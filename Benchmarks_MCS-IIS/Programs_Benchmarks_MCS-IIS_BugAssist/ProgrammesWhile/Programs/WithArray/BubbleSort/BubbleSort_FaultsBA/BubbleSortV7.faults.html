@@ -1,0 +1,169 @@
+Command exited with non-zero status 10
+7662.90user 63.12system 2:08:55elapsed 99%CPU (0avgtext+0avgdata 467016maxresident)k
+0inputs+69776outputs (0major+13501520minor)pagefaults 0swaps
+BubbleSortV7
+Generating GOTO Program
+Pointer Analysis
+Adding Pointer Checks
+Starting Bounded Model Checking
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 1 iteration 5
+Unwinding loop 1 iteration 6
+Unwinding loop 1 iteration 7
+Unwinding loop 1 iteration 8
+Unwinding loop 1 iteration 9
+Unwinding loop 1 iteration 10
+Unwinding loop 1 iteration 11
+Unwinding loop 2 iteration 1
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 1 iteration 5
+Unwinding loop 1 iteration 6
+Unwinding loop 1 iteration 7
+Unwinding loop 1 iteration 8
+Unwinding loop 1 iteration 9
+Unwinding loop 1 iteration 10
+Unwinding loop 1 iteration 11
+Unwinding loop 2 iteration 2
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 1 iteration 5
+Unwinding loop 1 iteration 6
+Unwinding loop 1 iteration 7
+Unwinding loop 1 iteration 8
+Unwinding loop 1 iteration 9
+Unwinding loop 1 iteration 10
+Unwinding loop 1 iteration 11
+Unwinding loop 2 iteration 3
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 1 iteration 5
+Unwinding loop 1 iteration 6
+Unwinding loop 1 iteration 7
+Unwinding loop 1 iteration 8
+Unwinding loop 1 iteration 9
+Unwinding loop 1 iteration 10
+Unwinding loop 1 iteration 11
+Unwinding loop 2 iteration 4
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 1 iteration 5
+Unwinding loop 1 iteration 6
+Unwinding loop 1 iteration 7
+Unwinding loop 1 iteration 8
+Unwinding loop 1 iteration 9
+Unwinding loop 1 iteration 10
+Unwinding loop 1 iteration 11
+Unwinding loop 2 iteration 5
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 1 iteration 5
+Unwinding loop 1 iteration 6
+Unwinding loop 1 iteration 7
+Unwinding loop 1 iteration 8
+Unwinding loop 1 iteration 9
+Unwinding loop 1 iteration 10
+Unwinding loop 1 iteration 11
+Unwinding loop 2 iteration 6
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 1 iteration 5
+Unwinding loop 1 iteration 6
+Unwinding loop 1 iteration 7
+Unwinding loop 1 iteration 8
+Unwinding loop 1 iteration 9
+Unwinding loop 1 iteration 10
+Unwinding loop 1 iteration 11
+Unwinding loop 2 iteration 7
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 1 iteration 5
+Unwinding loop 1 iteration 6
+Unwinding loop 1 iteration 7
+Unwinding loop 1 iteration 8
+Unwinding loop 1 iteration 9
+Unwinding loop 1 iteration 10
+Unwinding loop 1 iteration 11
+Unwinding loop 2 iteration 8
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 1 iteration 5
+Unwinding loop 1 iteration 6
+Unwinding loop 1 iteration 7
+Unwinding loop 1 iteration 8
+Unwinding loop 1 iteration 9
+Unwinding loop 1 iteration 10
+Unwinding loop 1 iteration 11
+Unwinding loop 2 iteration 9
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 1 iteration 5
+Unwinding loop 1 iteration 6
+Unwinding loop 1 iteration 7
+Unwinding loop 1 iteration 8
+Unwinding loop 1 iteration 9
+Unwinding loop 1 iteration 10
+Unwinding loop 1 iteration 11
+Unwinding loop 2 iteration 10
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 1 iteration 5
+Unwinding loop 1 iteration 6
+Unwinding loop 1 iteration 7
+Unwinding loop 1 iteration 8
+Unwinding loop 1 iteration 9
+Unwinding loop 1 iteration 10
+Unwinding loop 1 iteration 11
+Unwinding loop 2 iteration 11
+size of program expression: 3713 assignments
+Generated 1527 claims, 1527 remaining
+Passing problem to MiniSAT
+Passing to decision procedure
+Running MiniSAT
+Solving with MiniSAT
+315459 variables, 798279 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Building error trace
+
+Counterexample:
+
+Violated property:
+  file /home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithArray/BubbleSort/Versions/BubbleSortV7.c line 24
+  assertion
+  tab[0] >= tab[1] && tab[1] >= tab[2] && tab[2] >= tab[3] && tab[3] >= tab[4] && tab[4] >= tab[5] && tab[5] >= tab[6] && tab[6] >= tab[7] && tab[7] >= tab[8] && tab[8] >= tab[9] && tab[9] >= tab[10]
+
+< 1 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithArray/BubbleSort/Versions/BubbleSortV7.c:20
+
+< 10 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithArray/BubbleSort/Versions/BubbleSortV7.c:5
+
+< 13 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithArray/BubbleSort/Versions/BubbleSortV7.c:22
+
+< 17 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithArray/BubbleSort/Versions/BubbleSortV7.c:12
+
+< 72 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithArray/BubbleSort/Versions/BubbleSortV7.c:9
+
+BUG Assist: No More suspects:
+VERIFICATION FAILED

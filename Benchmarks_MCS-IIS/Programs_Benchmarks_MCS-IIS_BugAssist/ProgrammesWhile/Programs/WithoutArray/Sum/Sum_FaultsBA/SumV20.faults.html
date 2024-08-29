@@ -1,0 +1,61 @@
+Command exited with non-zero status 10
+53.85user 1.33system 0:55.78elapsed 98%CPU (0avgtext+0avgdata 32356maxresident)k
+0inputs+4720outputs (0major+547178minor)pagefaults 0swaps
+V20
+Generating GOTO Program
+Pointer Analysis
+Adding Pointer Checks
+Starting Bounded Model Checking
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 1 iteration 5
+Unwinding loop 1 iteration 6
+Unwinding loop 1 iteration 7
+Unwinding loop 1 iteration 8
+Unwinding loop 1 iteration 9
+Unwinding loop 1 iteration 10
+Unwinding loop 1 iteration 11
+Unwinding loop 1 iteration 12
+Unwinding loop 1 iteration 13
+Unwinding loop 1 iteration 14
+Unwinding loop 1 iteration 15
+Unwinding loop 1 iteration 16
+Unwinding loop 1 iteration 17
+Unwinding loop 1 iteration 18
+Unwinding loop 1 iteration 19
+Unwinding loop 1 iteration 20
+Unwinding loop 1 iteration 21
+Unwinding loop 1 iteration 22
+Unwinding loop 1 iteration 23
+Unwinding loop 1 iteration 24
+Unwinding loop 1 iteration 25
+Unwinding loop 1 iteration 26
+size of program expression: 192 assignments
+Generated 3 claims, 3 remaining
+Passing problem to MiniSAT
+Passing to decision procedure
+Running MiniSAT
+Solving with MiniSAT
+25147 variables, 30025 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Building error trace
+
+Counterexample:
+
+Violated property:
+  file /home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/Sum/Versions/SumV20.c line 11
+  assertion
+  s == n * (n + 1) / 2
+
+< 1 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/Sum/Versions/SumV20.c:9
+
+< 26 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/Sum/Versions/SumV20.c:7
+
+< 27 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/Sum/Versions/SumV20.c:11
+
+< 52 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/Sum/Versions/SumV20.c:8
+
+BUG Assist: No More suspects:
+VERIFICATION FAILED

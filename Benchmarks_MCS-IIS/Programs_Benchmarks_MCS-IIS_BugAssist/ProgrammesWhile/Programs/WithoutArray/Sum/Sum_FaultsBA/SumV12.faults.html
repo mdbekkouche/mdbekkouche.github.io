@@ -1,0 +1,53 @@
+Command exited with non-zero status 10
+21.31user 0.95system 0:22.71elapsed 98%CPU (0avgtext+0avgdata 26860maxresident)k
+0inputs+3624outputs (0major+328186minor)pagefaults 0swaps
+V12
+Generating GOTO Program
+Pointer Analysis
+Adding Pointer Checks
+Starting Bounded Model Checking
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 1 iteration 5
+Unwinding loop 1 iteration 6
+Unwinding loop 1 iteration 7
+Unwinding loop 1 iteration 8
+Unwinding loop 1 iteration 9
+Unwinding loop 1 iteration 10
+Unwinding loop 1 iteration 11
+Unwinding loop 1 iteration 12
+Unwinding loop 1 iteration 13
+Unwinding loop 1 iteration 14
+Unwinding loop 1 iteration 15
+Unwinding loop 1 iteration 16
+Unwinding loop 1 iteration 17
+Unwinding loop 1 iteration 18
+size of program expression: 136 assignments
+Generated 3 claims, 3 remaining
+Passing problem to MiniSAT
+Passing to decision procedure
+Running MiniSAT
+Solving with MiniSAT
+20227 variables, 26522 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Building error trace
+
+Counterexample:
+
+Violated property:
+  file /home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/Sum/Versions/SumV12.c line 11
+  assertion
+  s == n * (n + 1) / 2
+
+< 1 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/Sum/Versions/SumV12.c:9
+
+< 18 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/Sum/Versions/SumV12.c:7
+
+< 19 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/Sum/Versions/SumV12.c:11
+
+< 36 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/Sum/Versions/SumV12.c:8
+
+BUG Assist: No More suspects:
+VERIFICATION FAILED

@@ -1,0 +1,40 @@
+Command exited with non-zero status 10
+2.19user 0.18system 0:02.55elapsed 92%CPU (0avgtext+0avgdata 15196maxresident)k
+2872inputs+2032outputs (11major+74376minor)pagefaults 0swaps
+Generating GOTO Program
+Pointer Analysis
+Adding Pointer Checks
+Starting Bounded Model Checking
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 1 iteration 5
+Unwinding loop 1 iteration 6
+size of program expression: 52 assignments
+Generated 3 claims, 3 remaining
+Passing problem to MiniSAT
+Passing to decision procedure
+Running MiniSAT
+Solving with MiniSAT
+12821 variables, 21524 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Building error trace
+
+Counterexample:
+
+Violated property:
+  file /home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/Sum/Versions/SumV0.c line 11
+  assertion
+  s == n * (n + 1) / 2
+
+< 1 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/Sum/Versions/SumV0.c:9
+
+< 6 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/Sum/Versions/SumV0.c:7
+
+< 7 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/Sum/Versions/SumV0.c:11
+
+< 12 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/Sum/Versions/SumV0.c:8
+
+BUG Assist: No More suspects:
+VERIFICATION FAILED

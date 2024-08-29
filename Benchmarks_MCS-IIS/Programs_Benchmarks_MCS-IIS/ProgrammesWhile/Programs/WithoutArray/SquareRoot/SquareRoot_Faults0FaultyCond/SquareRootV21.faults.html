@@ -1,0 +1,63 @@
+DOING LOCALIZATION...
+NLS missing message: initializer_error in: org.eclipse.core.internal.runtime.messages
+NLS missing message: fileInitializer_fileNotFound in: org.eclipse.core.internal.runtime.messages
+NLS missing message: fileInitializer_IOError in: org.eclipse.core.internal.runtime.messages
+NLS missing message: fileInitializer_missingFileName in: org.eclipse.core.internal.runtime.messages
+
+Starting conversion of file: /home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/ProgrammesWhile/Programs/WithoutArray/SquareRoot/Versions/SquareRootV21.java
+Loops are unwound 31 times.
+
+From the counterexample, LocFaults calculates MCS by exploring the graph in DFS from top to bottom and by deviating at most '0' conditional statements.
+Solver: CP OPTIMIZER
+By deviating '0' condition(s), we obtain:
+
+1. CSP_d: empty set
+------------------------
+2. CSP_a:
+SquareRoot_0_val_0 := 31 --> line 5
+SquareRoot_0_i_0 := 1 --> line 6
+SquareRoot_0_v_0 := 0 --> line 7
+SquareRoot_0_res_0 := 0 --> line 8
+SquareRoot_0_v_1 := ( ( SquareRoot_0_v_0 + ( 2 * SquareRoot_0_i_0 ) ) + 1 ) --> line 10
+SquareRoot_0_i_1 := ( SquareRoot_0_i_0 + 1 ) --> line 11
+SquareRoot_0_v_2 := ( ( SquareRoot_0_v_1 + ( 2 * SquareRoot_0_i_1 ) ) + 1 ) --> line 10
+SquareRoot_0_i_2 := ( SquareRoot_0_i_1 + 1 ) --> line 11
+SquareRoot_0_v_3 := ( ( SquareRoot_0_v_2 + ( 2 * SquareRoot_0_i_2 ) ) + 1 ) --> line 10
+SquareRoot_0_i_3 := ( SquareRoot_0_i_2 + 1 ) --> line 11
+SquareRoot_0_v_4 := ( ( SquareRoot_0_v_3 + ( 2 * SquareRoot_0_i_3 ) ) + 1 ) --> line 10
+SquareRoot_0_i_4 := ( SquareRoot_0_i_3 + 1 ) --> line 11
+SquareRoot_0_v_5 := ( ( SquareRoot_0_v_4 + ( 2 * SquareRoot_0_i_4 ) ) + 1 ) --> line 10
+SquareRoot_0_i_5 := ( SquareRoot_0_i_4 + 1 ) --> line 11
+SquareRoot_0_i_31 := SquareRoot_0_i_5 --> line 0
+SquareRoot_0_v_31 := SquareRoot_0_v_5 --> line 0
+SquareRoot_0_res_1 := SquareRoot_0_i_31 --> line 13
+SquareRoot_0_Result_0 := SquareRoot_0_res_1 --> line 14
+( ( ( ( ( SquareRoot_0_res_1 * SquareRoot_0_res_1 ) <= SquareRoot_0_val_0 ) ) && ( ( ( ( SquareRoot_0_res_1 + 1 ) ) * ( ( SquareRoot_0_res_1 + 1 ) ) ) > SquareRoot_0_val_0 ) ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 11(SquareRoot_0_i_4 := ( SquareRoot_0_i_3 + 1 )): (9:4.11)}
+{line 11(SquareRoot_0_i_1 := ( SquareRoot_0_i_0 + 1 )): (9:1.11)}
+{line 0(SquareRoot_0_i_31 := SquareRoot_0_i_5): (0)}
+{line 6(SquareRoot_0_i_0 := 1): (6)}
+{line 11(SquareRoot_0_i_2 := ( SquareRoot_0_i_1 + 1 )): (9:2.11)}
+{line 13(SquareRoot_0_res_1 := SquareRoot_0_i_31): (13)}
+{line 11(SquareRoot_0_i_3 := ( SquareRoot_0_i_2 + 1 )): (9:3.11)}
+{line 5(SquareRoot_0_val_0 := 31): (5)}
+{line 11(SquareRoot_0_i_5 := ( SquareRoot_0_i_4 + 1 )): (9:5.11)}
+
+Runtime of the method that compute MCS: 0.135
+
+The resulats:
+1. Elapsed time during DFS exploration and MCS calculation: 0.162
+2. The sum of computation time of MCS isolations only: 0.135
+
+Suspicious instructions:
+The number of suspicious instructions:0
+
+/***************************************************************/
+The final resulats:
+1. The pretreatment(CFG building) time: 0.788
+2. Elapsed time during DFS exploration and MCS calculation: 0.162
+Total elapsed time: 1.045 s.

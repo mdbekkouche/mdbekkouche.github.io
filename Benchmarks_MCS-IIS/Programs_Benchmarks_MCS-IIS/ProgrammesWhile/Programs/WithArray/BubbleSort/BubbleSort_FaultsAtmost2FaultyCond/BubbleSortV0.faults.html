@@ -1,0 +1,308 @@
+DOING LOCALIZATION...
+NLS missing message: initializer_error in: org.eclipse.core.internal.runtime.messages
+NLS missing message: fileInitializer_fileNotFound in: org.eclipse.core.internal.runtime.messages
+NLS missing message: fileInitializer_IOError in: org.eclipse.core.internal.runtime.messages
+NLS missing message: fileInitializer_missingFileName in: org.eclipse.core.internal.runtime.messages
+
+Starting conversion of file: /home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/ProgrammesWhile/Programs/WithArray/BubbleSort/Versions/BubbleSortV0.java
+Loops are unwound 4 times.
+
+From the counterexample, LocFaults calculates MCS by exploring the graph in DFS from top to bottom and by deviating at most '2' conditional statements.
+Solver: CPLEX
+/***************************************************************/
+By deviating '0' condition(s), we obtain:
+
+1. CSP_d: empty set
+------------------------
+2. CSP_a:
+bubbleSort_0_tab_0[0] := -22191 --> line -1
+bubbleSort_0_tab_0[1] := -24402 --> line -1
+bubbleSort_0_tab_0[2] := -24403 --> line -1
+bubbleSort_0_tab_0[3] := -30486 --> line -1
+bubbleSort_0_i_0 := 0 --> line 5
+bubbleSort_0_j_0 := ( 4 - 1 ) --> line 6
+bubbleSort_0_aux_0 := 0 --> line 7
+bubbleSort_0_fini_0 := 0 --> line 8
+bubbleSort_0_fini_1 := 1 --> line 10
+bubbleSort_0_i_1 := 1 --> line 11
+bubbleSort_0_aux_1 := bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )] --> line 15
+bubbleSort_0_fini_2 := 0 --> line 18
+bubbleSort_0_i_2 := ( bubbleSort_0_i_1 + 1 ) --> line 20
+bubbleSort_0_aux_2 := bubbleSort_0_tab_2[( bubbleSort_0_i_2 - 1 )] --> line 15
+bubbleSort_0_fini_3 := 0 --> line 18
+bubbleSort_0_i_3 := ( bubbleSort_0_i_2 + 1 ) --> line 20
+bubbleSort_0_fini_5 := bubbleSort_0_fini_3 --> line 0
+bubbleSort_0_aux_4 := bubbleSort_0_aux_2 --> line 0
+bubbleSort_0_i_5 := bubbleSort_0_i_3 --> line 0
+bubbleSort_0_j_1 := ( bubbleSort_0_j_0 - 1 ) --> line 22
+bubbleSort_0_fini_6 := 1 --> line 10
+bubbleSort_0_i_6 := 1 --> line 11
+bubbleSort_0_aux_5 := bubbleSort_0_tab_8[( bubbleSort_0_i_6 - 1 )] --> line 15
+bubbleSort_0_fini_7 := 0 --> line 18
+bubbleSort_0_i_7 := ( bubbleSort_0_i_6 + 1 ) --> line 20
+bubbleSort_0_fini_10 := bubbleSort_0_fini_7 --> line 0
+bubbleSort_0_aux_8 := bubbleSort_0_aux_5 --> line 0
+bubbleSort_0_i_10 := bubbleSort_0_i_7 --> line 0
+bubbleSort_0_j_2 := ( bubbleSort_0_j_1 - 1 ) --> line 22
+bubbleSort_0_fini_11 := 1 --> line 10
+bubbleSort_0_i_11 := 1 --> line 11
+bubbleSort_0_fini_15 := bubbleSort_0_fini_11 --> line 0
+bubbleSort_0_aux_12 := bubbleSort_0_aux_8 --> line 0
+bubbleSort_0_i_15 := bubbleSort_0_i_11 --> line 0
+bubbleSort_0_j_3 := ( bubbleSort_0_j_2 - 1 ) --> line 22
+bubbleSort_0_fini_20 := bubbleSort_0_fini_15 --> line 0
+bubbleSort_0_j_4 := bubbleSort_0_j_3 --> line 0
+bubbleSort_0_aux_16 := bubbleSort_0_aux_12 --> line 0
+bubbleSort_0_i_20 := bubbleSort_0_i_15 --> line 0
+bubbleSort_0_tab_1[( bubbleSort_0_i_1 - 1 )] := bubbleSort_0_tab_0[bubbleSort_0_i_1] --> line 16
+bubbleSort_0_tab_2[bubbleSort_0_i_1] := bubbleSort_0_aux_1 --> line 17
+bubbleSort_0_tab_3[( bubbleSort_0_i_2 - 1 )] := bubbleSort_0_tab_2[bubbleSort_0_i_2] --> line 16
+bubbleSort_0_tab_4[bubbleSort_0_i_2] := bubbleSort_0_aux_2 --> line 17
+bubbleSort_0_tab_8 := bubbleSort_0_tab_4 --> line 0
+bubbleSort_0_tab_9[( bubbleSort_0_i_6 - 1 )] := bubbleSort_0_tab_8[bubbleSort_0_i_6] --> line 16
+bubbleSort_0_tab_10[bubbleSort_0_i_6] := bubbleSort_0_aux_5 --> line 17
+bubbleSort_0_tab_16 := bubbleSort_0_tab_10 --> line 0
+bubbleSort_0_tab_24 := bubbleSort_0_tab_16 --> line 0
+bubbleSort_0_tab_32 := bubbleSort_0_tab_24 --> line 0
+( ( ( ( bubbleSort_0_tab_32[0] >= bubbleSort_0_tab_32[1] ) && ( bubbleSort_0_tab_32[1] >= bubbleSort_0_tab_32[2] ) ) && ( bubbleSort_0_tab_32[2] >= bubbleSort_0_tab_32[3] ) ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 17(bubbleSort_0_tab_2[bubbleSort_0_i_1] := bubbleSort_0_aux_1): (9:1.12:1.17)}
+{line 17(bubbleSort_0_tab_4[bubbleSort_0_i_2] := bubbleSort_0_aux_2): (9:1.12:2.17)}
+{line 0(bubbleSort_0_tab_8 := bubbleSort_0_tab_4): (0)}
+{line 0(bubbleSort_0_tab_32 := bubbleSort_0_tab_24): (0)}
+{line 16(bubbleSort_0_tab_9[( bubbleSort_0_i_6 - 1 )] := bubbleSort_0_tab_8[bubbleSort_0_i_6]): (9:2.12:1.16)}
+{line 0(bubbleSort_0_tab_24 := bubbleSort_0_tab_16): (0)}
+{line 0(bubbleSort_0_tab_16 := bubbleSort_0_tab_10): (0)}
+{line 17(bubbleSort_0_tab_10[bubbleSort_0_i_6] := bubbleSort_0_aux_5): (9:2.12:1.17)}
+{line 16(bubbleSort_0_tab_1[( bubbleSort_0_i_1 - 1 )] := bubbleSort_0_tab_0[bubbleSort_0_i_1]): (9:1.12:1.16)}
+{line 16(bubbleSort_0_tab_3[( bubbleSort_0_i_2 - 1 )] := bubbleSort_0_tab_2[bubbleSort_0_i_2]): (9:1.12:2.16)}
+{line 15(bubbleSort_0_aux_2 := bubbleSort_0_tab_2[( bubbleSort_0_i_2 - 1 )]): (9:1.12:2.15),line 15(bubbleSort_0_aux_5 := bubbleSort_0_tab_8[( bubbleSort_0_i_6 - 1 )]): (9:2.12:1.15)}
+{line 15(bubbleSort_0_aux_1 := bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )]): (9:1.12:1.15),line 15(bubbleSort_0_aux_5 := bubbleSort_0_tab_8[( bubbleSort_0_i_6 - 1 )]): (9:2.12:1.15)}
+
+Runtime of the method that compute MCS: 0.235
+MIVcard(ctrs,line 15)=0.5
+MIVcard(ctrs,line 15)=0.5
+MIVcard(ctrs,line 15)=1.0
+MIVcard(ctrs,line 16)=1.0
+MIVcard(ctrs,line 17)=1.0
+MIVcard(ctrs,line 16)=1.0
+MIVcard(ctrs,line 17)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 16)=1.0
+MIVcard(ctrs,line 17)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 0)=1.0
+
+The number of instructions suspected: 9
+
+The resulats:
+1. Elapsed time during DFS exploration and MCS calculation: 0.27
+2. The sum of computation time of MCS isolations only: 0.235
+/***************************************************************/
+By deviating '1' condition(s), we obtain:
+
+1. CSP_d:
+line 9(If) : ( bubbleSort_0_fini_0 == 0 ): (9:1)
+------------------------
+2. CSP_a:
+bubbleSort_0_tab_0[0] := -22191 --> line -1
+bubbleSort_0_tab_0[1] := -24402 --> line -1
+bubbleSort_0_tab_0[2] := -24403 --> line -1
+bubbleSort_0_tab_0[3] := -30486 --> line -1
+bubbleSort_0_i_0 := 0 --> line 5
+bubbleSort_0_j_0 := ( 4 - 1 ) --> line 6
+bubbleSort_0_aux_0 := 0 --> line 7
+bubbleSort_0_fini_0 := 0 --> line 8
+!( ( bubbleSort_0_fini_0 == 0 ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 8(bubbleSort_0_fini_0 := 0): (8)}
+
+Runtime of the method that compute MCS: 0.012
+MIVcard(ctrs,line 8)=1.0
+
+The number of instructions suspected: 1
+1. CSP_d:
+line 12(If) : ( bubbleSort_0_i_1 < bubbleSort_0_j_0 ): (9:1.12:1)
+------------------------
+2. CSP_a:
+bubbleSort_0_tab_0[0] := -22191 --> line -1
+bubbleSort_0_tab_0[1] := -24402 --> line -1
+bubbleSort_0_tab_0[2] := -24403 --> line -1
+bubbleSort_0_tab_0[3] := -30486 --> line -1
+bubbleSort_0_i_0 := 0 --> line 5
+bubbleSort_0_j_0 := ( 4 - 1 ) --> line 6
+bubbleSort_0_aux_0 := 0 --> line 7
+bubbleSort_0_fini_0 := 0 --> line 8
+bubbleSort_0_fini_1 := 1 --> line 10
+bubbleSort_0_i_1 := 1 --> line 11
+!( ( bubbleSort_0_i_1 < bubbleSort_0_j_0 ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 6(bubbleSort_0_j_0 := ( 4 - 1 )): (6)}
+{line 11(bubbleSort_0_i_1 := 1): (9:1.11)}
+
+Runtime of the method that compute MCS: 0.011
+MIVcard(ctrs,line 6)=1.0
+MIVcard(ctrs,line 11)=1.0
+
+The number of instructions suspected: 2
+1. CSP_d:
+line 14(If) : ( bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )] > bubbleSort_0_tab_0[bubbleSort_0_i_1] ): (9:1.12:1.14)
+------------------------
+2. CSP_a:
+bubbleSort_0_tab_0[0] := -22191 --> line -1
+bubbleSort_0_tab_0[1] := -24402 --> line -1
+bubbleSort_0_tab_0[2] := -24403 --> line -1
+bubbleSort_0_tab_0[3] := -30486 --> line -1
+bubbleSort_0_i_0 := 0 --> line 5
+bubbleSort_0_j_0 := ( 4 - 1 ) --> line 6
+bubbleSort_0_aux_0 := 0 --> line 7
+bubbleSort_0_fini_0 := 0 --> line 8
+bubbleSort_0_fini_1 := 1 --> line 10
+bubbleSort_0_i_1 := 1 --> line 11
+!( ( bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )] > bubbleSort_0_tab_0[bubbleSort_0_i_1] ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+
+Runtime of the method that compute MCS: 0.003
+
+The number of instructions suspected: 0
+1. CSP_d:
+line 12(If) : ( bubbleSort_0_i_2 < bubbleSort_0_j_0 ): (9:1.12:2)
+------------------------
+2. CSP_a:
+bubbleSort_0_tab_0[0] := -22191 --> line -1
+bubbleSort_0_tab_0[1] := -24402 --> line -1
+bubbleSort_0_tab_0[2] := -24403 --> line -1
+bubbleSort_0_tab_0[3] := -30486 --> line -1
+bubbleSort_0_i_0 := 0 --> line 5
+bubbleSort_0_j_0 := ( 4 - 1 ) --> line 6
+bubbleSort_0_aux_0 := 0 --> line 7
+bubbleSort_0_fini_0 := 0 --> line 8
+bubbleSort_0_fini_1 := 1 --> line 10
+bubbleSort_0_i_1 := 1 --> line 11
+bubbleSort_0_aux_1 := bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )] --> line 15
+bubbleSort_0_fini_2 := 0 --> line 18
+bubbleSort_0_i_2 := ( bubbleSort_0_i_1 + 1 ) --> line 20
+!( ( bubbleSort_0_i_2 < bubbleSort_0_j_0 ) ) --> line -2
+bubbleSort_0_tab_1[( bubbleSort_0_i_1 - 1 )] := bubbleSort_0_tab_0[bubbleSort_0_i_1] --> line 16
+bubbleSort_0_tab_2[bubbleSort_0_i_1] := bubbleSort_0_aux_1 --> line 17
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 11(bubbleSort_0_i_1 := 1): (9:1.11)}
+{line 6(bubbleSort_0_j_0 := ( 4 - 1 )): (6)}
+{line 20(bubbleSort_0_i_2 := ( bubbleSort_0_i_1 + 1 )): (9:1.12:1.20)}
+
+Runtime of the method that compute MCS: 0.04
+MIVcard(ctrs,line 6)=1.0
+MIVcard(ctrs,line 11)=1.0
+MIVcard(ctrs,line 20)=1.0
+
+The number of instructions suspected: 3
+1. CSP_d:
+line 14(If) : ( bubbleSort_0_tab_2[( bubbleSort_0_i_2 - 1 )] > bubbleSort_0_tab_2[bubbleSort_0_i_2] ): (9:1.12:2.14)
+------------------------
+2. CSP_a:
+bubbleSort_0_tab_0[0] := -22191 --> line -1
+bubbleSort_0_tab_0[1] := -24402 --> line -1
+bubbleSort_0_tab_0[2] := -24403 --> line -1
+bubbleSort_0_tab_0[3] := -30486 --> line -1
+bubbleSort_0_i_0 := 0 --> line 5
+bubbleSort_0_j_0 := ( 4 - 1 ) --> line 6
+bubbleSort_0_aux_0 := 0 --> line 7
+bubbleSort_0_fini_0 := 0 --> line 8
+bubbleSort_0_fini_1 := 1 --> line 10
+bubbleSort_0_i_1 := 1 --> line 11
+bubbleSort_0_aux_1 := bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )] --> line 15
+bubbleSort_0_fini_2 := 0 --> line 18
+bubbleSort_0_i_2 := ( bubbleSort_0_i_1 + 1 ) --> line 20
+!( ( bubbleSort_0_tab_2[( bubbleSort_0_i_2 - 1 )] > bubbleSort_0_tab_2[bubbleSort_0_i_2] ) ) --> line -2
+bubbleSort_0_tab_1[( bubbleSort_0_i_1 - 1 )] := bubbleSort_0_tab_0[bubbleSort_0_i_1] --> line 16
+bubbleSort_0_tab_2[bubbleSort_0_i_1] := bubbleSort_0_aux_1 --> line 17
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 17(bubbleSort_0_tab_2[bubbleSort_0_i_1] := bubbleSort_0_aux_1): (9:1.12:1.17)}
+{line 16(bubbleSort_0_tab_1[( bubbleSort_0_i_1 - 1 )] := bubbleSort_0_tab_0[bubbleSort_0_i_1]): (9:1.12:1.16)}
+{line 15(bubbleSort_0_aux_1 := bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )]): (9:1.12:1.15)}
+
+Runtime of the method that compute MCS: 0.036
+MIVcard(ctrs,line 15)=1.0
+MIVcard(ctrs,line 16)=1.0
+MIVcard(ctrs,line 17)=1.0
+
+The number of instructions suspected: 3
+1. CSP_d:
+line 12(Else) : ( bubbleSort_0_i_3 < bubbleSort_0_j_0 ): (9:1.12:3)
+------------------------
+2. CSP_a:
+bubbleSort_0_tab_0[0] := -22191 --> line -1
+bubbleSort_0_tab_0[1] := -24402 --> line -1
+bubbleSort_0_tab_0[2] := -24403 --> line -1
+bubbleSort_0_tab_0[3] := -30486 --> line -1
+bubbleSort_0_i_0 := 0 --> line 5
+bubbleSort_0_j_0 := ( 4 - 1 ) --> line 6
+bubbleSort_0_aux_0 := 0 --> line 7
+bubbleSort_0_fini_0 := 0 --> line 8
+bubbleSort_0_fini_1 := 1 --> line 10
+bubbleSort_0_i_1 := 1 --> line 11
+bubbleSort_0_aux_1 := bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )] --> line 15
+bubbleSort_0_fini_2 := 0 --> line 18
+bubbleSort_0_i_2 := ( bubbleSort_0_i_1 + 1 ) --> line 20
+bubbleSort_0_aux_2 := bubbleSort_0_tab_2[( bubbleSort_0_i_2 - 1 )] --> line 15
+bubbleSort_0_fini_3 := 0 --> line 18
+bubbleSort_0_i_3 := ( bubbleSort_0_i_2 + 1 ) --> line 20
+( bubbleSort_0_i_3 < bubbleSort_0_j_0 ) --> line -2
+bubbleSort_0_tab_1[( bubbleSort_0_i_1 - 1 )] := bubbleSort_0_tab_0[bubbleSort_0_i_1] --> line 16
+bubbleSort_0_tab_2[bubbleSort_0_i_1] := bubbleSort_0_aux_1 --> line 17
+bubbleSort_0_tab_3[( bubbleSort_0_i_2 - 1 )] := bubbleSort_0_tab_2[bubbleSort_0_i_2] --> line 16
+bubbleSort_0_tab_4[bubbleSort_0_i_2] := bubbleSort_0_aux_2 --> line 17
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 20(bubbleSort_0_i_3 := ( bubbleSort_0_i_2 + 1 )): (9:1.12:2.20)}
+{line 20(bubbleSort_0_i_2 := ( bubbleSort_0_i_1 + 1 )): (9:1.12:1.20)}
+{line 11(bubbleSort_0_i_1 := 1): (9:1.11)}
+{line 6(bubbleSort_0_j_0 := ( 4 - 1 )): (6)}
+
+Runtime of the method that compute MCS: 0.064
+MIVcard(ctrs,line 6)=1.0
+MIVcard(ctrs,line 11)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 20)=1.0
+
+The number of instructions suspected: 4
+
+The resulats:
+1. Elapsed time during DFS exploration and MCS calculation: 0.212
+2. The sum of computation time of MCS isolations only: 0.166
+/***************************************************************/
+By deviating '2' condition(s), we obtain:
+
+
+The resulats:
+1. Elapsed time during DFS exploration and MCS calculation: 0.026
+2. The sum of computation time of MCS isolations only: 0.0
+/***************************************************************/
+The final resulats:
+1. The pretreatment(CFG building) time: 0.746
+2. Total elapsed time during DFS exploration and MCS calculation: 0.508
+3. Suspicious instructions:15,16,17,9,8,12,6,11,14,20
+4. The number of suspicious instructions:10
+
+Total elapsed time: 1.379 s.

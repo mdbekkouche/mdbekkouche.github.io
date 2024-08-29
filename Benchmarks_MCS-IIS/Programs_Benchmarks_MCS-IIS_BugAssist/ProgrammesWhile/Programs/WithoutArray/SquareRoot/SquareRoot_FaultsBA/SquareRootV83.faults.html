@@ -1,0 +1,129 @@
+Command exited with non-zero status 10
+70.20user 1.30system 1:11.88elapsed 99%CPU (0avgtext+0avgdata 67716maxresident)k
+0inputs+9648outputs (0major+578681minor)pagefaults 0swaps
+g
+Checking SquareRootV83
+Generating GOTO Program
+Pointer Analysis
+Adding Pointer Checks
+Starting Bounded Model Checking
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 1 iteration 5
+Unwinding loop 1 iteration 6
+Unwinding loop 1 iteration 7
+Unwinding loop 1 iteration 8
+Unwinding loop 1 iteration 9
+Unwinding loop 1 iteration 10
+Unwinding loop 1 iteration 11
+Unwinding loop 1 iteration 12
+Unwinding loop 1 iteration 13
+Unwinding loop 1 iteration 14
+Unwinding loop 1 iteration 15
+Unwinding loop 1 iteration 16
+Unwinding loop 1 iteration 17
+Unwinding loop 1 iteration 18
+Unwinding loop 1 iteration 19
+Unwinding loop 1 iteration 20
+Unwinding loop 1 iteration 21
+Unwinding loop 1 iteration 22
+Unwinding loop 1 iteration 23
+Unwinding loop 1 iteration 24
+Unwinding loop 1 iteration 25
+Unwinding loop 1 iteration 26
+Unwinding loop 1 iteration 27
+Unwinding loop 1 iteration 28
+Unwinding loop 1 iteration 29
+Unwinding loop 1 iteration 30
+Unwinding loop 1 iteration 31
+Unwinding loop 1 iteration 32
+Unwinding loop 1 iteration 33
+Unwinding loop 1 iteration 34
+Unwinding loop 1 iteration 35
+Unwinding loop 1 iteration 36
+Unwinding loop 1 iteration 37
+Unwinding loop 1 iteration 38
+Unwinding loop 1 iteration 39
+Unwinding loop 1 iteration 40
+Unwinding loop 1 iteration 41
+Unwinding loop 1 iteration 42
+Unwinding loop 1 iteration 43
+Unwinding loop 1 iteration 44
+Unwinding loop 1 iteration 45
+Unwinding loop 1 iteration 46
+Unwinding loop 1 iteration 47
+Unwinding loop 1 iteration 48
+Unwinding loop 1 iteration 49
+Unwinding loop 1 iteration 50
+Unwinding loop 1 iteration 51
+Unwinding loop 1 iteration 52
+Unwinding loop 1 iteration 53
+Unwinding loop 1 iteration 54
+Unwinding loop 1 iteration 55
+Unwinding loop 1 iteration 56
+Unwinding loop 1 iteration 57
+Unwinding loop 1 iteration 58
+Unwinding loop 1 iteration 59
+Unwinding loop 1 iteration 60
+Unwinding loop 1 iteration 61
+Unwinding loop 1 iteration 62
+Unwinding loop 1 iteration 63
+Unwinding loop 1 iteration 64
+Unwinding loop 1 iteration 65
+Unwinding loop 1 iteration 66
+Unwinding loop 1 iteration 67
+Unwinding loop 1 iteration 68
+Unwinding loop 1 iteration 69
+Unwinding loop 1 iteration 70
+Unwinding loop 1 iteration 71
+Unwinding loop 1 iteration 72
+Unwinding loop 1 iteration 73
+Unwinding loop 1 iteration 74
+Unwinding loop 1 iteration 75
+Unwinding loop 1 iteration 76
+Unwinding loop 1 iteration 77
+Unwinding loop 1 iteration 78
+Unwinding loop 1 iteration 79
+Unwinding loop 1 iteration 80
+Unwinding loop 1 iteration 81
+Unwinding loop 1 iteration 82
+Unwinding loop 1 iteration 83
+Unwinding loop 1 iteration 84
+Unwinding loop 1 iteration 85
+Unwinding loop 1 iteration 86
+Unwinding loop 1 iteration 87
+Unwinding loop 1 iteration 88
+Unwinding loop 1 iteration 89
+Unwinding loop 1 iteration 90
+Unwinding loop 1 iteration 91
+Unwinding loop 1 iteration 92
+Unwinding loop 1 iteration 93
+size of program expression: 662 assignments
+Generated 2 claims, 2 remaining
+Passing problem to MiniSAT
+Passing to decision procedure
+Running MiniSAT
+Solving with MiniSAT
+49344 variables, 27657 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Building error trace
+
+Counterexample:
+
+Violated property:
+  file /home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/SquareRoot/Versions/SquareRootV83.c line 14
+  assertion
+  res * res <= val && (res + 1) * (res + 1) > val
+
+< 1 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/SquareRoot/Versions/SquareRootV83.c:10
+
+< 2 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/SquareRoot/Versions/SquareRootV83.c:11
+
+< 8 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/SquareRoot/Versions/SquareRootV83.c:13
+
+< 29 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithoutArray/SquareRoot/Versions/SquareRootV83.c:9
+
+BUG Assist: No More suspects:
+VERIFICATION FAILED

@@ -1,0 +1,227 @@
+DOING LOCALIZATION...
+NLS missing message: initializer_error in: org.eclipse.core.internal.runtime.messages
+NLS missing message: fileInitializer_fileNotFound in: org.eclipse.core.internal.runtime.messages
+NLS missing message: fileInitializer_IOError in: org.eclipse.core.internal.runtime.messages
+NLS missing message: fileInitializer_missingFileName in: org.eclipse.core.internal.runtime.messages
+
+Starting conversion of file: /home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/ProgrammesWhile/Programs/WithoutArray/Sum/Versions/SumV16.java
+Loops are unwound 22 times.
+
+From the counterexample, LocFaults calculates MCS by exploring the graph in DFS from top to bottom and by deviating at most '2' conditional statements.
+Solver: CP OPTIMIZER
+By deviating '0' condition(s), we obtain:
+
+1. CSP_d: empty set
+------------------------
+2. CSP_a:
+Sum_0_n_0 := 21 --> line -1
+Sum_0_s_0 := 0 --> line 5
+Sum_0_i_0 := 0 --> line 6
+Sum_0_s_1 := ( Sum_0_s_0 + Sum_0_i_0 ) --> line 8
+Sum_0_i_1 := ( Sum_0_i_0 + 1 ) --> line 9
+Sum_0_s_2 := ( Sum_0_s_1 + Sum_0_i_1 ) --> line 8
+Sum_0_i_2 := ( Sum_0_i_1 + 1 ) --> line 9
+Sum_0_s_3 := ( Sum_0_s_2 + Sum_0_i_2 ) --> line 8
+Sum_0_i_3 := ( Sum_0_i_2 + 1 ) --> line 9
+Sum_0_s_4 := ( Sum_0_s_3 + Sum_0_i_3 ) --> line 8
+Sum_0_i_4 := ( Sum_0_i_3 + 1 ) --> line 9
+Sum_0_s_5 := ( Sum_0_s_4 + Sum_0_i_4 ) --> line 8
+Sum_0_i_5 := ( Sum_0_i_4 + 1 ) --> line 9
+Sum_0_s_6 := ( Sum_0_s_5 + Sum_0_i_5 ) --> line 8
+Sum_0_i_6 := ( Sum_0_i_5 + 1 ) --> line 9
+Sum_0_s_7 := ( Sum_0_s_6 + Sum_0_i_6 ) --> line 8
+Sum_0_i_7 := ( Sum_0_i_6 + 1 ) --> line 9
+Sum_0_s_8 := ( Sum_0_s_7 + Sum_0_i_7 ) --> line 8
+Sum_0_i_8 := ( Sum_0_i_7 + 1 ) --> line 9
+Sum_0_s_9 := ( Sum_0_s_8 + Sum_0_i_8 ) --> line 8
+Sum_0_i_9 := ( Sum_0_i_8 + 1 ) --> line 9
+Sum_0_s_10 := ( Sum_0_s_9 + Sum_0_i_9 ) --> line 8
+Sum_0_i_10 := ( Sum_0_i_9 + 1 ) --> line 9
+Sum_0_s_11 := ( Sum_0_s_10 + Sum_0_i_10 ) --> line 8
+Sum_0_i_11 := ( Sum_0_i_10 + 1 ) --> line 9
+Sum_0_s_12 := ( Sum_0_s_11 + Sum_0_i_11 ) --> line 8
+Sum_0_i_12 := ( Sum_0_i_11 + 1 ) --> line 9
+Sum_0_s_13 := ( Sum_0_s_12 + Sum_0_i_12 ) --> line 8
+Sum_0_i_13 := ( Sum_0_i_12 + 1 ) --> line 9
+Sum_0_s_14 := ( Sum_0_s_13 + Sum_0_i_13 ) --> line 8
+Sum_0_i_14 := ( Sum_0_i_13 + 1 ) --> line 9
+Sum_0_s_15 := ( Sum_0_s_14 + Sum_0_i_14 ) --> line 8
+Sum_0_i_15 := ( Sum_0_i_14 + 1 ) --> line 9
+Sum_0_s_16 := ( Sum_0_s_15 + Sum_0_i_15 ) --> line 8
+Sum_0_i_16 := ( Sum_0_i_15 + 1 ) --> line 9
+Sum_0_s_17 := ( Sum_0_s_16 + Sum_0_i_16 ) --> line 8
+Sum_0_i_17 := ( Sum_0_i_16 + 1 ) --> line 9
+Sum_0_s_18 := ( Sum_0_s_17 + Sum_0_i_17 ) --> line 8
+Sum_0_i_18 := ( Sum_0_i_17 + 1 ) --> line 9
+Sum_0_s_19 := ( Sum_0_s_18 + Sum_0_i_18 ) --> line 8
+Sum_0_i_19 := ( Sum_0_i_18 + 1 ) --> line 9
+Sum_0_s_20 := ( Sum_0_s_19 + Sum_0_i_19 ) --> line 8
+Sum_0_i_20 := ( Sum_0_i_19 + 1 ) --> line 9
+Sum_0_s_21 := ( Sum_0_s_20 + Sum_0_i_20 ) --> line 8
+Sum_0_i_21 := ( Sum_0_i_20 + 1 ) --> line 9
+Sum_0_s_22 := Sum_0_s_21 --> line 0
+Sum_0_i_22 := Sum_0_i_21 --> line 0
+Sum_0_Result_0 := Sum_0_s_22 --> line 11
+( ( Sum_0_Result_0 == ( ( ( Sum_0_n_0 * ( ( Sum_0_n_0 + 1 ) ) ) ) / 2 ) ) ) --> line -2
+
+The system is infeasible
+------------------------
+This constraint system is nonlinear: to calculate MCSs, we use the solver IBM ILOG CP OPTIMIZER of CPLEX
+------------------------
+3. MCS in CSP_a:
+{line 8(Sum_0_s_14 := ( Sum_0_s_13 + Sum_0_i_13 )): (7:14.8)}
+{line 8(Sum_0_s_10 := ( Sum_0_s_9 + Sum_0_i_9 )): (7:10.8)}
+{line 8(Sum_0_s_19 := ( Sum_0_s_18 + Sum_0_i_18 )): (7:19.8)}
+{line 8(Sum_0_s_7 := ( Sum_0_s_6 + Sum_0_i_6 )): (7:7.8)}
+{line 8(Sum_0_s_4 := ( Sum_0_s_3 + Sum_0_i_3 )): (7:4.8)}
+{line 8(Sum_0_s_15 := ( Sum_0_s_14 + Sum_0_i_14 )): (7:15.8)}
+{line 5(Sum_0_s_0 := 0): (5)}
+{line 8(Sum_0_s_5 := ( Sum_0_s_4 + Sum_0_i_4 )): (7:5.8)}
+{line 8(Sum_0_s_8 := ( Sum_0_s_7 + Sum_0_i_7 )): (7:8.8)}
+{line 8(Sum_0_s_16 := ( Sum_0_s_15 + Sum_0_i_15 )): (7:16.8)}
+{line 8(Sum_0_s_9 := ( Sum_0_s_8 + Sum_0_i_8 )): (7:9.8)}
+{line 8(Sum_0_s_20 := ( Sum_0_s_19 + Sum_0_i_19 )): (7:20.8)}
+{line 8(Sum_0_s_1 := ( Sum_0_s_0 + Sum_0_i_0 )): (7:1.8)}
+{line 9(Sum_0_i_20 := ( Sum_0_i_19 + 1 )): (7:20.9),line 0(Sum_0_s_22 := Sum_0_s_21): (0),line 0(Sum_0_i_22 := Sum_0_i_21): (0)}
+{line 9(Sum_0_i_20 := ( Sum_0_i_19 + 1 )): (7:20.9),line 9(Sum_0_i_21 := ( Sum_0_i_20 + 1 )): (7:21.9),line 0(Sum_0_i_22 := Sum_0_i_21): (0)}
+{line 9(Sum_0_i_19 := ( Sum_0_i_18 + 1 )): (7:19.9),line 9(Sum_0_i_20 := ( Sum_0_i_19 + 1 )): (7:20.9),line 0(Sum_0_i_22 := Sum_0_i_21): (0)}
+{line 8(Sum_0_s_6 := ( Sum_0_s_5 + Sum_0_i_5 )): (7:6.8),line 9(Sum_0_i_9 := ( Sum_0_i_8 + 1 )): (7:9.9),line 9(Sum_0_i_11 := ( Sum_0_i_10 + 1 )): (7:11.9),line 11(Sum_0_Result_0 := Sum_0_s_22): (11)}
+
+Runtime of the method that compute MCS: 1.1
+
+The resulats:
+1. Elapsed time during DFS exploration and MCS calculation: 1.16
+2. The sum of computation time of MCS isolations only: 1.1
+
+Suspicious instructions:
+The number of suspicious instructions:0
+
+By deviating '1' condition(s), we obtain:
+
+1. CSP_d:
+line 7(Else) : ( Sum_0_i_21 < Sum_0_n_0 ): (7:22)
+------------------------
+2. CSP_a:
+Sum_0_n_0 := 21 --> line -1
+Sum_0_s_0 := 0 --> line 5
+Sum_0_i_0 := 0 --> line 6
+Sum_0_s_1 := ( Sum_0_s_0 + Sum_0_i_0 ) --> line 8
+Sum_0_i_1 := ( Sum_0_i_0 + 1 ) --> line 9
+Sum_0_s_2 := ( Sum_0_s_1 + Sum_0_i_1 ) --> line 8
+Sum_0_i_2 := ( Sum_0_i_1 + 1 ) --> line 9
+Sum_0_s_3 := ( Sum_0_s_2 + Sum_0_i_2 ) --> line 8
+Sum_0_i_3 := ( Sum_0_i_2 + 1 ) --> line 9
+Sum_0_s_4 := ( Sum_0_s_3 + Sum_0_i_3 ) --> line 8
+Sum_0_i_4 := ( Sum_0_i_3 + 1 ) --> line 9
+Sum_0_s_5 := ( Sum_0_s_4 + Sum_0_i_4 ) --> line 8
+Sum_0_i_5 := ( Sum_0_i_4 + 1 ) --> line 9
+Sum_0_s_6 := ( Sum_0_s_5 + Sum_0_i_5 ) --> line 8
+Sum_0_i_6 := ( Sum_0_i_5 + 1 ) --> line 9
+Sum_0_s_7 := ( Sum_0_s_6 + Sum_0_i_6 ) --> line 8
+Sum_0_i_7 := ( Sum_0_i_6 + 1 ) --> line 9
+Sum_0_s_8 := ( Sum_0_s_7 + Sum_0_i_7 ) --> line 8
+Sum_0_i_8 := ( Sum_0_i_7 + 1 ) --> line 9
+Sum_0_s_9 := ( Sum_0_s_8 + Sum_0_i_8 ) --> line 8
+Sum_0_i_9 := ( Sum_0_i_8 + 1 ) --> line 9
+Sum_0_s_10 := ( Sum_0_s_9 + Sum_0_i_9 ) --> line 8
+Sum_0_i_10 := ( Sum_0_i_9 + 1 ) --> line 9
+Sum_0_s_11 := ( Sum_0_s_10 + Sum_0_i_10 ) --> line 8
+Sum_0_i_11 := ( Sum_0_i_10 + 1 ) --> line 9
+Sum_0_s_12 := ( Sum_0_s_11 + Sum_0_i_11 ) --> line 8
+Sum_0_i_12 := ( Sum_0_i_11 + 1 ) --> line 9
+Sum_0_s_13 := ( Sum_0_s_12 + Sum_0_i_12 ) --> line 8
+Sum_0_i_13 := ( Sum_0_i_12 + 1 ) --> line 9
+Sum_0_s_14 := ( Sum_0_s_13 + Sum_0_i_13 ) --> line 8
+Sum_0_i_14 := ( Sum_0_i_13 + 1 ) --> line 9
+Sum_0_s_15 := ( Sum_0_s_14 + Sum_0_i_14 ) --> line 8
+Sum_0_i_15 := ( Sum_0_i_14 + 1 ) --> line 9
+Sum_0_s_16 := ( Sum_0_s_15 + Sum_0_i_15 ) --> line 8
+Sum_0_i_16 := ( Sum_0_i_15 + 1 ) --> line 9
+Sum_0_s_17 := ( Sum_0_s_16 + Sum_0_i_16 ) --> line 8
+Sum_0_i_17 := ( Sum_0_i_16 + 1 ) --> line 9
+Sum_0_s_18 := ( Sum_0_s_17 + Sum_0_i_17 ) --> line 8
+Sum_0_i_18 := ( Sum_0_i_17 + 1 ) --> line 9
+Sum_0_s_19 := ( Sum_0_s_18 + Sum_0_i_18 ) --> line 8
+Sum_0_i_19 := ( Sum_0_i_18 + 1 ) --> line 9
+Sum_0_s_20 := ( Sum_0_s_19 + Sum_0_i_19 ) --> line 8
+Sum_0_i_20 := ( Sum_0_i_19 + 1 ) --> line 9
+Sum_0_s_21 := ( Sum_0_s_20 + Sum_0_i_20 ) --> line 8
+Sum_0_i_21 := ( Sum_0_i_20 + 1 ) --> line 9
+( Sum_0_i_21 < Sum_0_n_0 ) --> line -2
+
+The system is infeasible
+------------------------
+This constraint system is linear: to calculate MCSs, we use the solver IBM ILOG MIP of CPLEX
+------------------------
+3. MCS in CSP_a:
+{line 9(Sum_0_i_1 := ( Sum_0_i_0 + 1 )): (7:1.9)}
+{line 6(Sum_0_i_0 := 0): (6)}
+{line 9(Sum_0_i_3 := ( Sum_0_i_2 + 1 )): (7:3.9)}
+{line 9(Sum_0_i_21 := ( Sum_0_i_20 + 1 )): (7:21.9)}
+{line 9(Sum_0_i_18 := ( Sum_0_i_17 + 1 )): (7:18.9)}
+{line 9(Sum_0_i_19 := ( Sum_0_i_18 + 1 )): (7:19.9)}
+{line 9(Sum_0_i_16 := ( Sum_0_i_15 + 1 )): (7:16.9)}
+{line 9(Sum_0_i_2 := ( Sum_0_i_1 + 1 )): (7:2.9)}
+{line 9(Sum_0_i_5 := ( Sum_0_i_4 + 1 )): (7:5.9)}
+{line 9(Sum_0_i_17 := ( Sum_0_i_16 + 1 )): (7:17.9)}
+{line 9(Sum_0_i_14 := ( Sum_0_i_13 + 1 )): (7:14.9)}
+{line 9(Sum_0_i_15 := ( Sum_0_i_14 + 1 )): (7:15.9)}
+{line 9(Sum_0_i_12 := ( Sum_0_i_11 + 1 )): (7:12.9)}
+{line 9(Sum_0_i_13 := ( Sum_0_i_12 + 1 )): (7:13.9)}
+{line 9(Sum_0_i_10 := ( Sum_0_i_9 + 1 )): (7:10.9)}
+{line 9(Sum_0_i_11 := ( Sum_0_i_10 + 1 )): (7:11.9)}
+{line 9(Sum_0_i_8 := ( Sum_0_i_7 + 1 )): (7:8.9)}
+{line 9(Sum_0_i_9 := ( Sum_0_i_8 + 1 )): (7:9.9)}
+{line 9(Sum_0_i_6 := ( Sum_0_i_5 + 1 )): (7:6.9)}
+{line 9(Sum_0_i_4 := ( Sum_0_i_3 + 1 )): (7:4.9)}
+{line 9(Sum_0_i_20 := ( Sum_0_i_19 + 1 )): (7:20.9)}
+{line 9(Sum_0_i_7 := ( Sum_0_i_6 + 1 )): (7:7.9)}
+
+Runtime of the method that compute MCS: 5.591
+MIVcard(ctrs,line 6)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 9)=1.0
+
+The number of instructions suspected: 22
+
+The resulats:
+1. Elapsed time during DFS exploration and MCS calculation: 5.633
+2. The sum of computation time of MCS isolations only: 5.591
+
+Suspicious instructions:7,6,9
+The number of suspicious instructions:3
+
+By deviating '2' condition(s), we obtain:
+
+
+The resulats:
+1. Elapsed time during DFS exploration and MCS calculation: 0.03
+2. The sum of computation time of MCS isolations only: 0.0
+
+Suspicious instructions:7,6,9
+The number of suspicious instructions:3
+
+/***************************************************************/
+The final resulats:
+1. The pretreatment(CFG building) time: 1.103
+2. Elapsed time during DFS exploration and MCS calculation: 6.823
+Total elapsed time: 8.217 s.

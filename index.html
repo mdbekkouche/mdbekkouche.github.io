@@ -1,49 +1,446 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site Personnel</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Bienvenue sur Mon Site Personnel</h1>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="style3.css" />
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <script>
+      function blink(ob)
+      {
+        if (ob.style.visibility == "visible" )
+        {
+            ob.style.visibility = "hidden";
+        }
+        else 
+        {
+            ob.style.visibility = "visible";
+        }
+      }
+      setInterval("blink(bl)",500);
+      setInterval("blink(bl1)",500);
+      setInterval("blink(bl2)",500);
+    </script>
+         
+    <title>Mohammed BEKKOUCHE</title>
+  </head>
+  
+  <!--[if IE 6 ]><body class="ie6 old_ie"><![endif]-->
+  <!--[if IE 7 ]><body class="ie7 old_ie"><![endif]-->
+  <!--[if IE 8 ]><body class="ie8"><![endif]-->
+  <!--[if IE 9 ]><body class="ie9"><![endif]-->
+  <!--[if !IE]><!--><body><!--<![endif]-->
+  
+  
+    <div id="bloc_page">
+        <header>
+        <div id="titre_principal">
+          <div class="header-container">
+	    <img src="images/logoESI.png" alt="Logo de Zozor" id="logo" />
+	    <a href="https://www.esi-sba.dz/fr/" class="header-link">
+		<div class="header-title">École Nationale Supérieure en Informatique de Sidi Bel Abbès, Algérie</div>
+	    </a>
+	</div>
+
+
+          <h2><b>Welcome on the  website of Mohammed Bekkouche!</b></h2>
+          
+        </div>
+        
         <nav>
-            <ul>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#research">Recherche</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+          <ul>
+            <font size=2.8>
+              <li><a href="index.html">Accueil</a></li>
+            <!--  <li><a href="agenda.html">My agenda</a></li>-->
+              <li><a href="Tools.html">Tools</a></li> 
+              <li><a href="Bench_Mohammed.html">Our Benchmarks</a></li>
+              <li><a href="Bug_stories.html">Bug Stories</a></li>
+              <li><a href="mailto:mdbekkouche@gmail.com">Contact</a></li>
+            </font>
+          </ul>
         </nav>
-    </header>
+      </header>
+      
+      
+      <section>
+        <article>
+          <div id="sommaire" class="hover">
+          <h2>Summary</h2>
+          <ul> 	
+            <li><a href="index.html#im">Introducing myself</a></LI>
+	    <li><a href="index.html#me">My education</a></LI>
+	    <li><a href="index.html#rai">Research areas that interest us</a></LI>
+	    <ol>
+	      <li><a href="index.html#se">Error localization</a></LI>
+	      <li><a href="index.html#cp">Constraint Programming (CP)</a></LI>
+	    </ol>
+	    <li><a href="index.html#te">Teachings</a></LI>
+	    <li><a href="index.html#rmm">Meetings</a></LI>
+	    <li><a href="index.html#rp">Publications & Talks</a></LI>
+	  </ul>
+         </div> 
 
-    <section id="projects">
-        <h2>Projets</h2>
-        <p>Voici quelques-uns de mes projets récents :</p>
-        <ul>
-            <li><a href="#">Projet 1</a> - Description du projet 1.</li>
-            <li><a href="#">Projet 2</a> - Description du projet 2.</li>
-        </ul>
-    </section>
+       
 
-    <section id="research">
-        <h2>Recherche</h2>
-        <p>Découvrez mes travaux de recherche :</p>
-        <ul>
-            <li><a href="#">Publication 1</a> - Résumé de la publication 1.</li>
-            <li><a href="#">Publication 2</a> - Résumé de la publication 2.</li>
-        </ul>
-    </section>
+          <font color="red"><h1><a name="me">My Education</a></h1></font>
+<p>
+  <b>In 2006</b>, I completed my Baccalaureate in "Natural and Life Sciences" in Sidi Bel Abbes, Algeria. <b>In 2009</b>, I earned a bachelor's degree in Computer Science with a focus on "Fundamental Computer Science" from the University of Djillali Liabes, Sidi Bel Abbes. <b>In 2011</b>, I obtained a Master's degree in Computer Science with a specialization in "Computer Science Theory" (CST) from the same university, where I graduated at the top of my class.
+</p>
+<p>
+  In <b>June 2012</b>, I received a <a href="http://edstic.unice.fr/html/resultatAllocs2012.html"><b>MERS allocation</b></a> from the <a href="http://edstic.unice.fr/"><b>STIC</b></a> Doctoral School at Nice Sophia Antipolis University and began my doctoral studies in <b>October 2012</b>. My doctoral research, conducted in cotutelle with the <b>University of Oran 1 Es-Senia</b>, focused on "<b><font color="green">Exploring the Potential of CSP for Error Localization from Counterexamples</font></b>". I was awarded my PhD in <b>December 2015</b>.
+</p>
+<p>
+  In <b>2024</b>, I achieved the <b>Habilitation à Diriger des Recherches (HDR)</b> from the École Supérieure en Informatique de Sidi Bel Abbès, Algeria.
+</p>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Pour me contacter, veuillez envoyer un e-mail à <a href="mailto:example@example.com">example@example.com</a>.</p>
-    </section>
 
-    <footer>
+<font color="red"><h1><a name="rai">Research Areas of Interest</a></h1></font>
+
+<ol>
+    <li><b><u><a name="se">Error Localization</a></u></b></li>
+    <p>
+        Error localization is a critical area in software engineering, particularly for safety-critical systems where software errors can have severe consequences. My research focuses on identifying faulty code sections using counterexamples or execution traces, which is often a complex and time-consuming task. I am dedicated to advancing constraint-based approaches that streamline the error localization process, making it more accessible and efficient for developers. My work explores novel methods to enhance the identification of problematic code, contributing to more reliable software development.
+    </p>
+    <br>
+    <li><b><u><a name="cp">Constraint Programming (CP)</a></u></b></li>
+    <p>
+        Constraint Programming is an essential tool in Operations Research and software debugging, especially when dealing with inconsistent systems. My research examines algorithms that detect inconsistencies within constraint systems by identifying Minimal Unsatisfiable Subsets (MUSs) and Minimal Correction Subsets (MCSs). These subsets help diagnose which constraints are causing conflicts, providing valuable insights for debugging. I am particularly interested in refining these algorithms to enhance their computational efficiency and applicability, contributing to more robust constraint-based solutions in real-world scenarios.
+    </p>
+    <br>
+    <li><b><u>Verification of Programs</u></b></li>
+    <p>
+        Ensuring the correctness of software programs through formal verification methods is an integral aspect of my research. I focus on developing verification techniques that detect discrepancies between expected and actual program behaviors, ensuring software reliability and safety. This work supports the creation of software that meets rigorous standards, particularly in critical systems.
+    </p>
+    <br>
+    <li><b><u>Artificial Intelligence (AI)</u></b></li>
+    <p>
+        AI plays a pivotal role in my research, where I explore its applications in automating complex tasks such as error detection and optimization. My work delves into leveraging AI techniques to improve decision-making processes within constraint-based and verification systems, making them more adaptive and intelligent.
+    </p>
+    <br>
+    <li><b><u>Natural Language Processing (NLP)</u></b></li>
+    <p>
+        My interest in NLP centers on using language technologies to enhance human-computer interaction and automate the analysis of textual data. I investigate ways to integrate NLP with other fields, such as constraint programming and verification, to create comprehensive solutions that address complex, multi-faceted problems.
+    </p>
+</ol>
+
+<font color="red"><h1><a name="te">Teachings</a></h1></font>
+	  <p>
+	    During 2012-2013 academic year, I had a teaching load of 64 hours
+	    in the Department of Computer Science, University of Nice-Sophia 
+	    Antipolis. My lessons take place in Valrose. My teaching load was : TD 
+	    on machine General Computer Science (<a href="http://deptinfo.unice.fr/%7Ejf/InfoGene/">Informatique générale</a>) with <a href="http://deptinfo.unice.fr/%7Ejf/">Mr. Jacques Farré</a>.
+	  </p>
+	  
+	  <p>
+	    During the previous year (2013-2014), I did TD on machine in General Computer Science (54 hours) and in Web Introduction (<a href="http://www.i3s.unice.fr/~tettaman/Classes/IntroWeb/">Introduction Web</a>) (12 hours) with respectively M. Jacques Farré and M. <a href="http://www.i3s.unice.fr/~tettaman/">Andrea G. B. Tettamanzi</a>. And my lessons are also in Valrose University.
+	  </p>
+
+	  <p>
+           During the first semester of this academic year (2014-2015), I taught 3 TD on machine in General Computer Science (54 hours) and 1 TD on Machine Web Introduction (12 hours) per week; my teachings were, respectively, with Cinzia Di Giusto and Fabien Givors. The total number of hours insured is 66.
+          </p>
+	  <font color="red"><h1><a name="rmm">Meetings</a></h1></font>
+	  <p>
+	    I participated at the school for young researchers <a href="http://ejcp2013.inria.fr/">EJCP'2013</a>. The school was held at the Manoir of the Vicomte in Dinard from Wednesday 22 to Sunday, May 26 and INRIA Rennes Bretagne Atlantique Centre from Monday 27 to Friday, May 31.
+	  </p>
+	  <!--<p>
+	    Regularly, I do work meetings with Mr. Michel Rueher, Mrs. Helene Collavizza and Mr. Olivier Ponsini, where I present my progress in my PhD thesis.
+	  </p>-->
+	  
+	  <font color="red"><h1><a name="rp">Publications & Talks</a></h1></font>
+          
+          
+          
+
+          <p>
+          <b>"Combinaison des techniques de Bounded Model Checking et de Programmation Par Contraintes pour l'aide à la localisation d'erreurs (présentation)."</b>  </br>
+          Mohammed Bekkouche.</br>
+          Présentation de Thèse
+          </p>
+          <iframe src="publications/PresentationMaThese.pdf" width="620" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+          <p>
+          <b>"<a href="https://hal.archives-ouvertes.fr/tel-01242557v4/document">Combining techniques of Bounded Model Checking and Constraint Programming to aid for error localization.</a>"</b> <a href="https://hal.archives-ouvertes.fr/tel-01242557">Tel-01242557</a> </br>
+          Mohammed Bekkouche.</br>
+          PhD thesis.
+          </p>
+
+          <p>
+          <b>"Exploration of the scalability of LocFaults approach for error localization with While-loops programs."</b> <a href="https://hal.archives-ouvertes.fr/hal-01132781/">Hal-01132781</a></br>
+          Mohammed Bekkouche.</br>
+          Submitted.
+          </p>
+           
+          <p>
+          <b>"Exploration de la scalabilité de LocFaults."</b> <a href="https://hal.archives-ouvertes.fr/hal-01132780">Hal-01132780</a> </br>
+          Mohammed Bekkouche.</br>
+          Submitted.
+          </p>
+
+          <p>
+          <b>"Une approche incrémentale combinant les techniques BMC et un problème CSP pour l'aide à la localisation d'erreurs (slides)."</b></br>
+          Mohammed Bekkouche.</br>
+          Presentation at the conference <a href="http://jfpc2015.labri.fr/">JFPC'15</a>.</br>
+          22-24 June 2015, Bordeaux, France.</br> 
+          </p>
+          <iframe src="https://www.slideshare.net/slideshow/embed_code/key/3KvRkdWT39omyv" width="620" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+          <p>
+          <b>"Un algorithme incrémental dirigé par les flots et basé sur les contraintes pour l'aide à la localisation d'erreurs."</b></br>
+          Mohammed Bekkouche.</br>
+          This paper has been accepted for oral presentation at <a href="http://jfpc2015.labri.fr/">JFPC 2015</a> and to be included in the conference proceedings.</br>
+          JFPC 2015 is organized at the Research Laboratory of Bordeaux in Computer Science (Labri) the 22-24 June 2015.
+          <p class="important">
+          Dans ce papier, nous présentons l'amélioration apportée à notre algorithme de localisation d'erreurs à partir de contre-exemples, LocFaults, basé sur la programmation par contraintes et dirigé par les flots. Cet algorithme analyse les chemins du CFG (Control Flow Graph) du programme erroné pour calculer les sous-ensembles d'instructions suspectes permettant de corriger le programme. Nous nous intéressons dans ce papier à présenter l'aspect incrémental de ce nouvel algorithme.
+          </p>
+          </p>
+
+	  <p> 
+          <b><a href="publications/SAC2015EV.pdf">"LocFaults: A new flow-driven and constraint-based error localization approach (slides)</a>."</b> </br>
+          Mohammed Bekkouche, Hélène Collavizza and Michel Rueher.</br>
+          Presentation at the conference <a href="http://www.acm.org/conferences/sac/sac2015/">ACM SAC'15</a>, <a href="http://fmt.cs.utwente.nl/conferences/sac-svt2015/">SVT track</a>.</br>
+          Apr 2015, Salamanca, Spain.</br>
+         <iframe src="https://www.slideshare.net/slideshow/embed_code/43425301" width="620" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+          <ul>
+             <li><a href="publications/SAC2015EV.pdf">English version</a> (available)</li>
+          </ul>
+          <iframe src="https://www.slideshare.net/slideshow/embed_code/43540967" width="620" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+          <ul>
+	     <li><a href="publications/SAC2015FV.pdf">French version</a> (available)</li>
+	  </ul>
+          </p>
+          <p> 
+          <b><a href="https://hal.archives-ouvertes.fr/hal-01094227/document">"LocFaults: A new flow-driven and constraint-based error localization approach</a>."</b> </br>
+          Mohammed Bekkouche, Hélène Collavizza and Michel Rueher.</br>
+          Article accepted to appear at the conference <a href="http://www.acm.org/conferences/sac/sac2015/">SAC 2015</a>, the 30th ACM/SIGAPP Symposium On Applied Computing, <a href="http://fmt.cs.utwente.nl/conferences/sac-svt2015/">SVT</a> - Software Verification and Testing.</br>
+          Salamanca, Spain, April 13 - 17, 2015.</br>
+          291 papers (<b>24%</b>) were accepted out of 1211 submissions !
+          <p class="important">
+          We introduce in this paper LocFaults, a new flow-driven and constraint-based approach for error localization. The input is a faulty program for which a counter-example and a post-condition are provided. To identify helpful information for error location, we generate a constraint system for the paths of the control flow graph for which at most k conditional statements may be erroneous. Then, we calculate minimal correction sets (MCS) of bounded size for each of these paths. The removal of one of these sets of constraints yields a maximal satisfiable subset, in other words, a maximal subset of constraints satisfying the post condition. To compute the MCS, we extend the algorithm proposed by Liffiton and Sakallah in order to handle programs with numerical statements more efficiently. The main advantage of this flow-driven approach is that the computed sets of suspicious instructions are small, each of them being associated to an identified path. Moreover, the constraint-programming based framework of LocFaults allows mixing of Boolean and numerical constraints in an efficient and straightforward way. Preliminary experiments are quite encouraging.
+          </p>
+          </p>
+          <p>
+          <b><a href="publications/ICS2015EV.pdf">"Constraint-Based Error Localization</a>."</b></br>
+          Michel Rueher joined work with Mohammed Bekkouche, Hélène Collavizza</br>
+          The conference <a href="https://sites.google.com/site/2015icsconference/">ICS 2015</a> : 2015 INFORMS Computing Society Conference.</br>
+          Omni Richmond Hotel Richmond, Virginia, January 11-13, 2015. </br>
+          <iframe src="https://www.slideshare.net/slideshow/embed_code/43426250" width="620" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+          <ul>
+             <li><a href="publications/ICS2015EV.pdf">English version</a> (available)</li>
+	     <li><a href="http://capv.toile-libre.org/publications/ICS2015FV.pdf">French version</a></li>
+	  </ul>
+          </p>
+
+          <p>
+           <b><a href="http://vacsim.inria.fr/Reunions/2014-Octobre/I3S.pdf">"Error Localization</a></b>."</br> 
+           Mohammed Bekkouche, Hélène Collavizza,  Michel Rueher.</br>
+           Presentation at the plenary meeting of <a href="http://vacsim.inria.fr/index.html">the VACSIM project</a> (Validation de la commande des systèmes critiques par couplage simulation et méthodes d’analyse formelle – Validation of the control of critical systems by coupling simulation and formal analysis methods).</br>
+            University Laboratory of Research in Automated Production (LURPA), ENS Cachan, 14 and 15 October 2014.</br>
+            <iframe src="https://www.slideshare.net/slideshow/embed_code/43426669" width="620" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+            <ul>
+	     <li><a href="http://vacsim.inria.fr/Reunions/2014-Octobre/I3S.pdf">English version</a> (available)</li>
+             <li><a href="http://capv.toile-libre.org/publications/Vascim2015OctoberMeetingFV.pdf">French version</a></li>
+	    </ul>
+          </p>
+
+          <p>
+	    <b><a href="publications/PresentationJFPCVersionFinale.pdf">"Une approche bornée à base de contraintes pour l'aide à la localisation d’erreurs</a></b>."</br>
+	    Mohammed Bekkouche, Hélène Collavizza,  Michel Rueher.</br>
+	    Présentation aux Dixièmes Journées Francophones de Programmation par Contraintes (<a href="http://jfpc-jiaf2014.univ-angers.fr/jfpc/">JFPC 2014</a>).</br>
+	    Angers, France, Juin 2014, <a href="publications/PresentationJFPCVersionFinale.pdf">pdf</a>.</br>
+            <iframe src="https://www.slideshare.net/slideshow/embed_code/40430139" width="620" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+	    <ul>
+	      <li><a href="publications/PresentationJFPCVersionFinale.pdf">French version</a> (available)</li>
+	    </ul>
+	  <p class="important">
+	    Lorsqu'un programme est non-conforme vis-à-vis de sa spécification ou dit erroné, fournir des informations utiles à la localisation des erreurs est une tâche importante pour débugger le programme mais complexe en même temps. Le but est de fournir un ensemble réduit d'instructions suspectes permettant de comprendre l'origine des erreurs dans le programme. Dans ce papier nous proposons une nouvelle approche basée sur les contraintes pour l'aide à la localisation d'erreurs pour lequel un contre-exemple est disponible, c'est-à-dire que l'on dispose d'un cas de test prouvant la non-conformité.
+	    A partir du contre-exemple, notre approche génère un système de contraintes pour chaque chemin du CFG (Control Flow Graphe) pour lequel au plus k instructions conditionnelles sont suspectées. Après, elle calcule les MCS (Minimal Correction Subsets) d'une taille bornée pour chaque chemin erroné. Le retrait d'un de ces ensemble de contraintes produit un MSS (Maximal Satisfiable Subset), un ensemble qui ne viole plus la postcondition. Nous adaptons pour cela un algorithme générique proposé par Liffiton et Sakallah afin de pouvoir traiter plus efficacement des programmes avec des calculs numériques. Nous présentons les résultats de nos expérimentations qui sont très encourageants.
+	  </p>
+	  <ul>
+	    <li><a href="publications/PresentationJFPCFinalVersion.pdf">English version</a> (available)</li>
+	  </ul>
+	  <p>
+	  <p class="important">
+	    When a program is not conform to its specification, i.e., the program is erroneous, provide useful information for error localization is an important task to debug the program but complex at the same time. The goal is to provide a reduced set of suspicious statements to understand the origin of errors in the program. In our research we propose a new constraint-based approach to support the problem of error localization for which a counterexample is available, i.e., a test case proving the non conformity. From the counterexample, our approach generate a constraint system for each path of the CFG (Control Flow Graph) for which at most k conditional statements are suspected. Then, we calculate Minimal Correction Subsets (MCS) of bounded size for each erroneous path. The removal of one of these sets of constraints yields a Maximal Satisfiable Subset (MSS), a maximal subset of constraints satisfying the postcondition. We export and adapt the generic algorithm proposed by Liffiton and Sakallah to handle programs with numerical statements more efficiently. We present preliminary experimental results that are quite encouraging. 
+	  </p>
+          </p>
+	  <p>
+	    <b><a href="http://hal.archives-ouvertes.fr/hal-00957255">"Une approche CSP pour l'aide à la localisation d'erreurs</a></b>."</br>
+	    Mohammed Bekkouche, Hélène Collavizza,  Michel Rueher.</br>
+	    Dixièmes Journées Francophones de Programmation par Contraintes (<a href="http://jfpc-jiaf2014.univ-angers.fr/jfpc/">JFPC 2014</a>).
+	    <a href="http://hal.archives-ouvertes.fr/hal-00957255"> 
+	      HAL : hal-00957255 </a>
+	    <ul>
+	      <li><a href="http://hal.archives-ouvertes.fr/docs/00/95/72/55/PDF/mcs_jfpc14.pdf">Version 1(10/03/2014)</a> (available)</li>
+	    </ul>
+	  <p class="important">
+	    Nous proposons dans cet article une nouvelle approche baséee sur la CP pour l'aide à la localisation des erreurs dans un programme. Nous supposons qu'un contre-exemple a été trouvé, c'est à dire que l'on dispose d'une instanciation des variables d'entrée qui viole la post-condition. Pour aider à localiser les erreurs, nous générons un système de contraintes pour les chemins du CFG (Graphe de Flot de Controle) où au plus k instructions conditionnelles sont susceptibles de contenir des erreurs. Puis, nous calculons pour chacun de ces chemins des ensembles minima de correction (ou MCS - Minimal Correction Set) de taille bornée. Le retrait d'un de ces ensembles de contraintes produit un MSS (Maximal Satisfiable Subset) qui ne viole plus la post condition. Nous adaptons pour cela un algorithme proposé par Liffiton et Sakallah afin de pouvoir traiter plus efficacement des programmes avec des calculs numériques. Nous présentons les résultats des premières expérimentations qui sont très encourageants. 
+	  </p>
+	  <ul>
+	    <li><a href="http://hal.archives-ouvertes.fr/docs/00/98/38/97/PDF/mcs_jfpc14.pdf">Version 2(25/04/2014)</a> (available)</li> 
+	  </ul>
+	  </p>
+	  <p class="important">
+	    We introduce in this paper a new CP-based approach to support errors location in a program for which a counter-example is available, i.e. an instantiation of the input variables that violates the post-condition. To provide helpful information for error location, we generate a constraint system for the paths of the CFG (Control Flow Graph) for which at most k conditional statements may be erroneous. Then, we calculate Minimal Correction Sets (MCS) of bounded size for each of these paths. The removal of one of these sets of constraints yields a maximal satisfiable subset, in other words, a maximal subset of constraints satisfying the post condition. We extend the algorithm proposed by Liffiton and Sakallah to handle programs with numerical statements more efficiently. We present preliminary experimental results that are quite encouraging
+	  </p>
+	  
+	  <!--<p>
+	    <b><a href="http://users.polytech.unice.fr/~rueher/Publis/Talk_NII_2013-11-06.pdf">"Algorithms For Error Localization On Numeric Constraints</a></b>."</br>
+	    Mohammed Bekkouche, Hélène Collavizza, Michel Rueher.</br>
+	    Seminar at NII (National Institute of Informatics, Tokyo), 6 November 2013, <a href="http://users.polytech.unice.fr/~rueher/Publis/Talk_NII_2013-11-06.pdf">pdf file</a> 
+	    <ul>
+	      <li><a href="http://users.polytech.unice.fr/~rueher/Publis/Talk_NII_2013-11-06FrenchVersion.pdf">French version</a></li>
+	      <li><a href="http://users.polytech.unice.fr/~rueher/Publis/Talk_NII_2013-11-06.pdf">English version</a> (available)</li>
+	    </ul>
+	  </p>-->
+	  <p>
+	    <b><a href="publications/presentation_Bekkouche_Mohammed_NiceEJCP.pdf">"Constraint-based fault localization</a></b>."</br>
+	    Mohammed Bekkouche, Hélène Collavizza, Michel Rueher.</br>
+	    Ecole jeunes chercheurs en programmation (<a href="http://ejcp2013.inria.fr/">EJCP'13</a>).</br>
+	    Rennes, France, Mai 2013, <a href="publications/presentation_Bekkouche_Mohammed_NiceEJCP.pdf">pdf</a>
+	    <ul>
+	      <li><a href="http://capv.toile-libre.org/publications/presentation_Bekkouche_Mohammed_NiceEJCPFrenchVersion.pdf">French version</a></li>
+	      <li><a href="publications/presentation_Bekkouche_Mohammed_NiceEJCP.pdf">English version</a> (available)</li>
+	    </ul>
+	    
+	  </p>
+	  <p>  
+	    <b><a href="publications/presentation_Bekkouche_Mohammed_Nice.pdf">"On going work on error localization with IIS</a></b>."</br> 
+	    Mohammed Bekkouche, Hélène Collavizza, Michel Rueher.</br>
+	    Conference room (I3S).</br>
+	    Nice, France, Mars 2013, <a href="publications/presentation_Bekkouche_Mohammed_Nice.pdf">pdf</a>
+	    <ul>
+	      <li><a href="publications/presentation_Bekkouche_Mohammed_NiceFrenchVersion.pdf">French version</a> (available)</li>
+	      <li><a href="publications/presentation_Bekkouche_Mohammed_Nice.pdf">English version</a>  (available)</li>
+	    </ul>
+	  </p>
+	  <p> 
+	    <b><a href="publications/Presentation_Mohammed-Bekkouche_EDSTIC.pdf">Exploration des capacités des CSP pour la localisation d'erreurs à partir de contre-exemples</a></b>.</br>
+	    Concours pour les allocations (MESR 2012).</br>
+	    Mohammed Bekkouche, Hélène Collavizza, Michel Rueher.</br>
+	    Salle de conférence (I3S), Nice, France, Juin 2012, <a href="publications/Presentation_Mohammed-Bekkouche_EDSTIC.pdf">pdf</a> 
+	    <ul>
+	      <li><a href="publications/Presentation_Mohammed-Bekkouche_EDSTIC.pdf">French version</a> (available)</li>
+	      <li><a href="http://capv.toile-libre.org/publications/Presentation_Mohammed-Bekkouche_EDSTICEnglishVersion.pdf">English version</a></li>
+	    </ul>
+	  </p>
+      
+      <!--<font color="red"><h1><a name="mrdt">Some of my reports during the thesis (most are in French)</a></h1></font>
+          <p>
+ 
+          </p>
+          <p>
+          <b><a href="http://capv.toile-libre.org/publications/rapport_08-05-2013.pdf">Exploration des capacités de la programmation par contraintes pour l'aide à la localisation d'erreurs</a>, 08-05-2013, <a href="http://capv.toile-libre.org/publications/rapport_08-05-2013.pdf">pdf</a></b>
+          </p>
+          <p> 
+          <b><a href="http://capv.toile-libre.org/publications/Rapport_Mohammed-BEKKOUCHE_05-08-2013-LITIO-YL.pdf">Adaptation et implémentation de l'algorithme de liffiton et Sakallah dans le cadre la localisation d'erreurs avec l'outil CPBPV</a>, 05-08-2013, <a href="http://capv.toile-libre.org/publications/Rapport_Mohammed-BEKKOUCHE_05-08-2013-LITIO-YL.pdf">pdf</a></b>
+          </p>
+          <p>
+          <b><a href="http://capv.toile-libre.org/publications/report_01-11-2013.pdf">IIS/MUS versus MCS : Qui est le mieux pour l'aide à la localisation d'erreurs ?</a>, 01-11-2013, <a href="http://capv.toile-libre.org/publications/report_01-11-2013.pdf">pdf</a></b> 
+          </p>
+          <p>
+          <b><a href="http://capv.toile-libre.org/publications/Nouveau-Rapport-12-11-2013(BEKKOUCHE-Mohammed).pdf">Du calcul MCS dans un CSP infaisable vers la localisation d'erreurs dans un programme erroné</a>, 12-11-2013, <a href="http://capv.toile-libre.org/publications/Nouveau-Rapport-12-11-2013(BEKKOUCHE-Mohammed).pdf">pdf</a></b>
+          </p>
+          <p>
+          <b><a href="http://capv.toile-libre.org/publications/rapport_15-01-2014.pdf">LocFaults avec 0 et au plus 1 condition déviée à partir du contre-exemple</a>, 15-01-2014, <a href="http://capv.toile-libre.org/publications/rapport_15-01-2014.pdf">pdf</a></b>
+          </p>
+          <p>
+          <b><a href="http://capv.toile-libre.org/publications/report_18-02-2014.pdf">LocFaults avec 0 et au plus 1 condition déviée à partir du contre-exemple (version corrigée et améliorée)</a>, 18-02-2014, <a href="http://capv.toile-libre.org/publications/report_18-02-2014.pdf">pdf</a></b>
+          </p>
+          <p>
+          <b><a href="http://capv.toile-libre.org/publications/report_11-03-2014.pdf">LocFaults en déviant k conditions à partir du chemin du contre-exemple avec deux stratégies de parcours DFS du CFG : préfixée, infixée</a>, 11-03-2014, <a href="http://capv.toile-libre.org/publications/report_11-03-2014.pdf">pdf</a></b>
+          </p>
+          <p>
+          <b><a href="http://capv.toile-libre.org/publications/report_13-05-2014.pdf">Une approche bornée et basée sur les contraintes pour l'aide à la localisation d'erreurs</a>, 13-05-2014, <a href="http://capv.toile-libre.org/publications/report_13-05-2014.pdf">pdf</a></b>
+          </p>
+          <p>
+          <b><a href="http://capv.toile-libre.org/publications/report_10-07-2014.pdf">Localisation d'erreurs dans les boucles avec LocFaults</a>, 10-07-2014, <a href="http://capv.toile-libre.org/publications/report_10-07-2014.pdf">pdf</a></b>
+          </p>
+          <p>
+          <b><a href="http://capv.toile-libre.org/publications/report_01-01-2015.pdf">Évaluation empirique de notre approche LocFaults sur des programmes avec boucles While</a>, 01-01-2015, <a href="http://capv.toile-libre.org/publications/report_01-01-2015.pdf">pdf</a></b>
+          </p>
+          <p>
+          <b><a href="http://capv.toile-libre.org/publications/Bekkouche-Mohammed-juin-2015.pdf">Une approche combinant les techniques BMC et un problème CSP pour l'aide à la localisation
+d'erreurs</a>, 12-06-2015, <a href="http://capv.toile-libre.org/publications/Bekkouche-Mohammed-juin-2015.pdf">pdf</a></b> 
+          </p>
+          The rest is coming... </br>
+          -->
+          <!--<ul>
+          Here are the different versions of my reports during the thesis:</br> 
+          Rapport d'état d'avancement, 24-11-2012, pdf</br>
+          Rapport d'état d'avancement, 28-11-2012, pdf</br>
+          Rapport d'état d'avancement, 28-11-2012, pdf</br>
+          Rapport d'état d'avancement, 10-01-2013, pdf</br>
+          Rapport d'état d'avancement, 28-01-2013, pdf</br>
+          Rapport d'état d'avancement, 22-02-2013, pdf</br>
+          Rapport d'état d'avancement, 22-02-2013, (version englais), pdf</br>
+          Rapport d'état d'avancement, 04-03-2013, pdf</br>
+          Rapport d'état d'avancement, 12-03-2013, pdf</br>
+          Rapport d'état d'avancement, 14-03-2013, pdf</br>
+          Rapport d'état d'avancement, 01-04-2013, pdf</br>
+          Rapport d'état d'avancement, 09-04-2013, pdf</br>
+          Rapport d'état d'avancement, 16-04-2013, pdf</br>
+          Rapport d'état d'avancement, 25-04-2013, pdf</br>
+          Rapport d'état d'avancement, 30-04-2013, pdf</br>
+          Rapport d'état d'avancement, 08-05-2013, pdf</br>
+          Rapport d'état d'avancement de l'implémentation 17-06-2013, pdf</br>
+          Rapport d'état d'avancement de l'implémentation 03-07-2013, pdf</br>
+          Rapport d'état d'avancement durant ma mission à l'université d'Oran, du 12-07-2013 au 13-08-2013, pdf</br>
+          Rapport d'état d'avancement, 01-11-2013, pdf</br>
+          Rapport d'état d'avancement, 02-11-2013, pdf</br>
+          Rapport d'état d'avancement, 04-11-2013, pdf</br>
+          Rapport d'état d'avancement, 27-12-2013, pdf</br>
+          Rapport d'état d'avancement, 15-01-2014, pdf</br>
+          Rapport d'état d'avancement, 28-01-2014, pdf</br>
+          Rapport d'état d'avancement, 18-02-2014, pdf</br>
+          Rapport d'état d'avancement, 20-02-2014, pdf</br>
+          Rapport d'état d'avancement, 24-02-2014, pdf</br>
+          Rapport d'état d'avancement, 25-02-2014, pdf</br>
+          Rapport d'état d'avancement, 01-03-2014, pdf</br>
+          Rapport d'état d'avancement, 04-03-2014, pdf</br>
+          Rapport d'état d'avancement, 11-03-2014, pdf</br>
+          Algorithme LocFaults, 30-04-2014, pdf</br>
+          Rapport d'état d'avancement, 06-05-2014, pdf</br>
+          Rapport d'état d'avancement, 07-05-2014, pdf</br>
+          Rapport d'état d'avancement, 21-07-2014, pdf</br>
+          Rapport d'état d'avancement, 05-08-2014, pdf</br>
+          Rapport d'état d'avancement, 01-09-2014, pdf</br>
+          Rapport d'état d'avancement, 07-09-2014, pdf</br>
+          Rapport d'état d'avancement, 10-09-2014, pdf</br>
+          Rapport d'état d'avancement, 16-09-2014, pdf</br>
+          Rapport d'état d'avancement, 18-09-2014, pdf</br>
+          Rapport d'état d'avancement, 25-09-2014, pdf</br>
+          Rapport d'état d'avancement, 01-10-2014, pdf</br>
+          Rapport d'état d'avancement, 15-01-2014, pdf</br>
+          Rapport d'état d'avancement, 13-05-2014, pdf</br>
+          Rapport d'état d'avancement, 10-07-2014, pdf</br>
+	  </ul>
+	  -->
+	</article>
+
+	<aside>
+	  <font color="red"><h1><a name="im">Introducing myself</a></h1></font>
+	  <img src="images/bulle.png" alt="" id="fleche_bulle" />
+	  <center id="photo_zozor"><img src="images/MaPhoto.jpg" WIDTH=200 HEIGHT=200 alt="Mohammed BEKKOUCHE" /></center>
+	  <p>
+	    &nbsp; A brief presentation of who I am... I hold a PhD in Computer Science from the <a href="http://unice.fr/">Université Côte d'Azur</a> and <a href="https://www.univ-oran1.dz/">Université d'Oran 1</a>. My research interests lie in software engineering, focusing on testing, bounded model checking, and error localization in computer programs. I am also passionate about Constraint Programming, Artificial Intelligence, and Natural Language Processing (NLP), as well as techniques for diagnosing incorrect constraint systems. Currently, I am a <b>Maître de Conférences Classe A</b> at the <b><a href="https://www.esi-sba.dz/fr/">École Supérieure en Informatique de Sidi Bel Abbès</a></b> in Algeria.</p> <br/> <br/>
+          <a href="publications/CV_Mohammed-Bekkouche.pdf">My curriculum vitae</a> <br/> <br/>
+
+          <a href="http://mohammed-bekkouche.branded.me/">My page on branded.me</a>
+           
+	  <p><b>Follow me on :</b></br><a href="https://www.linkedin.com/pub/mohammed-bekkouche/9b/638/b3"><img src="images/linkedin.png" WIDTH=41 HEIGHT=41 alt="linkedin"/></a><a href="https://www.researchgate.net/profile/Bekkouche_Mohammed"><img src="images/RG.png" WIDTH=41 HEIGHT=41 alt="researchgate"/></a><a href="https://twitter.com/mdbekkouche"><img src="images/twitter.png" alt="Twitter" /></a><a href="http://fr.slideshare.net/MohammedBekkouche"><img src="images/SlideShare.png"  WIDTH=40 HEIGHT=40 alt="SlideShare" /></a></p>
+            <!--<a class="twitter-timeline"  href="https://twitter.com/mdbekkouche" data-widget-id="556143022984134657">Tweets de @mdbekkouche</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>-->
+          
+
+             
+	</aside>
+      </section>
+      
+      <footer>
         <p>&copy; 2024 Mohammed Bekkouche. Tous droits réservés.</p>
     </footer>
-</body>
+    </div>
+  </body>
 </html>
-

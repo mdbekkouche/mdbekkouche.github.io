@@ -1,0 +1,59 @@
+Command exited with non-zero status 10
+55.27user 0.65system 0:58.30elapsed 95%CPU (0avgtext+0avgdata 28312maxresident)k
+0inputs+3920outputs (0major+246867minor)pagefaults 0swaps
+ecking BubbleSortV0
+Generating GOTO Program
+Pointer Analysis
+Adding Pointer Checks
+Starting Bounded Model Checking
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 2 iteration 1
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 2 iteration 2
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 2 iteration 3
+Unwinding loop 1 iteration 1
+Unwinding loop 1 iteration 2
+Unwinding loop 1 iteration 3
+Unwinding loop 1 iteration 4
+Unwinding loop 2 iteration 4
+size of program expression: 542 assignments
+Generated 218 claims, 218 remaining
+Passing problem to MiniSAT
+Passing to decision procedure
+Running MiniSAT
+Solving with MiniSAT
+21635 variables, 48584 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Building error trace
+
+Counterexample:
+
+Violated property:
+  file /home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithArray/BubbleSort/Versions/BubbleSortV0.c line 24
+  assertion
+  tab[0] >= tab[1] && tab[1] >= tab[2] && tab[2] >= tab[3]
+
+< 1 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithArray/BubbleSort/Versions/BubbleSortV0.c:20
+
+< 3 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithArray/BubbleSort/Versions/BubbleSortV0.c:6
+
+< 4 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithArray/BubbleSort/Versions/BubbleSortV0.c:5
+
+< 5 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithArray/BubbleSort/Versions/BubbleSortV0.c:12
+
+< 12 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithArray/BubbleSort/Versions/BubbleSortV0.c:9
+
+< 27 > Potential BUG @ :/home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/Programs/WithArray/BubbleSort/Versions/BubbleSortV0.c:22
+
+BUG Assist: No More suspects:
+VERIFICATION FAILED

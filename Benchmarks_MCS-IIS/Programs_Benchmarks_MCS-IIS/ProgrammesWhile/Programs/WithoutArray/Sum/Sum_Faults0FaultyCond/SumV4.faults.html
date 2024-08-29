@@ -1,0 +1,76 @@
+DOING LOCALIZATION...
+NLS missing message: initializer_error in: org.eclipse.core.internal.runtime.messages
+NLS missing message: fileInitializer_fileNotFound in: org.eclipse.core.internal.runtime.messages
+NLS missing message: fileInitializer_IOError in: org.eclipse.core.internal.runtime.messages
+NLS missing message: fileInitializer_missingFileName in: org.eclipse.core.internal.runtime.messages
+
+Starting conversion of file: /home/mdbekkouche/These/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/ProgrammesWhile/Programs/WithoutArray/Sum/Versions/SumV4.java
+Loops are unwound 10 times.
+
+From the counterexample, LocFaults calculates MCS by exploring the graph in DFS from top to bottom and by deviating at most '0' conditional statements.
+Solver: CP OPTIMIZER
+By deviating '0' condition(s), we obtain:
+
+1. CSP_d: empty set
+------------------------
+2. CSP_a:
+Sum_0_n_0 := 9 --> line -1
+Sum_0_s_0 := 0 --> line 5
+Sum_0_i_0 := 0 --> line 6
+Sum_0_s_1 := ( Sum_0_s_0 + Sum_0_i_0 ) --> line 8
+Sum_0_i_1 := ( Sum_0_i_0 + 1 ) --> line 9
+Sum_0_s_2 := ( Sum_0_s_1 + Sum_0_i_1 ) --> line 8
+Sum_0_i_2 := ( Sum_0_i_1 + 1 ) --> line 9
+Sum_0_s_3 := ( Sum_0_s_2 + Sum_0_i_2 ) --> line 8
+Sum_0_i_3 := ( Sum_0_i_2 + 1 ) --> line 9
+Sum_0_s_4 := ( Sum_0_s_3 + Sum_0_i_3 ) --> line 8
+Sum_0_i_4 := ( Sum_0_i_3 + 1 ) --> line 9
+Sum_0_s_5 := ( Sum_0_s_4 + Sum_0_i_4 ) --> line 8
+Sum_0_i_5 := ( Sum_0_i_4 + 1 ) --> line 9
+Sum_0_s_6 := ( Sum_0_s_5 + Sum_0_i_5 ) --> line 8
+Sum_0_i_6 := ( Sum_0_i_5 + 1 ) --> line 9
+Sum_0_s_7 := ( Sum_0_s_6 + Sum_0_i_6 ) --> line 8
+Sum_0_i_7 := ( Sum_0_i_6 + 1 ) --> line 9
+Sum_0_s_8 := ( Sum_0_s_7 + Sum_0_i_7 ) --> line 8
+Sum_0_i_8 := ( Sum_0_i_7 + 1 ) --> line 9
+Sum_0_s_9 := ( Sum_0_s_8 + Sum_0_i_8 ) --> line 8
+Sum_0_i_9 := ( Sum_0_i_8 + 1 ) --> line 9
+Sum_0_s_10 := Sum_0_s_9 --> line 0
+Sum_0_i_10 := Sum_0_i_9 --> line 0
+Sum_0_Result_0 := Sum_0_s_10 --> line 11
+( ( Sum_0_Result_0 == ( ( ( Sum_0_n_0 * ( ( Sum_0_n_0 + 1 ) ) ) ) / 2 ) ) ) --> line -2
+
+The system is infeasible
+------------------------
+This constraint system is nonlinear: to calculate MCSs, we use the solver IBM ILOG CP OPTIMIZER of CPLEX
+------------------------
+3. MCS in CSP_a:
+{line 8(Sum_0_s_9 := ( Sum_0_s_8 + Sum_0_i_8 )): (7:9.8)}
+{line 9(Sum_0_i_8 := ( Sum_0_i_7 + 1 )): (7:8.9)}
+{line 8(Sum_0_s_7 := ( Sum_0_s_6 + Sum_0_i_6 )): (7:7.8)}
+{line 8(Sum_0_s_1 := ( Sum_0_s_0 + Sum_0_i_0 )): (7:1.8)}
+{line 8(Sum_0_s_8 := ( Sum_0_s_7 + Sum_0_i_7 )): (7:8.8)}
+{line 8(Sum_0_s_3 := ( Sum_0_s_2 + Sum_0_i_2 )): (7:3.8)}
+{line 0(Sum_0_s_10 := Sum_0_s_9): (0)}
+{line 8(Sum_0_s_2 := ( Sum_0_s_1 + Sum_0_i_1 )): (7:2.8)}
+{line 11(Sum_0_Result_0 := Sum_0_s_10): (11)}
+{line 8(Sum_0_s_4 := ( Sum_0_s_3 + Sum_0_i_3 )): (7:4.8)}
+{line 5(Sum_0_s_0 := 0): (5)}
+{line 8(Sum_0_s_6 := ( Sum_0_s_5 + Sum_0_i_5 )): (7:6.8)}
+{line 8(Sum_0_s_5 := ( Sum_0_s_4 + Sum_0_i_4 )): (7:5.8)}
+{line 9(Sum_0_i_5 := ( Sum_0_i_4 + 1 )): (7:5.9),line 9(Sum_0_i_6 := ( Sum_0_i_5 + 1 )): (7:6.9),line 9(Sum_0_i_7 := ( Sum_0_i_6 + 1 )): (7:7.9),line 9(Sum_0_i_9 := ( Sum_0_i_8 + 1 )): (7:9.9)}
+
+Runtime of the method that compute MCS: 0.971
+
+The resulats:
+1. Elapsed time during DFS exploration and MCS calculation: 1.015
+2. The sum of computation time of MCS isolations only: 0.971
+
+Suspicious instructions:
+The number of suspicious instructions:0
+
+/***************************************************************/
+The final resulats:
+1. The pretreatment(CFG building) time: 1.109
+2. Elapsed time during DFS exploration and MCS calculation: 1.015
+Total elapsed time: 2.416 s.

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style1.css" />
+  <title>Tools Mohammed BEKKOUCHE</title>
+ </head>
+
+<body>
+<div id="bloc_page">
+      <header>
+        <div id="titre_principal">
+          <div class="header-container">
+	    <img src="images/logoESI.png" alt="Logo de Zozor" id="logo" />
+	    <a href="https://www.esi-sba.dz/fr/" class="header-link">
+		<div class="header-title">École Nationale Supérieure en Informatique de Sidi Bel Abbès, Algérie</div>
+	    </a>
+	</div>
+
+        
+        <nav>
+          <ul>
+            <font size=2.8>
+              <li><a href="index.html">Accueil</a></li>
+            <!--  <li><a href="agenda.html">My agenda</a></li>-->
+              <li><a href="Tools.html">Tools</a></li> 
+              <li><a href="Bench_Mohammed.html">Our Benchmarks</a></li>
+              <li><a href="Bug_stories.html">Bug Stories</a></li>
+              <li><a href="mailto:mdbekkouche@gmail.com">Contact</a></li>
+            </font>
+          </ul>
+        </nav>
+      </header>
+
+<section>
+<article>
+
+
+
+<ul class="menu">
+<li><a href="ToolsEnglishVersion.html#benres">Tools to aid in error localization</a></li>
+<ul>
+<li><a href="ToolsEnglishVersion.html#LF">Our tool <b>"LocFaults"</b></a></li>
+<ol type="I">
+<li><a href="ToolsEnglishVersion.html#a1">Abstract</a></li>
+<li><a href="ToolsEnglishVersion.html#b1">Illustrative example</a></li>
+<li><a href="ToolsEnglishVersion.html#c1">Algorithms used in the tool</a></li>
+<ul>
+<li><a href="ToolsEnglishVersion.html#c11">Calculation of MCS/CoMSS</a></li>
+<li><a href="ToolsEnglishVersion.html#c12">DFS bounded exploration</a></li>
+</ul>
+<li><a href="ToolsEnglishVersion.html#d1">Constraint solvers used</a></li>
+<ul>
+<li><a href="ToolsEnglishVersion.html#e1">IBM ILOG CPLEX</a></li>
+<ul>
+<li><a href="ToolsEnglishVersion.html#e11">The MIP version</a></li>
+<li><a href="ToolsEnglishVersion.html#e12">The CP version</a></li>
+</ul>
+<li><a href="ToolsEnglishVersion.html#f1">Solvers in perspective</a></li>
+<ul>
+<li><a href="ToolsEnglishVersion.html#f11">Z3 of Microsoft</a></li>
+<li><a href="ToolsEnglishVersion.html#f12">FPCS (solver over floating-point numbers computations)</a></li>
+<li><a href="ToolsEnglishVersion.html#f13">GLPK</a></li>
+<li><a href="ToolsEnglishVersion.html#f14">Realpaver</a></li>
+<li><a href="ToolsEnglishVersion.html#f15">Fluctuat</a></li>
+<li><a href="ToolsEnglishVersion.html#f16">SCIP</a></li>
+<ul>
+<li><a href="ToolsEnglishVersion.html#f161">The LP version (SoPlex)</a></li>
+<li><a href="ToolsEnglishVersion.html#f162">The MIP and MINLP version</a></li>
+</ul>
+<li><a href="ToolsEnglishVersion.html#f17">SAT solveurs</a></li>
+
+</ul>
+</ul>
+<li><a href="ToolsEnglishVersion.html#g1">How to download the tool</a></li>
+<ul>
+<li><a href="ToolsEnglishVersion.html#g11">Installation</a></li>
+<li><a href="ToolsEnglishVersion.html#g12">Command line version </a></li>
+<li><a href="ToolsEnglishVersion.html#g13">Graphic version</a></li>
+</ul>
+<li><a href="ToolsEnglishVersion.html#h1">User Manual</a></li>
+<li><a href="ToolsEnglishVersion.html#i1">Experiments</a></li>
+<ul>
+<li><a href="ToolsEnglishVersion.html#i11">Experimental protocol</a></li>
+<li><a href="ToolsEnglishVersion.html#i12">Detailed results</a></li>
+<li><a href="ToolsEnglishVersion.html#i13">Analyses</a></li>
+</ul>
+<li><a href="ToolsEnglishVersion.html#j1">Future work</a></li>
+</ol>
+<li><a href="ToolsEnglishVersion.html#BA">Tools of the state of the art</a></li>
+<ol type="I">
+<li><a href="ToolsEnglishVersion.html#a2">Tools based on systematic testing</a></li>
+<ul>
+<li><a href="ToolsEnglishVersion.html#a22">Tarantula</a></li>
+<li><a href="ToolsEnglishVersion.html#a22">Ochiai</a></li>
+<li><a href="ToolsEnglishVersion.html#a23">Delta Debugging</a></li>
+<li><a href="ToolsEnglishVersion.html#a24">AMPLE</a></li>
+<li><a href="ToolsEnglishVersion.html#a25">Jaccard</a></li>
+<li><a href="ToolsEnglishVersion.html#a26">Heuristics III</a></li>
+<li><a href="ToolsEnglishVersion.html#a27">CBI</a></li>
+<li><a href="ToolsEnglishVersion.html#a28">DES</a></li>
+<li><a href="ToolsEnglishVersion.html#a29">SOBER</a></li>
+<li><a href="ToolsEnglishVersion.html#a210">SKKU Fault localizer</a></li>
+<li><a href="ToolsEnglishVersion.html#a211">Pinpoint</a></li>
+</ul>
+<li><a href="ToolsEnglishVersion.html#a3">Tools based on Boolean translation of the program</a></li>
+<ul>
+<li><a href="ToolsEnglishVersion.html#d31">explain</a></li>
+<li><a href="ToolsEnglishVersion.html#a32">BugAssist</a></li>
+<li><a href="ToolsEnglishVersion.html#d3">SNIPER</a></li>
+</ul>
+<li><a href="ToolsEnglishVersion.html#a4">More tools</a></li>
+<ul>
+<li><a href="ToolsEnglishVersion.html#41">DIDUCE</a></li>
+<li><a href="ToolsEnglishVersion.html#42">Darwin</a></li>
+<li><a href="ToolsEnglishVersion.html#43">Nopol</a></li>
+<li><a href="ToolsEnglishVersion.html#44">SemFix</a></li>
+<li><a href="ToolsEnglishVersion.html#44">GenProg</a></li>
+<li><a href="ToolsEnglishVersion.html#45">AutoFix-E</a></li>
+<li><a href="ToolsEnglishVersion.html#46">AutoFix-E2</a></li>
+<li><a href="ToolsEnglishVersion.html#47">BugFix</a></li>
+<li><a href="ToolsEnglishVersion.html#48">ClearView</a></li>
+<li><a href="ToolsEnglishVersion.html#49">PHPRepair</a></li>
+<li><a href="ToolsEnglishVersion.html#410">BugZilla</a></li>
+<li><a href="ToolsEnglishVersion.html#411">ReBucket</a></li>
+<li><a href="ToolsEnglishVersion.html#412">BFFinder</a></li>
+<li><a href="ToolsEnglishVersion.html#413">LOBBYS</a></li>
+<li><a href="ToolsEnglishVersion.html#414">CBCD</a></li>
+<li><a href="ToolsEnglishVersion.html#415">BugLocalizer</a></li>
+
+</ul>
+</ol>
+
+
+</ul>
+</ul>
+
+<h2><font color="red"><a name="outils">Tools to aid in error localization</a></font></h2>
+<p>
+This webpage is devoted to describe our error localization tool, <b>LocFaults</b>. We will also explain other tools that exist in the state of the art that we studied in our work (examples BugAssist, Tarantula).
+</p>
+<h2><a name="LF">Our tool  <b>"LocFaults"</b></a></font></h2>
+<ol type="I">
+<li><h1><a name="a1">Abstract</a></font></h1></li>
+<p>Obtain useful information to the error localization in an erroneous program is a task considered to be difficult, even for experienced programmers. The tool presented here, named LocFaults, by providing only relevant suspicious instructions,  helps users in this task. From a counterexample, <b>LocFaults</b> explores the CFG of the program in depth and collects constraints of instructions for each path. When a wrong path is detected, the tool isolates the MCS (Minimal Correction Subset) sets of bounded size from the set of constraints corresponding to the path. Specifically, our algorithm propagates the counterexample on the CFG of the programme to explore the corresponding path (the path of counterexample). After, it starts looking suspicious instructions for the other erroneous paths by deviating at most K conditions from the path of the counterexample. If the resulting path satisfies the postcondition (in other words, if the output of the program after the deviation with the counterexample does not contradict the postcondition), it calculates the MCS on the path that reaches the final condition deviated ; otherwise, the path is discarded. To calculate the MCS, our tool uses different constraint solvers. Currently, we use IBM ILOG MIP CPLEX and IBM ILOG CP CPLEX.
+</p>
+</ol>
+
+</section>
+</article>
+<footer>
+      
+</footer>
+</div>
+</body>
+</html>

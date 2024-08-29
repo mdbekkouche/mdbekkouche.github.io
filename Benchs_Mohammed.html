@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style1.css" />
+  <title>Benchmarks Mohammed BEKKOUCHE</title>
+ </head>
+  
+<body>
+   <div id="bloc_page">
+      <header>
+        <div id="titre_principal">
+          <div class="header-container">
+	    <img src="images/logoESI.png" alt="Logo de Zozor" id="logo" />
+	    <a href="https://www.esi-sba.dz/fr/" class="header-link">
+		<div class="header-title">École Nationale Supérieure en Informatique de Sidi Bel Abbès, Algérie</div>
+	    </a>
+	</div>
+
+        
+        <nav>
+          <ul>
+            <font size=2.8>
+              <li><a href="index.html">Accueil</a></li>
+            <!--  <li><a href="agenda.html">My agenda</a></li>-->
+              <li><a href="Tools.html">Tools</a></li> 
+              <li><a href="Bench_Mohammed.html">Our Benchmarks</a></li>
+              <li><a href="Bug_stories.html">Bug Stories</a></li>
+              <li><a href="mailto:mdbekkouche@gmail.com">Contact</a></li>
+            </font>
+          </ul>
+        </nav>
+      </header>
+      
+      
+      
+<section>
+<article>
+
+<font size=2>
+<div id="sommaire" class="hover">
+<h2>Summary</h2>
+<UL>
+<LI><a href="Benchs_Mohammed.html#benres">Our benchmarks</a></LI>
+<UL>
+<LI><a href="Benchs_Mohammed.html#ben">Programs used</a></LI>
+<ol type="I">
+<li><a href="Benchs_Mohammed.html#sbscn">Programs without loops and without non-linear calculations</a></li>
+<ol>
+<li><a href="Benchs_Mohammed.html#absminus">AbsMinus</a></li>
+<li><a href="Benchs_Mohammed.html#yzero">yZero</a></li>
+<li><a href="Benchs_Mohammed.html#minmax">Minmax</a></li>
+<li><a href="Benchs_Mohammed.html#exemplemcscardinalite2">ExempleMCSCardinalite2</a></li>
+<li><a href="Benchs_Mohammed.html#mid">Mid</a></li>
+<li><a href="Benchs_Mohammed.html#maxmin6var">Maxmin6var</a></li>
+<li><a href="Benchs_Mohammed.html#tritype">Tritype</a></li>
+<li><a href="Benchs_Mohammed.html#triperimetre">TriPerimetre</a></li>
+</ol>
+<li><a href="Benchs_Mohammed.html#sbacn">Programs without loops and with non-linear calculations</a></li>
+<ol>
+<li><a href="Benchs_Mohammed.html#trimultperimetre">TriMultPerimetre</a></li>
+<li><a href="Benchs_Mohammed.html#heron">Heron</a></li>
+</ol>
+<li><a href="Benchs_Mohammed.html#ab">Programs with loops</a></li>
+<ol type="A">
+<li><a href="Benchs_Mohammed.html#at">Without arrays</a></li>
+<ol>
+<li><a href="Benchs_Mohammed.html#squareroot">SquareRoot</a></li>
+<li><a href="Benchs_Mohammed.html#sum">Sum</a></li>
+<li><a href="Benchs_Mohammed.html#sumfrompton">SumFromPtoN</a></li>
+<li><a href="Benchs_Mohammed.html#squaresum">SquareSum</a></li>
+<li><a href="Benchs_Mohammed.html#squaresumfrompton">SquareSumFromPtoN</a></li>
+</ol>
+<li><a href="Benchs_Mohammed.html#st">With arrays</a></li>
+<ol>
+<li><a href="Benchs_Mohammed.html#minimum">Minimum</a></li>
+<li><a href="Benchs_Mohammed.html#arrayinit">ArrayInit</a></li>
+<li><a href="Benchs_Mohammed.html#bsearch">BSearch</a></li>
+<li><a href="Benchs_Mohammed.html#bubblesort">BubbleSort</a></li>
+<li><a href="Benchs_Mohammed.html#bfv1v2">Bf[5-20], Bf[5-20]V2</a></li>
+<li><a href="Benchs_Mohammed.html#prim">Prim</a></li>
+</ol>
+</ol>
+<li><a href="Benchs_Mohammed.html#br">Realistic benchmarks</a></li>
+<ol>
+<li><a href="Benchs_Mohammed.html#tcas">Tcas</a></li>
+</ol>
+</ol>
+<li><a href="Benchs_Mohammed.html#res">The results</a></li>
+<ol type="I">
+<li><a href="Benchs_Mohammed.html#rsb">Programs without loops</a></li>
+<ul>
+<li><a href="Benchs_Mohammed.html#rsba">The tables containing improved times of LocFaults (incremental version)</a></li>
+</ul>
+<li><a href="Benchs_Mohammed.html#ravb">Programs with loops</a></li>
+<ul>
+<li><a href="Benchs_Mohammed.html#sr">The sources of the results</a></li>
+<ol>
+<li><a href="Benchs_Mohammed.html#rbb">BubbleSort benchmark</a></li>
+<li><a href="Benchs_Mohammed.html#rbsu">Sum benchmark</a></li>
+<li><a href="Benchs_Mohammed.html#rbsq">SquareRoot benchmark</a></li>
+</ol>
+</ul>
+<li><a href="Benchs_Mohammed.html#rbrealistic">Realistic benchmarks</a></li>
+<ol> 
+<li><a href="Benchs_Mohammed.html#rtcas">Tcas</a></li>
+</ol>
+
+</ol>
+<!--<UL>
+<LI><a href="#h1">HYPOTHÈSE 1</a></LI>
+<LI><a href="#h2">HYPOTHÈSE 2</a></LI>
+</UL> -->
+</UL>
+</UL>
+</div>
+</font>
+
+<h3><font color="red"><a name="benres">Our benchmarks</a></font></h3>
+
+<p>
+On this page we will introduce the erroneous programs that we have built. For each program, we have built a version in JAVA annotated by a JML specification (for <B>LocFaults</B>), and a version in ANSI-C equivalent annotated by the same spefication but in ACSL (for <B>BugAssist</B>).  The programs are divided into three broad categories : programs without loops, with loops, and realistics. The purpose of the use of these programs is to validate our approach of error localization (<B>LocFaults</B>)  by comparing its performances with that of <B>BugAssist</B>. 
+</p>
+
+<h2><a name="ben">Programs used</a></h2>
+
+<ol TYPE="I">
+<li><div id="sbscn">Programs without loops and without non-linear calculations</div></li>
+
+
+<ol>
+<li><a name="absminus">AbsMinus</a></li>
+<p> 
+The program AbsMinus takes as input two integers, i and j, and returns the absolute value of i-j. Below the erroneous versions considered in JAVA for <B>LocFaults</B> and in C for <B>BugAssist</B>:
+</p>
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/AbsMinusKO.java">AbsMinusKO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/AbsMinusKO.c">AbsMinusKO.c</a> </li>
+<p>
+The error in this program is on the assignment statement "result = i-j" (line 17), the correct instruction should be "result = i-j". By taking the values as input of the program {i=0,j=1}, it returns the value -1 as an absolute value of i-j, while it should return the value 1.
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/AbsMinusKO2.java">AbsMinusKO2.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/AbsMinusKO2.c">AbsMinusKO2.c</a></li>
+<p>
+The error in this program is on the assignment statement "result=i+1" (line 11), the correct instruction should be "result=i". By taking the counterexample {i=0,j=1}, the program fails and returns 0, while it should return the value 1 as an absolute value of i-j. All conditions in this program are correct.
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/AbsMinusKO3.java">AbsMinusKO3.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/AbsMinusKO3.c">AbsMinusKO3.c</a></li>
+<p>
+The error in this program is on the assignment statement "k = k+2" (line 14), the correct instruction should be "k = k+1". By taking the counterexample as input {i=0,j=1}, this error contradicts the condition "(k == 1 && i != j)" and therefore the execution of the instruction "result = i-j" (line 20), causing an output other than the one expected, -1 instead of 1.
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/AbsMinusV2KO.java">AbsMinusV2KO.java</a>,<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/AbsMinusV2KO.c">AbsMinusV2KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/AbsMinusV2KO2.java">AbsMinusV2KO2.java</a>,<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/AbsMinusV2KO2.c">AbsMinusV2KO2.c</a></li>
+<p>
+AbsMinusV2 represents a rewriting of the program AbsMinus, which calculates the absolute value of (i-j) (i and j are the inputs), so that it becomes easier. The resulting program contains four instructions : lines 11, 12, 13 and 16. In other words, AbsMinusV2 is semantically equivalent to AbsMinus. The programs AbsMinusV2KO and AbsMinusV2KO2 (erroneous verions of AbsMinusV2 program) are equivalent respectively to AbsMinusKO and AbsMinusKO2.
+</p>
+</ul>
+
+<li><a name="yzero">yZero</a></li>
+<p>
+The yZero program is a simple illustrative example. Below the erroneous version considered in JAVA for <B>LocFaults</B> and in C for <B>BugAssist</B>:
+</p>
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/yZero.java">yZero.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/yZero.c">yZero.c</a></li>
+<p>
+
+</p>
+</ul>
+
+<li><a name="minmax">Minmax</a></li>
+<p>
+The program Minmax takes as input three integers and affects the smallest value to the variable least and the greatest value to the variable most. This program has been used in the following paper <a href="http://www.cs.cmu.edu/~agroce/sttt05.pdf">Error Explanation with Distance Metrics</a>. Below considered erroneous version in JAVA for <B>LocFaults</B> and in C for <B>BugAssist</B>:
+</p>
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/MinmaxKO.java">MinmaxKO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/MinmaxKO.c">MinmaxKO.c</a></li>
+<p>
+The error in this program is on the assignment statement "most = in2" (line 19), the instruction should be "least = in2". For an input equal to {in1=2, in2=1, in3=3}, we should have as output least=1 and most=3. With this input the program outputs least=2 and most=1, which is ce qui est not comply with the postcondition used "(least <= most)".
+</p>
+</ul>
+<li><a name="exemplemcscardinalite2">ExempleMCSCardinalite2</a></li>
+<p>
+This program takes as input a variable i, and calculates the following assignment :"z=i*(|v|+|w|)". The output should be comply with the the following post condition: "((z==0||i!=0)&&(v>=0)&&(w>=0))". Below the erroneous version considered in JAVA for <B>LocFaults</B> and in C for <B>BugAssist</B>:
+</p>
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/ExempleMCSCardinalite2.java">ExempleMCSCardinalite2.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/ExempleMCSCardinalite2.c">ExempleMCSCardinalite2.c</a></li>
+<p>
+The error in this program is on the assignment statement "z=i+(|v|+|w|)", the correct instruction should be "z=i*(|v|+|w|)". By taking as input {i=0}, the program fails and violates its postcondition.
+</p>
+</ul>
+<li><a name="mid">Mid</a></li>
+<p> 
+This program was used in the paper <a href="http://www.cc.gatech.edu/~stasko/papers/icse02.pdf">"Visualization of Test Information to Assist Fault Localization"</a> to introduce and explain the Tarantula approach. We used the wrong version used in the mentioned paper:
+</p>
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/MidKO.java">MidKO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/MidKO.c">MidKO.c</a></li>
+</ul>
+<li><a name="maxmin6var">Maxmin6var</a></li>
+<p>
+This program takes six variables as input of integer values ​​and allows to assign:
+</p>
+<ol>
+<li>the greatest value to the variable max ;</li>
+<li>and the smallest value ​​to the variable min.</li> 
+</ol>
+<p>
+We used 4 erroneous versions:
+</p>
+<ul> 
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Maxmin6varKO.java">Maxmin6varKO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Maxmin6varKO.c">Maxmin6varKO.c</a></li>
+<p>
+The error in this program is on the condition instruction If (e>f) (line 27). The following counterexample {a=1, b=-4, c=-3, d=-1, e=0, f=-4} produces a bad branching and calculate the following output {max=1,min=0} instead of {max=1,min=-4}.
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Maxmin6varKO2.java">Maxmin6varKO2.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Maxmin6varKO2.c">Maxmin6varKO2.c</a></li>
+<p>
+The error in this program is on the condition instruction if ((a>b) && (a>c) && (b>d) && (a>e) && (a>f)) (line 12), the correct instruction should be if ((a>b) && (a>c) && (a>d) && (a>e) && (a>f)). This error creates a bad branching, by taking as input the following counterexample {a=1, b=-3, c=0, d=-2, e=-1, f=-2} ; the program returns the following output {max=0,min=-3} instead of {max=1,min=-3}.
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Maxmin6varKO3.java">Maxmin6varKO3.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Maxmin6varKO3.c">Maxmin6varKO3.c</a></li>
+<p>
+The errors in this program are introduced at the two conditions: lignes 12 et 15. By taking the input {a=1, b=-3, c=0, d=-2, e=-1, f=-2}, these errors produce two bad branchings ; the program returns {max=0,min=-3} instead of {max=1,min=-3}.
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Maxmin6varKO4.java">Maxmin6varKO4.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Maxmin6varKO4.c">Maxmin6varKO4.c</a></li>
+<p>
+This program contains three conditional errors: lines 12, 15 et 20. By taking the following input {a=1, b=-3, c=-4, d=-2, e=-1, f=-2}, the program returns  {max=-1,min=-4} instead of {max=1,min=-4}. 
+</p>
+<li><a href="Benchs_Mohammed.html">Maxmin6varKO5.java</a>,<a href="Benchs_Mohammed.html">Maxmin6varKO5.java</a></li>
+<li><a href="Benchs_Mohammed.html">Maxmin6varKO6.java</a>,<a href="Benchs_Mohammed.html">Maxmin6varKO6.java</a></li>
+</ul>
+
+<li><a name="tritype">Tritype</a></li>
+<p>
+The program Tritype takes as input three variables (the sides of a triangle) and returns 3 if the inputs correspond to an equilateral, 2 if they match an isosceles, 1 if they correspond to another type of triangle, 4 if they do not correspond to a valid triangle. Below considered erroneous versions in JAVA for <B>LocFaults</B> and in C for <B>BugAssist</B>:
+</p>
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/TritypeKO.java">TritypeKO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/TritypeKO.c">TritypeKO.c</a></li>
+<p>
+The error in this program is on the assignment statement "trityp = 1" (line 54), the correct instruction should be "trityp = 2". By taking as input the values {i=2,j=3,k=2}, the program returns 1, while it should return 2 (the input triangle is an isosceles).
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/TritypeKO2.java">TritypeKO2.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/TritypeKO2.c">TritypeKO2.c</a></li>
+<p>
+The error in this program is on the assignment statement "(<B>trityp == 1</B> && (i + k) > j)" (line 53), the instruction should be "(<B>trityp == 2</B> && (i + k) > j)". By taking as input {i=2,j=2,k=2}, the program returns 2 to indicate that the triangle is an isosceles, while it should return the value 4 to indicate that the entry does not match a valid triangle..
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/TritypeKO2V2.java">TritypeKO2V2.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/TritypeKO2V2.c">TritypeKO2V2.c</a></li>
+<p>
+The error in this program is on the assignment statement of the line 31: "trityp = trityp+1", the correct instruction should be "trityp = trityp + 2". By taking as input values {i=1,j=2,k=1}, the program returns the value 2 (input corresponds to an isosceles), while it should return 4 (input 
+does not correspond to a valid triangle).
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/TritypeKO3.java">TritypeKO3.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/TritypeKO3.c">TritypeKO3.c</a></li>
+<p>
+The error in this program is on the conditional statement "(trityp == 2 && <B>(i+j) > k</B>)" (line 53), the correct instruction is "(trityp == 2 && <B>(i+k) > j</B>). With the input {i=1, j=2, k=1}, the program should return the input triangle is an isosceles (output equal to 2). This program with the same input returns that the corresponding triangle is not valid.
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/TritypeKO4.java">TritypeKO4.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/TritypeKO4.c">TritypeKO4.c</a></li>
+<p>
+The error in this program is on the statement "(trityp >= 3)", the instruction should be "(trityp > 3)". By taking the input {i=2,j=3,k=3}, the program satisfies the condition and executes the instruction "trityp = 3" (line 46) to return that the input triangle is an equilateral, while it should  return that it is isosceles (the returned value should be equal to 2). 
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/2_Conditions_Fausses/TritypeKO5.java">TritypeKO5.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/2_Conditions_Fausses/TritypeKO5.c">TritypeKO5.c</a></li>
+<p>
+The errors in this program are on the condition "(j != k)" (line 32) and on the condition "(trityp >= 3)" (line 45), the correct instructions will be respectively "(j == k)" and "(trityp >= 3)". By taking the input {i=2,j=3,k=3}, the program returns the value 1, while it should return the value 2 (the triangle is an isosceles).
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/3_Conditions_Fausses/TritypeKO6.java">TritypeKO6.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/3_Conditions_Fausses/TritypeKO6.c">TritypeKO6.c</a></li>
+<p>
+The errors in this program are on the condition "(j != k)" (line 32) and on the assignment "trityp = trityp + 4" (line 33), the correct instructions will be respectively "(j == k)" and "trityp = trityp + 3". By taking as input the program {i=2,j=3,k=3}, it returns that the triangle is equilateral (the value 1), while it should return it isosceles (the value 2).
+</p>
+</ul>
+ 
+<li><a name="triperimetre">TriPerimetre</a></li>
+<p>
+The program TriPerimetre has exactly the same structure of the control of Tritype. The difference is that TriPerimetre returns the sum of the sides of the triangle if the inputs correspond to a valid triangle ; and returns -1 in the opposite case. Below erroneous versions considered in JAVA for <B>LocFaults</B> and in C for <B>BugAssist</B>:
+</p>
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/TriPerimetreKO.java">TriPerimetreKO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/TriPerimetreKO.c">TriPerimetreKO.c</a></li>
+<p>
+The error in this program is on the assignment statement "res = 2*i + k" (line 58), the instruction should be "res = 2*i+j". By taking the input {i=2,j=1,k=2}, the program returns the value 6, while it should return the value 5.
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/TriPerimetreKOV2.java">TriPerimetreKOV2.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/TriPerimetreKOV2.c">TriPerimetreKOV2.c</a></li>
+<p>
+The error in this program is on the assignment statement "res = 2*j" (line 34), the instruction should be "res = 2*i". By taking as input {i=2,j=3,k=2}, the returns 9, while it should return the sum 7. This program is semantically equivalent to TriPerimetreKO, the difference is that the error is not on the same instruction for both programs.
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/TriPerimetreKO2.java">TriPerimetreKO2.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/TriPerimetreKO2.c">TriPerimetreKO2.c</a></li>
+<p>
+The error in this program is on the condition "(<B>trityp == 1</B> && (i+k) > j)", the correct instruction should be "(<B>trityp == 2</B> && (i+k) > j)". By taking as input {i=1,j=1,k=2}, the program returns as sum the value 4, while it should return -1 (the entries do not correspond to a valid triangle).
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/TriPerimetreKO2V2.java">TriPerimetreKO2V2.java</a>,<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/TriPerimetreKO2V2.c">TriPerimetreKO2V2.c</a></li>
+<p>
+The error in this program is on the affectation "trityp = trityp + 1", the correct instruction should be "trityp = trityp + 2". With the following entry {i=1,j=2,k=1}, the program calculates the sum of the triangle : 4, while it should return the value -1 ( the entries do not correspond to a valid triangle).
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/TriPerimetreKO3.java">TriPerimetreKO3.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/TriPerimetreKO3.c">TriPerimetreKO3.c</a></li>
+<p>
+The error in this program is the second part of the condition "(trityp == 1 && <B>(i+j) > k</B>)" (line 57), the correct instruction should be "(trityp == 2 && <B>(i+k) > j)</B>". By taking as input {i=1, j=2, k=1}, the program outputs the sum 4, while it should return -1 to indicate that the entries do not correspond to a valid triangle.
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/TriPerimetreKO4.java">TriPerimetreKO4.java</a>,<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/TriPerimetreKO4.c">TriPerimetreKO4.c</a></li>
+<p>
+The error in this program is on the conditional statement "(trityp >= 3)", this instruction should be "(trityp> 3)". With the following entry {i=2,j=3,k=3}, the program executes the instruction "res = 3 * i" and returns the value 6, while it should return the value 8 (the sum of the sides of the triangle).
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/TriPerimetreKO5.java">TriPerimetreKO5.java</a>,<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/TriPerimetreKO5.c">TriPerimetreKO5.c</a></li>
+<p>
+In this program, we have introduced two errors : on the condition "(j! = k)" (line 34) and on the condition "(trityp> = 3)" (line 49), the correct instructions are to be respectively "(j == k)" and "(trityp> = 3)". With the following entry {i = 2, j = 2, k = 3}, this program should return the value 7.
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/TriPerimetreKO6.java">TriPerimetreKO6.java</a>,<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/TriPerimetreKO6.c">TriPerimetreKO6.c</a></li>
+<p>
+The errors in this program are on the conditional statement "(j! = K)" (line 34) and the affectation "trityp trityp = + 4" (line 35), the correct instructions are to be respectively "(j == k)" and "trityp = trityp + 3". With the following counterexample {i=2,j=2,k=3}, TriPerimetreKO6 should return the sum 7.
+</p>
+</ul>
+</ol>
+
+<li><div id="sbacn">Programs without loops and with non-linear calculations</div></li>
+<ol>
+<li><a name="trimultperimetre">TriMultPerimetre</a></li>
+<p>
+This program also has the same structure as the control tritype. In addition, it can calculate the multiplication of sides of a triangle. Below the erroneous version considered in JAVA for <B>LocFaults</B> and in C for <B>BugAssist</B>:
+</p>
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/TriMultPerimetreKO.java">TriMultPerimetreKO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/TriMultPerimetreKO.c">TriMultPerimetreKO.c</a></li>
+<p>
+The error injected into the program is on the line 58, the instruction should be "res = i * i * j" instead of "res = i * i * k".
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/TriMultPerimetreKO2.java">TriMultPerimetreKO2.java</a>,<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/TriMultPerimetreKO2.c">TriMultPerimetreKO2.c</a></li>
+<p>
+The injected error in this program is on the condition of line 57 : "(<b>trityp == 1</b> && (i + k) > j)", the instruction should be "(<b>trityp == 2</b> && (i + k) > j)".
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/TriMultPerimetreKO2V2.java">TriMultPerimetreKO2V2.java</a>,<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/TriMultPerimetreKO2V2.c">TriMultPerimetreKO2V2.c</a></li>
+<p>
+The error in this program is inserted on the instruction "trityp = trityp + 1", on the line 33, the correct instruction should be rather "trityp trityp = + 2".
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/TriMultPerimetreKO3.java">TriMultPerimetreKO3.java</a>,<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/TriMultPerimetreKO3.c">TriMultPerimetreKO3.c</a></li>
+<p>
+The error in TriMultPerimetreKO3 is on line 56 (conditional error) : "(i+j) > k" instead of "(i+k) > j".
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/TriMultPerimetreKO4.java">TriMultPerimetreKO4.java</a>,<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/TriMultPerimetreKO4.c">TriMultPerimetreKO4.c</a></li>
+<p>
+The problem in this program comes from the line 48 : the condition "(trityp> = 3)" is incorrect, the correct statement is "(trityp> 3)".
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/TriMultPerimetreKO5.java">TriMultPerimetreKO5.java</a>,<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/TriMultPerimetreKO5.c">TriMultPerimetreKO5.c</a></li>
+<p>
+This program has two erroneous instructions, the first is on the line 33: the condition "(j = k!)", And the second is at line 48: the condition "(trityp> = 3)"; to make this program correct, we should replace the errors respectively by "(j == k)" and "(trityp> 3)".
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/TriMultPerimetreKO6.java">TriMultPerimetreKO6.java</a>,<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/TriMultPerimetreKO6.c">TriMultPerimetreKO6.c</a></li>
+<p>
+This program contains an error at line 33 (the condition "(j != k)"), and another on the next line (the assignment "trityp = trityp + 4"); these instructions had to be respectively "(j == k)" and "trityp = trityp + 4".
+</p>
+</ul>
+
+
+<li><a name="heron">Heron</a></li>
+<p>
+This program also has the same structure of control as tritype. With the difference that it returns the square of the area of the triangle (i, j, k) entry using Heron's formula. Here are two versions erroneous in JAVA for <B>LocFaults</B> and in C for <B>BugAssist</B>:
+</p>
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/HeronKO.java">HeronKO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/HeronKO.c">HeronKO.c</a></li>
+<p>
+This program has the same type of error in the program TritypeKO and TriPerimetreKO (it is on a final calculation in the path of counterexample), the mutated instruction is on the line 61 : "res = s*(s-i)*(s-j)*(s-i)" instead of "res = s*(s-i)*(s-j)*(s-j)". 
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/HeronKO2.java">HeronKO2.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/HeronKO2.c">HeronKO2.c</a></li>
+<p>
+The error in this program is injected is on the line condition 59 (same type of error in TritypeKO2 and TriPerimetreKO2) : "trityp == 1" instead of "trityp == 2". The case of error associated with this program is as follows: {i=2, j=2, k=4}. By taking as input this counterexample , the program HeronKO2 calculates the value 32 by executing the instruction "res = s*(s-i)*(s-j)*(s-i)" in line 62; while it should return -1 as what the program entries correspond to an invalid triangle.
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/HeronV1.java">HeronV1.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/HeronV2.java">HeronV2.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/HeronV1.c">HeronV1.c</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/HeronV2.c">HeronV2.c</a></li>
+<p>
+The programs HeronV1 and HeronV2 are respectively equivalent to HeronKO and HeronKO2. The difference is that in HeronV1 and HeronV2, the instruction "s=(i+j+k)/2" (line 19) is deleted ; the expression "(i+j+k)/2" is substituted for "s" in the instructions that compute "res".
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/HeronKO2V2.java">HeronKO2V2.java</a>,<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/HeronKO2V2.c">HeronKO2V2.c</a></li>
+<p>
+The error in HeronKO2V2 is on the line 31: the assignment "trityp = trityp + 1"; the correct statement should be "trityp = trityp + 2".
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/HeronKO3.java">HeronKO3.java</a>,<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/HeronKO3.c">HeronKO3.c</a></li>
+<p>
+The error in HeronKO3 is on the line condition 59 : "(i + j)> k" instead of "(i + k)> j".
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/HeronKO4.java">HeronKO4.java</a>,<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/HeronKO4.c">HeronKO4.c</a></li>
+<p>
+The error in HeronKO4 is on the condition of the line 47 : "trityp >= 3" instead of "trityp > 3". With the following entry {i=2,j=3,k=3}, the program should calculate the value 8.
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/HeronKO5.java">HeronKO5.java</a>,<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/HeronKO5.c">HeronKO5.c</a></li>
+<p>
+There are two conditionals errors in HeronKO5 on lines 32 and 47: "(j != k)" and "(trityp >= 3)" instead of respectively "(j == k)" and "(trityp > 3 ) ".
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/HeronKO6.java">HeronKO6.java</a>,<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/HeronKO6.c">HeronKO6.c</a></li>
+<p>
+This program contains two errors, a conditional (line 32: "(j != k)") and the other in an assignment (line 33: "trityp = trityp + 4"); these instructions had to be respectively "(j == k)" and "trityp = trityp + 3".
+</p>
+</ul>
+</ol>
+
+<li><a name="ab">Programs with loops</a></li>
+
+<ol type="A">
+<li><a name="at">Without arrays</a></li>
+<ol>
+<li><a name="squareroot">SquareRoot</a></li>
+<p>
+This program form the paper describing the approach BugAssist: <a href="http://arxiv.org/pdf/1011.1589.pdf">Cause Clue Clauses: Error Localization using Maximum Satisfiability</a> (see page 9, section 6.4), to find the nearest integer square root of a value. Below the wrong version used in this paper in C, and in JAVA for our tool.
+</p>
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/ProgrammesWhile/SquareRoot.java">SquareRootKO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/SquareRoot.c">SquareRootKO.c</a>
+<li><a href="SquareRootV[0-90]JAVA_EN.html">SquareRootV0.java, SquareRootV1.java,..., SquareRootV90.java</a>, <a href="SquareRootV[0-90]C_EN.html">SquareRootV0.c, SquareRootV1.c,..., SquareRootV90.c</a>  (91 versions)</li>
+</ul>
+<li><a name="sum">Sum</a></li>
+<p>
+This program takes a positive integer "n" form the user, and it calculates the value of "1+2+3+...+n". Here are all the erroneous versions we have built and used in our experiments for this program:
+</p>
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/ProgrammesWhile/SumKO.java">SumKO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/SumKO.c">SumKO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/ProgrammesWhile/SumKO_OK.java">SumKO_OK.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/SumKO_OK.c">SumKO_OK.c</a></li>
+<li><a href="SumV[0-95]JAVA_EN.html">SumV0.java, SumV1.java,...,SumV95.java</a>, <a href="SumV[0-95]C_EN.html">SumV0.c, SumV1.c,...,SumV95.c</a> (96 versions)</li>
+</ul>
+
+<li><a name="sumfrompton">SumFromPtoN</a></li>
+ <ul>
+<li><a href="https://capv.toile-libre.org/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/ProgrammesWhile/SumFromPtoNKO.java">SumFromPtoNKO.java</a>,<a href="https://capv.toile-libre.org/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/SumFromPtoNKO.c">SumFromPtoNKO.c</a></li>
+</ul>
+
+<li><a name="squaresum">SquareSum</a></li>
+<ul>
+<li><a href="https://capv.toile-libre.org/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/ProgrammesWhile/SquareSumFromPtoNKO.java">SquareSumKO.java</a>,<a href="https://capv.toile-libre.org/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/SquareSumFromPtoNKO.c">SquareSumKO.c</a></li>
+</ul>
+
+<li><a name="squaresumfrompton">SquareSumFromPtoN</a></li>
+<ul>
+<li><a href="https://capv.toile-libre.org/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/ProgrammesWhile/SquareSumFromPtoNKO.java">SquareSumFromPtoNKO.java</a>,<a href="https://capv.toile-libre.org/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/SquareSumFromPtoNKO.c">SquareSumFromPtoNKO.c</a></li>
+
+</ul>
+
+</ol>
+<li><a name="st">With arrays</a></li>
+
+
+<ol>
+
+<li><a name="minimum">Minimum</a></li>
+<p>
+The program Minimum takes as input an array of integers, and return the minimum value. Below the considered erroneous version in JAVA for <B>LocFaults</B> and in C for <B>BugAssist</B>:
+</p>
+<ul>
+<a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/ProgrammesWhile/MinimumKO.java">MinimumKO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/ProgrammesWhile/MinimumKO.c">MinimumKO.c</a>
+<p>
+This program is wrong because of its while loop, The instruction is falsified on the condition of the loop (line 9). From the following counterexample {a[0]=3,a[1]=2,a[3]=1,a[4]=0}, it returns a[2]==1 because the stopping criterion of the loop that does not allow testing to the fourth cell of the table "a" ;  it should return a[2]==0. 
+</p>
+
+</ul>
+
+
+<li><a name="arrayinit">ArrayInit</a></li>
+<p>
+The program ArrayInit takes as input an array of integers whose elements are initialized to zero 0. It allows to assign each of its cells the value of the index plus one. Below the considered erroneous version in JAVA for <B>LocFaults</B> and in C for <B>BugAssist</B>:
+</p>
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/ArrayInitKO.java">ArrayInitKO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/ArrayInitKO.c">ArrayInitKO.c</a></li>
+</ul>
+<li><a name="bsearch">BSearch</a></li>
+<p>
+The program BSearch takes as input an array of integers and an integer x. By a dichotomous process, it can return the index of the box in the table whose value is x. If x not on the table, the program returns the value -1. Below the considered erroneous version in JAVA for <B>LocFaults</B> and in C for <B>BugAssist</B>:
+</p>
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/ProgrammesWhile/BSearchKO.java">BSearchKO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/ProgrammesWhile/BSearchKO.c">BSearchKO.c</a></li>
+<p>
+This program contains an error that is on the line 16: "result = milieu" instead of "result = gauche". By using the verification tool CPBPV, we looked for a counterexample for an array of languor 128. From this counterexample, we specified a precondition in JML and in ACSL respectively to annotate the JAVA (for our tool LocFaults) and C (for BugAssist) version. The postcondition of the two programs indicates the correct output expected: ((result==3) and (result==63)).
+</p>
+</ul>
+
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BSearchKO.java">BSearchKO2.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BSearchKO.c">BSearchKO2.c</a></li>
+<p>
+The error in this program is on the assignment statement "droite = milieu - 1" (line 20), the correct instruction should be "gauche = milieu + 1". By taking as input {tab[0]=-2147477728, tab[1]=-2147470009, tab[2]=-2147468773, tab[3]=-2147466336, tab[4]=-2147457481, tab[5]=-2147457481, tab[6]=-2147457481, tab[7]=-2147457481, tab[8]=2147457481, tab[9]=-2147457480, x=-2147457480}, the program returns -1 to indicate that x=-2147457480 not on the table entry tab, while it should return 9 because the value of the ninth cell of tab is equal to x.
+</p>
+</ul>
+
+<li><a name="bubblesort">BubbleSort</a></li>
+<p>
+This program implements the bubble sort algorithm. Here erroneous version we used in our experiments (in JAVA for LocFaults and in C for BugAssist) :
+</p>
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/ProgrammesWhile/BubbleSortKO.java">BubbleSortKO.java</a>, BubbleSortKO.c</li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/ProgrammesWhile/BubbleSortKO2.java">BubbleSortKO2.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/ProgrammesWhile/BubbleSortKO2.c">BubbleSortKO2.c</a></li>
+<p>
+The erroneous instruction in this program causes the program to sort the input array by considering only its n-1 first elements, n is the length of the array. The malfunction of BubblesortKO2 is due to the insufficient number of iterations performed by the loop. This is due to the incorrect initialization of the variable i :  i = tab.length - 1 ; this instruction should be i = tab.length.
+</p>
+<li><a href="BubbleSortV[0-96]JAVA_EN.html">BubbleSortV0.java,...,BubbleSortV96.java</a>, <a href="BubbleSortV[0-96]C_EN.html">BubbleSortV0.c,...,BubbleSortV96.c</a> (97 versions)</li>
+</ul>
+
+
+<li><a name="bfv1v2">Bf[5-20], Bf[5-20]V2</a></li>
+<p>
+The programs Bf[5-20]V2 inspired from programs found in the database of benchs of <a href="http://llbmc.org/downloads.html">LLBMC</a> (Bf[5-20]). The programs Bf[5-20] represent an implementation of the algorithm of Dijkstra by fixing the number of nodes in the graph and by varying the number of arcs, weights and the nodes of origin and destination. They allow you to calculate the shortest path between the source vertex (node 0) and any node in the input graph. Below the considered erroneous versions in JAVA for <B>LocFaults</B> and in C for <B>BugAssist</B>:
+</p>
+<ul>
+
+Bf[5-20]
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Bf5KO.java">Bf5KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Bf5KO.c">Bf5KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Bf6KO.java">Bf6KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Bf6KO.c">Bf6KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Bf7KO.java">Bf7KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Bf7KO.c">Bf7KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Bf8KO.java">Bf8KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Bf8KO.c">Bf8KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Bf9KO.java">Bf9KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Bf9KO.c">Bf9KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Bf10KO.java">Bf10KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Bf10KO.c">Bf10KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Bf11KO.java">Bf11KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Bf11KO.c">Bf11KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Bf12KO.java">Bf12KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Bf12KO.c">Bf12KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Bf13KO.java">Bf13KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Bf13KO.c">Bf13KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Bf14KO.java">Bf14KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Bf14KO.c">Bf14KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Bf15KO.java">Bf15KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Bf15KO.c">Bf15KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Bf16KO.java">Bf16KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Bf16KO.c">Bf16KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Bf17KO.java">Bf17KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Bf17KO.c">Bf17KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Bf18KO.java">Bf18KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Bf18KO.c">Bf18KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Bf19KO.java">Bf19KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Bf19KO.c">Bf19KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Bf20KO.java">Bf20KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Bf20KO.c">Bf20KO.c</a></li>
+</ul>
+Bf[5-20]V2
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Bf5V2KO.java">Bf5V2KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Bf5V2KO.c">Bf5V2KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Bf6V2KO.java">Bf6V2KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Bf6V2KO.c">Bf6V2KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Bf7V2KO.java">Bf7V2KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Bf7V2KO.c">Bf7V2KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Bf8V2KO.java">Bf8V2KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Bf8V2KO.c">Bf8V2KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Bf9V2KO.java">Bf9V2KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Bf9V2KO.c">Bf9V2KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Bf10V2KO.java">Bf10V2KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Bf10V2KO.c">Bf10V2KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Bf11V2KO.java">Bf11V2KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Bf11V2KO.c">Bf11V2KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Bf12V2KO.java">Bf12V2KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Bf12V2KO.c">Bf12V2KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Bf13V2KO.java">Bf13V2KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Bf13V2KO.c">Bf13V2KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Bf14V2KO.java">Bf14V2KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Bf14V2KO.c">Bf14V2KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Bf15V2KO.java">Bf15V2KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Bf15V2KO.c">Bf15V2KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Bf16V2KO.java">Bf16V2KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Bf16V2KO.c">Bf16V2KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Bf17V2KO.java">Bf17V2KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Bf17V2KO.c">Bf17V2KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Bf18V2KO.java">Bf18V2KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Bf18V2KO.c">Bf18V2KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Bf19V2KO.java">Bf19V2KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Bf19V2KO.c">Bf19V2KO.c</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Bf20V2KO.java">Bf20V2KO.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Bf20V2KO.c">Bf20V2KO.c</a></li>
+</ul>
+<p>
+The error in these programs is on the assignment statement "distance[i] = -1" (line 24), the correct instruction should be "distance[i] = 0": the error indicates that the distance between the root node and itself is -1, while it should be 0.
+</p>
+</ul>
+ 
+
+<li><a name="prim">Prim</a></li>
+
+<ul>
+<li>Prim_4.java, Prim_4.c</li>
+<li>Prim_5.java, Prim_5.c</li>
+<li>Prim_6.java, Prim_6.c</li>
+<li>Prim_7.java, Prim_7.c</li>
+<li>Prim_8.java, Prim_8.c</li>
+</ul>
+
+
+
+
+
+
+</ol>
+
+</ol>
+
+<li><a name="br">Realistic benchmarks</a></li>
+<ol>
+
+
+
+<li><a name="tcas">Tcas</a></li> 
+<p>
+Tcas program of the Siemens test suite is a traffic alert system and collision avoidance. It is a real application, and a critical embedded system to avoid collisions between aircraft in flight. There are 41 erroneous versions ans 1608 test cases. They considered all but versions TcasKO15, TcasKO31, TcasKO32, TcasKO33 and TcasKO38 and test cases whose index AltLayerValue overflows the table PositiveRAAltThresh.
+</p> 
+<ul>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/Scriptes/cas-tests.txt">The 1608 test cases</a></li> 
+</ul>
+<p>
+Below the considered erroneous versions in JAVA for <B>LocFaults</B> and in C for <B>BugAssist</B>:
+</p>
+<ul>
+<li>TcasKO</li>
+<ul>
+<li>1 error (line 77): 1 assignment, 0 condition.</li>
+<li><a href="TcasKOJAVA.html">Versions JAVA</a>, <a href="TcasKOC.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO/CE_TcasKO.txt">The 131 counter-examples considered</a></li>
+</ul>
+
+<li>TcasKO2</li>
+<ul>
+<li>2 errors (line 68 et line 86): 2 assignments, 0 condition.</li> 
+<li><a href="TcasKO2JAVA.html">Versions JAVA</a>, <a href="TcasKO2C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO2/CE_TcasKO2.txt">The 67 counter-examples considered</a></li>
+</ul>
+
+<li>TcasKO3</li>
+<ul>
+<li>1 error (line 63): 1 assignment, 0 condition.</li>
+<li><a href="TcasKO3JAVA.html">Versions JAVA</a>, <a href="TcasKO3C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO3/CE_TcasKO3.txt">The 23 counter-examples considered</a></li>
+</ul>
+
+<li>TcasKO4</li>
+<ul>
+<li>1 error (line 81): 1 assignment , 0 condition.</li>
+<li><a href="TcasKO4JAVA.html">Versions JAVA</a>, <a href="TcasKO4C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO4/CE_TcasKO4.txt">The 20 counter-examples considered</a></li>
+</ul>
+
+<li>TcasKO5</li>
+<ul>
+<li>1 error (line 61): 1 assignment, 0 condition.</li>
+<li><a href="TcasKO5JAVA.html">Versions JAVA</a>, <a href="TcasKO5C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO5/CE_TcasKO5.txt">The 10 counter-examples considered</a></li>
+</ul>
+
+<li>TcasKO6</li>
+<ul>
+<li>3 errors (line 77, line 84 et line 94): 3 assignments, 0 condition.</li>
+<li><a href="TcasKO6JAVA.html">Versions JAVA</a>, <a href="TcasKO6C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO6/CE_TcasKO6.txt">The 12 counter-examples considered</a></li>
+</ul>
+
+<li>TcasKO7</li>
+<ul>
+<li>1 error (line 58): 1 assignment, 0 condition.</li>
+<li><a href="TcasKO7JAVA.html">Versions JAVA</a>, <a href="TcasKO7C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO7/CE_TcasKO7.txt">The 36 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO8</li>
+<ul>
+<li>1 error (line 60): 1 assignment, 0 condition.</li>
+<li><a href="TcasKO8JAVA.html">Versions JAVA</a>, <a href="TcasKO8C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO8/CE_TcasKO8.txt">Le contre-exemple considéré</a></li>
+</ul>
+
+<li>TcasKO9</li>
+<ul>
+<li>1 error (line 92): 0 assignment, 1 condition.</li>
+<li><a href="TcasKO9JAVA.html">Versions JAVA</a>, <a href="TcasKO9C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO9/CE_TcasKO9.txt">The 7 counter-examples considered</a></li>
+</ul>
+
+<li>TcasKO10</li>
+<ul>
+<li>6 errors (line 77, line 81, line 84, line 94, line 98 et line 101): 6 assignments, 0 condition.</li>
+<li><a href="TcasKO10JAVA.html">Versions JAVA</a>, <a href="TcasKO10C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO10/CE_TcasKO10.txt">The 14 counter-examples considered</a></li>
+</ul>
+
+
+
+<li>TcasKO11</li>
+<ul>
+<li>6 errors (line 77, line 81, line 84, line 94, line 98 et line 101): 6 assignments, 0 condition. On note que les errors dans TcasKO11 sont les mêmes dans TcasKO10, la différence est que dans TcasKO11 l'instruction conditionelle "((need_upward_RA)&&(need_downward_RA))" et l'assignment "alt_sep = UNRESOLVED" sont supprimées (voir respectivement les lines 102 et 106 dans le programme TcasKO10).</li>
+<li><a href="TcasKO11JAVA.html">Versions JAVA</a>, <a href="TcasKO11C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO11/CE_TcasKO11.txt">The 14 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO12</li>
+<ul>
+<li>1 error (line 61): 1 assignment, 0 condition.</li>
+<li><a href="TcasKO12JAVA.html">Versions JAVA</a>, <a href="TcasKO12C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO12/CE_TcasKO12.txt">The 70 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO13</li>
+<ul>
+<li>1 error (line 48): 1 assignment, 0 condition.</li>
+<li><a href="TcasKO13JAVA.html">Versions JAVA</a>, <a href="TcasKO13C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO13/CE_TcasKO13.txt">The 4 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO14</li>
+<ul>
+<li>1 error (line 49): 1 assignment, 0 condition.</li>
+<li><a href="TcasKO14JAVA.html">Versions JAVA</a>, <a href="TcasKO14C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO14/CE_TcasKO14.txt">The 50 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO16</li>
+<ul>
+<li>1 error (line 57): 1 assignment, 0 condition.</li>
+<li><a href="TcasKO16JAVA.html">Versions JAVA</a>, <a href="TcasKO16C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO16/CE_TcasKO16.txt">The 70 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO17</li>
+<ul>
+<li>1 error (line 58): 1 assignment, 0 condition.</li>
+<li><a href="TcasKO17JAVA.html">Versions JAVA</a>, <a href="TcasKO17C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO17/CE_TcasKO17.txt">The 35 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO18</li>
+<ul>
+<li>1 error (line 59): 1 assignment, 0 condition.</li>
+<li><a href="TcasKO18JAVA.html">Versions JAVA</a>, <a href="TcasKO18C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO18/CE_TcasKO18.txt">The 29 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO19</li>
+<ul>
+<li>1 error (line 60): 1 assignment, 0 condition.</li>
+<li><a href="TcasKO19JAVA.html">Versions JAVA</a>, <a href="TcasKO19C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO19/CE_TcasKO19.txt">The 19 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO20</li>
+<ul>
+<li>1 error (line 75): 0 assignment, 1 condition.</li>
+<li><a href="TcasKO20JAVA.html">Versions JAVA</a>, <a href="TcasKO20C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO20/CE_TcasKO20.txt">The 18 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO21</li>
+<ul>
+<li>1 error (line 75): 0 assignment, 1 condition. </li>
+<li><a href="TcasKO21JAVA.html">Versions JAVA</a>, <a href="https://capv.toile-libre.org/Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO21/TcasKO21_SpecsC/">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO21/CE_TcasKO21.txt">The 16 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO22</li>
+<ul>
+<li>1 error (line 75): 0 assignment, 1 condition. On note que l'error est sur la même line de condition dans les trois programmes :TcasKO20, TcasKO21 et TcasKO22; la différence est qu'elle est provoquée différemment dans les trois programmes: "(Inhibit_Biased_Climb>=Down_Separation)" dans TcasKO20, "((Up_Separation+NOZCROSS)>Down_Separation)" dans TcasKO21 et "(Up_Separation>Down_Separation)" dans TcasKO22. Or l'instruction correcte devra être "(Inhibit_Biased_Climb>Down_Separation)"</li>
+<li><a href="TcasKO22JAVA.html">Versions JAVA</a>, <a href="TcasKO22C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO22/CE_TcasKO22.txt">The 11 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO23</li>
+<ul>
+<li>1 error (line 92): 0 assignment, 1 condition.</li>
+<li><a href="TcasKO23JAVA.html">Versions JAVA</a>, <a href="TcasKO23C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO23/CE_TcasKO23.txt">The 41 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO24</li>
+<ul>
+<li>1 error (line 92): 0 assignment, 1 condiiton. On note que l'error est sur la même line de condition dans TcasKO23 et dans TcasKO24, mais elle est provoquée différemment dans les deux programmes: "((Up_Separation+NOZCROSS)>Down_Separation)" dans TcasKO23 et "(Up_Separation>Down_Separation)" dans TcasKO24.</li>
+<li><a href="TcasKO24JAVA.html">Versions JAVA</a>, <a href="TcasKO24C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO24/CE_TcasKO24.txt">The 7 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO25</li>
+<ul>
+<li>1 error (line 98): 1 assignment, 0 condition.</li>
+<li><a href="TcasKO25JAVA.html">Versions JAVA</a>, <a href="TcasKO25C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO25/CE_TcasKO25.txt">The 3 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO26</li>
+<ul>
+<li>1 error (line 61): 1 assignment, 0 condition.</li>
+<li><a href="TcasKO26JAVA.html">Versions JAVA</a>, <a href="TcasKO26C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO26/CE_TcasKO26.txt">The 11 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO27</li>
+<ul>
+<li>1 error (line 61): 1 assignment, 0 condition. On note que l'error porte sur la même line d'assignment dans TcasKO26 et dans TcasKO25, mais elle n'est pas provoquée de la même façcon: "enabled = High_Confidence && (Cur_Vertical_Sep>MAXALTDIFF)" dans TcasKO26 et "enabled=High_Confidence&&(Own_Tracked_Alt_Rate<=OLEV)" dans TcasKO27</li>
+<li><a href="TcasKO27JAVA.html">Versions JAVA</a>, <a href="TcasKO27C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO27/CE_TcasKO27.txt">The 10 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO28</li>
+<ul>
+<li>2 errors (line 67 et line 85): 0 assignment, 2 conditions.</li>
+<li><a href="TcasKO28JAVA.html">Versions JAVA</a>, <a href="TcasKO28C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO28/CE_TcasKO28.txt">The 75 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO29</li>
+<ul>
+<li>2 errors (line 68 et line 86): 2 assignments, 0 condition.</li>
+<li><a href="TcasKO29JAVA.html">Versions JAVA</a>, <a href="TcasKO29C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO29/CE_TcasKO29.txt">The 18 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO30</li>
+<ul>
+<li>2 errors (line 71 et line 89): 2 assignments, 0 condition.</li>
+<li><a href="TcasKO30JAVA.html">Versions JAVA</a>, <a href="TcasKO30C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO30/CE_TcasKO30.txt">The 57 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO34</li>
+<ul>
+<li>1 error (line 65): 0 assignment, 1 condition.</li>
+<li><a href="TcasKO34JAVA.html">Versions JAVA</a>, <a href="TcasKO34C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO34/CE_TcasKO34.txt">The 77 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO35</li>
+<ul>
+<li>4 errors (line 68, line 71, line 86 et line 89): 4 assignments, 0 condition.</li>
+<li><a href="TcasKO35JAVA.html">Versions JAVA</a>, <a href="TcasKO35C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO35/CE_TcasKO35.txt">The 75 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO36</li>
+<ul>
+<li>1 error (line 56): 1 assignment, 0 condition.</li>
+<li><a href="TcasKO36JAVA.html">Versions JAVA</a>, <a href="TcasKO36C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO36/CE_TcasKO36.txt">The 122 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO37</li>
+<ul>
+<li>4 errors (line 77, line 81, line 94 et line 98): 4 assignments, 0 condition.</li>
+<li><a href="TcasKO37JAVA.html">Versions JAVA</a>, <a href="TcasKO37C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO37/CE_TcasKO37.txt">The 92 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO39</li>
+<ul>
+<li>1 error (line 98): 1 assignment, 0 condition.</li>
+<li><a href="TcasKO39JAVA.html">Versions JAVA</a>, <a href="TcasKO39C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO39/CE_TcasKO39.txt">The 3 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO40</li>
+<ul>
+<li>2 errors (line 77 et line 84): 2 assignments, 0 condition.</li>
+<li><a href="TcasKO40JAVA.html">Versions JAVA</a>, <a href="TcasKO40C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO40/CE_TcasKO40.txt">The 122 counter-examples considered</a></li>
+</ul>
+
+
+<li>TcasKO41</li>
+<ul>
+<li>1 error (line 81): 1 assignment, 0 condition.</li>
+<li><a href="TcasKO41JAVA.html">Versions JAVA</a>, <a href="TcasKO41C.html">versions C</a></li>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/Programmes_Tcas/TcasKO41/CE_TcasKO41.txt">The 20 counter-examples considered</a></li>
+</ul>
+
+
+<p>
+The errors in these programs are injected in different places in the correct version of Tcas, créant des versions erronées. For each version, we built a set of programs In fact, for a given version TcasV{i}, we first find all counterexamples. And then for each counterexample T{j} found, we build a program TcasV{i}T{j} 
+that will take as input the counterexample, and as postcondition the correct output expected.  
+</p>
+<li><a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/TcasKOV2_t1.java">TcasKOV2T1.java</a>, <a href="Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/TcasKOV2_t1.c">TcasKOV2T1.c</a></li> 
+<p>
+The error is on the instruction assignment "altsep = DOWNWARDRA" (line 114), the correct instruction should be "altsep = UNRESOLVED". By taking as input T1={CurVerticalSep=958, HighConfidence=true, TwoofThreeReportsValid=true, OwnTrackedAlt=2597, OwnTrackedAltRate=574, OtherTrackedAlt=4253, PositiveRAAltThresh=400, UpSeparation=399, DownSeparation =400, OtherRAC=0, OtherCapability=0, ClimbInhibit=true}, the program fails and returns 2, while it should return the value 0.
+</p>
+</ul>
+
+<li>Schedule2</li> 
+<li>Schedule</li>
+<li>Replace</li>
+<li>Tot_info</li>
+<li>Print_tokens2</li>
+<li>Print_tokens</li>
+<li>Space</li>
+<li>Gzip</li>
+<li>Sed</li>
+<li>Flex</li>
+<li>Grep</li>
+<li>Make</li>
+<li>Bash</li>
+<li>Emp-server</li>
+<li>Pine</li>
+<li>Vim</li>
+<li>Nanoxml</li>
+<li>Siena</li>
+<li>Galileo</li>
+<li>Ant</li>
+<li>Xml-security</li>
+<li>Jmeter</li>
+<li>Jtopas</li>
+
+</ol>
+
+
+
+</ol>
+<h2><a name="res">The results</a></h2>
+<p>
+In this section, we will show, describe and analyze tables containing the experimental results mentioned above.
+</p>
+
+<ol TYPE="I">
+<li><a name="rsb">Programs without loops</a></li>
+
+<p>
+<iframe src="publications/MCSTempsProgrammesSansBouclesResultatsAmelioresEN.pdf" width="900" height="1150" align="middle"></iframe>
+</p>
+<ul>
+<li><a name="rsba">The table containing improved times of LocFaults (incremental version)</a></li>
+</ul>
+<p>
+<iframe src="publications/TempsProgrammesSansBouclesResultatsAmelioresEN.pdf" width="900" height="1150" align="middle"></iframe>
+</p>
+<li><a name="ravb">Programs with loops</a></li>
+<p>
+<iframe src="publications/MCSTempsProgrammesAvecBouclesResultatsAmelioresEN.pdf" width="900" height="1150" align="middle"></iframe>
+</p>
+<ul>
+<li><a name="sr">The sources of the results<a></li>
+<ol>
+<li><a name="rbb">BubbleSort benchmark</a></li>
+
+<ol>
+<li><a href="BubbleSort_CECPBPV.html">The counterexamples generated by CPBPV tool</a></li>
+<li><a href="BubbleSort_Faults0FaultyCond.html">LocFaults with 0 deviated condition</a></li>
+<li><a href="BubbleSort_FaultsAtmost1FaultyCond.html">LocFaults with at most 1 deviated condition</a></li>
+<li><a href="BubbleSort_FaultsAtmost2FaultyCond.html">LocFaults with at most 2 deviated conditions</a></li>
+<li><a href="BubbleSort_FaultsAtmost3FaultyCond.html">LocFaults with at most 3 deviated conditions</a></li>
+<li><a href="BubbleSort_BugAssist.html">BugAssist</a></li>
+</ol>
+
+<li><a name="rbsu">Sum benchmark</a></li>
+
+<ol>
+<li><a href="Sum_CECPBPV.html">The counterexamples generated by CPBPV tool</a></li>
+<li><a href="Sum_Faults0FaultyCond.html">LocFaults with 0 deviated condition</a></li>
+<li><a href="Sum_FaultsAtmost1FaultyCond.html">LocFaults with at most 1 deviated condition</a></li>
+<li><a href="Sum_FaultsAtmost2FaultyCond.html">LocFaults with at most 2 deviated conditions</a></li>
+<li><a href="Sum_FaultsAtmost3FaultyCond.html">LocFaults with at most 3 deviated conditions</a></li>
+<li><a href="Sum_BugAssist.html">BugAssist</a></li>
+</ol>
+
+<li><a name="rbsq">SquareRoot benchmark</a></li>
+
+<ol>
+<li><a href="SquareRoot_CECPBPV.html">The counterexamples generated by CPBPV tool</a></li>
+<li><a href="SquareRoot_Faults0FaultyCond.html">LocFaults with 0 deviated condition</a></li>
+<li><a href="SquareRoot_FaultsAtmost1FaultyCond.html">LocFaults with at most 1 deviated condition</a></li>
+<li><a href="SquareRoot_FaultsAtmost2FaultyCond.html">LocFaults with at most 2 deviated conditions</a></li>
+<li><a href="SquareRoot_FaultsAtmost3FaultyCond.html">LocFaults with at most 3 deviated conditions</a></li>
+<li><a href="SquareRoot_BugAssist.html">BugAssist</a></li>
+</ol>
+
+</ol>
+</ul>
+<li><a name="rbrealistic">Realistic benchmarks</a></li>
+<ol> 
+<li><a name="rtcas">Tcas</a></li>
+</ol>
+<p>
+<iframe src="publications/MCSTempsProgrammesTcasEN.pdf" width="900" height="1150" align="middle"></iframe>
+</p>
+</ol>
+
+<!--<h1><a name="h1">Hypothèse 1: on suppose qu'il y a zéro condition incorrecte</a></h1>
+
+
+<ol>
+
+
+<li>AbsMinus</li>
+<ul>
+AbsMinusKO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/AbsMinusKO/AbsMinusKO_Faults/Faults_AbsMinusKO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/AbsMinusKO/AbsMinusKO_FaultsBA/Faults_AbsMinusKO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+AbsMinusKO2
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/AbsMinusKO2/AbsMinusKO2_Faults/Faults_AbsMinusKO2.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/AbsMinusKO2/AbsMinusKO2_FaultsBA/Faults_AbsMinusKO2.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+AbsMinusKO3
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/AbsMinusKO3/AbsMinusKO3_Faults/Faults_AbsMinusKO3.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/AbsMinusKO3/AbsMinusKO3_FaultsBA/Faults_AbsMinusKO3.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<li>Minmax</li>
+<ul>
+MinmaxKO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/MinmaxKO/MinmaxKO_Faults/Faults_MinmaxKO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/MinmaxKO/MinmaxKO_FaultsBA/Faults_MinmaxKO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+
+<li>ExempleMCSCardinalite2</li>
+<ul>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/ExempleMCSCardinalite2/ExempleMCSCardinalite2_Faults/Faults_ExempleMCSCardinalite2.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/ExempleMCSCardinalite2/ExempleMCSCardinalite2_FaultsBA/Faults_ExempleMCSCardinalite2.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+
+</ul>
+<li>Tritype</li>
+<ul>
+TritypeKO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/TritypeKO/TritypeKO_Faults/Faults_TritypeKO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/TritypeKO/TritypeKO_FaultsBA/Faults_TritypeKO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+TritypeKO2
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/TritypeKO2/TritypeKO2_Faults/Faults_TritypeKO2.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/TritypeKO2/TritypeKO2_FaultsBA/Faults_TritypeKO2.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+TritypeKO2V2
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/TritypeKO2V2/TritypeKO2V2_Faults/Faults_TritypeKO2V2.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/TritypeKO2V2/TritypeKO2V2_FaultsBA/Faults_TritypeKO2.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+TritypeKO3
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/TritypeKO3/TritypeKO3_Faults/Faults_TritypeKO3.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/TritypeKO3/TritypeKO3_FaultsBA/Faults_TritypeKO3.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+TritypeKO4
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/TritypeKO4/TritypeKO4_Faults/Faults_TritypeKO4.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/TritypeKO4/TritypeKO4_FaultsBA/Faults_TritypeKO4.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+TritypeKO5
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/TritypeKO5/TritypeKO5_Faults/Faults_TritypeKO5.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/TritypeKO5/TritypeKO5_FaultsBA/Faults_TritypeKO5.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<li>TriPerimetre</li>
+<ul>
+TriPerimetreKO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/TriPerimetreKO/TriPerimetreKO_Faults/Faults_TriPerimetreKO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/TriPerimetreKO/TriPerimetreKO_FaultsBA/Faults_TriPerimetreKO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+TriPerimetreKOV2
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/TriPerimetreKOV2/TriPerimetreKOV2_Faults/Faults_TriPerimetreKOV2.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/TriPerimetreKOV2/TriPerimetreKOV2_FaultsBA/Faults_TriPerimetreKOV2.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+TriPerimetreKO2
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/TriPerimetreKO2/TriPerimetreKO2_Faults/Faults_TriPerimetreKO2.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/TriPerimetreKO2/TriPerimetreKO2_FaultsBA/Faults_TriPerimetreKO2.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+TriPerimetreKO3
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/TriPerimetreKO3/TriPerimetreKO3_Faults/Faults_TriPerimetreKO3.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/TriPerimetreKO3/TriPerimetreKO3_FaultsBA/Faults_TriPerimetreKO3.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<li>ArrayInit</li>
+<ul>
+ArrayInitKO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/ArrayInitKO/ArrayInitKO_Faults/Faults_ArrayInitKO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/ArrayInitKO/ArrayInitKO_FaultsBA/Faults_ArrayInitKO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<li>BSearch</li>
+<ul>
+BSearchKO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/BSearchKO/BSearchKO_Faults/Faults_BSearchKO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/BSearchKO/BSearchKO_FaultsBA/Faults_BSearchKO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<li>Tcas</li>
+<ul>
+TcasKOV2T1
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/Resultats/TcasKOV2_t1/TcasKOV2_t1_Faults/Faults_TcasKOV2_t1.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/Resultats/TcasKOV2_t1/TcasKOV2_t1_FaultsBA/Faults_TcasKOV2_t1.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+
+<li>Bf[5-20]</li>
+<ul>
+Bf5KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Resultats/Bf5KO/Bf5KO_Faults/Faults_Bf5KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Resultats/Bf5KO/Bf5KO_FaultsBA/Faults_Bf5KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf6KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Resultats/Bf6KO/Bf6KO_Faults/Faults_Bf6KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Resultats/Bf6KO/Bf6KO_FaultsBA/Faults_Bf6KO.faults">Résultats de l'outil <B>BugAssist</B></a></li></ul>
+<ul>
+Bf7KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Resultats/Bf7KO/Bf7KO_Faults/Faults_Bf7KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Resultats/Bf7KO/Bf7KO_FaultsBA/Faults_Bf7KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf8KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Resultats/Bf8KO/Bf8KO_Faults/Faults_Bf8KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Resultats/Bf8KO/Bf8KO_FaultsBA/Faults_Bf8KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf9KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Resultats/Bf9KO/Bf9KO_Faults/Faults_Bf9KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Resultats/Bf9KO/Bf9KO_FaultsBA/Faults_Bf9KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf10KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Resultats/Bf10KO/Bf10KO_Faults/Faults_Bf10KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Resultats/Bf10KO/Bf10KO_FaultsBA/Faults_Bf10KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf11KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Resultats/Bf11KO/Bf11KO_Faults/Faults_Bf11KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Resultats/Bf11KO/Bf11KO_FaultsBA/Faults_Bf11KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf12KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Resultats/Bf12KO/Bf12KO_Faults/Faults_Bf12KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Resultats/Bf12KO/Bf12KO_FaultsBA/Faults_Bf12KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf13KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Resultats/Bf13KO/Bf13KO_Faults/Faults_Bf13KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Resultats/Bf13KO/Bf13KO_FaultsBA/Faults_Bf13KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf14KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Resultats/Bf14KO/Bf14KO_Faults/Faults_Bf14KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Resultats/Bf14KO/Bf14KO_FaultsBA/Faults_Bf14KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf15KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Resultats/Bf15KO/Bf15KO_Faults/Faults_Bf15KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Resultats/Bf15KO/Bf15KO_FaultsBA/Faults_Bf15KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf16KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Resultats/Bf16KO/Bf16KO_Faults/Faults_Bf16KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Resultats/Bf16KO/Bf16KO_FaultsBA/Faults_Bf16KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf17KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Resultats/Bf17KO/Bf17KO_Faults/Faults_Bf17KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Resultats/Bf17KO/Bf17KO_FaultsBA/Faults_Bf17KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf18KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Resultats/Bf18KO/Bf18KO_Faults/Faults_Bf18KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Resultats/Bf18KO/Bf18KO_FaultsBA/Faults_Bf18KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf19KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Resultats/Bf19KO/Bf19KO_Faults/Faults_Bf19KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Resultats/Bf19KO/Bf19KO_FaultsBA/Faults_Bf19KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf20KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfKO/Resultats/Bf20KO/Bf20KO_Faults/Faults_Bf20KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfKO/Resultats/Bf20KO/Bf20KO_FaultsBA/Faults_Bf20KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+
+
+
+<li>Bf[5-20]V2</li>
+<ul>
+Bf5V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf5V2KO/Bf5V2KO_Faults/Faults_Bf5V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf5V2KO/Bf5V2KO_FaultsBA/Faults_Bf5V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf6V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf6V2KO/Bf6V2KO_Faults/Faults_Bf6V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf6V2KO/Bf6V2KO_FaultsBA/Faults_Bf6V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li></ul>
+<ul>
+Bf7V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf7V2KO/Bf7V2KO_Faults/Faults_Bf7V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf7V2KO/Bf7V2KO_FaultsBA/Faults_Bf7V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf8V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf8V2KO/Bf8V2KO_Faults/Faults_Bf8V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf8V2KO/Bf8V2KO_FaultsBA/Faults_Bf8V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf9V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf9V2KO/Bf9V2KO_Faults/Faults_Bf9V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf9V2KO/Bf9V2KO_FaultsBA/Faults_Bf9V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf10V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf10V2KO/Bf10V2KO_Faults/Faults_Bf10V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf10V2KO/Bf10V2KO_FaultsBA/Faults_Bf10V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf11V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf11V2KO/Bf11V2KO_Faults/Faults_Bf11V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf11V2KO/Bf11V2KO_FaultsBA/Faults_Bf11V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf12V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf12V2KO/Bf12V2KO_Faults/Faults_Bf12V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf12V2KO/Bf12V2KO_FaultsBA/Faults_Bf12V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf13V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf13V2KO/Bf13V2KO_Faults/Faults_Bf13V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf13V2KO/Bf13V2KO_FaultsBA/Faults_Bf13V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf14V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf14V2KO/Bf14V2KO_Faults/Faults_Bf14V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf14V2KO/Bf14V2KO_FaultsBA/Faults_Bf14V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf15V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf15V2KO/Bf15V2KO_Faults/Faults_Bf15V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf15V2KO/Bf15V2KO_FaultsBA/Faults_Bf15V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf16V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf16V2KO/Bf16V2KO_Faults/Faults_Bf16V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf16V2KO/Bf16V2KO_FaultsBA/Faults_Bf16V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf17V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf17V2KO/Bf17V2KO_Faults/Faults_Bf17V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf17V2KO/Bf17V2KO_FaultsBA/Faults_Bf17V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf18V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf18V2KO/Bf18V2KO_Faults/Faults_Bf18V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf18V2KO/Bf18V2KO_FaultsBA/Faults_Bf18V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf19V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf19V2KO/Bf19V2KO_Faults/Faults_Bf19V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf19V2KO/Bf19V2KO_FaultsBA/Faults_Bf19V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf20V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf20V2KO/Bf20V2KO_Faults/Faults_Bf20V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf20V2KO/Bf20V2KO_FaultsBA/Faults_Bf20V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+</ol>
+
+<h1><a name="h2">Hypothèse 2: on suppose qu'il y a au plus une condition incorrecte</a></h1>
+
+<ol>
+<li>AbsMinus</li>
+<ul>
+AbsMinuKO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/Resultats/AbsMinusKO/AbsMinusKO_Faults/Faults_AbsMinusKO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/Resultats/AbsMinusKO/AbsMinusKO_FaultsBA/Faults_AbsMinusKO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+AbsMinusKO2
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/Resultats/AbsMinusKO2/AbsMinusKO2_Faults/Faults_AbsMinusKO2.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/Resultats/AbsMinusKO2/AbsMinusKO2_FaultsBA/Faults_AbsMinusKO2.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+AbsMinusKO3
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/Resultats/AbsMinusKO3/AbsMinusKO3_Faults/Faults_AbsMinusKO3.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/Resultats/AbsMinusKO3/AbsMinusKO3_FaultsBA/Faults_AbsMinusKO3.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+
+<li>Minmax</li>
+<ul>
+MminmaxKO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/Resultats/MinmaxKO/MinmaxKO_Faults/Faults_MinmaxKO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/Resultats/MinmaxKO/MinmaxKO_FaultsBA/Faults_MinmaxKO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul> 
+
+<li>Tritype</li>
+<ul>
+TritypeKO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/Resultats/TritypeKO/TritypeKO_Faults/Faults_TritypeKO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/Resultats/TritypeKO/TritypeKO_FaultsBA/Faults_TritypeKO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+TritypeKO2
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/Resultats/TritypeKO/TritypeKO_Faults/Faults_TritypeKO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/Resultats/TritypeKO/TritypeKO_FaultsBA/Faults_TritypeKO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+TritypeKO2V2
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/Resultats/TritypeKO2V2/TritypeKO2V2_Faults/Faults_TritypeKO2V2.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/Resultats/TritypeKO2V2/TritypeKO2V2_FaultsBA/Faults_TritypeKO2V2.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+TritypeKO3
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/Resultats/TritypeKO3/TritypeKO3_Faults/Faults_TritypeKO3.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/Resultats/TritypeKO3/TritypeKO3_FaultsBA/Faults_TritypeKO3.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+TritypeKO4
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/Resultats/TritypeKO4/TritypeKO4_Faults/Faults_TritypeKO4.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/Resultats/TritypeKO4/TritypeKO4_FaultsBA/Faults_TritypeKO4.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+TritypeKO5
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/Resultats/TritypeKO5/TritypeKO5_Faults/Faults_TritypeKO5.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/Resultats/TritypeKO5/TritypeKO5_FaultsBA/Faults_TritypeKO5.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<li>TriPerimetre</li>
+<ul>
+TriPerimetreKO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/Resultats/TriPerimetreKO/TriPerimetreKO_Faults/Faults_TriPerimetreKO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/Resultats/TriPerimetreKO/TriPerimetreKO_FaultsBA/Faults_TriPerimetreKO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+TriPerimetreKOV2
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/Resultats/TriPerimetreKOV2/TriPerimetreKOV2_Faults/Faults_TriPerimetreKOV2.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/Resultats/TriPerimetreKOV2/TriPerimetreKOV2_FaultsBA/Faults_TriPerimetreKOV2.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+TriPerimetreKO2
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/Resultats/TriPerimetreKO2/TriPerimetreKO2_Faults/Faults_TriPerimetreKO2.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/Resultats/TriPerimetreKO2/TriPerimetreKO2_FaultsBA/Faults_TriPerimetreKO2.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+TriPerimetreKO3
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/Resultats/TriPerimetreKO3/TriPerimetreKO3_Faults/Faults_TriPerimetreKO3.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/Resultats/TriPerimetreKO3/TriPerimetreKO3_FaultsBA/Faults_TriPerimetreKO3.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+
+
+<li>Bf[5-20]</li>
+<ul>
+Bf5KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/BfKO/Resultats/Bf5KO/Bf5KO_Faults/Faults_Bf5KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/BfKO/Resultats/Bf5KO/Bf5KO_FaultsBA/Faults_Bf5KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf6KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/BfKO/Resultats/Bf6KO/Bf6KO_Faults/Faults_Bf6KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/BfKO/Resultats/Bf6KO/Bf6KO_FaultsBA/Faults_Bf6KO.faults">Résultats de l'outil <B>BugAssist</B></a></li></ul>
+<ul>
+Bf7KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/BfKO/Resultats/Bf7KO/Bf7KO_Faults/Faults_Bf7KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/BfKO/Resultats/Bf7KO/Bf7KO_FaultsBA/Faults_Bf7KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf8KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/BfKO/Resultats/Bf8KO/Bf8KO_Faults/Faults_Bf8KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/BfKO/Resultats/Bf8KO/Bf8KO_FaultsBA/Faults_Bf8KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf9KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/BfKO/Resultats/Bf9KO/Bf9KO_Faults/Faults_Bf9KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/BfKO/Resultats/Bf9KO/Bf9KO_FaultsBA/Faults_Bf9KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf10KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/BfKO/Resultats/Bf10KO/Bf10KO_Faults/Faults_Bf10KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/BfKO/Resultats/Bf10KO/Bf10KO_FaultsBA/Faults_Bf10KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf11KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/BfKO/Resultats/Bf11KO/Bf11KO_Faults/Faults_Bf11KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/BfKO/Resultats/Bf11KO/Bf11KO_FaultsBA/Faults_Bf11KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf12KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/BfKO/Resultats/Bf12KO/Bf12KO_Faults/Faults_Bf12KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/BfKO/Resultats/Bf12KO/Bf12KO_FaultsBA/Faults_Bf12KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf13KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/BfKO/Resultats/Bf13KO/Bf13KO_Faults/Faults_Bf13KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/BfKO/Resultats/Bf13KO/Bf13KO_FaultsBA/Faults_Bf13KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf14KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/BfKO/Resultats/Bf14KO/Bf14KO_Faults/Faults_Bf14KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/BfKO/Resultats/Bf14KO/Bf14KO_FaultsBA/Faults_Bf14KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf15KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/BfKO/Resultats/Bf15KO/Bf15KO_Faults/Faults_Bf15KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/BfKO/Resultats/Bf15KO/Bf15KO_FaultsBA/Faults_Bf15KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf16KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/BfKO/Resultats/Bf16KO/Bf16KO_Faults/Faults_Bf16KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/BfKO/Resultats/Bf16KO/Bf16KO_FaultsBA/Faults_Bf16KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf17KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/BfKO/Resultats/Bf17KO/Bf17KO_Faults/Faults_Bf17KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/BfKO/Resultats/Bf17KO/Bf17KO_FaultsBA/Faults_Bf17KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf18KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/BfKO/Resultats/Bf18KO/Bf18KO_Faults/Faults_Bf18KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/BfKO/Resultats/Bf18KO/Bf18KO_FaultsBA/Faults_Bf18KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf19KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/BfKO/Resultats/Bf19KO/Bf19KO_Faults/Faults_Bf19KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/BfKO/Resultats/Bf19KO/Bf19KO_FaultsBA/Faults_Bf19KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf20KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/1_Conditions_Fausses/BfKO/Resultats/Bf20KO/Bf20KO_Faults/Faults_Bf20KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/1_Conditions_Fausses/BfKO/Resultats/Bf20KO/Bf20KO_FaultsBA/Faults_Bf20KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+
+
+
+<li>Bf[5-20]V2</li>
+<ul>
+Bf5V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf5V2KO/Bf5V2KO_Faults/Faults_Bf5V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf5V2KO/Bf5V2KO_FaultsBA/Faults_Bf5V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf6V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf6V2KO/Bf6V2KO_Faults/Faults_Bf6V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf6V2KO/Bf6V2KO_FaultsBA/Faults_Bf6V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li></ul>
+<ul>
+Bf7V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf7V2KO/Bf7V2KO_Faults/Faults_Bf7V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf7V2KO/Bf7V2KO_FaultsBA/Faults_Bf7V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf8V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf8V2KO/Bf8V2KO_Faults/Faults_Bf8V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf8V2KO/Bf8V2KO_FaultsBA/Faults_Bf8V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf9V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf9V2KO/Bf9V2KO_Faults/Faults_Bf9V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf9V2KO/Bf9V2KO_FaultsBA/Faults_Bf9V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf10V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf10V2KO/Bf10V2KO_Faults/Faults_Bf10V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf10V2KO/Bf10V2KO_FaultsBA/Faults_Bf10V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf11V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf11V2KO/Bf11V2KO_Faults/Faults_Bf11V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf11V2KO/Bf11V2KO_FaultsBA/Faults_Bf11V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf12V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf12V2KO/Bf12V2KO_Faults/Faults_Bf12V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf12V2KO/Bf12V2KO_FaultsBA/Faults_Bf12V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf13V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf13V2KO/Bf13V2KO_Faults/Faults_Bf13V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf13V2KO/Bf13V2KO_FaultsBA/Faults_Bf13V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf14V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf14V2KO/Bf14V2KO_Faults/Faults_Bf14V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf14V2KO/Bf14V2KO_FaultsBA/Faults_Bf14V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf15V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf15V2KO/Bf15V2KO_Faults/Faults_Bf15V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf15V2KO/Bf15V2KO_FaultsBA/Faults_Bf15V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf16V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf16V2KO/Bf16V2KO_Faults/Faults_Bf16V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf16V2KO/Bf16V2KO_FaultsBA/Faults_Bf16V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf17V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf17V2KO/Bf17V2KO_Faults/Faults_Bf17V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf17V2KO/Bf17V2KO_FaultsBA/Faults_Bf17V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf18V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf18V2KO/Bf18V2KO_Faults/Faults_Bf18V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf18V2KO/Bf18V2KO_FaultsBA/Faults_Bf18V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf19V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf19V2KO/Bf19V2KO_Faults/Faults_Bf19V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf19V2KO/Bf19V2KO_FaultsBA/Faults_Bf19V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+<ul>
+Bf20V2KO
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS/0_Conditions_Fausses/BfV2KO/Resultats/Bf20V2KO/Bf20V2KO_Faults/Faults_Bf20V2KO.faults">Résultats de notre implémentation de <B>LocFaults</B></a></li>
+<li><a href="./Benchmarks_MCS-IIS/Programs_Benchmarks_MCS-IIS_BugAssist/0_Conditions_Fausses/BfV2KO/Resultats/Bf20V2KO/Bf20V2KO_FaultsBA/Faults_Bf20V2KO.faults">Résultats de l'outil <B>BugAssist</B></a></li>
+</ul>
+
+
+
+<li>Tcas</li>
+<ul>
+TcasKO
+<li><a href=./ResultatsTcasKOJAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKOC.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO2
+<li><a href=./ResultatsTcasKO2JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO2C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO3
+<li><a href=./ResultatsTcasKO3JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO3C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO4
+<li><a href=./ResultatsTcasKO4JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO4C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO5
+<li><a href=./ResultatsTcasKO5JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO5C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO6
+<li><a href=./ResultatsTcasKO6JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO6C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO7
+<li><a href=./ResultatsTcasKO7JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO7C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO8
+<li><a href=./ResultatsTcasKO8JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO8C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO9
+<li><a href=./ResultatsTcasKO9JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO9C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO10
+<li><a href=./ResultatsTcasKO10JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO10C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO11
+<li><a href=./ResultatsTcasKO11JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO11C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO12
+<li><a href=./ResultatsTcasKO12JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO12C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO13
+<li><a href=./ResultatsTcasKO13JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO13C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO14
+<li><a href=./ResultatsTcasKO14JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO14C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO16
+<li><a href=./ResultatsTcasKO16JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO16C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO17
+<li><a href=./ResultatsTcasKO17JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO17C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO18
+<li><a href=./ResultatsTcasKO18JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO18C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO19
+<li><a href=./ResultatsTcasKO19JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO19C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO20
+<li><a href=./ResultatsTcasKO20JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO20C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO21
+<li><a href=./ResultatsTcasKO21JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO21C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO22
+<li><a href=./ResultatsTcasKO22JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO22C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO23
+<li><a href=./ResultatsTcasKO23JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO23C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO24
+<li><a href=./ResultatsTcasKO24JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO24C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO25
+<li><a href=./ResultatsTcasKO25JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO25C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO26
+<li><a href=./ResultatsTcasKO26JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO26C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO27
+<li><a href=./ResultatsTcasKO27JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO27C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO28
+<li><a href=./ResultatsTcasKO28JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO28C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO29
+<li><a href=./ResultatsTcasKO29JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO29C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO30
+<li><a href=./ResultatsTcasKO30JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO30C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO34
+<li><a href=./ResultatsTcasKO34JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO34C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO35
+<li><a href=./ResultatsTcasKO35JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO35C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO36
+<li><a href=./ResultatsTcasKO36JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO36C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO37
+<li><a href=./ResultatsTcasKO37JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO37C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO39
+<li><a href=./ResultatsTcasKO39JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO39C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO40
+<li><a href=./ResultatsTcasKO40JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO40C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+<ul>
+TcasKO41
+<li><a href=./ResultatsTcasKO41JAVA.html>Résultats de notre implémentation de LocFaults</a></li>
+<li><a href=./ResultatsTcasKO41C.html>Résultats de l'outil BugAssist</a></li>
+</ul>
+</ol>
+-->
+
+</article>
+
+</section>
+<footer>
+      
+</footer>
+ </div>
+ </body>
+</html>
