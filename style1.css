@@ -357,6 +357,8 @@ footer h1
 }
 p.wisdom {border:4px dotted Black;}
 UL.menu {color: red; width:8cm; border:4px ridge Black;background-color:#dddddd;}
+UL.menu1 {color: red; width:13cm; border:4px ridge Black;background-color:#dddddd;}
+
 
 div#sommaire {
   position: fixed;
