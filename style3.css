@@ -21,4 +21,19 @@ footer {
     bottom: 0;
 }
 
-
+p.important {
+   height:3cm;
+   margin:0cm; /* permet de mettre une marge externe au cadre . */
+   padding:0.5cm; /* permet de mettre une marge à l'interieure du cadre */
+   padding:10px;
+   background-color:#dddddd;
+   /*color: red;*/
+   border-left:2px solid blue; /* couleur du cadre */
+   border-right:2px solid blue;
+   border-bottom:2px solid blue;
+   border-top:2px solid blue;
+   overflow:scroll; /* ne débordent pas du cadre(espace d'affichage) avec ou sans scrollbar */
+  }
+p.important:hover/*, p.hover*/ {
+  background: #fff;
+}
