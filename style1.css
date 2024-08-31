@@ -87,7 +87,7 @@ section h1, section h2, section h3 {
 
 #bloc_page
 {
-    width: 1390px;
+    width: 1360px;
     margin: auto;
 }
 
@@ -381,7 +381,6 @@ div#sommaire:hover/*, div#sommaire.hover */ {
 /**********/
 /* Style de base pour le header */
 header {
-    padding: 10px 20px;
     border-bottom: 2px solid #ccc;
 }
 
