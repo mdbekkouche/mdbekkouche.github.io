@@ -440,48 +440,5 @@ nav ul li a:hover {
     background-color: #ddd;
 }
 
-/* Responsive pour tablettes et petits écrans */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .header-title {
-        font-size: 20px;
-        text-align: right;
-        padding: 8px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav ul li a {
-        font-size: 1.2rem;
-        padding: 10px;
-    }
-}
-
-/* Responsive pour très petits écrans (téléphones) */
-@media (max-width: 480px) {
-    #logo {
-        max-width: 60px; /* Réduire la taille du logo pour les très petits écrans */
-    }
-
-    .header-title {
-        font-size: 16px;
-        text-align: right;
-        padding: 6px;
-    }
-
-    nav ul li a {
-        font-size: 1.4rem;
-        padding: 12px;
-    }
-}
-
 /**********/
 
