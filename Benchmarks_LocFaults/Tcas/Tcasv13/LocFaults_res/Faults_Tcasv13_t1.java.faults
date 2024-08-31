@@ -1,0 +1,35 @@
+DOING LOCALIZATION...
+java2CFGTranslator.Java2CFGException: It was impossible to build the AST for file /home/bekkouche/eclipse-workspace/Benchmarks_LocFaults/Tcas/Tcasv13/Progs_with_spec/Tcasv13_t1.java
+Possible errors in the program: 
+   - only primitive types and arrays of primitive types are allowed
+   - in "if statements", then and else blocks must be enclosed with {}
+   - "switch statements" are not allowed (use "if else" instead)
+   - "for loops" are not allowed (use "while loops" instead)
+   - JavaDoc comments are not allowed
+   - i++ or i-- are not permitted
+   - non deterministic values are only permitted in assigments
+     of the form: v=nondet-in();Possible error in JML specification: 
+   - requires clause must precede ensures clause
+   - clauses must terminate with ";"
+   see http://www.cs.ucf.edu/~leavens/JML/ for JML syntax
+java2CFGTranslator.Java2CFGException: It was impossible to build the AST for file /home/bekkouche/eclipse-workspace/Benchmarks_LocFaults/Tcas/Tcasv13/Progs_with_spec/Tcasv13_t1.java
+Possible errors in the program: 
+   - only primitive types and arrays of primitive types are allowed
+   - in "if statements", then and else blocks must be enclosed with {}
+   - "switch statements" are not allowed (use "if else" instead)
+   - "for loops" are not allowed (use "while loops" instead)
+   - JavaDoc comments are not allowed
+   - i++ or i-- are not permitted
+   - non deterministic values are only permitted in assigments
+     of the form: v=nondet-in();Possible error in JML specification: 
+   - requires clause must precede ensures clause
+   - clauses must terminate with ";"
+   see http://www.cs.ucf.edu/~leavens/JML/ for JML syntax
+	at java2CFGTranslator.Jml2CFG.<init>(Jml2CFG.java:105)
+	at java2CFGTranslator.Java2CFGVisitor.<init>(Java2CFGVisitor.java:243)
+	at java2CFGTranslator.CFGBuilder.convert(CFGBuilder.java:73)
+	at validation.strategies.cfg.localization.CplexLocalization.buildCFG(CplexLocalization.java:278)
+	at validation.strategies.cfg.localization.CplexLocalization.<init>(CplexLocalization.java:76)
+	at validation.Validation.verify(Validation.java:281)
+	at validation.ValidationLauncher.main(ValidationLauncher.java:387)
+Error: method null is not defined in /home/bekkouche/eclipse-workspace/Benchmarks_LocFaults/Tcas/Tcasv13/Progs_with_spec/Tcasv13_t1.java!

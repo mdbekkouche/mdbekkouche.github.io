@@ -1,0 +1,277 @@
+DOING LOCALIZATION...
+
+Starting conversion of file: /home/bekkouche/eclipse-workspace/Benchmarks_LocFaults/Tritype/Tritypev4/Progs_with_spec/Tritypev4_TestCase_7.java
+Loops are unwound 10 times.
+The size of the constructed CFG: 30
+
+From the counterexample, LocFaults calculates MCS and IIS by exploring the graph in DFS from top to bottom and by deviating at most '3' conditional statements.
+By deviating '0' condition(s), we obtain:
+
+
+Solver: CP OPTIMIZER
+1. CSP_d: empty set
+------------------------
+2. CSP_a:
+tritype_0_i_0 := 5 --> line -1
+tritype_0_j_0 := 6 --> line -1
+tritype_0_k_0 := 6 --> line -1
+tritype_0_trityp_0 := 0 --> line 14
+tritype_0_trityp_1 := 1 --> line 19
+tritype_0_trityp_2 := tritype_0_trityp_1 --> line 0
+tritype_0_trityp_3 := tritype_0_trityp_2 --> line 0
+tritype_0_trityp_4 := ( tritype_0_trityp_3 + 3 ) --> line 27
+tritype_0_trityp_5 := 3 --> line 39
+tritype_0_Result_0 := tritype_0_trityp_5 --> line 61
+( ( ( ( ( ( ( ( ( ( ( tritype_0_i_0 + tritype_0_j_0 ) ) <= tritype_0_k_0 ) || ( ( ( tritype_0_j_0 + tritype_0_k_0 ) ) <= tritype_0_i_0 ) ) || ( ( ( tritype_0_i_0 + tritype_0_k_0 ) ) <= tritype_0_j_0 ) ) ) ==> ( ( tritype_0_Result_0 == 4 ) ) ) ) && ( ( ( ( !( ( ( ( ( ( ( tritype_0_i_0 + tritype_0_j_0 ) ) <= tritype_0_k_0 ) || ( ( ( tritype_0_j_0 + tritype_0_k_0 ) ) <= tritype_0_i_0 ) ) || ( ( ( tritype_0_i_0 + tritype_0_k_0 ) ) <= tritype_0_j_0 ) ) ) ) && ( ( ( tritype_0_i_0 == tritype_0_j_0 ) && ( tritype_0_j_0 == tritype_0_k_0 ) ) ) ) ) ==> ( ( tritype_0_Result_0 == 3 ) ) ) ) ) && ( ( ( ( ( !( ( ( ( ( ( ( tritype_0_i_0 + tritype_0_j_0 ) ) <= tritype_0_k_0 ) || ( ( ( tritype_0_j_0 + tritype_0_k_0 ) ) <= tritype_0_i_0 ) ) || ( ( ( tritype_0_i_0 + tritype_0_k_0 ) ) <= tritype_0_j_0 ) ) ) ) && !( ( ( ( tritype_0_i_0 == tritype_0_j_0 ) && ( tritype_0_j_0 == tritype_0_k_0 ) ) ) ) ) && ( ( ( ( tritype_0_i_0 == tritype_0_j_0 ) || ( tritype_0_j_0 == tritype_0_k_0 ) ) || ( tritype_0_i_0 == tritype_0_k_0 ) ) ) ) ) ==> ( ( tritype_0_Result_0 == 2 ) ) ) ) ) && ( ( ( ( ( !( ( ( ( ( ( ( tritype_0_i_0 + tritype_0_j_0 ) ) <= tritype_0_k_0 ) || ( ( ( tritype_0_j_0 + tritype_0_k_0 ) ) <= tritype_0_i_0 ) ) || ( ( ( tritype_0_i_0 + tritype_0_k_0 ) ) <= tritype_0_j_0 ) ) ) ) && !( ( ( ( tritype_0_i_0 == tritype_0_j_0 ) && ( tritype_0_j_0 == tritype_0_k_0 ) ) ) ) ) && !( ( ( ( ( tritype_0_i_0 == tritype_0_j_0 ) || ( tritype_0_j_0 == tritype_0_k_0 ) ) || ( tritype_0_i_0 == tritype_0_k_0 ) ) ) ) ) ) ==> ( ( tritype_0_Result_0 == 1 ) ) ) ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 39}
+{line 61}
+
+Runtime of the method that compute MCS: 0.016
+MIVcard(ctrs,line 39)=1.0
+MIVcard(ctrs,line 61)=1.0
+
+The number of instructions suspected: 2
+   IIS in CSP_a using Deletion Filter:
+{CE,line 39,line 61,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.013
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 7
+{CE,line 61,line 39,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.012
+   IIS in CSP_a using the conflict refiner implementation of CP Optimizer:
+{CE,line 39,line 61,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CP Optimizer: 0.012
+
+The resulats:
+1. Elapsed time during DFS exploration: 0.033
+2. Elapsed time during MCS calculation: 0.016
+3. Elapsed time during IIS isolation using Deletion Filter: 0.013
+4. Elapsed time during IIS isolation using QuickExplain: 0.012
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.012
+By deviating '1' condition(s), we obtain:
+
+
+Solver: CP OPTIMIZER
+1. CSP_d:
+line 26(If) : ( tritype_0_j_0 == tritype_0_k_0 )
+------------------------
+2. CSP_a:
+tritype_0_i_0 := 5 --> line -1
+tritype_0_j_0 := 6 --> line -1
+tritype_0_k_0 := 6 --> line -1
+tritype_0_trityp_0 := 0 --> line 14
+tritype_0_trityp_1 := 1 --> line 19
+tritype_0_trityp_2 := tritype_0_trityp_1 --> line 0
+tritype_0_trityp_3 := tritype_0_trityp_2 --> line 0
+!( ( tritype_0_j_0 == tritype_0_k_0 ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+
+Runtime of the method that compute MCS: 0.001
+
+The number of instructions suspected: 0
+   IIS in CSP_a using Deletion Filter:
+{CE,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.003
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 4
+{CE,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.001
+   IIS in CSP_a using the conflict refiner implementation of CP Optimizer:
+{CE,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CP Optimizer: 0.001
+
+The resulats:
+1. Elapsed time during DFS exploration: 0.005
+2. Elapsed time during MCS calculation: 0.001
+3. Elapsed time during IIS isolation using Deletion Filter: 0.003
+4. Elapsed time during IIS isolation using QuickExplain: 0.001
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.001
+By deviating '2' condition(s), we obtain:
+
+
+Solver: CP OPTIMIZER
+1. CSP_d:
+line 38(If) : ( tritype_0_trityp_4 > 3 )
+line 42(Else) : ( ( tritype_0_trityp_4 == 1 ) && ( ( tritype_0_i_0 + tritype_0_j_0 ) > tritype_0_k_0 ) )
+------------------------
+2. CSP_a:
+tritype_0_i_0 := 5 --> line -1
+tritype_0_j_0 := 6 --> line -1
+tritype_0_k_0 := 6 --> line -1
+tritype_0_trityp_0 := 0 --> line 14
+tritype_0_trityp_1 := 1 --> line 19
+tritype_0_trityp_2 := tritype_0_trityp_1 --> line 0
+tritype_0_trityp_3 := tritype_0_trityp_2 --> line 0
+tritype_0_trityp_4 := ( tritype_0_trityp_3 + 3 ) --> line 27
+!( ( tritype_0_trityp_4 > 3 ) ) --> line -2
+( ( tritype_0_trityp_4 == 1 ) && ( ( tritype_0_i_0 + tritype_0_j_0 ) > tritype_0_k_0 ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 0}
+{line 27}
+{line 0}
+{line 19}
+
+Runtime of the method that compute MCS: 0.02
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 27)=1.0
+
+The number of instructions suspected: 2
+   IIS in CSP_a using Deletion Filter:
+{CE,line 19,line 0,line 0,line 27,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.007
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 5
+{CE,line 27,line 0,line 0,line 19,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.012
+   IIS in CSP_a using the conflict refiner implementation of CP Optimizer:
+{CE,line 19,line 0,line 0,line 27,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CP Optimizer: 0.016
+
+Solver: CP OPTIMIZER
+1. CSP_d:
+line 38(If) : ( tritype_0_trityp_4 > 3 )
+line 46(Else) : ( ( tritype_0_trityp_4 == 2 ) && ( ( tritype_0_i_0 + tritype_0_k_0 ) > tritype_0_j_0 ) )
+------------------------
+2. CSP_a:
+tritype_0_i_0 := 5 --> line -1
+tritype_0_j_0 := 6 --> line -1
+tritype_0_k_0 := 6 --> line -1
+tritype_0_trityp_0 := 0 --> line 14
+tritype_0_trityp_1 := 1 --> line 19
+tritype_0_trityp_2 := tritype_0_trityp_1 --> line 0
+tritype_0_trityp_3 := tritype_0_trityp_2 --> line 0
+tritype_0_trityp_4 := ( tritype_0_trityp_3 + 3 ) --> line 27
+!( ( tritype_0_trityp_4 > 3 ) ) --> line -2
+( ( tritype_0_trityp_4 == 2 ) && ( ( tritype_0_i_0 + tritype_0_k_0 ) > tritype_0_j_0 ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 0}
+{line 27}
+{line 0}
+{line 19}
+
+Runtime of the method that compute MCS: 0.015
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 27)=1.0
+
+The number of instructions suspected: 2
+   IIS in CSP_a using Deletion Filter:
+{CE,line 19,line 0,line 0,line 27,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.006
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 5
+{CE,line 27,line 0,line 0,line 19,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.012
+   IIS in CSP_a using the conflict refiner implementation of CP Optimizer:
+{CE,line 19,line 0,line 0,line 27,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CP Optimizer: 0.015
+
+Solver: CP OPTIMIZER
+1. CSP_d:
+line 38(If) : ( tritype_0_trityp_4 > 3 )
+line 50(Else) : ( ( tritype_0_trityp_4 == 3 ) && ( ( tritype_0_j_0 + tritype_0_k_0 ) > tritype_0_i_0 ) )
+------------------------
+2. CSP_a:
+tritype_0_i_0 := 5 --> line -1
+tritype_0_j_0 := 6 --> line -1
+tritype_0_k_0 := 6 --> line -1
+tritype_0_trityp_0 := 0 --> line 14
+tritype_0_trityp_1 := 1 --> line 19
+tritype_0_trityp_2 := tritype_0_trityp_1 --> line 0
+tritype_0_trityp_3 := tritype_0_trityp_2 --> line 0
+tritype_0_trityp_4 := ( tritype_0_trityp_3 + 3 ) --> line 27
+!( ( tritype_0_trityp_4 > 3 ) ) --> line -2
+( ( tritype_0_trityp_4 == 3 ) && ( ( tritype_0_j_0 + tritype_0_k_0 ) > tritype_0_i_0 ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 0}
+{line 27}
+{line 0}
+{line 19}
+
+Runtime of the method that compute MCS: 0.018
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 27)=1.0
+
+The number of instructions suspected: 2
+   IIS in CSP_a using Deletion Filter:
+{CE,line 19,line 0,line 0,line 27,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.006
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 5
+{CE,line 27,line 0,line 0,line 19,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.012
+   IIS in CSP_a using the conflict refiner implementation of CP Optimizer:
+{CE,line 19,line 0,line 0,line 27,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CP Optimizer: 0.015
+
+The resulats:
+1. Elapsed time during DFS exploration: 0.012
+2. Elapsed time during MCS calculation: 0.053
+3. Elapsed time during IIS isolation using Deletion Filter: 0.019
+4. Elapsed time during IIS isolation using QuickExplain: 0.036
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.046
+By deviating '3' condition(s), we obtain:
+
+
+The resulats:
+1. Elapsed time during DFS exploration: 0.003
+2. Elapsed time during MCS calculation: 0.0
+3. Elapsed time during IIS isolation using Deletion Filter: 0.0
+4. Elapsed time during IIS isolation using QuickExplain: 0.0
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.0
+/***************************************************************/
+The final resulats:
+1. The pretreatment(CFG building) time: 0.402
+2. Total elapsed time during DFS exploration: 0.053
+
+3. The time required to calculate the MCSs:0.07
+4. The time required for Deletion Filter:0.035
+5. The time required for QuickExplain:0.049
+6. The time required for the conflict refiner implementation:0.059
+7. Total elapsed time during DFS exploration and MCS calculation: 0.123
+8. Total elapsed time during DFS exploration and IIS calculation using Deletion Filter: 0.088
+9. Total elapsed time during DFS exploration and IIS calculation using QuickExplain: 0.102
+10. Total elapsed time during DFS exploration and IIS calculation using conflict refiner: 0.112
+11. The number of paths that resulted in an IIS with at least one soft constraint: 4
+12. Suspicious instructions (using MCSs):[39, 61, 26, 38, 42, 19, 27, 46, 50]
+13. Suspicious instructions (using Deletion Filter):[50, 19, 38, 39, 26, 42, 27, 61, 46]
+14. Suspicious instructions (using QuickExplain):[50, 19, 38, 39, 26, 42, 27, 61, 46]
+15. Suspicious instructions (using Conflict Refiner):[50, 19, 38, 39, 26, 42, 27, 61, 46]
+
+Total elapsed time: 0.724 s.

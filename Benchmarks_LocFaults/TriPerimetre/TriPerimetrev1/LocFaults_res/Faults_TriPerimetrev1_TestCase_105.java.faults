@@ -1,0 +1,190 @@
+DOING LOCALIZATION...
+
+Starting conversion of file: /home/bekkouche/eclipse-workspace/Benchmarks_LocFaults/TriPerimetre/TriPerimetrev1/Progs_with_spec/TriPerimetrev1_TestCase_105.java
+Loops are unwound 10 times.
+The size of the constructed CFG: 35
+
+From the counterexample, LocFaults calculates MCS and IIS by exploring the graph in DFS from top to bottom and by deviating at most '3' conditional statements.
+/***************************************************************/
+By deviating '0' condition(s), we obtain:
+
+
+Solver: CPLEX
+1. CSP_d: empty set
+------------------------
+2. CSP_a:
+triperimetre_0_i_0 := 9 --> line -1
+triperimetre_0_j_0 := 5 --> line -1
+triperimetre_0_k_0 := 9 --> line -1
+triperimetre_0_trityp_0 := 0 --> line 14
+triperimetre_0_res_0 := 0 --> line 15
+triperimetre_0_trityp_1 := 0 --> line 21
+triperimetre_0_trityp_2 := triperimetre_0_trityp_1 --> line 0
+triperimetre_0_trityp_3 := ( triperimetre_0_trityp_2 + 2 ) --> line 26
+triperimetre_0_trityp_4 := triperimetre_0_trityp_3 --> line 0
+triperimetre_0_res_1 := ( ( 2 * triperimetre_0_i_0 ) + triperimetre_0_k_0 ) --> line 52
+triperimetre_0_trityp_5 := triperimetre_0_trityp_4 --> line 0
+triperimetre_0_Result_0 := triperimetre_0_res_1 --> line 66
+( ( ( ( ( ( ( ( ( ( ( triperimetre_0_i_0 + triperimetre_0_j_0 ) ) <= triperimetre_0_k_0 ) || ( ( ( triperimetre_0_j_0 + triperimetre_0_k_0 ) ) <= triperimetre_0_i_0 ) ) || ( ( ( triperimetre_0_i_0 + triperimetre_0_k_0 ) ) <= triperimetre_0_j_0 ) ) ) ==> ( ( triperimetre_0_Result_0 == -1 ) ) ) ) && ( ( ( ( !( ( ( ( ( ( ( triperimetre_0_i_0 + triperimetre_0_j_0 ) ) <= triperimetre_0_k_0 ) || ( ( ( triperimetre_0_j_0 + triperimetre_0_k_0 ) ) <= triperimetre_0_i_0 ) ) || ( ( ( triperimetre_0_i_0 + triperimetre_0_k_0 ) ) <= triperimetre_0_j_0 ) ) ) ) && ( ( ( triperimetre_0_i_0 == triperimetre_0_j_0 ) && ( triperimetre_0_j_0 == triperimetre_0_k_0 ) ) ) ) ) ==> ( ( triperimetre_0_Result_0 == ( ( triperimetre_0_i_0 + triperimetre_0_j_0 ) + triperimetre_0_k_0 ) ) ) ) ) ) && ( ( ( ( ( !( ( ( ( ( ( ( triperimetre_0_i_0 + triperimetre_0_j_0 ) ) <= triperimetre_0_k_0 ) || ( ( ( triperimetre_0_j_0 + triperimetre_0_k_0 ) ) <= triperimetre_0_i_0 ) ) || ( ( ( triperimetre_0_i_0 + triperimetre_0_k_0 ) ) <= triperimetre_0_j_0 ) ) ) ) && !( ( ( ( triperimetre_0_i_0 == triperimetre_0_j_0 ) && ( triperimetre_0_j_0 == triperimetre_0_k_0 ) ) ) ) ) && ( ( ( ( triperimetre_0_i_0 == triperimetre_0_j_0 ) || ( triperimetre_0_j_0 == triperimetre_0_k_0 ) ) || ( triperimetre_0_i_0 == triperimetre_0_k_0 ) ) ) ) ) ==> ( ( triperimetre_0_Result_0 == ( ( triperimetre_0_i_0 + triperimetre_0_j_0 ) + triperimetre_0_k_0 ) ) ) ) ) ) && ( ( ( ( ( !( ( ( ( ( ( ( triperimetre_0_i_0 + triperimetre_0_j_0 ) ) <= triperimetre_0_k_0 ) || ( ( ( triperimetre_0_j_0 + triperimetre_0_k_0 ) ) <= triperimetre_0_i_0 ) ) || ( ( ( triperimetre_0_i_0 + triperimetre_0_k_0 ) ) <= triperimetre_0_j_0 ) ) ) ) && !( ( ( ( triperimetre_0_i_0 == triperimetre_0_j_0 ) && ( triperimetre_0_j_0 == triperimetre_0_k_0 ) ) ) ) ) && !( ( ( ( ( triperimetre_0_i_0 == triperimetre_0_j_0 ) || ( triperimetre_0_j_0 == triperimetre_0_k_0 ) ) || ( triperimetre_0_i_0 == triperimetre_0_k_0 ) ) ) ) ) ) ==> ( ( triperimetre_0_Result_0 == ( ( triperimetre_0_i_0 + triperimetre_0_j_0 ) + triperimetre_0_k_0 ) ) ) ) ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 52}
+{line 66}
+
+Runtime of the method that compute MCS: 0.009
+MIVcard(ctrs,line 52)=1.0
+MIVcard(ctrs,line 66)=1.0
+
+The number of instructions suspected: 2
+   IIS in CSP_a using Deletion Filter:
+{CE,line 52,line 66,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.007
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 9
+{CE,line 66,line 52,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.016
+   IIS in CSP_a using the conflict refiner implementation of CPLEX:
+{CE,line 52,line 66,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.005
+
+The resulats:
+1. Elapsed time during DFS exploration: 0.017
+2. Elapsed time during MCS calculation: 0.009
+3. Elapsed time during IIS isolation using Deletion Filter: 0.007
+4. Elapsed time during IIS isolation using QuickExplain: 0.016
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.005
+/***************************************************************/
+By deviating '1' condition(s), we obtain:
+
+
+Solver: CPLEX
+1. CSP_d:
+line 25(If) : ( triperimetre_0_i_0 == triperimetre_0_k_0 )
+------------------------
+2. CSP_a:
+triperimetre_0_i_0 := 9 --> line -1
+triperimetre_0_j_0 := 5 --> line -1
+triperimetre_0_k_0 := 9 --> line -1
+triperimetre_0_trityp_0 := 0 --> line 14
+triperimetre_0_res_0 := 0 --> line 15
+triperimetre_0_trityp_1 := 0 --> line 21
+triperimetre_0_trityp_2 := triperimetre_0_trityp_1 --> line 0
+!( ( triperimetre_0_i_0 == triperimetre_0_k_0 ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+
+Runtime of the method that compute MCS: 0.001
+
+The number of instructions suspected: 0
+   IIS in CSP_a using Deletion Filter:
+{CE,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.002
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 4
+{CE,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.001
+   IIS in CSP_a using the conflict refiner implementation of CPLEX:
+{CE,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.001
+
+Solver: CPLEX
+1. CSP_d:
+line 31(Else) : ( triperimetre_0_trityp_4 == 0 )
+------------------------
+2. CSP_a:
+triperimetre_0_i_0 := 9 --> line -1
+triperimetre_0_j_0 := 5 --> line -1
+triperimetre_0_k_0 := 9 --> line -1
+triperimetre_0_trityp_0 := 0 --> line 14
+triperimetre_0_res_0 := 0 --> line 15
+triperimetre_0_trityp_1 := 0 --> line 21
+triperimetre_0_trityp_2 := triperimetre_0_trityp_1 --> line 0
+triperimetre_0_trityp_3 := ( triperimetre_0_trityp_2 + 2 ) --> line 26
+triperimetre_0_trityp_4 := triperimetre_0_trityp_3 --> line 0
+( triperimetre_0_trityp_4 == 0 ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 26}
+{line 0}
+{line 0}
+{line 21}
+
+Runtime of the method that compute MCS: 0.018
+MIVcard(ctrs,line 21)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 26)=1.0
+MIVcard(ctrs,line 0)=1.0
+
+The number of instructions suspected: 2
+   IIS in CSP_a using Deletion Filter:
+{CE,line 21,line 0,line 26,line 0,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.004
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 6
+{CE,line 0,line 26,line 0,line 21,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.01
+   IIS in CSP_a using the conflict refiner implementation of CPLEX:
+{CE,line 21,line 0,line 26,line 0,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.001
+
+The resulats:
+1. Elapsed time during DFS exploration: 0.008
+2. Elapsed time during MCS calculation: 0.019
+3. Elapsed time during IIS isolation using Deletion Filter: 0.006
+4. Elapsed time during IIS isolation using QuickExplain: 0.011
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.002
+/***************************************************************/
+By deviating '2' condition(s), we obtain:
+
+
+The resulats:
+1. Elapsed time during DFS exploration: 0.003
+2. Elapsed time during MCS calculation: 0.0
+3. Elapsed time during IIS isolation using Deletion Filter: 0.0
+4. Elapsed time during IIS isolation using QuickExplain: 0.0
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.0
+/***************************************************************/
+By deviating '3' condition(s), we obtain:
+
+
+The resulats:
+1. Elapsed time during DFS exploration: 0.004
+2. Elapsed time during MCS calculation: 0.0
+3. Elapsed time during IIS isolation using Deletion Filter: 0.0
+4. Elapsed time during IIS isolation using QuickExplain: 0.0
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.0
+/***************************************************************/
+The final resulats:
+1. The pretreatment(CFG building) time: 0.389
+2. Total elapsed time during DFS exploration: 0.032
+
+3. The time required to calculate the MCSs:0.028
+4. The time required for Deletion Filter:0.013
+5. The time required for QuickExplain:0.027
+6. The time required for the conflict refiner implementation:0.007
+7. Total elapsed time during DFS exploration and MCS calculation: 0.06
+8. Total elapsed time during DFS exploration and IIS calculation using Deletion Filter: 0.045
+9. Total elapsed time during DFS exploration and IIS calculation using QuickExplain: 0.059
+10. Total elapsed time during DFS exploration and IIS calculation using conflict refiner: 0.039
+11. The number of paths that resulted in an IIS with at least one soft constraint: 2
+12. Suspicious instructions (using MCSs):[52, 66, 25, 31, 21, 26]
+13. Suspicious instructions (using Deletion Filter):[66, 52, 21, 25, 26, 31]
+14. Suspicious instructions (using QuickExplain):[66, 52, 21, 25, 26, 31]
+15. Suspicious instructions (using Conflict Refiner):[66, 52, 21, 25, 26, 31]
+
+Total elapsed time: 0.544 s.

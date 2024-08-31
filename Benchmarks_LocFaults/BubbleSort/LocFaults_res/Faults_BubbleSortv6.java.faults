@@ -1,0 +1,1404 @@
+DOING LOCALIZATION...
+
+Starting conversion of file: /home/bekkouche/eclipse-workspace/Benchmarks_LocFaults/BubbleSort/Progs_with_spec/BubbleSortv6.java
+Loops are unwound 9 times.
+The size of the constructed CFG: 1312
+
+From the counterexample, LocFaults calculates MCS and IIS by exploring the graph in DFS from top to bottom and by deviating at most '2' conditional statements.
+/***************************************************************/
+By deviating '0' condition(s), we obtain:
+
+
+Solver: CPLEX
+1. CSP_d: empty set
+------------------------
+2. CSP_a:
+bubbleSort_0_tab_0[0] := 921 --> line -1
+bubbleSort_0_tab_0[1] := 794 --> line -1
+bubbleSort_0_tab_0[2] := 765 --> line -1
+bubbleSort_0_tab_0[3] := 345 --> line -1
+bubbleSort_0_tab_0[4] := 239 --> line -1
+bubbleSort_0_tab_0[5] := 217 --> line -1
+bubbleSort_0_tab_0[6] := 152 --> line -1
+bubbleSort_0_tab_0[7] := 91 --> line -1
+bubbleSort_0_tab_0[8] := 794 --> line -1
+bubbleSort_0_i_0 := 0 --> line 8
+bubbleSort_0_j_0 := ( 9 - 1 ) --> line 9
+bubbleSort_0_aux_0 := 0 --> line 10
+bubbleSort_0_fini_0 := 0 --> line 11
+bubbleSort_0_fini_1 := 1 --> line 13
+bubbleSort_0_i_1 := 1 --> line 14
+bubbleSort_0_aux_1 := bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )] --> line 18
+bubbleSort_0_fini_2 := 0 --> line 21
+bubbleSort_0_i_2 := ( bubbleSort_0_i_1 + 1 ) --> line 23
+bubbleSort_0_aux_2 := bubbleSort_0_tab_2[( bubbleSort_0_i_2 - 1 )] --> line 18
+bubbleSort_0_fini_3 := 0 --> line 21
+bubbleSort_0_i_3 := ( bubbleSort_0_i_2 + 1 ) --> line 23
+bubbleSort_0_aux_3 := bubbleSort_0_tab_4[( bubbleSort_0_i_3 - 1 )] --> line 18
+bubbleSort_0_fini_4 := 0 --> line 21
+bubbleSort_0_i_4 := ( bubbleSort_0_i_3 + 1 ) --> line 23
+bubbleSort_0_aux_4 := bubbleSort_0_tab_6[( bubbleSort_0_i_4 - 1 )] --> line 18
+bubbleSort_0_fini_5 := 0 --> line 21
+bubbleSort_0_i_5 := ( bubbleSort_0_i_4 + 1 ) --> line 23
+bubbleSort_0_aux_5 := bubbleSort_0_tab_8[( bubbleSort_0_i_5 - 1 )] --> line 18
+bubbleSort_0_fini_6 := 0 --> line 21
+bubbleSort_0_i_6 := ( bubbleSort_0_i_5 + 1 ) --> line 23
+bubbleSort_0_aux_6 := bubbleSort_0_tab_10[( bubbleSort_0_i_6 - 1 )] --> line 18
+bubbleSort_0_fini_7 := 0 --> line 21
+bubbleSort_0_i_7 := ( bubbleSort_0_i_6 + 1 ) --> line 23
+bubbleSort_0_aux_7 := bubbleSort_0_tab_12[( bubbleSort_0_i_7 - 1 )] --> line 18
+bubbleSort_0_fini_8 := 0 --> line 21
+bubbleSort_0_i_8 := ( bubbleSort_0_i_7 + 1 ) --> line 23
+bubbleSort_0_fini_10 := bubbleSort_0_fini_8 --> line 0
+bubbleSort_0_i_10 := bubbleSort_0_i_8 --> line 0
+bubbleSort_0_aux_9 := bubbleSort_0_aux_7 --> line 0
+bubbleSort_0_j_1 := ( bubbleSort_0_j_0 - 1 ) --> line 25
+bubbleSort_0_fini_11 := 1 --> line 13
+bubbleSort_0_i_11 := 1 --> line 14
+bubbleSort_0_aux_10 := bubbleSort_0_tab_18[( bubbleSort_0_i_11 - 1 )] --> line 18
+bubbleSort_0_fini_12 := 0 --> line 21
+bubbleSort_0_i_12 := ( bubbleSort_0_i_11 + 1 ) --> line 23
+bubbleSort_0_aux_11 := bubbleSort_0_tab_20[( bubbleSort_0_i_12 - 1 )] --> line 18
+bubbleSort_0_fini_13 := 0 --> line 21
+bubbleSort_0_i_13 := ( bubbleSort_0_i_12 + 1 ) --> line 23
+bubbleSort_0_aux_12 := bubbleSort_0_tab_22[( bubbleSort_0_i_13 - 1 )] --> line 18
+bubbleSort_0_fini_14 := 0 --> line 21
+bubbleSort_0_i_14 := ( bubbleSort_0_i_13 + 1 ) --> line 23
+bubbleSort_0_aux_13 := bubbleSort_0_tab_24[( bubbleSort_0_i_14 - 1 )] --> line 18
+bubbleSort_0_fini_15 := 0 --> line 21
+bubbleSort_0_i_15 := ( bubbleSort_0_i_14 + 1 ) --> line 23
+bubbleSort_0_aux_14 := bubbleSort_0_tab_26[( bubbleSort_0_i_15 - 1 )] --> line 18
+bubbleSort_0_fini_16 := 0 --> line 21
+bubbleSort_0_i_16 := ( bubbleSort_0_i_15 + 1 ) --> line 23
+bubbleSort_0_aux_15 := bubbleSort_0_tab_28[( bubbleSort_0_i_16 - 1 )] --> line 18
+bubbleSort_0_fini_17 := 0 --> line 21
+bubbleSort_0_i_17 := ( bubbleSort_0_i_16 + 1 ) --> line 23
+bubbleSort_0_fini_20 := bubbleSort_0_fini_17 --> line 0
+bubbleSort_0_i_20 := bubbleSort_0_i_17 --> line 0
+bubbleSort_0_aux_18 := bubbleSort_0_aux_15 --> line 0
+bubbleSort_0_j_2 := ( bubbleSort_0_j_1 - 1 ) --> line 25
+bubbleSort_0_fini_21 := 1 --> line 13
+bubbleSort_0_i_21 := 1 --> line 14
+bubbleSort_0_aux_19 := bubbleSort_0_tab_36[( bubbleSort_0_i_21 - 1 )] --> line 18
+bubbleSort_0_fini_22 := 0 --> line 21
+bubbleSort_0_i_22 := ( bubbleSort_0_i_21 + 1 ) --> line 23
+bubbleSort_0_aux_20 := bubbleSort_0_tab_38[( bubbleSort_0_i_22 - 1 )] --> line 18
+bubbleSort_0_fini_23 := 0 --> line 21
+bubbleSort_0_i_23 := ( bubbleSort_0_i_22 + 1 ) --> line 23
+bubbleSort_0_aux_21 := bubbleSort_0_tab_40[( bubbleSort_0_i_23 - 1 )] --> line 18
+bubbleSort_0_fini_24 := 0 --> line 21
+bubbleSort_0_i_24 := ( bubbleSort_0_i_23 + 1 ) --> line 23
+bubbleSort_0_aux_22 := bubbleSort_0_tab_42[( bubbleSort_0_i_24 - 1 )] --> line 18
+bubbleSort_0_fini_25 := 0 --> line 21
+bubbleSort_0_i_25 := ( bubbleSort_0_i_24 + 1 ) --> line 23
+bubbleSort_0_aux_23 := bubbleSort_0_tab_44[( bubbleSort_0_i_25 - 1 )] --> line 18
+bubbleSort_0_fini_26 := 0 --> line 21
+bubbleSort_0_i_26 := ( bubbleSort_0_i_25 + 1 ) --> line 23
+bubbleSort_0_fini_30 := bubbleSort_0_fini_26 --> line 0
+bubbleSort_0_i_30 := bubbleSort_0_i_26 --> line 0
+bubbleSort_0_aux_27 := bubbleSort_0_aux_23 --> line 0
+bubbleSort_0_j_3 := ( bubbleSort_0_j_2 - 1 ) --> line 25
+bubbleSort_0_fini_31 := 1 --> line 13
+bubbleSort_0_i_31 := 1 --> line 14
+bubbleSort_0_aux_28 := bubbleSort_0_tab_54[( bubbleSort_0_i_31 - 1 )] --> line 18
+bubbleSort_0_fini_32 := 0 --> line 21
+bubbleSort_0_i_32 := ( bubbleSort_0_i_31 + 1 ) --> line 23
+bubbleSort_0_aux_29 := bubbleSort_0_tab_56[( bubbleSort_0_i_32 - 1 )] --> line 18
+bubbleSort_0_fini_33 := 0 --> line 21
+bubbleSort_0_i_33 := ( bubbleSort_0_i_32 + 1 ) --> line 23
+bubbleSort_0_aux_30 := bubbleSort_0_tab_58[( bubbleSort_0_i_33 - 1 )] --> line 18
+bubbleSort_0_fini_34 := 0 --> line 21
+bubbleSort_0_i_34 := ( bubbleSort_0_i_33 + 1 ) --> line 23
+bubbleSort_0_aux_31 := bubbleSort_0_tab_60[( bubbleSort_0_i_34 - 1 )] --> line 18
+bubbleSort_0_fini_35 := 0 --> line 21
+bubbleSort_0_i_35 := ( bubbleSort_0_i_34 + 1 ) --> line 23
+bubbleSort_0_fini_40 := bubbleSort_0_fini_35 --> line 0
+bubbleSort_0_i_40 := bubbleSort_0_i_35 --> line 0
+bubbleSort_0_aux_36 := bubbleSort_0_aux_31 --> line 0
+bubbleSort_0_j_4 := ( bubbleSort_0_j_3 - 1 ) --> line 25
+bubbleSort_0_fini_41 := 1 --> line 13
+bubbleSort_0_i_41 := 1 --> line 14
+bubbleSort_0_aux_37 := bubbleSort_0_tab_72[( bubbleSort_0_i_41 - 1 )] --> line 18
+bubbleSort_0_fini_42 := 0 --> line 21
+bubbleSort_0_i_42 := ( bubbleSort_0_i_41 + 1 ) --> line 23
+bubbleSort_0_aux_38 := bubbleSort_0_tab_74[( bubbleSort_0_i_42 - 1 )] --> line 18
+bubbleSort_0_fini_43 := 0 --> line 21
+bubbleSort_0_i_43 := ( bubbleSort_0_i_42 + 1 ) --> line 23
+bubbleSort_0_aux_39 := bubbleSort_0_tab_76[( bubbleSort_0_i_43 - 1 )] --> line 18
+bubbleSort_0_fini_44 := 0 --> line 21
+bubbleSort_0_i_44 := ( bubbleSort_0_i_43 + 1 ) --> line 23
+bubbleSort_0_fini_50 := bubbleSort_0_fini_44 --> line 0
+bubbleSort_0_i_50 := bubbleSort_0_i_44 --> line 0
+bubbleSort_0_aux_45 := bubbleSort_0_aux_39 --> line 0
+bubbleSort_0_j_5 := ( bubbleSort_0_j_4 - 1 ) --> line 25
+bubbleSort_0_fini_51 := 1 --> line 13
+bubbleSort_0_i_51 := 1 --> line 14
+bubbleSort_0_aux_46 := bubbleSort_0_tab_90[( bubbleSort_0_i_51 - 1 )] --> line 18
+bubbleSort_0_fini_52 := 0 --> line 21
+bubbleSort_0_i_52 := ( bubbleSort_0_i_51 + 1 ) --> line 23
+bubbleSort_0_aux_47 := bubbleSort_0_tab_92[( bubbleSort_0_i_52 - 1 )] --> line 18
+bubbleSort_0_fini_53 := 0 --> line 21
+bubbleSort_0_i_53 := ( bubbleSort_0_i_52 + 1 ) --> line 23
+bubbleSort_0_fini_60 := bubbleSort_0_fini_53 --> line 0
+bubbleSort_0_i_60 := bubbleSort_0_i_53 --> line 0
+bubbleSort_0_aux_54 := bubbleSort_0_aux_47 --> line 0
+bubbleSort_0_j_6 := ( bubbleSort_0_j_5 - 1 ) --> line 25
+bubbleSort_0_fini_61 := 1 --> line 13
+bubbleSort_0_i_61 := 1 --> line 14
+bubbleSort_0_aux_55 := bubbleSort_0_tab_108[( bubbleSort_0_i_61 - 1 )] --> line 18
+bubbleSort_0_fini_62 := 0 --> line 21
+bubbleSort_0_i_62 := ( bubbleSort_0_i_61 + 1 ) --> line 23
+bubbleSort_0_fini_70 := bubbleSort_0_fini_62 --> line 0
+bubbleSort_0_i_70 := bubbleSort_0_i_62 --> line 0
+bubbleSort_0_aux_63 := bubbleSort_0_aux_55 --> line 0
+bubbleSort_0_j_7 := ( bubbleSort_0_j_6 - 1 ) --> line 25
+bubbleSort_0_fini_71 := 1 --> line 13
+bubbleSort_0_i_71 := 1 --> line 14
+bubbleSort_0_fini_80 := bubbleSort_0_fini_71 --> line 0
+bubbleSort_0_i_80 := bubbleSort_0_i_71 --> line 0
+bubbleSort_0_aux_72 := bubbleSort_0_aux_63 --> line 0
+bubbleSort_0_j_8 := ( bubbleSort_0_j_7 - 1 ) --> line 25
+bubbleSort_0_fini_90 := bubbleSort_0_fini_80 --> line 0
+bubbleSort_0_j_9 := bubbleSort_0_j_8 --> line 0
+bubbleSort_0_i_90 := bubbleSort_0_i_80 --> line 0
+bubbleSort_0_aux_81 := bubbleSort_0_aux_72 --> line 0
+bubbleSort_0_tab_1[( bubbleSort_0_i_1 - 1 )] := bubbleSort_0_tab_0[bubbleSort_0_i_1] --> line 19
+bubbleSort_0_tab_2[bubbleSort_0_i_1] := bubbleSort_0_aux_1 --> line 20
+bubbleSort_0_tab_3[( bubbleSort_0_i_2 - 1 )] := bubbleSort_0_tab_2[bubbleSort_0_i_2] --> line 19
+bubbleSort_0_tab_4[bubbleSort_0_i_2] := bubbleSort_0_aux_2 --> line 20
+bubbleSort_0_tab_5[( bubbleSort_0_i_3 - 1 )] := bubbleSort_0_tab_4[bubbleSort_0_i_3] --> line 19
+bubbleSort_0_tab_6[bubbleSort_0_i_3] := bubbleSort_0_aux_3 --> line 20
+bubbleSort_0_tab_7[( bubbleSort_0_i_4 - 1 )] := bubbleSort_0_tab_6[bubbleSort_0_i_4] --> line 19
+bubbleSort_0_tab_8[bubbleSort_0_i_4] := bubbleSort_0_aux_4 --> line 20
+bubbleSort_0_tab_9[( bubbleSort_0_i_5 - 1 )] := bubbleSort_0_tab_8[bubbleSort_0_i_5] --> line 19
+bubbleSort_0_tab_10[bubbleSort_0_i_5] := bubbleSort_0_aux_5 --> line 20
+bubbleSort_0_tab_11[( bubbleSort_0_i_6 - 1 )] := bubbleSort_0_tab_10[bubbleSort_0_i_6] --> line 19
+bubbleSort_0_tab_12[bubbleSort_0_i_6] := bubbleSort_0_aux_6 --> line 20
+bubbleSort_0_tab_13[( bubbleSort_0_i_7 - 1 )] := bubbleSort_0_tab_12[bubbleSort_0_i_7] --> line 19
+bubbleSort_0_tab_14[bubbleSort_0_i_7] := bubbleSort_0_aux_7 --> line 20
+bubbleSort_0_tab_18 := bubbleSort_0_tab_14 --> line 0
+bubbleSort_0_tab_19[( bubbleSort_0_i_11 - 1 )] := bubbleSort_0_tab_18[bubbleSort_0_i_11] --> line 19
+bubbleSort_0_tab_20[bubbleSort_0_i_11] := bubbleSort_0_aux_10 --> line 20
+bubbleSort_0_tab_21[( bubbleSort_0_i_12 - 1 )] := bubbleSort_0_tab_20[bubbleSort_0_i_12] --> line 19
+bubbleSort_0_tab_22[bubbleSort_0_i_12] := bubbleSort_0_aux_11 --> line 20
+bubbleSort_0_tab_23[( bubbleSort_0_i_13 - 1 )] := bubbleSort_0_tab_22[bubbleSort_0_i_13] --> line 19
+bubbleSort_0_tab_24[bubbleSort_0_i_13] := bubbleSort_0_aux_12 --> line 20
+bubbleSort_0_tab_25[( bubbleSort_0_i_14 - 1 )] := bubbleSort_0_tab_24[bubbleSort_0_i_14] --> line 19
+bubbleSort_0_tab_26[bubbleSort_0_i_14] := bubbleSort_0_aux_13 --> line 20
+bubbleSort_0_tab_27[( bubbleSort_0_i_15 - 1 )] := bubbleSort_0_tab_26[bubbleSort_0_i_15] --> line 19
+bubbleSort_0_tab_28[bubbleSort_0_i_15] := bubbleSort_0_aux_14 --> line 20
+bubbleSort_0_tab_29[( bubbleSort_0_i_16 - 1 )] := bubbleSort_0_tab_28[bubbleSort_0_i_16] --> line 19
+bubbleSort_0_tab_30[bubbleSort_0_i_16] := bubbleSort_0_aux_15 --> line 20
+bubbleSort_0_tab_36 := bubbleSort_0_tab_30 --> line 0
+bubbleSort_0_tab_37[( bubbleSort_0_i_21 - 1 )] := bubbleSort_0_tab_36[bubbleSort_0_i_21] --> line 19
+bubbleSort_0_tab_38[bubbleSort_0_i_21] := bubbleSort_0_aux_19 --> line 20
+bubbleSort_0_tab_39[( bubbleSort_0_i_22 - 1 )] := bubbleSort_0_tab_38[bubbleSort_0_i_22] --> line 19
+bubbleSort_0_tab_40[bubbleSort_0_i_22] := bubbleSort_0_aux_20 --> line 20
+bubbleSort_0_tab_41[( bubbleSort_0_i_23 - 1 )] := bubbleSort_0_tab_40[bubbleSort_0_i_23] --> line 19
+bubbleSort_0_tab_42[bubbleSort_0_i_23] := bubbleSort_0_aux_21 --> line 20
+bubbleSort_0_tab_43[( bubbleSort_0_i_24 - 1 )] := bubbleSort_0_tab_42[bubbleSort_0_i_24] --> line 19
+bubbleSort_0_tab_44[bubbleSort_0_i_24] := bubbleSort_0_aux_22 --> line 20
+bubbleSort_0_tab_45[( bubbleSort_0_i_25 - 1 )] := bubbleSort_0_tab_44[bubbleSort_0_i_25] --> line 19
+bubbleSort_0_tab_46[bubbleSort_0_i_25] := bubbleSort_0_aux_23 --> line 20
+bubbleSort_0_tab_54 := bubbleSort_0_tab_46 --> line 0
+bubbleSort_0_tab_55[( bubbleSort_0_i_31 - 1 )] := bubbleSort_0_tab_54[bubbleSort_0_i_31] --> line 19
+bubbleSort_0_tab_56[bubbleSort_0_i_31] := bubbleSort_0_aux_28 --> line 20
+bubbleSort_0_tab_57[( bubbleSort_0_i_32 - 1 )] := bubbleSort_0_tab_56[bubbleSort_0_i_32] --> line 19
+bubbleSort_0_tab_58[bubbleSort_0_i_32] := bubbleSort_0_aux_29 --> line 20
+bubbleSort_0_tab_59[( bubbleSort_0_i_33 - 1 )] := bubbleSort_0_tab_58[bubbleSort_0_i_33] --> line 19
+bubbleSort_0_tab_60[bubbleSort_0_i_33] := bubbleSort_0_aux_30 --> line 20
+bubbleSort_0_tab_61[( bubbleSort_0_i_34 - 1 )] := bubbleSort_0_tab_60[bubbleSort_0_i_34] --> line 19
+bubbleSort_0_tab_62[bubbleSort_0_i_34] := bubbleSort_0_aux_31 --> line 20
+bubbleSort_0_tab_72 := bubbleSort_0_tab_62 --> line 0
+bubbleSort_0_tab_73[( bubbleSort_0_i_41 - 1 )] := bubbleSort_0_tab_72[bubbleSort_0_i_41] --> line 19
+bubbleSort_0_tab_74[bubbleSort_0_i_41] := bubbleSort_0_aux_37 --> line 20
+bubbleSort_0_tab_75[( bubbleSort_0_i_42 - 1 )] := bubbleSort_0_tab_74[bubbleSort_0_i_42] --> line 19
+bubbleSort_0_tab_76[bubbleSort_0_i_42] := bubbleSort_0_aux_38 --> line 20
+bubbleSort_0_tab_77[( bubbleSort_0_i_43 - 1 )] := bubbleSort_0_tab_76[bubbleSort_0_i_43] --> line 19
+bubbleSort_0_tab_78[bubbleSort_0_i_43] := bubbleSort_0_aux_39 --> line 20
+bubbleSort_0_tab_90 := bubbleSort_0_tab_78 --> line 0
+bubbleSort_0_tab_91[( bubbleSort_0_i_51 - 1 )] := bubbleSort_0_tab_90[bubbleSort_0_i_51] --> line 19
+bubbleSort_0_tab_92[bubbleSort_0_i_51] := bubbleSort_0_aux_46 --> line 20
+bubbleSort_0_tab_93[( bubbleSort_0_i_52 - 1 )] := bubbleSort_0_tab_92[bubbleSort_0_i_52] --> line 19
+bubbleSort_0_tab_94[bubbleSort_0_i_52] := bubbleSort_0_aux_47 --> line 20
+bubbleSort_0_tab_108 := bubbleSort_0_tab_94 --> line 0
+bubbleSort_0_tab_109[( bubbleSort_0_i_61 - 1 )] := bubbleSort_0_tab_108[bubbleSort_0_i_61] --> line 19
+bubbleSort_0_tab_110[bubbleSort_0_i_61] := bubbleSort_0_aux_55 --> line 20
+bubbleSort_0_tab_126 := bubbleSort_0_tab_110 --> line 0
+bubbleSort_0_tab_144 := bubbleSort_0_tab_126 --> line 0
+bubbleSort_0_tab_162 := bubbleSort_0_tab_144 --> line 0
+( ( ( ( ( ( ( ( ( bubbleSort_0_tab_162[0] <= bubbleSort_0_tab_162[1] ) && ( bubbleSort_0_tab_162[1] <= bubbleSort_0_tab_162[2] ) ) && ( bubbleSort_0_tab_162[2] <= bubbleSort_0_tab_162[3] ) ) && ( bubbleSort_0_tab_162[3] <= bubbleSort_0_tab_162[4] ) ) && ( bubbleSort_0_tab_162[4] <= bubbleSort_0_tab_162[5] ) ) && ( bubbleSort_0_tab_162[5] <= bubbleSort_0_tab_162[6] ) ) && ( bubbleSort_0_tab_162[6] <= bubbleSort_0_tab_162[7] ) ) && ( bubbleSort_0_tab_162[7] <= bubbleSort_0_tab_162[8] ) ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 0}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 0}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 0}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 0}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 0}
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 0}
+{line 19}
+{line 20}
+{line 0}
+{line 0}
+{line 0}
+{line 18}
+{line 18}
+{line 18}
+{line 18}
+{line 18}
+{line 18}
+{line 18}
+
+Runtime of the method that compute MCS: 11.407
+MIVcard(ctrs,line 18)=1.0
+MIVcard(ctrs,line 18)=1.0
+MIVcard(ctrs,line 18)=1.0
+MIVcard(ctrs,line 18)=1.0
+MIVcard(ctrs,line 18)=1.0
+MIVcard(ctrs,line 18)=1.0
+MIVcard(ctrs,line 18)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 0)=1.0
+
+The number of instructions suspected: 63
+   IIS in CSP_a using Deletion Filter:
+{CE,line 18,line 18,line 18,line 18,line 18,line 18,line 18,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 0,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 0,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 0,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 0,line 19,line 20,line 19,line 20,line 19,line 20,line 0,line 19,line 20,line 19,line 20,line 0,line 19,line 20,line 0,line 0,line 0,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 1.443
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 205
+{CE,line 0,line 0,line 0,line 20,line 19,line 0,line 20,line 19,line 20,line 19,line 0,line 20,line 19,line 20,line 19,line 20,line 19,line 0,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 0,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 0,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 0,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 18,line 18,line 18,line 18,line 18,line 18,line 18,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 8.298
+   IIS in CSP_a using the conflict refiner implementation of CPLEX:
+{CE,line 18,line 18,line 18,line 18,line 18,line 18,line 18,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 0,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 0,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 0,line 19,line 20,line 19,line 20,line 19,line 20,line 19,line 20,line 0,line 19,line 20,line 19,line 20,line 19,line 20,line 0,line 19,line 20,line 19,line 20,line 0,line 19,line 20,line 0,line 0,line 0,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 2.417
+
+The resulats:
+1. Elapsed time during DFS exploration: 0.102
+2. Elapsed time during MCS calculation: 11.407
+3. Elapsed time during IIS isolation using Deletion Filter: 1.443
+4. Elapsed time during IIS isolation using QuickExplain: 8.298
+5. Elapsed time during IIS isolation using Conflict Refiner: 2.417
+/***************************************************************/
+By deviating '1' condition(s), we obtain:
+
+
+The resulats:
+1. Elapsed time during DFS exploration: 0.012
+2. Elapsed time during MCS calculation: 0.0
+3. Elapsed time during IIS isolation using Deletion Filter: 0.0
+4. Elapsed time during IIS isolation using QuickExplain: 0.0
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.0
+/***************************************************************/
+By deviating '2' condition(s), we obtain:
+
+
+Solver: CPLEX
+1. CSP_d:
+line 15(Else) : ( bubbleSort_0_i_8 < bubbleSort_0_j_0 )
+line 12(If) : ( bubbleSort_0_fini_70 == 0 )
+------------------------
+2. CSP_a:
+bubbleSort_0_tab_0[0] := 921 --> line -1
+bubbleSort_0_tab_0[1] := 794 --> line -1
+bubbleSort_0_tab_0[2] := 765 --> line -1
+bubbleSort_0_tab_0[3] := 345 --> line -1
+bubbleSort_0_tab_0[4] := 239 --> line -1
+bubbleSort_0_tab_0[5] := 217 --> line -1
+bubbleSort_0_tab_0[6] := 152 --> line -1
+bubbleSort_0_tab_0[7] := 91 --> line -1
+bubbleSort_0_tab_0[8] := 794 --> line -1
+bubbleSort_0_i_0 := 0 --> line 8
+bubbleSort_0_j_0 := ( 9 - 1 ) --> line 9
+bubbleSort_0_aux_0 := 0 --> line 10
+bubbleSort_0_fini_0 := 0 --> line 11
+bubbleSort_0_fini_1 := 1 --> line 13
+bubbleSort_0_i_1 := 1 --> line 14
+bubbleSort_0_aux_1 := bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )] --> line 18
+bubbleSort_0_fini_2 := 0 --> line 21
+bubbleSort_0_i_2 := ( bubbleSort_0_i_1 + 1 ) --> line 23
+bubbleSort_0_aux_2 := bubbleSort_0_tab_2[( bubbleSort_0_i_2 - 1 )] --> line 18
+bubbleSort_0_fini_3 := 0 --> line 21
+bubbleSort_0_i_3 := ( bubbleSort_0_i_2 + 1 ) --> line 23
+bubbleSort_0_aux_3 := bubbleSort_0_tab_4[( bubbleSort_0_i_3 - 1 )] --> line 18
+bubbleSort_0_fini_4 := 0 --> line 21
+bubbleSort_0_i_4 := ( bubbleSort_0_i_3 + 1 ) --> line 23
+bubbleSort_0_aux_4 := bubbleSort_0_tab_6[( bubbleSort_0_i_4 - 1 )] --> line 18
+bubbleSort_0_fini_5 := 0 --> line 21
+bubbleSort_0_i_5 := ( bubbleSort_0_i_4 + 1 ) --> line 23
+bubbleSort_0_aux_5 := bubbleSort_0_tab_8[( bubbleSort_0_i_5 - 1 )] --> line 18
+bubbleSort_0_fini_6 := 0 --> line 21
+bubbleSort_0_i_6 := ( bubbleSort_0_i_5 + 1 ) --> line 23
+bubbleSort_0_aux_6 := bubbleSort_0_tab_10[( bubbleSort_0_i_6 - 1 )] --> line 18
+bubbleSort_0_fini_7 := 0 --> line 21
+bubbleSort_0_i_7 := ( bubbleSort_0_i_6 + 1 ) --> line 23
+bubbleSort_0_aux_7 := bubbleSort_0_tab_12[( bubbleSort_0_i_7 - 1 )] --> line 18
+bubbleSort_0_fini_8 := 0 --> line 21
+bubbleSort_0_i_8 := ( bubbleSort_0_i_7 + 1 ) --> line 23
+bubbleSort_0_aux_8 := bubbleSort_0_tab_14[( bubbleSort_0_i_8 - 1 )] --> line 18
+bubbleSort_0_fini_9 := 0 --> line 21
+bubbleSort_0_i_9 := ( bubbleSort_0_i_8 + 1 ) --> line 23
+bubbleSort_0_fini_10 := bubbleSort_0_fini_9 --> line 0
+bubbleSort_0_i_10 := bubbleSort_0_i_9 --> line 0
+bubbleSort_0_aux_9 := bubbleSort_0_aux_8 --> line 0
+bubbleSort_0_j_1 := ( bubbleSort_0_j_0 - 1 ) --> line 25
+bubbleSort_0_fini_11 := 1 --> line 13
+bubbleSort_0_i_11 := 1 --> line 14
+bubbleSort_0_aux_10 := bubbleSort_0_tab_18[( bubbleSort_0_i_11 - 1 )] --> line 18
+bubbleSort_0_fini_12 := 0 --> line 21
+bubbleSort_0_i_12 := ( bubbleSort_0_i_11 + 1 ) --> line 23
+bubbleSort_0_aux_11 := bubbleSort_0_tab_20[( bubbleSort_0_i_12 - 1 )] --> line 18
+bubbleSort_0_fini_13 := 0 --> line 21
+bubbleSort_0_i_13 := ( bubbleSort_0_i_12 + 1 ) --> line 23
+bubbleSort_0_aux_12 := bubbleSort_0_tab_22[( bubbleSort_0_i_13 - 1 )] --> line 18
+bubbleSort_0_fini_14 := 0 --> line 21
+bubbleSort_0_i_14 := ( bubbleSort_0_i_13 + 1 ) --> line 23
+bubbleSort_0_aux_13 := bubbleSort_0_tab_24[( bubbleSort_0_i_14 - 1 )] --> line 18
+bubbleSort_0_fini_15 := 0 --> line 21
+bubbleSort_0_i_15 := ( bubbleSort_0_i_14 + 1 ) --> line 23
+bubbleSort_0_aux_14 := bubbleSort_0_tab_26[( bubbleSort_0_i_15 - 1 )] --> line 18
+bubbleSort_0_fini_16 := 0 --> line 21
+bubbleSort_0_i_16 := ( bubbleSort_0_i_15 + 1 ) --> line 23
+bubbleSort_0_aux_15 := bubbleSort_0_tab_28[( bubbleSort_0_i_16 - 1 )] --> line 18
+bubbleSort_0_fini_17 := 0 --> line 21
+bubbleSort_0_i_17 := ( bubbleSort_0_i_16 + 1 ) --> line 23
+bubbleSort_0_fini_20 := bubbleSort_0_fini_17 --> line 0
+bubbleSort_0_i_20 := bubbleSort_0_i_17 --> line 0
+bubbleSort_0_aux_18 := bubbleSort_0_aux_15 --> line 0
+bubbleSort_0_j_2 := ( bubbleSort_0_j_1 - 1 ) --> line 25
+bubbleSort_0_fini_21 := 1 --> line 13
+bubbleSort_0_i_21 := 1 --> line 14
+bubbleSort_0_aux_19 := bubbleSort_0_tab_36[( bubbleSort_0_i_21 - 1 )] --> line 18
+bubbleSort_0_fini_22 := 0 --> line 21
+bubbleSort_0_i_22 := ( bubbleSort_0_i_21 + 1 ) --> line 23
+bubbleSort_0_aux_20 := bubbleSort_0_tab_38[( bubbleSort_0_i_22 - 1 )] --> line 18
+bubbleSort_0_fini_23 := 0 --> line 21
+bubbleSort_0_i_23 := ( bubbleSort_0_i_22 + 1 ) --> line 23
+bubbleSort_0_aux_21 := bubbleSort_0_tab_40[( bubbleSort_0_i_23 - 1 )] --> line 18
+bubbleSort_0_fini_24 := 0 --> line 21
+bubbleSort_0_i_24 := ( bubbleSort_0_i_23 + 1 ) --> line 23
+bubbleSort_0_aux_22 := bubbleSort_0_tab_42[( bubbleSort_0_i_24 - 1 )] --> line 18
+bubbleSort_0_fini_25 := 0 --> line 21
+bubbleSort_0_i_25 := ( bubbleSort_0_i_24 + 1 ) --> line 23
+bubbleSort_0_aux_23 := bubbleSort_0_tab_44[( bubbleSort_0_i_25 - 1 )] --> line 18
+bubbleSort_0_fini_26 := 0 --> line 21
+bubbleSort_0_i_26 := ( bubbleSort_0_i_25 + 1 ) --> line 23
+bubbleSort_0_fini_30 := bubbleSort_0_fini_26 --> line 0
+bubbleSort_0_i_30 := bubbleSort_0_i_26 --> line 0
+bubbleSort_0_aux_27 := bubbleSort_0_aux_23 --> line 0
+bubbleSort_0_j_3 := ( bubbleSort_0_j_2 - 1 ) --> line 25
+bubbleSort_0_fini_31 := 1 --> line 13
+bubbleSort_0_i_31 := 1 --> line 14
+bubbleSort_0_aux_28 := bubbleSort_0_tab_54[( bubbleSort_0_i_31 - 1 )] --> line 18
+bubbleSort_0_fini_32 := 0 --> line 21
+bubbleSort_0_i_32 := ( bubbleSort_0_i_31 + 1 ) --> line 23
+bubbleSort_0_aux_29 := bubbleSort_0_tab_56[( bubbleSort_0_i_32 - 1 )] --> line 18
+bubbleSort_0_fini_33 := 0 --> line 21
+bubbleSort_0_i_33 := ( bubbleSort_0_i_32 + 1 ) --> line 23
+bubbleSort_0_aux_30 := bubbleSort_0_tab_58[( bubbleSort_0_i_33 - 1 )] --> line 18
+bubbleSort_0_fini_34 := 0 --> line 21
+bubbleSort_0_i_34 := ( bubbleSort_0_i_33 + 1 ) --> line 23
+bubbleSort_0_aux_31 := bubbleSort_0_tab_60[( bubbleSort_0_i_34 - 1 )] --> line 18
+bubbleSort_0_fini_35 := 0 --> line 21
+bubbleSort_0_i_35 := ( bubbleSort_0_i_34 + 1 ) --> line 23
+bubbleSort_0_fini_40 := bubbleSort_0_fini_35 --> line 0
+bubbleSort_0_i_40 := bubbleSort_0_i_35 --> line 0
+bubbleSort_0_aux_36 := bubbleSort_0_aux_31 --> line 0
+bubbleSort_0_j_4 := ( bubbleSort_0_j_3 - 1 ) --> line 25
+bubbleSort_0_fini_41 := 1 --> line 13
+bubbleSort_0_i_41 := 1 --> line 14
+bubbleSort_0_aux_37 := bubbleSort_0_tab_72[( bubbleSort_0_i_41 - 1 )] --> line 18
+bubbleSort_0_fini_42 := 0 --> line 21
+bubbleSort_0_i_42 := ( bubbleSort_0_i_41 + 1 ) --> line 23
+bubbleSort_0_aux_38 := bubbleSort_0_tab_74[( bubbleSort_0_i_42 - 1 )] --> line 18
+bubbleSort_0_fini_43 := 0 --> line 21
+bubbleSort_0_i_43 := ( bubbleSort_0_i_42 + 1 ) --> line 23
+bubbleSort_0_aux_39 := bubbleSort_0_tab_76[( bubbleSort_0_i_43 - 1 )] --> line 18
+bubbleSort_0_fini_44 := 0 --> line 21
+bubbleSort_0_i_44 := ( bubbleSort_0_i_43 + 1 ) --> line 23
+bubbleSort_0_fini_50 := bubbleSort_0_fini_44 --> line 0
+bubbleSort_0_i_50 := bubbleSort_0_i_44 --> line 0
+bubbleSort_0_aux_45 := bubbleSort_0_aux_39 --> line 0
+bubbleSort_0_j_5 := ( bubbleSort_0_j_4 - 1 ) --> line 25
+bubbleSort_0_fini_51 := 1 --> line 13
+bubbleSort_0_i_51 := 1 --> line 14
+bubbleSort_0_aux_46 := bubbleSort_0_tab_90[( bubbleSort_0_i_51 - 1 )] --> line 18
+bubbleSort_0_fini_52 := 0 --> line 21
+bubbleSort_0_i_52 := ( bubbleSort_0_i_51 + 1 ) --> line 23
+bubbleSort_0_aux_47 := bubbleSort_0_tab_92[( bubbleSort_0_i_52 - 1 )] --> line 18
+bubbleSort_0_fini_53 := 0 --> line 21
+bubbleSort_0_i_53 := ( bubbleSort_0_i_52 + 1 ) --> line 23
+bubbleSort_0_fini_60 := bubbleSort_0_fini_53 --> line 0
+bubbleSort_0_i_60 := bubbleSort_0_i_53 --> line 0
+bubbleSort_0_aux_54 := bubbleSort_0_aux_47 --> line 0
+bubbleSort_0_j_6 := ( bubbleSort_0_j_5 - 1 ) --> line 25
+bubbleSort_0_fini_61 := 1 --> line 13
+bubbleSort_0_i_61 := 1 --> line 14
+bubbleSort_0_aux_55 := bubbleSort_0_tab_108[( bubbleSort_0_i_61 - 1 )] --> line 18
+bubbleSort_0_fini_62 := 0 --> line 21
+bubbleSort_0_i_62 := ( bubbleSort_0_i_61 + 1 ) --> line 23
+bubbleSort_0_fini_70 := bubbleSort_0_fini_62 --> line 0
+bubbleSort_0_i_70 := bubbleSort_0_i_62 --> line 0
+bubbleSort_0_aux_63 := bubbleSort_0_aux_55 --> line 0
+bubbleSort_0_j_7 := ( bubbleSort_0_j_6 - 1 ) --> line 25
+( bubbleSort_0_i_8 < bubbleSort_0_j_0 ) --> line -2
+bubbleSort_0_tab_1[( bubbleSort_0_i_1 - 1 )] := bubbleSort_0_tab_0[bubbleSort_0_i_1] --> line 19
+bubbleSort_0_tab_2[bubbleSort_0_i_1] := bubbleSort_0_aux_1 --> line 20
+bubbleSort_0_tab_3[( bubbleSort_0_i_2 - 1 )] := bubbleSort_0_tab_2[bubbleSort_0_i_2] --> line 19
+bubbleSort_0_tab_4[bubbleSort_0_i_2] := bubbleSort_0_aux_2 --> line 20
+bubbleSort_0_tab_5[( bubbleSort_0_i_3 - 1 )] := bubbleSort_0_tab_4[bubbleSort_0_i_3] --> line 19
+bubbleSort_0_tab_6[bubbleSort_0_i_3] := bubbleSort_0_aux_3 --> line 20
+bubbleSort_0_tab_7[( bubbleSort_0_i_4 - 1 )] := bubbleSort_0_tab_6[bubbleSort_0_i_4] --> line 19
+bubbleSort_0_tab_8[bubbleSort_0_i_4] := bubbleSort_0_aux_4 --> line 20
+bubbleSort_0_tab_9[( bubbleSort_0_i_5 - 1 )] := bubbleSort_0_tab_8[bubbleSort_0_i_5] --> line 19
+bubbleSort_0_tab_10[bubbleSort_0_i_5] := bubbleSort_0_aux_5 --> line 20
+bubbleSort_0_tab_11[( bubbleSort_0_i_6 - 1 )] := bubbleSort_0_tab_10[bubbleSort_0_i_6] --> line 19
+bubbleSort_0_tab_12[bubbleSort_0_i_6] := bubbleSort_0_aux_6 --> line 20
+bubbleSort_0_tab_13[( bubbleSort_0_i_7 - 1 )] := bubbleSort_0_tab_12[bubbleSort_0_i_7] --> line 19
+bubbleSort_0_tab_14[bubbleSort_0_i_7] := bubbleSort_0_aux_7 --> line 20
+bubbleSort_0_tab_15[( bubbleSort_0_i_8 - 1 )] := bubbleSort_0_tab_14[bubbleSort_0_i_8] --> line 19
+bubbleSort_0_tab_16[bubbleSort_0_i_8] := bubbleSort_0_aux_8 --> line 20
+bubbleSort_0_tab_18 := bubbleSort_0_tab_16 --> line 0
+bubbleSort_0_tab_19[( bubbleSort_0_i_11 - 1 )] := bubbleSort_0_tab_18[bubbleSort_0_i_11] --> line 19
+bubbleSort_0_tab_20[bubbleSort_0_i_11] := bubbleSort_0_aux_10 --> line 20
+bubbleSort_0_tab_21[( bubbleSort_0_i_12 - 1 )] := bubbleSort_0_tab_20[bubbleSort_0_i_12] --> line 19
+bubbleSort_0_tab_22[bubbleSort_0_i_12] := bubbleSort_0_aux_11 --> line 20
+bubbleSort_0_tab_23[( bubbleSort_0_i_13 - 1 )] := bubbleSort_0_tab_22[bubbleSort_0_i_13] --> line 19
+bubbleSort_0_tab_24[bubbleSort_0_i_13] := bubbleSort_0_aux_12 --> line 20
+bubbleSort_0_tab_25[( bubbleSort_0_i_14 - 1 )] := bubbleSort_0_tab_24[bubbleSort_0_i_14] --> line 19
+bubbleSort_0_tab_26[bubbleSort_0_i_14] := bubbleSort_0_aux_13 --> line 20
+bubbleSort_0_tab_27[( bubbleSort_0_i_15 - 1 )] := bubbleSort_0_tab_26[bubbleSort_0_i_15] --> line 19
+bubbleSort_0_tab_28[bubbleSort_0_i_15] := bubbleSort_0_aux_14 --> line 20
+bubbleSort_0_tab_29[( bubbleSort_0_i_16 - 1 )] := bubbleSort_0_tab_28[bubbleSort_0_i_16] --> line 19
+bubbleSort_0_tab_30[bubbleSort_0_i_16] := bubbleSort_0_aux_15 --> line 20
+bubbleSort_0_tab_36 := bubbleSort_0_tab_30 --> line 0
+bubbleSort_0_tab_37[( bubbleSort_0_i_21 - 1 )] := bubbleSort_0_tab_36[bubbleSort_0_i_21] --> line 19
+bubbleSort_0_tab_38[bubbleSort_0_i_21] := bubbleSort_0_aux_19 --> line 20
+bubbleSort_0_tab_39[( bubbleSort_0_i_22 - 1 )] := bubbleSort_0_tab_38[bubbleSort_0_i_22] --> line 19
+bubbleSort_0_tab_40[bubbleSort_0_i_22] := bubbleSort_0_aux_20 --> line 20
+bubbleSort_0_tab_41[( bubbleSort_0_i_23 - 1 )] := bubbleSort_0_tab_40[bubbleSort_0_i_23] --> line 19
+bubbleSort_0_tab_42[bubbleSort_0_i_23] := bubbleSort_0_aux_21 --> line 20
+bubbleSort_0_tab_43[( bubbleSort_0_i_24 - 1 )] := bubbleSort_0_tab_42[bubbleSort_0_i_24] --> line 19
+bubbleSort_0_tab_44[bubbleSort_0_i_24] := bubbleSort_0_aux_22 --> line 20
+bubbleSort_0_tab_45[( bubbleSort_0_i_25 - 1 )] := bubbleSort_0_tab_44[bubbleSort_0_i_25] --> line 19
+bubbleSort_0_tab_46[bubbleSort_0_i_25] := bubbleSort_0_aux_23 --> line 20
+bubbleSort_0_tab_54 := bubbleSort_0_tab_46 --> line 0
+bubbleSort_0_tab_55[( bubbleSort_0_i_31 - 1 )] := bubbleSort_0_tab_54[bubbleSort_0_i_31] --> line 19
+bubbleSort_0_tab_56[bubbleSort_0_i_31] := bubbleSort_0_aux_28 --> line 20
+bubbleSort_0_tab_57[( bubbleSort_0_i_32 - 1 )] := bubbleSort_0_tab_56[bubbleSort_0_i_32] --> line 19
+bubbleSort_0_tab_58[bubbleSort_0_i_32] := bubbleSort_0_aux_29 --> line 20
+bubbleSort_0_tab_59[( bubbleSort_0_i_33 - 1 )] := bubbleSort_0_tab_58[bubbleSort_0_i_33] --> line 19
+bubbleSort_0_tab_60[bubbleSort_0_i_33] := bubbleSort_0_aux_30 --> line 20
+bubbleSort_0_tab_61[( bubbleSort_0_i_34 - 1 )] := bubbleSort_0_tab_60[bubbleSort_0_i_34] --> line 19
+bubbleSort_0_tab_62[bubbleSort_0_i_34] := bubbleSort_0_aux_31 --> line 20
+bubbleSort_0_tab_72 := bubbleSort_0_tab_62 --> line 0
+bubbleSort_0_tab_73[( bubbleSort_0_i_41 - 1 )] := bubbleSort_0_tab_72[bubbleSort_0_i_41] --> line 19
+bubbleSort_0_tab_74[bubbleSort_0_i_41] := bubbleSort_0_aux_37 --> line 20
+bubbleSort_0_tab_75[( bubbleSort_0_i_42 - 1 )] := bubbleSort_0_tab_74[bubbleSort_0_i_42] --> line 19
+bubbleSort_0_tab_76[bubbleSort_0_i_42] := bubbleSort_0_aux_38 --> line 20
+bubbleSort_0_tab_77[( bubbleSort_0_i_43 - 1 )] := bubbleSort_0_tab_76[bubbleSort_0_i_43] --> line 19
+bubbleSort_0_tab_78[bubbleSort_0_i_43] := bubbleSort_0_aux_39 --> line 20
+bubbleSort_0_tab_90 := bubbleSort_0_tab_78 --> line 0
+bubbleSort_0_tab_91[( bubbleSort_0_i_51 - 1 )] := bubbleSort_0_tab_90[bubbleSort_0_i_51] --> line 19
+bubbleSort_0_tab_92[bubbleSort_0_i_51] := bubbleSort_0_aux_46 --> line 20
+bubbleSort_0_tab_93[( bubbleSort_0_i_52 - 1 )] := bubbleSort_0_tab_92[bubbleSort_0_i_52] --> line 19
+bubbleSort_0_tab_94[bubbleSort_0_i_52] := bubbleSort_0_aux_47 --> line 20
+bubbleSort_0_tab_108 := bubbleSort_0_tab_94 --> line 0
+bubbleSort_0_tab_109[( bubbleSort_0_i_61 - 1 )] := bubbleSort_0_tab_108[bubbleSort_0_i_61] --> line 19
+bubbleSort_0_tab_110[bubbleSort_0_i_61] := bubbleSort_0_aux_55 --> line 20
+bubbleSort_0_tab_126 := bubbleSort_0_tab_110 --> line 0
+!( ( bubbleSort_0_fini_70 == 0 ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 23,line 21}
+{line 14,line 21}
+{line 14,line 0}
+{line 23,line 0}
+{line 23,line 21}
+{line 23,line 21}
+{line 9,line 21}
+{line 23,line 21}
+{line 23,line 0}
+{line 23,line 21}
+{line 23,line 21}
+{line 23,line 21}
+{line 9,line 0}
+{line 23,line 0}
+{line 23,line 0}
+{line 23,line 0}
+{line 23,line 0}
+{line 23,line 0}
+
+Runtime of the method that compute MCS: 8.967
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 14)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 21)=4.5
+MIVcard(ctrs,line 0)=4.5
+
+The number of instructions suspected: 10
+   IIS in CSP_a using Deletion Filter:
+{CE,line 21,line 0,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.73
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 198
+{CE,line 23,line 23,line 23,line 23,line 23,line 23,line 23,line 14,line 9,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.354
+   IIS in CSP_a using the conflict refiner implementation of CPLEX:
+{CE,line 9,line 14,line 23,line 23,line 23,line 23,line 23,line 23,line 23,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.15
+
+Solver: CPLEX
+1. CSP_d:
+line 15(Else) : ( bubbleSort_0_i_8 < bubbleSort_0_j_0 )
+line 15(Else) : ( bubbleSort_0_i_71 < bubbleSort_0_j_7 )
+------------------------
+2. CSP_a:
+bubbleSort_0_tab_0[0] := 921 --> line -1
+bubbleSort_0_tab_0[1] := 794 --> line -1
+bubbleSort_0_tab_0[2] := 765 --> line -1
+bubbleSort_0_tab_0[3] := 345 --> line -1
+bubbleSort_0_tab_0[4] := 239 --> line -1
+bubbleSort_0_tab_0[5] := 217 --> line -1
+bubbleSort_0_tab_0[6] := 152 --> line -1
+bubbleSort_0_tab_0[7] := 91 --> line -1
+bubbleSort_0_tab_0[8] := 794 --> line -1
+bubbleSort_0_i_0 := 0 --> line 8
+bubbleSort_0_j_0 := ( 9 - 1 ) --> line 9
+bubbleSort_0_aux_0 := 0 --> line 10
+bubbleSort_0_fini_0 := 0 --> line 11
+bubbleSort_0_fini_1 := 1 --> line 13
+bubbleSort_0_i_1 := 1 --> line 14
+bubbleSort_0_aux_1 := bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )] --> line 18
+bubbleSort_0_fini_2 := 0 --> line 21
+bubbleSort_0_i_2 := ( bubbleSort_0_i_1 + 1 ) --> line 23
+bubbleSort_0_aux_2 := bubbleSort_0_tab_2[( bubbleSort_0_i_2 - 1 )] --> line 18
+bubbleSort_0_fini_3 := 0 --> line 21
+bubbleSort_0_i_3 := ( bubbleSort_0_i_2 + 1 ) --> line 23
+bubbleSort_0_aux_3 := bubbleSort_0_tab_4[( bubbleSort_0_i_3 - 1 )] --> line 18
+bubbleSort_0_fini_4 := 0 --> line 21
+bubbleSort_0_i_4 := ( bubbleSort_0_i_3 + 1 ) --> line 23
+bubbleSort_0_aux_4 := bubbleSort_0_tab_6[( bubbleSort_0_i_4 - 1 )] --> line 18
+bubbleSort_0_fini_5 := 0 --> line 21
+bubbleSort_0_i_5 := ( bubbleSort_0_i_4 + 1 ) --> line 23
+bubbleSort_0_aux_5 := bubbleSort_0_tab_8[( bubbleSort_0_i_5 - 1 )] --> line 18
+bubbleSort_0_fini_6 := 0 --> line 21
+bubbleSort_0_i_6 := ( bubbleSort_0_i_5 + 1 ) --> line 23
+bubbleSort_0_aux_6 := bubbleSort_0_tab_10[( bubbleSort_0_i_6 - 1 )] --> line 18
+bubbleSort_0_fini_7 := 0 --> line 21
+bubbleSort_0_i_7 := ( bubbleSort_0_i_6 + 1 ) --> line 23
+bubbleSort_0_aux_7 := bubbleSort_0_tab_12[( bubbleSort_0_i_7 - 1 )] --> line 18
+bubbleSort_0_fini_8 := 0 --> line 21
+bubbleSort_0_i_8 := ( bubbleSort_0_i_7 + 1 ) --> line 23
+bubbleSort_0_aux_8 := bubbleSort_0_tab_14[( bubbleSort_0_i_8 - 1 )] --> line 18
+bubbleSort_0_fini_9 := 0 --> line 21
+bubbleSort_0_i_9 := ( bubbleSort_0_i_8 + 1 ) --> line 23
+bubbleSort_0_fini_10 := bubbleSort_0_fini_9 --> line 0
+bubbleSort_0_i_10 := bubbleSort_0_i_9 --> line 0
+bubbleSort_0_aux_9 := bubbleSort_0_aux_8 --> line 0
+bubbleSort_0_j_1 := ( bubbleSort_0_j_0 - 1 ) --> line 25
+bubbleSort_0_fini_11 := 1 --> line 13
+bubbleSort_0_i_11 := 1 --> line 14
+bubbleSort_0_aux_10 := bubbleSort_0_tab_18[( bubbleSort_0_i_11 - 1 )] --> line 18
+bubbleSort_0_fini_12 := 0 --> line 21
+bubbleSort_0_i_12 := ( bubbleSort_0_i_11 + 1 ) --> line 23
+bubbleSort_0_aux_11 := bubbleSort_0_tab_20[( bubbleSort_0_i_12 - 1 )] --> line 18
+bubbleSort_0_fini_13 := 0 --> line 21
+bubbleSort_0_i_13 := ( bubbleSort_0_i_12 + 1 ) --> line 23
+bubbleSort_0_aux_12 := bubbleSort_0_tab_22[( bubbleSort_0_i_13 - 1 )] --> line 18
+bubbleSort_0_fini_14 := 0 --> line 21
+bubbleSort_0_i_14 := ( bubbleSort_0_i_13 + 1 ) --> line 23
+bubbleSort_0_aux_13 := bubbleSort_0_tab_24[( bubbleSort_0_i_14 - 1 )] --> line 18
+bubbleSort_0_fini_15 := 0 --> line 21
+bubbleSort_0_i_15 := ( bubbleSort_0_i_14 + 1 ) --> line 23
+bubbleSort_0_aux_14 := bubbleSort_0_tab_26[( bubbleSort_0_i_15 - 1 )] --> line 18
+bubbleSort_0_fini_16 := 0 --> line 21
+bubbleSort_0_i_16 := ( bubbleSort_0_i_15 + 1 ) --> line 23
+bubbleSort_0_aux_15 := bubbleSort_0_tab_28[( bubbleSort_0_i_16 - 1 )] --> line 18
+bubbleSort_0_fini_17 := 0 --> line 21
+bubbleSort_0_i_17 := ( bubbleSort_0_i_16 + 1 ) --> line 23
+bubbleSort_0_fini_20 := bubbleSort_0_fini_17 --> line 0
+bubbleSort_0_i_20 := bubbleSort_0_i_17 --> line 0
+bubbleSort_0_aux_18 := bubbleSort_0_aux_15 --> line 0
+bubbleSort_0_j_2 := ( bubbleSort_0_j_1 - 1 ) --> line 25
+bubbleSort_0_fini_21 := 1 --> line 13
+bubbleSort_0_i_21 := 1 --> line 14
+bubbleSort_0_aux_19 := bubbleSort_0_tab_36[( bubbleSort_0_i_21 - 1 )] --> line 18
+bubbleSort_0_fini_22 := 0 --> line 21
+bubbleSort_0_i_22 := ( bubbleSort_0_i_21 + 1 ) --> line 23
+bubbleSort_0_aux_20 := bubbleSort_0_tab_38[( bubbleSort_0_i_22 - 1 )] --> line 18
+bubbleSort_0_fini_23 := 0 --> line 21
+bubbleSort_0_i_23 := ( bubbleSort_0_i_22 + 1 ) --> line 23
+bubbleSort_0_aux_21 := bubbleSort_0_tab_40[( bubbleSort_0_i_23 - 1 )] --> line 18
+bubbleSort_0_fini_24 := 0 --> line 21
+bubbleSort_0_i_24 := ( bubbleSort_0_i_23 + 1 ) --> line 23
+bubbleSort_0_aux_22 := bubbleSort_0_tab_42[( bubbleSort_0_i_24 - 1 )] --> line 18
+bubbleSort_0_fini_25 := 0 --> line 21
+bubbleSort_0_i_25 := ( bubbleSort_0_i_24 + 1 ) --> line 23
+bubbleSort_0_aux_23 := bubbleSort_0_tab_44[( bubbleSort_0_i_25 - 1 )] --> line 18
+bubbleSort_0_fini_26 := 0 --> line 21
+bubbleSort_0_i_26 := ( bubbleSort_0_i_25 + 1 ) --> line 23
+bubbleSort_0_fini_30 := bubbleSort_0_fini_26 --> line 0
+bubbleSort_0_i_30 := bubbleSort_0_i_26 --> line 0
+bubbleSort_0_aux_27 := bubbleSort_0_aux_23 --> line 0
+bubbleSort_0_j_3 := ( bubbleSort_0_j_2 - 1 ) --> line 25
+bubbleSort_0_fini_31 := 1 --> line 13
+bubbleSort_0_i_31 := 1 --> line 14
+bubbleSort_0_aux_28 := bubbleSort_0_tab_54[( bubbleSort_0_i_31 - 1 )] --> line 18
+bubbleSort_0_fini_32 := 0 --> line 21
+bubbleSort_0_i_32 := ( bubbleSort_0_i_31 + 1 ) --> line 23
+bubbleSort_0_aux_29 := bubbleSort_0_tab_56[( bubbleSort_0_i_32 - 1 )] --> line 18
+bubbleSort_0_fini_33 := 0 --> line 21
+bubbleSort_0_i_33 := ( bubbleSort_0_i_32 + 1 ) --> line 23
+bubbleSort_0_aux_30 := bubbleSort_0_tab_58[( bubbleSort_0_i_33 - 1 )] --> line 18
+bubbleSort_0_fini_34 := 0 --> line 21
+bubbleSort_0_i_34 := ( bubbleSort_0_i_33 + 1 ) --> line 23
+bubbleSort_0_aux_31 := bubbleSort_0_tab_60[( bubbleSort_0_i_34 - 1 )] --> line 18
+bubbleSort_0_fini_35 := 0 --> line 21
+bubbleSort_0_i_35 := ( bubbleSort_0_i_34 + 1 ) --> line 23
+bubbleSort_0_fini_40 := bubbleSort_0_fini_35 --> line 0
+bubbleSort_0_i_40 := bubbleSort_0_i_35 --> line 0
+bubbleSort_0_aux_36 := bubbleSort_0_aux_31 --> line 0
+bubbleSort_0_j_4 := ( bubbleSort_0_j_3 - 1 ) --> line 25
+bubbleSort_0_fini_41 := 1 --> line 13
+bubbleSort_0_i_41 := 1 --> line 14
+bubbleSort_0_aux_37 := bubbleSort_0_tab_72[( bubbleSort_0_i_41 - 1 )] --> line 18
+bubbleSort_0_fini_42 := 0 --> line 21
+bubbleSort_0_i_42 := ( bubbleSort_0_i_41 + 1 ) --> line 23
+bubbleSort_0_aux_38 := bubbleSort_0_tab_74[( bubbleSort_0_i_42 - 1 )] --> line 18
+bubbleSort_0_fini_43 := 0 --> line 21
+bubbleSort_0_i_43 := ( bubbleSort_0_i_42 + 1 ) --> line 23
+bubbleSort_0_aux_39 := bubbleSort_0_tab_76[( bubbleSort_0_i_43 - 1 )] --> line 18
+bubbleSort_0_fini_44 := 0 --> line 21
+bubbleSort_0_i_44 := ( bubbleSort_0_i_43 + 1 ) --> line 23
+bubbleSort_0_fini_50 := bubbleSort_0_fini_44 --> line 0
+bubbleSort_0_i_50 := bubbleSort_0_i_44 --> line 0
+bubbleSort_0_aux_45 := bubbleSort_0_aux_39 --> line 0
+bubbleSort_0_j_5 := ( bubbleSort_0_j_4 - 1 ) --> line 25
+bubbleSort_0_fini_51 := 1 --> line 13
+bubbleSort_0_i_51 := 1 --> line 14
+bubbleSort_0_aux_46 := bubbleSort_0_tab_90[( bubbleSort_0_i_51 - 1 )] --> line 18
+bubbleSort_0_fini_52 := 0 --> line 21
+bubbleSort_0_i_52 := ( bubbleSort_0_i_51 + 1 ) --> line 23
+bubbleSort_0_aux_47 := bubbleSort_0_tab_92[( bubbleSort_0_i_52 - 1 )] --> line 18
+bubbleSort_0_fini_53 := 0 --> line 21
+bubbleSort_0_i_53 := ( bubbleSort_0_i_52 + 1 ) --> line 23
+bubbleSort_0_fini_60 := bubbleSort_0_fini_53 --> line 0
+bubbleSort_0_i_60 := bubbleSort_0_i_53 --> line 0
+bubbleSort_0_aux_54 := bubbleSort_0_aux_47 --> line 0
+bubbleSort_0_j_6 := ( bubbleSort_0_j_5 - 1 ) --> line 25
+bubbleSort_0_fini_61 := 1 --> line 13
+bubbleSort_0_i_61 := 1 --> line 14
+bubbleSort_0_aux_55 := bubbleSort_0_tab_108[( bubbleSort_0_i_61 - 1 )] --> line 18
+bubbleSort_0_fini_62 := 0 --> line 21
+bubbleSort_0_i_62 := ( bubbleSort_0_i_61 + 1 ) --> line 23
+bubbleSort_0_fini_70 := bubbleSort_0_fini_62 --> line 0
+bubbleSort_0_i_70 := bubbleSort_0_i_62 --> line 0
+bubbleSort_0_aux_63 := bubbleSort_0_aux_55 --> line 0
+bubbleSort_0_j_7 := ( bubbleSort_0_j_6 - 1 ) --> line 25
+bubbleSort_0_fini_71 := 1 --> line 13
+bubbleSort_0_i_71 := 1 --> line 14
+( bubbleSort_0_i_8 < bubbleSort_0_j_0 ) --> line -2
+( bubbleSort_0_i_71 < bubbleSort_0_j_7 ) --> line -2
+bubbleSort_0_tab_1[( bubbleSort_0_i_1 - 1 )] := bubbleSort_0_tab_0[bubbleSort_0_i_1] --> line 19
+bubbleSort_0_tab_2[bubbleSort_0_i_1] := bubbleSort_0_aux_1 --> line 20
+bubbleSort_0_tab_3[( bubbleSort_0_i_2 - 1 )] := bubbleSort_0_tab_2[bubbleSort_0_i_2] --> line 19
+bubbleSort_0_tab_4[bubbleSort_0_i_2] := bubbleSort_0_aux_2 --> line 20
+bubbleSort_0_tab_5[( bubbleSort_0_i_3 - 1 )] := bubbleSort_0_tab_4[bubbleSort_0_i_3] --> line 19
+bubbleSort_0_tab_6[bubbleSort_0_i_3] := bubbleSort_0_aux_3 --> line 20
+bubbleSort_0_tab_7[( bubbleSort_0_i_4 - 1 )] := bubbleSort_0_tab_6[bubbleSort_0_i_4] --> line 19
+bubbleSort_0_tab_8[bubbleSort_0_i_4] := bubbleSort_0_aux_4 --> line 20
+bubbleSort_0_tab_9[( bubbleSort_0_i_5 - 1 )] := bubbleSort_0_tab_8[bubbleSort_0_i_5] --> line 19
+bubbleSort_0_tab_10[bubbleSort_0_i_5] := bubbleSort_0_aux_5 --> line 20
+bubbleSort_0_tab_11[( bubbleSort_0_i_6 - 1 )] := bubbleSort_0_tab_10[bubbleSort_0_i_6] --> line 19
+bubbleSort_0_tab_12[bubbleSort_0_i_6] := bubbleSort_0_aux_6 --> line 20
+bubbleSort_0_tab_13[( bubbleSort_0_i_7 - 1 )] := bubbleSort_0_tab_12[bubbleSort_0_i_7] --> line 19
+bubbleSort_0_tab_14[bubbleSort_0_i_7] := bubbleSort_0_aux_7 --> line 20
+bubbleSort_0_tab_15[( bubbleSort_0_i_8 - 1 )] := bubbleSort_0_tab_14[bubbleSort_0_i_8] --> line 19
+bubbleSort_0_tab_16[bubbleSort_0_i_8] := bubbleSort_0_aux_8 --> line 20
+bubbleSort_0_tab_18 := bubbleSort_0_tab_16 --> line 0
+bubbleSort_0_tab_19[( bubbleSort_0_i_11 - 1 )] := bubbleSort_0_tab_18[bubbleSort_0_i_11] --> line 19
+bubbleSort_0_tab_20[bubbleSort_0_i_11] := bubbleSort_0_aux_10 --> line 20
+bubbleSort_0_tab_21[( bubbleSort_0_i_12 - 1 )] := bubbleSort_0_tab_20[bubbleSort_0_i_12] --> line 19
+bubbleSort_0_tab_22[bubbleSort_0_i_12] := bubbleSort_0_aux_11 --> line 20
+bubbleSort_0_tab_23[( bubbleSort_0_i_13 - 1 )] := bubbleSort_0_tab_22[bubbleSort_0_i_13] --> line 19
+bubbleSort_0_tab_24[bubbleSort_0_i_13] := bubbleSort_0_aux_12 --> line 20
+bubbleSort_0_tab_25[( bubbleSort_0_i_14 - 1 )] := bubbleSort_0_tab_24[bubbleSort_0_i_14] --> line 19
+bubbleSort_0_tab_26[bubbleSort_0_i_14] := bubbleSort_0_aux_13 --> line 20
+bubbleSort_0_tab_27[( bubbleSort_0_i_15 - 1 )] := bubbleSort_0_tab_26[bubbleSort_0_i_15] --> line 19
+bubbleSort_0_tab_28[bubbleSort_0_i_15] := bubbleSort_0_aux_14 --> line 20
+bubbleSort_0_tab_29[( bubbleSort_0_i_16 - 1 )] := bubbleSort_0_tab_28[bubbleSort_0_i_16] --> line 19
+bubbleSort_0_tab_30[bubbleSort_0_i_16] := bubbleSort_0_aux_15 --> line 20
+bubbleSort_0_tab_36 := bubbleSort_0_tab_30 --> line 0
+bubbleSort_0_tab_37[( bubbleSort_0_i_21 - 1 )] := bubbleSort_0_tab_36[bubbleSort_0_i_21] --> line 19
+bubbleSort_0_tab_38[bubbleSort_0_i_21] := bubbleSort_0_aux_19 --> line 20
+bubbleSort_0_tab_39[( bubbleSort_0_i_22 - 1 )] := bubbleSort_0_tab_38[bubbleSort_0_i_22] --> line 19
+bubbleSort_0_tab_40[bubbleSort_0_i_22] := bubbleSort_0_aux_20 --> line 20
+bubbleSort_0_tab_41[( bubbleSort_0_i_23 - 1 )] := bubbleSort_0_tab_40[bubbleSort_0_i_23] --> line 19
+bubbleSort_0_tab_42[bubbleSort_0_i_23] := bubbleSort_0_aux_21 --> line 20
+bubbleSort_0_tab_43[( bubbleSort_0_i_24 - 1 )] := bubbleSort_0_tab_42[bubbleSort_0_i_24] --> line 19
+bubbleSort_0_tab_44[bubbleSort_0_i_24] := bubbleSort_0_aux_22 --> line 20
+bubbleSort_0_tab_45[( bubbleSort_0_i_25 - 1 )] := bubbleSort_0_tab_44[bubbleSort_0_i_25] --> line 19
+bubbleSort_0_tab_46[bubbleSort_0_i_25] := bubbleSort_0_aux_23 --> line 20
+bubbleSort_0_tab_54 := bubbleSort_0_tab_46 --> line 0
+bubbleSort_0_tab_55[( bubbleSort_0_i_31 - 1 )] := bubbleSort_0_tab_54[bubbleSort_0_i_31] --> line 19
+bubbleSort_0_tab_56[bubbleSort_0_i_31] := bubbleSort_0_aux_28 --> line 20
+bubbleSort_0_tab_57[( bubbleSort_0_i_32 - 1 )] := bubbleSort_0_tab_56[bubbleSort_0_i_32] --> line 19
+bubbleSort_0_tab_58[bubbleSort_0_i_32] := bubbleSort_0_aux_29 --> line 20
+bubbleSort_0_tab_59[( bubbleSort_0_i_33 - 1 )] := bubbleSort_0_tab_58[bubbleSort_0_i_33] --> line 19
+bubbleSort_0_tab_60[bubbleSort_0_i_33] := bubbleSort_0_aux_30 --> line 20
+bubbleSort_0_tab_61[( bubbleSort_0_i_34 - 1 )] := bubbleSort_0_tab_60[bubbleSort_0_i_34] --> line 19
+bubbleSort_0_tab_62[bubbleSort_0_i_34] := bubbleSort_0_aux_31 --> line 20
+bubbleSort_0_tab_72 := bubbleSort_0_tab_62 --> line 0
+bubbleSort_0_tab_73[( bubbleSort_0_i_41 - 1 )] := bubbleSort_0_tab_72[bubbleSort_0_i_41] --> line 19
+bubbleSort_0_tab_74[bubbleSort_0_i_41] := bubbleSort_0_aux_37 --> line 20
+bubbleSort_0_tab_75[( bubbleSort_0_i_42 - 1 )] := bubbleSort_0_tab_74[bubbleSort_0_i_42] --> line 19
+bubbleSort_0_tab_76[bubbleSort_0_i_42] := bubbleSort_0_aux_38 --> line 20
+bubbleSort_0_tab_77[( bubbleSort_0_i_43 - 1 )] := bubbleSort_0_tab_76[bubbleSort_0_i_43] --> line 19
+bubbleSort_0_tab_78[bubbleSort_0_i_43] := bubbleSort_0_aux_39 --> line 20
+bubbleSort_0_tab_90 := bubbleSort_0_tab_78 --> line 0
+bubbleSort_0_tab_91[( bubbleSort_0_i_51 - 1 )] := bubbleSort_0_tab_90[bubbleSort_0_i_51] --> line 19
+bubbleSort_0_tab_92[bubbleSort_0_i_51] := bubbleSort_0_aux_46 --> line 20
+bubbleSort_0_tab_93[( bubbleSort_0_i_52 - 1 )] := bubbleSort_0_tab_92[bubbleSort_0_i_52] --> line 19
+bubbleSort_0_tab_94[bubbleSort_0_i_52] := bubbleSort_0_aux_47 --> line 20
+bubbleSort_0_tab_108 := bubbleSort_0_tab_94 --> line 0
+bubbleSort_0_tab_109[( bubbleSort_0_i_61 - 1 )] := bubbleSort_0_tab_108[bubbleSort_0_i_61] --> line 19
+bubbleSort_0_tab_110[bubbleSort_0_i_61] := bubbleSort_0_aux_55 --> line 20
+bubbleSort_0_tab_126 := bubbleSort_0_tab_110 --> line 0
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 9}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 14,line 25}
+{line 14,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 14,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 14,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 14,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 14,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 14}
+{line 14,line 25}
+{line 14,line 14}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 25}
+{line 23,line 14}
+{line 23,line 14}
+{line 23,line 14}
+{line 23,line 14}
+{line 23,line 14}
+{line 23,line 25}
+{line 23,line 14}
+{line 23,line 25}
+
+Runtime of the method that compute MCS: 11.289
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 14)=4.0
+MIVcard(ctrs,line 23)=4.0
+MIVcard(ctrs,line 23)=4.0
+MIVcard(ctrs,line 23)=4.0
+MIVcard(ctrs,line 23)=4.0
+MIVcard(ctrs,line 23)=4.0
+MIVcard(ctrs,line 23)=4.0
+MIVcard(ctrs,line 23)=4.0
+MIVcard(ctrs,line 25)=4.0
+MIVcard(ctrs,line 25)=4.0
+MIVcard(ctrs,line 25)=4.0
+MIVcard(ctrs,line 25)=4.0
+MIVcard(ctrs,line 25)=4.0
+MIVcard(ctrs,line 25)=4.0
+MIVcard(ctrs,line 25)=4.0
+MIVcard(ctrs,line 14)=4.0
+
+The number of instructions suspected: 17
+   IIS in CSP_a using Deletion Filter:
+{CE,line 9,line 25,line 25,line 25,line 25,line 25,line 25,line 25,line 14,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.6
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 200
+{CE,line 23,line 23,line 23,line 23,line 23,line 23,line 23,line 14,line 9,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.184
+   IIS in CSP_a using the conflict refiner implementation of CPLEX:
+{CE,line 9,line 14,line 23,line 23,line 23,line 23,line 23,line 23,line 23,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.125
+
+Solver: CPLEX
+1. CSP_d:
+line 15(Else) : ( bubbleSort_0_i_8 < bubbleSort_0_j_0 )
+line 12(Else) : ( bubbleSort_0_fini_80 == 0 )
+------------------------
+2. CSP_a:
+bubbleSort_0_tab_0[0] := 921 --> line -1
+bubbleSort_0_tab_0[1] := 794 --> line -1
+bubbleSort_0_tab_0[2] := 765 --> line -1
+bubbleSort_0_tab_0[3] := 345 --> line -1
+bubbleSort_0_tab_0[4] := 239 --> line -1
+bubbleSort_0_tab_0[5] := 217 --> line -1
+bubbleSort_0_tab_0[6] := 152 --> line -1
+bubbleSort_0_tab_0[7] := 91 --> line -1
+bubbleSort_0_tab_0[8] := 794 --> line -1
+bubbleSort_0_i_0 := 0 --> line 8
+bubbleSort_0_j_0 := ( 9 - 1 ) --> line 9
+bubbleSort_0_aux_0 := 0 --> line 10
+bubbleSort_0_fini_0 := 0 --> line 11
+bubbleSort_0_fini_1 := 1 --> line 13
+bubbleSort_0_i_1 := 1 --> line 14
+bubbleSort_0_aux_1 := bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )] --> line 18
+bubbleSort_0_fini_2 := 0 --> line 21
+bubbleSort_0_i_2 := ( bubbleSort_0_i_1 + 1 ) --> line 23
+bubbleSort_0_aux_2 := bubbleSort_0_tab_2[( bubbleSort_0_i_2 - 1 )] --> line 18
+bubbleSort_0_fini_3 := 0 --> line 21
+bubbleSort_0_i_3 := ( bubbleSort_0_i_2 + 1 ) --> line 23
+bubbleSort_0_aux_3 := bubbleSort_0_tab_4[( bubbleSort_0_i_3 - 1 )] --> line 18
+bubbleSort_0_fini_4 := 0 --> line 21
+bubbleSort_0_i_4 := ( bubbleSort_0_i_3 + 1 ) --> line 23
+bubbleSort_0_aux_4 := bubbleSort_0_tab_6[( bubbleSort_0_i_4 - 1 )] --> line 18
+bubbleSort_0_fini_5 := 0 --> line 21
+bubbleSort_0_i_5 := ( bubbleSort_0_i_4 + 1 ) --> line 23
+bubbleSort_0_aux_5 := bubbleSort_0_tab_8[( bubbleSort_0_i_5 - 1 )] --> line 18
+bubbleSort_0_fini_6 := 0 --> line 21
+bubbleSort_0_i_6 := ( bubbleSort_0_i_5 + 1 ) --> line 23
+bubbleSort_0_aux_6 := bubbleSort_0_tab_10[( bubbleSort_0_i_6 - 1 )] --> line 18
+bubbleSort_0_fini_7 := 0 --> line 21
+bubbleSort_0_i_7 := ( bubbleSort_0_i_6 + 1 ) --> line 23
+bubbleSort_0_aux_7 := bubbleSort_0_tab_12[( bubbleSort_0_i_7 - 1 )] --> line 18
+bubbleSort_0_fini_8 := 0 --> line 21
+bubbleSort_0_i_8 := ( bubbleSort_0_i_7 + 1 ) --> line 23
+bubbleSort_0_aux_8 := bubbleSort_0_tab_14[( bubbleSort_0_i_8 - 1 )] --> line 18
+bubbleSort_0_fini_9 := 0 --> line 21
+bubbleSort_0_i_9 := ( bubbleSort_0_i_8 + 1 ) --> line 23
+bubbleSort_0_fini_10 := bubbleSort_0_fini_9 --> line 0
+bubbleSort_0_i_10 := bubbleSort_0_i_9 --> line 0
+bubbleSort_0_aux_9 := bubbleSort_0_aux_8 --> line 0
+bubbleSort_0_j_1 := ( bubbleSort_0_j_0 - 1 ) --> line 25
+bubbleSort_0_fini_11 := 1 --> line 13
+bubbleSort_0_i_11 := 1 --> line 14
+bubbleSort_0_aux_10 := bubbleSort_0_tab_18[( bubbleSort_0_i_11 - 1 )] --> line 18
+bubbleSort_0_fini_12 := 0 --> line 21
+bubbleSort_0_i_12 := ( bubbleSort_0_i_11 + 1 ) --> line 23
+bubbleSort_0_aux_11 := bubbleSort_0_tab_20[( bubbleSort_0_i_12 - 1 )] --> line 18
+bubbleSort_0_fini_13 := 0 --> line 21
+bubbleSort_0_i_13 := ( bubbleSort_0_i_12 + 1 ) --> line 23
+bubbleSort_0_aux_12 := bubbleSort_0_tab_22[( bubbleSort_0_i_13 - 1 )] --> line 18
+bubbleSort_0_fini_14 := 0 --> line 21
+bubbleSort_0_i_14 := ( bubbleSort_0_i_13 + 1 ) --> line 23
+bubbleSort_0_aux_13 := bubbleSort_0_tab_24[( bubbleSort_0_i_14 - 1 )] --> line 18
+bubbleSort_0_fini_15 := 0 --> line 21
+bubbleSort_0_i_15 := ( bubbleSort_0_i_14 + 1 ) --> line 23
+bubbleSort_0_aux_14 := bubbleSort_0_tab_26[( bubbleSort_0_i_15 - 1 )] --> line 18
+bubbleSort_0_fini_16 := 0 --> line 21
+bubbleSort_0_i_16 := ( bubbleSort_0_i_15 + 1 ) --> line 23
+bubbleSort_0_aux_15 := bubbleSort_0_tab_28[( bubbleSort_0_i_16 - 1 )] --> line 18
+bubbleSort_0_fini_17 := 0 --> line 21
+bubbleSort_0_i_17 := ( bubbleSort_0_i_16 + 1 ) --> line 23
+bubbleSort_0_fini_20 := bubbleSort_0_fini_17 --> line 0
+bubbleSort_0_i_20 := bubbleSort_0_i_17 --> line 0
+bubbleSort_0_aux_18 := bubbleSort_0_aux_15 --> line 0
+bubbleSort_0_j_2 := ( bubbleSort_0_j_1 - 1 ) --> line 25
+bubbleSort_0_fini_21 := 1 --> line 13
+bubbleSort_0_i_21 := 1 --> line 14
+bubbleSort_0_aux_19 := bubbleSort_0_tab_36[( bubbleSort_0_i_21 - 1 )] --> line 18
+bubbleSort_0_fini_22 := 0 --> line 21
+bubbleSort_0_i_22 := ( bubbleSort_0_i_21 + 1 ) --> line 23
+bubbleSort_0_aux_20 := bubbleSort_0_tab_38[( bubbleSort_0_i_22 - 1 )] --> line 18
+bubbleSort_0_fini_23 := 0 --> line 21
+bubbleSort_0_i_23 := ( bubbleSort_0_i_22 + 1 ) --> line 23
+bubbleSort_0_aux_21 := bubbleSort_0_tab_40[( bubbleSort_0_i_23 - 1 )] --> line 18
+bubbleSort_0_fini_24 := 0 --> line 21
+bubbleSort_0_i_24 := ( bubbleSort_0_i_23 + 1 ) --> line 23
+bubbleSort_0_aux_22 := bubbleSort_0_tab_42[( bubbleSort_0_i_24 - 1 )] --> line 18
+bubbleSort_0_fini_25 := 0 --> line 21
+bubbleSort_0_i_25 := ( bubbleSort_0_i_24 + 1 ) --> line 23
+bubbleSort_0_aux_23 := bubbleSort_0_tab_44[( bubbleSort_0_i_25 - 1 )] --> line 18
+bubbleSort_0_fini_26 := 0 --> line 21
+bubbleSort_0_i_26 := ( bubbleSort_0_i_25 + 1 ) --> line 23
+bubbleSort_0_fini_30 := bubbleSort_0_fini_26 --> line 0
+bubbleSort_0_i_30 := bubbleSort_0_i_26 --> line 0
+bubbleSort_0_aux_27 := bubbleSort_0_aux_23 --> line 0
+bubbleSort_0_j_3 := ( bubbleSort_0_j_2 - 1 ) --> line 25
+bubbleSort_0_fini_31 := 1 --> line 13
+bubbleSort_0_i_31 := 1 --> line 14
+bubbleSort_0_aux_28 := bubbleSort_0_tab_54[( bubbleSort_0_i_31 - 1 )] --> line 18
+bubbleSort_0_fini_32 := 0 --> line 21
+bubbleSort_0_i_32 := ( bubbleSort_0_i_31 + 1 ) --> line 23
+bubbleSort_0_aux_29 := bubbleSort_0_tab_56[( bubbleSort_0_i_32 - 1 )] --> line 18
+bubbleSort_0_fini_33 := 0 --> line 21
+bubbleSort_0_i_33 := ( bubbleSort_0_i_32 + 1 ) --> line 23
+bubbleSort_0_aux_30 := bubbleSort_0_tab_58[( bubbleSort_0_i_33 - 1 )] --> line 18
+bubbleSort_0_fini_34 := 0 --> line 21
+bubbleSort_0_i_34 := ( bubbleSort_0_i_33 + 1 ) --> line 23
+bubbleSort_0_aux_31 := bubbleSort_0_tab_60[( bubbleSort_0_i_34 - 1 )] --> line 18
+bubbleSort_0_fini_35 := 0 --> line 21
+bubbleSort_0_i_35 := ( bubbleSort_0_i_34 + 1 ) --> line 23
+bubbleSort_0_fini_40 := bubbleSort_0_fini_35 --> line 0
+bubbleSort_0_i_40 := bubbleSort_0_i_35 --> line 0
+bubbleSort_0_aux_36 := bubbleSort_0_aux_31 --> line 0
+bubbleSort_0_j_4 := ( bubbleSort_0_j_3 - 1 ) --> line 25
+bubbleSort_0_fini_41 := 1 --> line 13
+bubbleSort_0_i_41 := 1 --> line 14
+bubbleSort_0_aux_37 := bubbleSort_0_tab_72[( bubbleSort_0_i_41 - 1 )] --> line 18
+bubbleSort_0_fini_42 := 0 --> line 21
+bubbleSort_0_i_42 := ( bubbleSort_0_i_41 + 1 ) --> line 23
+bubbleSort_0_aux_38 := bubbleSort_0_tab_74[( bubbleSort_0_i_42 - 1 )] --> line 18
+bubbleSort_0_fini_43 := 0 --> line 21
+bubbleSort_0_i_43 := ( bubbleSort_0_i_42 + 1 ) --> line 23
+bubbleSort_0_aux_39 := bubbleSort_0_tab_76[( bubbleSort_0_i_43 - 1 )] --> line 18
+bubbleSort_0_fini_44 := 0 --> line 21
+bubbleSort_0_i_44 := ( bubbleSort_0_i_43 + 1 ) --> line 23
+bubbleSort_0_fini_50 := bubbleSort_0_fini_44 --> line 0
+bubbleSort_0_i_50 := bubbleSort_0_i_44 --> line 0
+bubbleSort_0_aux_45 := bubbleSort_0_aux_39 --> line 0
+bubbleSort_0_j_5 := ( bubbleSort_0_j_4 - 1 ) --> line 25
+bubbleSort_0_fini_51 := 1 --> line 13
+bubbleSort_0_i_51 := 1 --> line 14
+bubbleSort_0_aux_46 := bubbleSort_0_tab_90[( bubbleSort_0_i_51 - 1 )] --> line 18
+bubbleSort_0_fini_52 := 0 --> line 21
+bubbleSort_0_i_52 := ( bubbleSort_0_i_51 + 1 ) --> line 23
+bubbleSort_0_aux_47 := bubbleSort_0_tab_92[( bubbleSort_0_i_52 - 1 )] --> line 18
+bubbleSort_0_fini_53 := 0 --> line 21
+bubbleSort_0_i_53 := ( bubbleSort_0_i_52 + 1 ) --> line 23
+bubbleSort_0_fini_60 := bubbleSort_0_fini_53 --> line 0
+bubbleSort_0_i_60 := bubbleSort_0_i_53 --> line 0
+bubbleSort_0_aux_54 := bubbleSort_0_aux_47 --> line 0
+bubbleSort_0_j_6 := ( bubbleSort_0_j_5 - 1 ) --> line 25
+bubbleSort_0_fini_61 := 1 --> line 13
+bubbleSort_0_i_61 := 1 --> line 14
+bubbleSort_0_aux_55 := bubbleSort_0_tab_108[( bubbleSort_0_i_61 - 1 )] --> line 18
+bubbleSort_0_fini_62 := 0 --> line 21
+bubbleSort_0_i_62 := ( bubbleSort_0_i_61 + 1 ) --> line 23
+bubbleSort_0_fini_70 := bubbleSort_0_fini_62 --> line 0
+bubbleSort_0_i_70 := bubbleSort_0_i_62 --> line 0
+bubbleSort_0_aux_63 := bubbleSort_0_aux_55 --> line 0
+bubbleSort_0_j_7 := ( bubbleSort_0_j_6 - 1 ) --> line 25
+bubbleSort_0_fini_71 := 1 --> line 13
+bubbleSort_0_i_71 := 1 --> line 14
+bubbleSort_0_fini_80 := bubbleSort_0_fini_71 --> line 0
+bubbleSort_0_i_80 := bubbleSort_0_i_71 --> line 0
+bubbleSort_0_aux_72 := bubbleSort_0_aux_63 --> line 0
+bubbleSort_0_j_8 := ( bubbleSort_0_j_7 - 1 ) --> line 25
+( bubbleSort_0_i_8 < bubbleSort_0_j_0 ) --> line -2
+( bubbleSort_0_fini_80 == 0 ) --> line -2
+bubbleSort_0_tab_1[( bubbleSort_0_i_1 - 1 )] := bubbleSort_0_tab_0[bubbleSort_0_i_1] --> line 19
+bubbleSort_0_tab_2[bubbleSort_0_i_1] := bubbleSort_0_aux_1 --> line 20
+bubbleSort_0_tab_3[( bubbleSort_0_i_2 - 1 )] := bubbleSort_0_tab_2[bubbleSort_0_i_2] --> line 19
+bubbleSort_0_tab_4[bubbleSort_0_i_2] := bubbleSort_0_aux_2 --> line 20
+bubbleSort_0_tab_5[( bubbleSort_0_i_3 - 1 )] := bubbleSort_0_tab_4[bubbleSort_0_i_3] --> line 19
+bubbleSort_0_tab_6[bubbleSort_0_i_3] := bubbleSort_0_aux_3 --> line 20
+bubbleSort_0_tab_7[( bubbleSort_0_i_4 - 1 )] := bubbleSort_0_tab_6[bubbleSort_0_i_4] --> line 19
+bubbleSort_0_tab_8[bubbleSort_0_i_4] := bubbleSort_0_aux_4 --> line 20
+bubbleSort_0_tab_9[( bubbleSort_0_i_5 - 1 )] := bubbleSort_0_tab_8[bubbleSort_0_i_5] --> line 19
+bubbleSort_0_tab_10[bubbleSort_0_i_5] := bubbleSort_0_aux_5 --> line 20
+bubbleSort_0_tab_11[( bubbleSort_0_i_6 - 1 )] := bubbleSort_0_tab_10[bubbleSort_0_i_6] --> line 19
+bubbleSort_0_tab_12[bubbleSort_0_i_6] := bubbleSort_0_aux_6 --> line 20
+bubbleSort_0_tab_13[( bubbleSort_0_i_7 - 1 )] := bubbleSort_0_tab_12[bubbleSort_0_i_7] --> line 19
+bubbleSort_0_tab_14[bubbleSort_0_i_7] := bubbleSort_0_aux_7 --> line 20
+bubbleSort_0_tab_15[( bubbleSort_0_i_8 - 1 )] := bubbleSort_0_tab_14[bubbleSort_0_i_8] --> line 19
+bubbleSort_0_tab_16[bubbleSort_0_i_8] := bubbleSort_0_aux_8 --> line 20
+bubbleSort_0_tab_18 := bubbleSort_0_tab_16 --> line 0
+bubbleSort_0_tab_19[( bubbleSort_0_i_11 - 1 )] := bubbleSort_0_tab_18[bubbleSort_0_i_11] --> line 19
+bubbleSort_0_tab_20[bubbleSort_0_i_11] := bubbleSort_0_aux_10 --> line 20
+bubbleSort_0_tab_21[( bubbleSort_0_i_12 - 1 )] := bubbleSort_0_tab_20[bubbleSort_0_i_12] --> line 19
+bubbleSort_0_tab_22[bubbleSort_0_i_12] := bubbleSort_0_aux_11 --> line 20
+bubbleSort_0_tab_23[( bubbleSort_0_i_13 - 1 )] := bubbleSort_0_tab_22[bubbleSort_0_i_13] --> line 19
+bubbleSort_0_tab_24[bubbleSort_0_i_13] := bubbleSort_0_aux_12 --> line 20
+bubbleSort_0_tab_25[( bubbleSort_0_i_14 - 1 )] := bubbleSort_0_tab_24[bubbleSort_0_i_14] --> line 19
+bubbleSort_0_tab_26[bubbleSort_0_i_14] := bubbleSort_0_aux_13 --> line 20
+bubbleSort_0_tab_27[( bubbleSort_0_i_15 - 1 )] := bubbleSort_0_tab_26[bubbleSort_0_i_15] --> line 19
+bubbleSort_0_tab_28[bubbleSort_0_i_15] := bubbleSort_0_aux_14 --> line 20
+bubbleSort_0_tab_29[( bubbleSort_0_i_16 - 1 )] := bubbleSort_0_tab_28[bubbleSort_0_i_16] --> line 19
+bubbleSort_0_tab_30[bubbleSort_0_i_16] := bubbleSort_0_aux_15 --> line 20
+bubbleSort_0_tab_36 := bubbleSort_0_tab_30 --> line 0
+bubbleSort_0_tab_37[( bubbleSort_0_i_21 - 1 )] := bubbleSort_0_tab_36[bubbleSort_0_i_21] --> line 19
+bubbleSort_0_tab_38[bubbleSort_0_i_21] := bubbleSort_0_aux_19 --> line 20
+bubbleSort_0_tab_39[( bubbleSort_0_i_22 - 1 )] := bubbleSort_0_tab_38[bubbleSort_0_i_22] --> line 19
+bubbleSort_0_tab_40[bubbleSort_0_i_22] := bubbleSort_0_aux_20 --> line 20
+bubbleSort_0_tab_41[( bubbleSort_0_i_23 - 1 )] := bubbleSort_0_tab_40[bubbleSort_0_i_23] --> line 19
+bubbleSort_0_tab_42[bubbleSort_0_i_23] := bubbleSort_0_aux_21 --> line 20
+bubbleSort_0_tab_43[( bubbleSort_0_i_24 - 1 )] := bubbleSort_0_tab_42[bubbleSort_0_i_24] --> line 19
+bubbleSort_0_tab_44[bubbleSort_0_i_24] := bubbleSort_0_aux_22 --> line 20
+bubbleSort_0_tab_45[( bubbleSort_0_i_25 - 1 )] := bubbleSort_0_tab_44[bubbleSort_0_i_25] --> line 19
+bubbleSort_0_tab_46[bubbleSort_0_i_25] := bubbleSort_0_aux_23 --> line 20
+bubbleSort_0_tab_54 := bubbleSort_0_tab_46 --> line 0
+bubbleSort_0_tab_55[( bubbleSort_0_i_31 - 1 )] := bubbleSort_0_tab_54[bubbleSort_0_i_31] --> line 19
+bubbleSort_0_tab_56[bubbleSort_0_i_31] := bubbleSort_0_aux_28 --> line 20
+bubbleSort_0_tab_57[( bubbleSort_0_i_32 - 1 )] := bubbleSort_0_tab_56[bubbleSort_0_i_32] --> line 19
+bubbleSort_0_tab_58[bubbleSort_0_i_32] := bubbleSort_0_aux_29 --> line 20
+bubbleSort_0_tab_59[( bubbleSort_0_i_33 - 1 )] := bubbleSort_0_tab_58[bubbleSort_0_i_33] --> line 19
+bubbleSort_0_tab_60[bubbleSort_0_i_33] := bubbleSort_0_aux_30 --> line 20
+bubbleSort_0_tab_61[( bubbleSort_0_i_34 - 1 )] := bubbleSort_0_tab_60[bubbleSort_0_i_34] --> line 19
+bubbleSort_0_tab_62[bubbleSort_0_i_34] := bubbleSort_0_aux_31 --> line 20
+bubbleSort_0_tab_72 := bubbleSort_0_tab_62 --> line 0
+bubbleSort_0_tab_73[( bubbleSort_0_i_41 - 1 )] := bubbleSort_0_tab_72[bubbleSort_0_i_41] --> line 19
+bubbleSort_0_tab_74[bubbleSort_0_i_41] := bubbleSort_0_aux_37 --> line 20
+bubbleSort_0_tab_75[( bubbleSort_0_i_42 - 1 )] := bubbleSort_0_tab_74[bubbleSort_0_i_42] --> line 19
+bubbleSort_0_tab_76[bubbleSort_0_i_42] := bubbleSort_0_aux_38 --> line 20
+bubbleSort_0_tab_77[( bubbleSort_0_i_43 - 1 )] := bubbleSort_0_tab_76[bubbleSort_0_i_43] --> line 19
+bubbleSort_0_tab_78[bubbleSort_0_i_43] := bubbleSort_0_aux_39 --> line 20
+bubbleSort_0_tab_90 := bubbleSort_0_tab_78 --> line 0
+bubbleSort_0_tab_91[( bubbleSort_0_i_51 - 1 )] := bubbleSort_0_tab_90[bubbleSort_0_i_51] --> line 19
+bubbleSort_0_tab_92[bubbleSort_0_i_51] := bubbleSort_0_aux_46 --> line 20
+bubbleSort_0_tab_93[( bubbleSort_0_i_52 - 1 )] := bubbleSort_0_tab_92[bubbleSort_0_i_52] --> line 19
+bubbleSort_0_tab_94[bubbleSort_0_i_52] := bubbleSort_0_aux_47 --> line 20
+bubbleSort_0_tab_108 := bubbleSort_0_tab_94 --> line 0
+bubbleSort_0_tab_109[( bubbleSort_0_i_61 - 1 )] := bubbleSort_0_tab_108[bubbleSort_0_i_61] --> line 19
+bubbleSort_0_tab_110[bubbleSort_0_i_61] := bubbleSort_0_aux_55 --> line 20
+bubbleSort_0_tab_126 := bubbleSort_0_tab_110 --> line 0
+bubbleSort_0_tab_144 := bubbleSort_0_tab_126 --> line 0
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 23,line 13}
+{line 23,line 0}
+{line 23,line 13}
+{line 23,line 0}
+{line 23,line 13}
+{line 23,line 0}
+{line 23,line 13}
+{line 23,line 0}
+{line 14,line 13}
+{line 23,line 13}
+{line 14,line 0}
+{line 23,line 0}
+{line 23,line 13}
+{line 9,line 13}
+{line 23,line 13}
+{line 23,line 0}
+{line 23,line 0}
+{line 9,line 0}
+
+Runtime of the method that compute MCS: 1.998
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 14)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 13)=4.5
+MIVcard(ctrs,line 0)=4.5
+
+The number of instructions suspected: 10
+   IIS in CSP_a using Deletion Filter:
+{CE,line 13,line 0,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.568
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 205
+{CE,line 23,line 23,line 23,line 23,line 23,line 23,line 23,line 14,line 9,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.188
+   IIS in CSP_a using the conflict refiner implementation of CPLEX:
+{CE,line 9,line 14,line 23,line 23,line 23,line 23,line 23,line 23,line 23,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.133
+
+Solver: CPLEX
+1. CSP_d:
+line 15(If) : ( bubbleSort_0_i_11 < bubbleSort_0_j_1 )
+line 12(Else) : ( bubbleSort_0_fini_20 == 0 )
+------------------------
+2. CSP_a:
+bubbleSort_0_tab_0[0] := 921 --> line -1
+bubbleSort_0_tab_0[1] := 794 --> line -1
+bubbleSort_0_tab_0[2] := 765 --> line -1
+bubbleSort_0_tab_0[3] := 345 --> line -1
+bubbleSort_0_tab_0[4] := 239 --> line -1
+bubbleSort_0_tab_0[5] := 217 --> line -1
+bubbleSort_0_tab_0[6] := 152 --> line -1
+bubbleSort_0_tab_0[7] := 91 --> line -1
+bubbleSort_0_tab_0[8] := 794 --> line -1
+bubbleSort_0_i_0 := 0 --> line 8
+bubbleSort_0_j_0 := ( 9 - 1 ) --> line 9
+bubbleSort_0_aux_0 := 0 --> line 10
+bubbleSort_0_fini_0 := 0 --> line 11
+bubbleSort_0_fini_1 := 1 --> line 13
+bubbleSort_0_i_1 := 1 --> line 14
+bubbleSort_0_aux_1 := bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )] --> line 18
+bubbleSort_0_fini_2 := 0 --> line 21
+bubbleSort_0_i_2 := ( bubbleSort_0_i_1 + 1 ) --> line 23
+bubbleSort_0_aux_2 := bubbleSort_0_tab_2[( bubbleSort_0_i_2 - 1 )] --> line 18
+bubbleSort_0_fini_3 := 0 --> line 21
+bubbleSort_0_i_3 := ( bubbleSort_0_i_2 + 1 ) --> line 23
+bubbleSort_0_aux_3 := bubbleSort_0_tab_4[( bubbleSort_0_i_3 - 1 )] --> line 18
+bubbleSort_0_fini_4 := 0 --> line 21
+bubbleSort_0_i_4 := ( bubbleSort_0_i_3 + 1 ) --> line 23
+bubbleSort_0_aux_4 := bubbleSort_0_tab_6[( bubbleSort_0_i_4 - 1 )] --> line 18
+bubbleSort_0_fini_5 := 0 --> line 21
+bubbleSort_0_i_5 := ( bubbleSort_0_i_4 + 1 ) --> line 23
+bubbleSort_0_aux_5 := bubbleSort_0_tab_8[( bubbleSort_0_i_5 - 1 )] --> line 18
+bubbleSort_0_fini_6 := 0 --> line 21
+bubbleSort_0_i_6 := ( bubbleSort_0_i_5 + 1 ) --> line 23
+bubbleSort_0_aux_6 := bubbleSort_0_tab_10[( bubbleSort_0_i_6 - 1 )] --> line 18
+bubbleSort_0_fini_7 := 0 --> line 21
+bubbleSort_0_i_7 := ( bubbleSort_0_i_6 + 1 ) --> line 23
+bubbleSort_0_aux_7 := bubbleSort_0_tab_12[( bubbleSort_0_i_7 - 1 )] --> line 18
+bubbleSort_0_fini_8 := 0 --> line 21
+bubbleSort_0_i_8 := ( bubbleSort_0_i_7 + 1 ) --> line 23
+bubbleSort_0_fini_10 := bubbleSort_0_fini_8 --> line 0
+bubbleSort_0_i_10 := bubbleSort_0_i_8 --> line 0
+bubbleSort_0_aux_9 := bubbleSort_0_aux_7 --> line 0
+bubbleSort_0_j_1 := ( bubbleSort_0_j_0 - 1 ) --> line 25
+bubbleSort_0_fini_11 := 1 --> line 13
+bubbleSort_0_i_11 := 1 --> line 14
+bubbleSort_0_fini_20 := bubbleSort_0_fini_11 --> line 0
+bubbleSort_0_i_20 := bubbleSort_0_i_11 --> line 0
+bubbleSort_0_aux_18 := bubbleSort_0_aux_9 --> line 0
+bubbleSort_0_j_2 := ( bubbleSort_0_j_1 - 1 ) --> line 25
+!( ( bubbleSort_0_i_11 < bubbleSort_0_j_1 ) ) --> line -2
+( bubbleSort_0_fini_20 == 0 ) --> line -2
+bubbleSort_0_tab_1[( bubbleSort_0_i_1 - 1 )] := bubbleSort_0_tab_0[bubbleSort_0_i_1] --> line 19
+bubbleSort_0_tab_2[bubbleSort_0_i_1] := bubbleSort_0_aux_1 --> line 20
+bubbleSort_0_tab_3[( bubbleSort_0_i_2 - 1 )] := bubbleSort_0_tab_2[bubbleSort_0_i_2] --> line 19
+bubbleSort_0_tab_4[bubbleSort_0_i_2] := bubbleSort_0_aux_2 --> line 20
+bubbleSort_0_tab_5[( bubbleSort_0_i_3 - 1 )] := bubbleSort_0_tab_4[bubbleSort_0_i_3] --> line 19
+bubbleSort_0_tab_6[bubbleSort_0_i_3] := bubbleSort_0_aux_3 --> line 20
+bubbleSort_0_tab_7[( bubbleSort_0_i_4 - 1 )] := bubbleSort_0_tab_6[bubbleSort_0_i_4] --> line 19
+bubbleSort_0_tab_8[bubbleSort_0_i_4] := bubbleSort_0_aux_4 --> line 20
+bubbleSort_0_tab_9[( bubbleSort_0_i_5 - 1 )] := bubbleSort_0_tab_8[bubbleSort_0_i_5] --> line 19
+bubbleSort_0_tab_10[bubbleSort_0_i_5] := bubbleSort_0_aux_5 --> line 20
+bubbleSort_0_tab_11[( bubbleSort_0_i_6 - 1 )] := bubbleSort_0_tab_10[bubbleSort_0_i_6] --> line 19
+bubbleSort_0_tab_12[bubbleSort_0_i_6] := bubbleSort_0_aux_6 --> line 20
+bubbleSort_0_tab_13[( bubbleSort_0_i_7 - 1 )] := bubbleSort_0_tab_12[bubbleSort_0_i_7] --> line 19
+bubbleSort_0_tab_14[bubbleSort_0_i_7] := bubbleSort_0_aux_7 --> line 20
+bubbleSort_0_tab_18 := bubbleSort_0_tab_14 --> line 0
+bubbleSort_0_tab_36 := bubbleSort_0_tab_18 --> line 0
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 9,line 13}
+{line 9,line 0}
+{line 25,line 0}
+{line 25,line 13}
+{line 13,line 14}
+{line 14,line 0}
+
+Runtime of the method that compute MCS: 0.266
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 25)=1.0
+MIVcard(ctrs,line 13)=1.5
+MIVcard(ctrs,line 14)=1.0
+MIVcard(ctrs,line 0)=1.5
+
+The number of instructions suspected: 4
+   IIS in CSP_a using Deletion Filter:
+{CE,line 13,line 0,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.118
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 53
+{CE,line 14,line 25,line 9,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.068
+   IIS in CSP_a using the conflict refiner implementation of CPLEX:
+{CE,line 9,line 25,line 14,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.025
+
+The resulats:
+1. Elapsed time during DFS exploration: 1.099
+2. Elapsed time during MCS calculation: 22.52
+3. Elapsed time during IIS isolation using Deletion Filter: 2.016
+4. Elapsed time during IIS isolation using QuickExplain: 0.794
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.433
+/***************************************************************/
+The final resulats:
+1. The pretreatment(CFG building) time: 0.424
+2. Total elapsed time during DFS exploration: 1.213
+
+3. The time required to calculate the MCSs:33.927
+4. The time required for Deletion Filter:3.459
+5. The time required for QuickExplain:9.092
+6. The time required for the conflict refiner implementation:2.85
+7. Total elapsed time during DFS exploration and MCS calculation: 35.14
+8. Total elapsed time during DFS exploration and IIS calculation using Deletion Filter: 4.672
+9. Total elapsed time during DFS exploration and IIS calculation using QuickExplain: 10.305
+10. Total elapsed time during DFS exploration and IIS calculation using conflict refiner: 4.063
+11. Suspicious instructions (using MCSs):[18, 19, 20, 15, 12, 9, 14, 23, 21, 25, 13]
+12. Suspicious instructions (using Deletion Filter):[18, 19, 20, 21, 9, 25, 12, 13, 14, 15]
+13. Suspicious instructions (using QuickExplain):[18, 19, 20, 23, 9, 25, 12, 14, 15]
+14. Suspicious instructions (using Conflict Refiner):[18, 19, 20, 23, 9, 25, 12, 14, 15]
+
+Total elapsed time: 51.012 s.

@@ -1,0 +1,23 @@
+Instruction: 60, Suspiciousness Score: 1.0
+Instruction: 24, Suspiciousness Score: 0.8
+Instruction: 56, Suspiciousness Score: 0.5
+Instruction: 47, Suspiciousness Score: 0.5
+Instruction: 42, Suspiciousness Score: 0.3333333333333333
+Instruction: 38, Suspiciousness Score: 0.3076923076923077
+Instruction: 23, Suspiciousness Score: 0.16
+Instruction: 67, Suspiciousness Score: 0.16
+Instruction: 15, Suspiciousness Score: 0.16
+Instruction: 26, Suspiciousness Score: 0.16
+Instruction: 29, Suspiciousness Score: 0.16
+Instruction: 19, Suspiciousness Score: 0.16
+Instruction: 3, Suspiciousness Score: 0.16
+Instruction: 20, Suspiciousness Score: 0.16
+Instruction: 34, Suspiciousness Score: 0.0
+Instruction: 57, Suspiciousness Score: 0.0
+Instruction: 27, Suspiciousness Score: 0.0
+Instruction: 39, Suspiciousness Score: 0.0
+Instruction: 30, Suspiciousness Score: 0.0
+Instruction: 21, Suspiciousness Score: 0.0
+Instruction: 43, Suspiciousness Score: 0.0
+Tie size :2
+The rank of the faulty instruction (47) is: 3.5/21

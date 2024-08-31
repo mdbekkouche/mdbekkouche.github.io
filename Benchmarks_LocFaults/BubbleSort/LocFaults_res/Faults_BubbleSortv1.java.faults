@@ -1,0 +1,516 @@
+DOING LOCALIZATION...
+
+Starting conversion of file: /home/bekkouche/eclipse-workspace/Benchmarks_LocFaults/BubbleSort/Progs_with_spec/BubbleSortv1.java
+Loops are unwound 4 times.
+The size of the constructed CFG: 287
+
+From the counterexample, LocFaults calculates MCS and IIS by exploring the graph in DFS from top to bottom and by deviating at most '2' conditional statements.
+/***************************************************************/
+By deviating '0' condition(s), we obtain:
+
+
+Solver: CPLEX
+1. CSP_d: empty set
+------------------------
+2. CSP_a:
+bubbleSort_0_tab_0[0] := 965 --> line -1
+bubbleSort_0_tab_0[1] := 670 --> line -1
+bubbleSort_0_tab_0[2] := 395 --> line -1
+bubbleSort_0_tab_0[3] := 670 --> line -1
+bubbleSort_0_i_0 := 0 --> line 8
+bubbleSort_0_j_0 := ( 4 - 1 ) --> line 9
+bubbleSort_0_aux_0 := 0 --> line 10
+bubbleSort_0_fini_0 := 0 --> line 11
+bubbleSort_0_fini_1 := 1 --> line 13
+bubbleSort_0_i_1 := 1 --> line 14
+bubbleSort_0_aux_1 := bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )] --> line 18
+bubbleSort_0_fini_2 := 0 --> line 21
+bubbleSort_0_i_2 := ( bubbleSort_0_i_1 + 1 ) --> line 23
+bubbleSort_0_aux_2 := bubbleSort_0_tab_2[( bubbleSort_0_i_2 - 1 )] --> line 18
+bubbleSort_0_fini_3 := 0 --> line 21
+bubbleSort_0_i_3 := ( bubbleSort_0_i_2 + 1 ) --> line 23
+bubbleSort_0_fini_5 := bubbleSort_0_fini_3 --> line 0
+bubbleSort_0_i_5 := bubbleSort_0_i_3 --> line 0
+bubbleSort_0_aux_4 := bubbleSort_0_aux_2 --> line 0
+bubbleSort_0_j_1 := ( bubbleSort_0_j_0 - 1 ) --> line 25
+bubbleSort_0_fini_6 := 1 --> line 13
+bubbleSort_0_i_6 := 1 --> line 14
+bubbleSort_0_aux_5 := bubbleSort_0_tab_8[( bubbleSort_0_i_6 - 1 )] --> line 18
+bubbleSort_0_fini_7 := 0 --> line 21
+bubbleSort_0_i_7 := ( bubbleSort_0_i_6 + 1 ) --> line 23
+bubbleSort_0_fini_10 := bubbleSort_0_fini_7 --> line 0
+bubbleSort_0_i_10 := bubbleSort_0_i_7 --> line 0
+bubbleSort_0_aux_8 := bubbleSort_0_aux_5 --> line 0
+bubbleSort_0_j_2 := ( bubbleSort_0_j_1 - 1 ) --> line 25
+bubbleSort_0_fini_11 := 1 --> line 13
+bubbleSort_0_i_11 := 1 --> line 14
+bubbleSort_0_fini_15 := bubbleSort_0_fini_11 --> line 0
+bubbleSort_0_i_15 := bubbleSort_0_i_11 --> line 0
+bubbleSort_0_aux_12 := bubbleSort_0_aux_8 --> line 0
+bubbleSort_0_j_3 := ( bubbleSort_0_j_2 - 1 ) --> line 25
+bubbleSort_0_fini_20 := bubbleSort_0_fini_15 --> line 0
+bubbleSort_0_j_4 := bubbleSort_0_j_3 --> line 0
+bubbleSort_0_i_20 := bubbleSort_0_i_15 --> line 0
+bubbleSort_0_aux_16 := bubbleSort_0_aux_12 --> line 0
+bubbleSort_0_tab_1[( bubbleSort_0_i_1 - 1 )] := bubbleSort_0_tab_0[bubbleSort_0_i_1] --> line 19
+bubbleSort_0_tab_2[bubbleSort_0_i_1] := bubbleSort_0_aux_1 --> line 20
+bubbleSort_0_tab_3[( bubbleSort_0_i_2 - 1 )] := bubbleSort_0_tab_2[bubbleSort_0_i_2] --> line 19
+bubbleSort_0_tab_4[bubbleSort_0_i_2] := bubbleSort_0_aux_2 --> line 20
+bubbleSort_0_tab_8 := bubbleSort_0_tab_4 --> line 0
+bubbleSort_0_tab_9[( bubbleSort_0_i_6 - 1 )] := bubbleSort_0_tab_8[bubbleSort_0_i_6] --> line 19
+bubbleSort_0_tab_10[bubbleSort_0_i_6] := bubbleSort_0_aux_5 --> line 20
+bubbleSort_0_tab_16 := bubbleSort_0_tab_10 --> line 0
+bubbleSort_0_tab_24 := bubbleSort_0_tab_16 --> line 0
+bubbleSort_0_tab_32 := bubbleSort_0_tab_24 --> line 0
+( ( ( ( bubbleSort_0_tab_32[0] <= bubbleSort_0_tab_32[1] ) && ( bubbleSort_0_tab_32[1] <= bubbleSort_0_tab_32[2] ) ) && ( bubbleSort_0_tab_32[2] <= bubbleSort_0_tab_32[3] ) ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 19}
+{line 20}
+{line 19}
+{line 20}
+{line 0}
+{line 19}
+{line 18}
+{line 18}
+{line 20}
+{line 0}
+{line 0}
+{line 0}
+
+Runtime of the method that compute MCS: 0.158
+MIVcard(ctrs,line 18)=1.0
+MIVcard(ctrs,line 18)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 19)=1.0
+MIVcard(ctrs,line 20)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 0)=1.0
+
+The number of instructions suspected: 8
+   IIS in CSP_a using Deletion Filter:
+{CE,line 18,line 18,line 19,line 20,line 19,line 20,line 0,line 19,line 20,line 0,line 0,line 0,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.051
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 45
+{CE,line 0,line 0,line 0,line 20,line 19,line 0,line 20,line 19,line 20,line 19,line 18,line 18,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.095
+   IIS in CSP_a using the conflict refiner implementation of CPLEX:
+{CE,line 18,line 18,line 19,line 20,line 19,line 20,line 0,line 19,line 20,line 0,line 0,line 0,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.045
+
+The resulats:
+1. Elapsed time during DFS exploration: 0.029
+2. Elapsed time during MCS calculation: 0.158
+3. Elapsed time during IIS isolation using Deletion Filter: 0.051
+4. Elapsed time during IIS isolation using QuickExplain: 0.095
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.045
+/***************************************************************/
+By deviating '1' condition(s), we obtain:
+
+
+The resulats:
+1. Elapsed time during DFS exploration: 0.003
+2. Elapsed time during MCS calculation: 0.0
+3. Elapsed time during IIS isolation using Deletion Filter: 0.0
+4. Elapsed time during IIS isolation using QuickExplain: 0.0
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.0
+/***************************************************************/
+By deviating '2' condition(s), we obtain:
+
+
+Solver: CPLEX
+1. CSP_d:
+line 15(Else) : ( bubbleSort_0_i_3 < bubbleSort_0_j_0 )
+line 12(If) : ( bubbleSort_0_fini_10 == 0 )
+------------------------
+2. CSP_a:
+bubbleSort_0_tab_0[0] := 965 --> line -1
+bubbleSort_0_tab_0[1] := 670 --> line -1
+bubbleSort_0_tab_0[2] := 395 --> line -1
+bubbleSort_0_tab_0[3] := 670 --> line -1
+bubbleSort_0_i_0 := 0 --> line 8
+bubbleSort_0_j_0 := ( 4 - 1 ) --> line 9
+bubbleSort_0_aux_0 := 0 --> line 10
+bubbleSort_0_fini_0 := 0 --> line 11
+bubbleSort_0_fini_1 := 1 --> line 13
+bubbleSort_0_i_1 := 1 --> line 14
+bubbleSort_0_aux_1 := bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )] --> line 18
+bubbleSort_0_fini_2 := 0 --> line 21
+bubbleSort_0_i_2 := ( bubbleSort_0_i_1 + 1 ) --> line 23
+bubbleSort_0_aux_2 := bubbleSort_0_tab_2[( bubbleSort_0_i_2 - 1 )] --> line 18
+bubbleSort_0_fini_3 := 0 --> line 21
+bubbleSort_0_i_3 := ( bubbleSort_0_i_2 + 1 ) --> line 23
+bubbleSort_0_aux_3 := bubbleSort_0_tab_4[( bubbleSort_0_i_3 - 1 )] --> line 18
+bubbleSort_0_fini_4 := 0 --> line 21
+bubbleSort_0_i_4 := ( bubbleSort_0_i_3 + 1 ) --> line 23
+bubbleSort_0_fini_5 := bubbleSort_0_fini_4 --> line 0
+bubbleSort_0_i_5 := bubbleSort_0_i_4 --> line 0
+bubbleSort_0_aux_4 := bubbleSort_0_aux_3 --> line 0
+bubbleSort_0_j_1 := ( bubbleSort_0_j_0 - 1 ) --> line 25
+bubbleSort_0_fini_6 := 1 --> line 13
+bubbleSort_0_i_6 := 1 --> line 14
+bubbleSort_0_aux_5 := bubbleSort_0_tab_8[( bubbleSort_0_i_6 - 1 )] --> line 18
+bubbleSort_0_fini_7 := 0 --> line 21
+bubbleSort_0_i_7 := ( bubbleSort_0_i_6 + 1 ) --> line 23
+bubbleSort_0_fini_10 := bubbleSort_0_fini_7 --> line 0
+bubbleSort_0_i_10 := bubbleSort_0_i_7 --> line 0
+bubbleSort_0_aux_8 := bubbleSort_0_aux_5 --> line 0
+bubbleSort_0_j_2 := ( bubbleSort_0_j_1 - 1 ) --> line 25
+( bubbleSort_0_i_3 < bubbleSort_0_j_0 ) --> line -2
+bubbleSort_0_tab_1[( bubbleSort_0_i_1 - 1 )] := bubbleSort_0_tab_0[bubbleSort_0_i_1] --> line 19
+bubbleSort_0_tab_2[bubbleSort_0_i_1] := bubbleSort_0_aux_1 --> line 20
+bubbleSort_0_tab_3[( bubbleSort_0_i_2 - 1 )] := bubbleSort_0_tab_2[bubbleSort_0_i_2] --> line 19
+bubbleSort_0_tab_4[bubbleSort_0_i_2] := bubbleSort_0_aux_2 --> line 20
+bubbleSort_0_tab_5[( bubbleSort_0_i_3 - 1 )] := bubbleSort_0_tab_4[bubbleSort_0_i_3] --> line 19
+bubbleSort_0_tab_6[bubbleSort_0_i_3] := bubbleSort_0_aux_3 --> line 20
+bubbleSort_0_tab_8 := bubbleSort_0_tab_6 --> line 0
+bubbleSort_0_tab_9[( bubbleSort_0_i_6 - 1 )] := bubbleSort_0_tab_8[bubbleSort_0_i_6] --> line 19
+bubbleSort_0_tab_10[bubbleSort_0_i_6] := bubbleSort_0_aux_5 --> line 20
+bubbleSort_0_tab_16 := bubbleSort_0_tab_10 --> line 0
+!( ( bubbleSort_0_fini_10 == 0 ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 23,line 0}
+{line 23,line 21}
+{line 14,line 0}
+{line 23,line 21}
+{line 14,line 21}
+{line 23,line 0}
+{line 9,line 21}
+{line 9,line 0}
+
+Runtime of the method that compute MCS: 0.132
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 14)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 21)=2.0
+MIVcard(ctrs,line 0)=2.0
+
+The number of instructions suspected: 5
+   IIS in CSP_a using Deletion Filter:
+{CE,line 21,line 0,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.028
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 38
+{CE,line 23,line 23,line 14,line 9,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.043
+   IIS in CSP_a using the conflict refiner implementation of CPLEX:
+{CE,line 9,line 14,line 23,line 23,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.012
+
+Solver: CPLEX
+1. CSP_d:
+line 15(Else) : ( bubbleSort_0_i_3 < bubbleSort_0_j_0 )
+line 15(Else) : ( bubbleSort_0_i_11 < bubbleSort_0_j_2 )
+------------------------
+2. CSP_a:
+bubbleSort_0_tab_0[0] := 965 --> line -1
+bubbleSort_0_tab_0[1] := 670 --> line -1
+bubbleSort_0_tab_0[2] := 395 --> line -1
+bubbleSort_0_tab_0[3] := 670 --> line -1
+bubbleSort_0_i_0 := 0 --> line 8
+bubbleSort_0_j_0 := ( 4 - 1 ) --> line 9
+bubbleSort_0_aux_0 := 0 --> line 10
+bubbleSort_0_fini_0 := 0 --> line 11
+bubbleSort_0_fini_1 := 1 --> line 13
+bubbleSort_0_i_1 := 1 --> line 14
+bubbleSort_0_aux_1 := bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )] --> line 18
+bubbleSort_0_fini_2 := 0 --> line 21
+bubbleSort_0_i_2 := ( bubbleSort_0_i_1 + 1 ) --> line 23
+bubbleSort_0_aux_2 := bubbleSort_0_tab_2[( bubbleSort_0_i_2 - 1 )] --> line 18
+bubbleSort_0_fini_3 := 0 --> line 21
+bubbleSort_0_i_3 := ( bubbleSort_0_i_2 + 1 ) --> line 23
+bubbleSort_0_aux_3 := bubbleSort_0_tab_4[( bubbleSort_0_i_3 - 1 )] --> line 18
+bubbleSort_0_fini_4 := 0 --> line 21
+bubbleSort_0_i_4 := ( bubbleSort_0_i_3 + 1 ) --> line 23
+bubbleSort_0_fini_5 := bubbleSort_0_fini_4 --> line 0
+bubbleSort_0_i_5 := bubbleSort_0_i_4 --> line 0
+bubbleSort_0_aux_4 := bubbleSort_0_aux_3 --> line 0
+bubbleSort_0_j_1 := ( bubbleSort_0_j_0 - 1 ) --> line 25
+bubbleSort_0_fini_6 := 1 --> line 13
+bubbleSort_0_i_6 := 1 --> line 14
+bubbleSort_0_aux_5 := bubbleSort_0_tab_8[( bubbleSort_0_i_6 - 1 )] --> line 18
+bubbleSort_0_fini_7 := 0 --> line 21
+bubbleSort_0_i_7 := ( bubbleSort_0_i_6 + 1 ) --> line 23
+bubbleSort_0_fini_10 := bubbleSort_0_fini_7 --> line 0
+bubbleSort_0_i_10 := bubbleSort_0_i_7 --> line 0
+bubbleSort_0_aux_8 := bubbleSort_0_aux_5 --> line 0
+bubbleSort_0_j_2 := ( bubbleSort_0_j_1 - 1 ) --> line 25
+bubbleSort_0_fini_11 := 1 --> line 13
+bubbleSort_0_i_11 := 1 --> line 14
+( bubbleSort_0_i_3 < bubbleSort_0_j_0 ) --> line -2
+( bubbleSort_0_i_11 < bubbleSort_0_j_2 ) --> line -2
+bubbleSort_0_tab_1[( bubbleSort_0_i_1 - 1 )] := bubbleSort_0_tab_0[bubbleSort_0_i_1] --> line 19
+bubbleSort_0_tab_2[bubbleSort_0_i_1] := bubbleSort_0_aux_1 --> line 20
+bubbleSort_0_tab_3[( bubbleSort_0_i_2 - 1 )] := bubbleSort_0_tab_2[bubbleSort_0_i_2] --> line 19
+bubbleSort_0_tab_4[bubbleSort_0_i_2] := bubbleSort_0_aux_2 --> line 20
+bubbleSort_0_tab_5[( bubbleSort_0_i_3 - 1 )] := bubbleSort_0_tab_4[bubbleSort_0_i_3] --> line 19
+bubbleSort_0_tab_6[bubbleSort_0_i_3] := bubbleSort_0_aux_3 --> line 20
+bubbleSort_0_tab_8 := bubbleSort_0_tab_6 --> line 0
+bubbleSort_0_tab_9[( bubbleSort_0_i_6 - 1 )] := bubbleSort_0_tab_8[bubbleSort_0_i_6] --> line 19
+bubbleSort_0_tab_10[bubbleSort_0_i_6] := bubbleSort_0_aux_5 --> line 20
+bubbleSort_0_tab_16 := bubbleSort_0_tab_10 --> line 0
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 9}
+{line 23,line 25}
+{line 23,line 14}
+{line 23,line 25}
+{line 14,line 25}
+{line 14,line 14}
+{line 23,line 25}
+{line 14,line 25}
+{line 23,line 25}
+{line 23,line 14}
+
+Runtime of the method that compute MCS: 0.179
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 14)=1.5
+MIVcard(ctrs,line 23)=1.5
+MIVcard(ctrs,line 23)=1.5
+MIVcard(ctrs,line 25)=1.5
+MIVcard(ctrs,line 25)=1.5
+MIVcard(ctrs,line 14)=1.5
+
+The number of instructions suspected: 7
+   IIS in CSP_a using Deletion Filter:
+{CE,line 9,line 25,line 25,line 14,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.031
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 40
+{CE,line 23,line 23,line 14,line 9,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.014
+   IIS in CSP_a using the conflict refiner implementation of CPLEX:
+{CE,line 9,line 14,line 23,line 23,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.005
+
+Solver: CPLEX
+1. CSP_d:
+line 15(Else) : ( bubbleSort_0_i_3 < bubbleSort_0_j_0 )
+line 12(Else) : ( bubbleSort_0_fini_15 == 0 )
+------------------------
+2. CSP_a:
+bubbleSort_0_tab_0[0] := 965 --> line -1
+bubbleSort_0_tab_0[1] := 670 --> line -1
+bubbleSort_0_tab_0[2] := 395 --> line -1
+bubbleSort_0_tab_0[3] := 670 --> line -1
+bubbleSort_0_i_0 := 0 --> line 8
+bubbleSort_0_j_0 := ( 4 - 1 ) --> line 9
+bubbleSort_0_aux_0 := 0 --> line 10
+bubbleSort_0_fini_0 := 0 --> line 11
+bubbleSort_0_fini_1 := 1 --> line 13
+bubbleSort_0_i_1 := 1 --> line 14
+bubbleSort_0_aux_1 := bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )] --> line 18
+bubbleSort_0_fini_2 := 0 --> line 21
+bubbleSort_0_i_2 := ( bubbleSort_0_i_1 + 1 ) --> line 23
+bubbleSort_0_aux_2 := bubbleSort_0_tab_2[( bubbleSort_0_i_2 - 1 )] --> line 18
+bubbleSort_0_fini_3 := 0 --> line 21
+bubbleSort_0_i_3 := ( bubbleSort_0_i_2 + 1 ) --> line 23
+bubbleSort_0_aux_3 := bubbleSort_0_tab_4[( bubbleSort_0_i_3 - 1 )] --> line 18
+bubbleSort_0_fini_4 := 0 --> line 21
+bubbleSort_0_i_4 := ( bubbleSort_0_i_3 + 1 ) --> line 23
+bubbleSort_0_fini_5 := bubbleSort_0_fini_4 --> line 0
+bubbleSort_0_i_5 := bubbleSort_0_i_4 --> line 0
+bubbleSort_0_aux_4 := bubbleSort_0_aux_3 --> line 0
+bubbleSort_0_j_1 := ( bubbleSort_0_j_0 - 1 ) --> line 25
+bubbleSort_0_fini_6 := 1 --> line 13
+bubbleSort_0_i_6 := 1 --> line 14
+bubbleSort_0_aux_5 := bubbleSort_0_tab_8[( bubbleSort_0_i_6 - 1 )] --> line 18
+bubbleSort_0_fini_7 := 0 --> line 21
+bubbleSort_0_i_7 := ( bubbleSort_0_i_6 + 1 ) --> line 23
+bubbleSort_0_fini_10 := bubbleSort_0_fini_7 --> line 0
+bubbleSort_0_i_10 := bubbleSort_0_i_7 --> line 0
+bubbleSort_0_aux_8 := bubbleSort_0_aux_5 --> line 0
+bubbleSort_0_j_2 := ( bubbleSort_0_j_1 - 1 ) --> line 25
+bubbleSort_0_fini_11 := 1 --> line 13
+bubbleSort_0_i_11 := 1 --> line 14
+bubbleSort_0_fini_15 := bubbleSort_0_fini_11 --> line 0
+bubbleSort_0_i_15 := bubbleSort_0_i_11 --> line 0
+bubbleSort_0_aux_12 := bubbleSort_0_aux_8 --> line 0
+bubbleSort_0_j_3 := ( bubbleSort_0_j_2 - 1 ) --> line 25
+( bubbleSort_0_i_3 < bubbleSort_0_j_0 ) --> line -2
+( bubbleSort_0_fini_15 == 0 ) --> line -2
+bubbleSort_0_tab_1[( bubbleSort_0_i_1 - 1 )] := bubbleSort_0_tab_0[bubbleSort_0_i_1] --> line 19
+bubbleSort_0_tab_2[bubbleSort_0_i_1] := bubbleSort_0_aux_1 --> line 20
+bubbleSort_0_tab_3[( bubbleSort_0_i_2 - 1 )] := bubbleSort_0_tab_2[bubbleSort_0_i_2] --> line 19
+bubbleSort_0_tab_4[bubbleSort_0_i_2] := bubbleSort_0_aux_2 --> line 20
+bubbleSort_0_tab_5[( bubbleSort_0_i_3 - 1 )] := bubbleSort_0_tab_4[bubbleSort_0_i_3] --> line 19
+bubbleSort_0_tab_6[bubbleSort_0_i_3] := bubbleSort_0_aux_3 --> line 20
+bubbleSort_0_tab_8 := bubbleSort_0_tab_6 --> line 0
+bubbleSort_0_tab_9[( bubbleSort_0_i_6 - 1 )] := bubbleSort_0_tab_8[bubbleSort_0_i_6] --> line 19
+bubbleSort_0_tab_10[bubbleSort_0_i_6] := bubbleSort_0_aux_5 --> line 20
+bubbleSort_0_tab_16 := bubbleSort_0_tab_10 --> line 0
+bubbleSort_0_tab_24 := bubbleSort_0_tab_16 --> line 0
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 23,line 13}
+{line 23,line 13}
+{line 23,line 0}
+{line 23,line 0}
+{line 14,line 0}
+{line 14,line 13}
+{line 9,line 13}
+{line 9,line 0}
+
+Runtime of the method that compute MCS: 0.091
+MIVcard(ctrs,line 9)=1.0
+MIVcard(ctrs,line 14)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 23)=1.0
+MIVcard(ctrs,line 13)=2.0
+MIVcard(ctrs,line 0)=2.0
+
+The number of instructions suspected: 5
+   IIS in CSP_a using Deletion Filter:
+{CE,line 13,line 0,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.026
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 45
+{CE,line 23,line 23,line 14,line 9,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.012
+   IIS in CSP_a using the conflict refiner implementation of CPLEX:
+{CE,line 9,line 14,line 23,line 23,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.006
+
+Solver: CPLEX
+1. CSP_d:
+line 17(If) : ( bubbleSort_0_tab_8[( bubbleSort_0_i_6 - 1 )] > bubbleSort_0_tab_8[bubbleSort_0_i_6] )
+line 15(Else) : ( bubbleSort_0_i_7 < bubbleSort_0_j_1 )
+------------------------
+2. CSP_a:
+bubbleSort_0_tab_0[0] := 965 --> line -1
+bubbleSort_0_tab_0[1] := 670 --> line -1
+bubbleSort_0_tab_0[2] := 395 --> line -1
+bubbleSort_0_tab_0[3] := 670 --> line -1
+bubbleSort_0_i_0 := 0 --> line 8
+bubbleSort_0_j_0 := ( 4 - 1 ) --> line 9
+bubbleSort_0_aux_0 := 0 --> line 10
+bubbleSort_0_fini_0 := 0 --> line 11
+bubbleSort_0_fini_1 := 1 --> line 13
+bubbleSort_0_i_1 := 1 --> line 14
+bubbleSort_0_aux_1 := bubbleSort_0_tab_0[( bubbleSort_0_i_1 - 1 )] --> line 18
+bubbleSort_0_fini_2 := 0 --> line 21
+bubbleSort_0_i_2 := ( bubbleSort_0_i_1 + 1 ) --> line 23
+bubbleSort_0_aux_2 := bubbleSort_0_tab_2[( bubbleSort_0_i_2 - 1 )] --> line 18
+bubbleSort_0_fini_3 := 0 --> line 21
+bubbleSort_0_i_3 := ( bubbleSort_0_i_2 + 1 ) --> line 23
+bubbleSort_0_fini_5 := bubbleSort_0_fini_3 --> line 0
+bubbleSort_0_i_5 := bubbleSort_0_i_3 --> line 0
+bubbleSort_0_aux_4 := bubbleSort_0_aux_2 --> line 0
+bubbleSort_0_j_1 := ( bubbleSort_0_j_0 - 1 ) --> line 25
+bubbleSort_0_fini_6 := 1 --> line 13
+bubbleSort_0_i_6 := 1 --> line 14
+bubbleSort_0_fini_7 := bubbleSort_0_fini_6 --> line 0
+bubbleSort_0_aux_5 := bubbleSort_0_aux_4 --> line 0
+bubbleSort_0_i_7 := ( bubbleSort_0_i_6 + 1 ) --> line 23
+!( ( bubbleSort_0_tab_8[( bubbleSort_0_i_6 - 1 )] > bubbleSort_0_tab_8[bubbleSort_0_i_6] ) ) --> line -2
+( bubbleSort_0_i_7 < bubbleSort_0_j_1 ) --> line -2
+bubbleSort_0_tab_1[( bubbleSort_0_i_1 - 1 )] := bubbleSort_0_tab_0[bubbleSort_0_i_1] --> line 19
+bubbleSort_0_tab_2[bubbleSort_0_i_1] := bubbleSort_0_aux_1 --> line 20
+bubbleSort_0_tab_3[( bubbleSort_0_i_2 - 1 )] := bubbleSort_0_tab_2[bubbleSort_0_i_2] --> line 19
+bubbleSort_0_tab_4[bubbleSort_0_i_2] := bubbleSort_0_aux_2 --> line 20
+bubbleSort_0_tab_8 := bubbleSort_0_tab_4 --> line 0
+bubbleSort_0_tab_10 := bubbleSort_0_tab_8 --> line 0
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 9,line 19}
+{line 9,line 20}
+{line 9,line 0}
+{line 9,line 20}
+{line 25,line 20}
+{line 25,line 19}
+{line 9,line 19}
+{line 25,line 19}
+{line 25,line 20}
+{line 25,line 0}
+{line 14,line 20}
+{line 14,line 19}
+{line 14,line 19}
+{line 14,line 20}
+{line 14,line 0}
+{line 23,line 19}
+{line 23,line 20}
+{line 23,line 19}
+{line 23,line 20}
+{line 23,line 0}
+
+Runtime of the method that compute MCS: 0.217
+MIVcard(ctrs,line 9)=2.5
+MIVcard(ctrs,line 25)=2.5
+MIVcard(ctrs,line 14)=2.5
+MIVcard(ctrs,line 23)=2.5
+MIVcard(ctrs,line 19)=2.0
+MIVcard(ctrs,line 20)=2.0
+MIVcard(ctrs,line 19)=2.0
+MIVcard(ctrs,line 20)=2.0
+MIVcard(ctrs,line 0)=2.0
+
+The number of instructions suspected: 8
+   IIS in CSP_a using Deletion Filter:
+{CE,line 19,line 20,line 19,line 20,line 0,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.025
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 27
+{CE,line 23,line 14,line 25,line 9,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.017
+   IIS in CSP_a using the conflict refiner implementation of CPLEX:
+{CE,line 9,line 25,line 14,line 23,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.007
+
+The resulats:
+1. Elapsed time during DFS exploration: 0.025
+2. Elapsed time during MCS calculation: 0.619
+3. Elapsed time during IIS isolation using Deletion Filter: 0.11
+4. Elapsed time during IIS isolation using QuickExplain: 0.086
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.03
+/***************************************************************/
+The final resulats:
+1. The pretreatment(CFG building) time: 0.416
+2. Total elapsed time during DFS exploration: 0.057
+
+3. The time required to calculate the MCSs:0.777
+4. The time required for Deletion Filter:0.161
+5. The time required for QuickExplain:0.181
+6. The time required for the conflict refiner implementation:0.075
+7. Total elapsed time during DFS exploration and MCS calculation: 0.834
+8. Total elapsed time during DFS exploration and IIS calculation using Deletion Filter: 0.218
+9. Total elapsed time during DFS exploration and IIS calculation using QuickExplain: 0.238
+10. Total elapsed time during DFS exploration and IIS calculation using conflict refiner: 0.132
+11. Suspicious instructions (using MCSs):[18, 19, 20, 15, 12, 9, 14, 23, 21, 25, 13, 17]
+12. Suspicious instructions (using Deletion Filter):[17, 18, 19, 20, 21, 9, 25, 12, 13, 14, 15]
+13. Suspicious instructions (using QuickExplain):[17, 18, 19, 20, 23, 9, 25, 12, 14, 15]
+14. Suspicious instructions (using Conflict Refiner):[17, 18, 19, 20, 23, 9, 25, 12, 14, 15]
+
+Total elapsed time: 1.721 s.

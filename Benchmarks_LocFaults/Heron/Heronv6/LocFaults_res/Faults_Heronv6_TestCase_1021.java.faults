@@ -1,0 +1,270 @@
+DOING LOCALIZATION...
+
+Starting conversion of file: /home/bekkouche/eclipse-workspace/Benchmarks_LocFaults/Heron/Heronv6/Progs_with_spec/Heronv6_TestCase_1021.java
+Loops are unwound 10 times.
+The size of the constructed CFG: 40
+
+From the counterexample, LocFaults calculates MCS and IIS by exploring the graph in DFS from top to bottom and by deviating at most '3' conditional statements.
+By deviating '0' condition(s), we obtain:
+
+
+Solver: CP OPTIMIZER
+1. CSP_d: empty set
+------------------------
+2. CSP_a:
+heron_0_i_0 := 14 --> line -1
+heron_0_j_0 := 6 --> line -1
+heron_0_k_0 := 6 --> line -1
+heron_0_trityp_0 := 0 --> line 14
+heron_0_res_0 := 0 --> line 15
+heron_0_s_0 := ( ( ( heron_0_i_0 + heron_0_j_0 ) + heron_0_k_0 ) / 2 ) --> line 16
+heron_0_trityp_1 := 0 --> line 22
+heron_0_trityp_2 := heron_0_trityp_1 --> line 0
+heron_0_trityp_3 := heron_0_trityp_2 --> line 0
+heron_0_trityp_4 := ( heron_0_trityp_3 + 4 ) --> line 30
+heron_0_trityp_5 := 3 --> line 44
+heron_0_res_1 := ( ( ( ( ( 3 * heron_0_i_0 ) * heron_0_i_0 ) * heron_0_i_0 ) * heron_0_i_0 ) / 16 ) --> line 45
+heron_0_Result_0 := heron_0_res_1 --> line 76
+( ( ( ( ( ( ( ( ( ( ( heron_0_i_0 + heron_0_j_0 ) ) <= heron_0_k_0 ) || ( ( ( heron_0_j_0 + heron_0_k_0 ) ) <= heron_0_i_0 ) ) || ( ( ( heron_0_i_0 + heron_0_k_0 ) ) <= heron_0_j_0 ) ) ) || ( ( ( ( heron_0_i_0 == 0 ) || ( heron_0_j_0 == 0 ) ) || ( heron_0_k_0 == 0 ) ) ) ) ) ==> ( ( heron_0_Result_0 == -1 ) ) ) ) && ( ( ( !( ( ( ( ( ( ( ( ( heron_0_i_0 + heron_0_j_0 ) ) <= heron_0_k_0 ) || ( ( ( heron_0_j_0 + heron_0_k_0 ) ) <= heron_0_i_0 ) ) || ( ( ( heron_0_i_0 + heron_0_k_0 ) ) <= heron_0_j_0 ) ) ) || ( ( ( ( heron_0_i_0 == 0 ) || ( heron_0_j_0 == 0 ) ) || ( heron_0_k_0 == 0 ) ) ) ) ) ) ) ==> ( ( heron_0_Result_0 == ( ( ( ( ( ( ( heron_0_i_0 + heron_0_j_0 ) + heron_0_k_0 ) ) / 2 ) * ( ( ( ( ( ( ( heron_0_i_0 + heron_0_j_0 ) + heron_0_k_0 ) ) / 2 ) ) - heron_0_i_0 ) ) ) * ( ( ( ( ( ( ( heron_0_i_0 + heron_0_j_0 ) + heron_0_k_0 ) ) / 2 ) ) - heron_0_j_0 ) ) ) * ( ( ( ( ( ( ( heron_0_i_0 + heron_0_j_0 ) + heron_0_k_0 ) ) / 2 ) ) - heron_0_k_0 ) ) ) ) ) ) ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 76}
+{line 45}
+
+Runtime of the method that compute MCS: 0.014
+MIVcard(ctrs,line 45)=1.0
+MIVcard(ctrs,line 76)=1.0
+
+The number of instructions suspected: 2
+   IIS in CSP_a using Deletion Filter:
+{CE,line 45,line 76,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.017
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 10
+{CE,line 76,line 45,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.016
+   IIS in CSP_a using the conflict refiner implementation of CP Optimizer:
+{CE,line 45,line 76,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CP Optimizer: 0.013
+
+The resulats:
+1. Elapsed time during DFS exploration: 0.029
+2. Elapsed time during MCS calculation: 0.014
+3. Elapsed time during IIS isolation using Deletion Filter: 0.017
+4. Elapsed time during IIS isolation using QuickExplain: 0.016
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.013
+By deviating '1' condition(s), we obtain:
+
+
+Solver: CP OPTIMIZER
+1. CSP_d:
+line 17(Else) : ( ( ( heron_0_i_0 == 0 ) || ( heron_0_j_0 == 0 ) ) || ( heron_0_k_0 == 0 ) )
+------------------------
+2. CSP_a:
+heron_0_i_0 := 14 --> line -1
+heron_0_j_0 := 6 --> line -1
+heron_0_k_0 := 6 --> line -1
+heron_0_trityp_0 := 0 --> line 14
+heron_0_res_0 := 0 --> line 15
+heron_0_s_0 := ( ( ( heron_0_i_0 + heron_0_j_0 ) + heron_0_k_0 ) / 2 ) --> line 16
+( ( ( heron_0_i_0 == 0 ) || ( heron_0_j_0 == 0 ) ) || ( heron_0_k_0 == 0 ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+
+Runtime of the method that compute MCS: 0.002
+
+The number of instructions suspected: 0
+   IIS in CSP_a using Deletion Filter:
+{CE,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.002
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 3
+{CE,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.001
+   IIS in CSP_a using the conflict refiner implementation of CP Optimizer:
+{CE,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CP Optimizer: 0.001
+
+Solver: CP OPTIMIZER
+1. CSP_d:
+line 29(If) : ( heron_0_j_0 == heron_0_k_0 )
+------------------------
+2. CSP_a:
+heron_0_i_0 := 14 --> line -1
+heron_0_j_0 := 6 --> line -1
+heron_0_k_0 := 6 --> line -1
+heron_0_trityp_0 := 0 --> line 14
+heron_0_res_0 := 0 --> line 15
+heron_0_s_0 := ( ( ( heron_0_i_0 + heron_0_j_0 ) + heron_0_k_0 ) / 2 ) --> line 16
+heron_0_trityp_1 := 0 --> line 22
+heron_0_trityp_2 := heron_0_trityp_1 --> line 0
+heron_0_trityp_3 := heron_0_trityp_2 --> line 0
+!( ( heron_0_j_0 == heron_0_k_0 ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+
+Runtime of the method that compute MCS: 0.001
+
+The number of instructions suspected: 0
+   IIS in CSP_a using Deletion Filter:
+{CE,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.004
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 6
+{CE,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.001
+   IIS in CSP_a using the conflict refiner implementation of CP Optimizer:
+{CE,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CP Optimizer: 0.001
+
+Solver: CP OPTIMIZER
+1. CSP_d:
+line 32(Else) : ( heron_0_trityp_4 == 0 )
+------------------------
+2. CSP_a:
+heron_0_i_0 := 14 --> line -1
+heron_0_j_0 := 6 --> line -1
+heron_0_k_0 := 6 --> line -1
+heron_0_trityp_0 := 0 --> line 14
+heron_0_res_0 := 0 --> line 15
+heron_0_s_0 := ( ( ( heron_0_i_0 + heron_0_j_0 ) + heron_0_k_0 ) / 2 ) --> line 16
+heron_0_trityp_1 := 0 --> line 22
+heron_0_trityp_2 := heron_0_trityp_1 --> line 0
+heron_0_trityp_3 := heron_0_trityp_2 --> line 0
+heron_0_trityp_4 := ( heron_0_trityp_3 + 4 ) --> line 30
+( heron_0_trityp_4 == 0 ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 0}
+{line 0}
+{line 22}
+{line 30}
+
+Runtime of the method that compute MCS: 0.016
+MIVcard(ctrs,line 22)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 30)=1.0
+
+The number of instructions suspected: 2
+   IIS in CSP_a using Deletion Filter:
+{CE,line 22,line 0,line 0,line 30,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.009
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 7
+{CE,line 30,line 0,line 0,line 22,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.013
+   IIS in CSP_a using the conflict refiner implementation of CP Optimizer:
+{CE,line 22,line 0,line 0,line 30,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CP Optimizer: 0.018
+
+Solver: CP OPTIMIZER
+1. CSP_d:
+line 43(If) : ( heron_0_trityp_4 > 3 )
+------------------------
+2. CSP_a:
+heron_0_i_0 := 14 --> line -1
+heron_0_j_0 := 6 --> line -1
+heron_0_k_0 := 6 --> line -1
+heron_0_trityp_0 := 0 --> line 14
+heron_0_res_0 := 0 --> line 15
+heron_0_s_0 := ( ( ( heron_0_i_0 + heron_0_j_0 ) + heron_0_k_0 ) / 2 ) --> line 16
+heron_0_trityp_1 := 0 --> line 22
+heron_0_trityp_2 := heron_0_trityp_1 --> line 0
+heron_0_trityp_3 := heron_0_trityp_2 --> line 0
+heron_0_trityp_4 := ( heron_0_trityp_3 + 4 ) --> line 30
+!( ( heron_0_trityp_4 > 3 ) ) --> line -2
+
+The system is infeasible
+------------------------
+3. MCS in CSP_a:
+{line 0}
+{line 0}
+{line 22}
+{line 30}
+
+Runtime of the method that compute MCS: 0.017
+MIVcard(ctrs,line 22)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 0)=1.0
+MIVcard(ctrs,line 30)=1.0
+
+The number of instructions suspected: 2
+   IIS in CSP_a using Deletion Filter:
+{CE,line 22,line 0,line 0,line 30,POST}
+
+Runtime of the method that compute IIS using Deletion Filter: 0.014
+   IIS in CSP_a using QuickExplain:
+Length of the set of soft constraints : 7
+{CE,line 30,line 0,line 0,line 22,POST}
+
+Runtime of the method that compute IIS using QuickExplain: 0.023
+   IIS in CSP_a using the conflict refiner implementation of CP Optimizer:
+{CE,line 22,line 0,line 0,line 30,POST}
+
+Runtime of the method that compute IIS using the conflict refiner implementation of CP Optimizer: 0.018
+
+The resulats:
+1. Elapsed time during DFS exploration: 0.012
+2. Elapsed time during MCS calculation: 0.036
+3. Elapsed time during IIS isolation using Deletion Filter: 0.029
+4. Elapsed time during IIS isolation using QuickExplain: 0.038
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.038
+By deviating '2' condition(s), we obtain:
+
+
+The resulats:
+1. Elapsed time during DFS exploration: 0.002
+2. Elapsed time during MCS calculation: 0.0
+3. Elapsed time during IIS isolation using Deletion Filter: 0.0
+4. Elapsed time during IIS isolation using QuickExplain: 0.0
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.0
+By deviating '3' condition(s), we obtain:
+
+
+The resulats:
+1. Elapsed time during DFS exploration: 0.002
+2. Elapsed time during MCS calculation: 0.0
+3. Elapsed time during IIS isolation using Deletion Filter: 0.0
+4. Elapsed time during IIS isolation using QuickExplain: 0.0
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.0
+/***************************************************************/
+The final resulats:
+1. The pretreatment(CFG building) time: 0.369
+2. Total elapsed time during DFS exploration: 0.045
+
+3. The time required to calculate the MCSs:0.05
+4. The time required for Deletion Filter:0.046
+5. The time required for QuickExplain:0.054
+6. The time required for the conflict refiner implementation:0.051
+7. Total elapsed time during DFS exploration and MCS calculation: 0.095
+8. Total elapsed time during DFS exploration and IIS calculation using Deletion Filter: 0.091
+9. Total elapsed time during DFS exploration and IIS calculation using QuickExplain: 0.099
+10. Total elapsed time during DFS exploration and IIS calculation using conflict refiner: 0.096
+11. The number of paths that resulted in an IIS with at least one soft constraint: 3
+12. Suspicious instructions (using MCSs):[45, 76, 17, 29, 32, 22, 30, 43]
+13. Suspicious instructions (using Deletion Filter):[32, 17, 22, 43, 76, 45, 29, 30]
+14. Suspicious instructions (using QuickExplain):[32, 17, 22, 43, 76, 45, 29, 30]
+15. Suspicious instructions (using Conflict Refiner):[32, 17, 22, 43, 76, 45, 29, 30]
+
+Total elapsed time: 0.666 s.

@@ -1,0 +1,15 @@
+DOING LOCALIZATION...
+
+Starting conversion of file: /home/bekkouche/eclipse-workspace/Benchmarks_LocFaults/Tcas/Tcasv25/Progs_with_spec/Tcasv25_t1.java
+Loops are unwound 10 times.
+Error while trying to read counterexample file (/home/bekkouche/eclipse-workspace/Benchmarks_LocFaults/Tcas/Tcasv25/CE_CPBPV/CE_TcasKO25_t1.java.ce)!
+java.io.FileNotFoundException: /home/bekkouche/eclipse-workspace/Benchmarks_LocFaults/Tcas/Tcasv25/CE_CPBPV/CE_TcasKO25_t1.java.ce (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:155)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:110)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at validation.strategies.cfg.localization.CplexLocalization.readCounterexample(CplexLocalization.java:318)
+	at validation.strategies.cfg.localization.CplexLocalization.<init>(CplexLocalization.java:81)
+	at validation.Validation.verify(Validation.java:281)
+	at validation.ValidationLauncher.main(ValidationLauncher.java:387)
