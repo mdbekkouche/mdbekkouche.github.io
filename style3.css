@@ -7,7 +7,7 @@ article, aside
 
 article
 {
-    width: 78%;
+    width: 78.7%;
     margin-right: 15px;
 }
 
@@ -37,3 +37,9 @@ p.important {
 p.important:hover/*, p.hover*/ {
   background: #fff;
 }
+
+img {
+    max-width: 100%; /* L'image ne sera jamais plus large que son conteneur parent */
+    height: auto;    /* La hauteur est ajustée automatiquement pour maintenir le ratio */
+}
+
