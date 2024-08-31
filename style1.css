@@ -471,7 +471,8 @@ nav ul li a:hover {
     }
 
     .header-title {
-        font-size: 5vw;
+        font-size: 16px;
+        padding: 6px;
     }
 
     nav ul li a {
