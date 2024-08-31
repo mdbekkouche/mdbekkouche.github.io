@@ -472,6 +472,7 @@ nav ul li a:hover {
 
     .header-title {
         font-size: 16px;
+        text-align: right;
         padding: 6px;
     }
 
