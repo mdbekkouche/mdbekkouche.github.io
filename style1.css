@@ -378,3 +378,107 @@ div#sommaire:hover/*, div#sommaire.hover */ {
 }
 
 
+/**********/
+/* Style de base pour le header */
+header {
+    padding: 10px 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+/* Container principal */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permet au contenu de s'ajuster sur plusieurs lignes si nécessaire */
+}
+
+/* Style du logo */
+#logo {
+    max-width: 80px;
+    height: auto;
+}
+
+/* Style du titre */
+.header-title {
+    font-size: 2vw;
+    text-align: center;
+    flex: 1;
+    margin-left: 10px;
+}
+
+/* Style du lien du titre */
+.header-link {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Style de la navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
+}
+
+/* Responsive pour tablettes et petits écrans */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-title {
+        font-size: 4vw; /* Ajustement de la taille de la police pour les petits écrans */
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+}
+
+/* Responsive pour très petits écrans (téléphones) */
+@media (max-width: 480px) {
+    #logo {
+        max-width: 60px; /* Réduire la taille du logo pour les très petits écrans */
+    }
+
+    .header-title {
+        font-size: 5vw;
+    }
+
+    nav ul li a {
+        font-size: 1.4rem;
+        padding: 12px;
+    }
+}
+
+/**********/
+
