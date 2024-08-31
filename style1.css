@@ -449,8 +449,8 @@ nav ul li a:hover {
     }
 
     .header-title {
-        font-size: 4vw; /* Ajustement de la taille de la police pour les petits écrans */
-        margin-top: 10px;
+        font-size: 20px;
+        padding: 8px;
     }
 
     nav ul {
