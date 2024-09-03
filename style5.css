@@ -118,3 +118,105 @@ ul li a:hover {
     color: #007BFF;
 }
 
+
+/********************************/
+/* General Styles */
+
+
+h2, h3 {
+    color: #343a40;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 10px;
+    color: #495057;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styles */
+section.program-results {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Source Code Link Styles */
+.source-code, .locfaults-code, .locfaults-results, .spectrum-results, .combined-results {
+    margin-bottom: 30px;
+}
+
+.source-code a, .locfaults-code a, .locfaults-results a, .spectrum-results a, .combined-results a {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.source-code a:hover, .locfaults-code a:hover, .locfaults-results a:hover, .spectrum-results a:hover, .combined-results a:hover {
+    background-color: #ced4da;
+}
+
+/* Benchmark Title Styles */
+h2 {
+    font-size: 24px;
+    border-bottom: 2px solid #6c757d;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Faulty Program Section Styles */
+.program-links ul, .res-links ul, .spectrum-results ul, .combined-results ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.program-links li, .res-links li, .spectrum-results li, .combined-results li {
+    margin-bottom: 5px;
+}
+
+.program-links ul, .res-links ul, .spectrum-results ul, .combined-results ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.program-links li, .res-links li, .spectrum-results li, .combined-results li {
+    flex: 1 1 calc(10% - 10px);
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+.program-links li:last-child, .res-links li:last-child, .spectrum-results li:last-child, .combined-results li:last-child {
+    margin-right: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .program-links li, .res-links li, .spectrum-results li, .combined-results li {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 576px) {
+    .program-links li, .res-links li, .spectrum-results li, .combined-results li {
+        flex: 1 1 100%;
+    }
+}
+
+/**************************/
+
+
