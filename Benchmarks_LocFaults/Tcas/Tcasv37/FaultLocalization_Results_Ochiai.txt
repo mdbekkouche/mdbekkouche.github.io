@@ -40,3 +40,4 @@ Instruction: 111, Suspiciousness Score: 0.16529226213494566
 Instruction: 106, Suspiciousness Score: 0.0
 Tie size :2
 The rank of the faulty instruction (74) is: 37.5/40
+EXAM Score (Percentage of code to examine): 91.25%

@@ -25,3 +25,4 @@ Instruction: 40, Suspiciousness Score: 0.0
 Instruction: 41, Suspiciousness Score: 0.0
 Tie size :10
 The rank of the faulty instruction (22) is: 14.5/25
+EXAM Score (Percentage of code to examine): 54%

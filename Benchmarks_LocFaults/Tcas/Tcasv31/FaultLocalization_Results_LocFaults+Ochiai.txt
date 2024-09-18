@@ -42,3 +42,4 @@ Instruction: 63, Suspiciousness Score: 0.0
 Instruction: 85, Suspiciousness Score: 0.0
 Tie size :5
 The rank of the faulty instruction (83) is: 6.0/42
+EXAM Score (Percentage of code to examine): 11.9%

@@ -40,3 +40,4 @@ Instruction: 106, Suspiciousness Score: 0.0
 Instruction: 109, Suspiciousness Score: 0.0
 Tie size :8
 The rank of the faulty instruction (89) is: 10.5/40
+EXAM Score (Percentage of code to examine): 23.75%

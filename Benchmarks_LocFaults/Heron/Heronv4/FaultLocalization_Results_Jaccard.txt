@@ -32,3 +32,4 @@ Instruction: 18, Suspiciousness Score: 0.0
 Instruction: 19, Suspiciousness Score: 0.0
 Tie size :5
 The rank of the faulty instruction (17) is: 17.0/32
+EXAM Score (Percentage of code to examine): 50%

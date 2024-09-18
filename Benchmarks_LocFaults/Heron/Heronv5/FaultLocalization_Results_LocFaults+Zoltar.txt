@@ -30,3 +30,4 @@ Instruction: 62, Suspiciousness Score: 0.0
 Instruction: 64, Suspiciousness Score: 0.0
 Tie size :2
 The rank of the faulty instruction (33) is: 1.5/30
+EXAM Score (Percentage of code to examine): 1.67%

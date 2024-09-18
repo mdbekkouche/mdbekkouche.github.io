@@ -40,3 +40,4 @@ Instruction: 86, Suspiciousness Score: 9.310140144957719E-7
 Instruction: 109, Suspiciousness Score: 6.904367944814768E-7
 Tie size :8
 The rank of the faulty instruction (82) is: 4.5/40
+EXAM Score (Percentage of code to examine): 8.75%

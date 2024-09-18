@@ -2,7 +2,7 @@ package benchmark;
 
 public class BubbleSort {
     
-    /*@ requires (tab[0] == 923 && tab[1] == 816 && tab[2] == 584 && tab[3] == 455 && tab[4] == 454 && tab[5] == 367 && tab[6] == 349 && tab[7] == 318 && tab[8] == 279 && tab[9] == 816);
+    /*@ requires (tab[0] == 879 && tab[1] == 713 && tab[2] == 636 && tab[3] == 594 && tab[4] == 550 && tab[5] == 451 && tab[6] == 249 && tab[7] == 143 && tab[8] == 100 && tab[9] == 713);
     @ ensures (tab[0] <= tab[1] && tab[1] <= tab[2] && tab[2] <= tab[3] && tab[3] <= tab[4] && tab[4] <= tab[5] && tab[5] <= tab[6] && tab[6] <= tab[7] && tab[7] <= tab[8] && tab[8] <= tab[9]);*/
     void bubbleSort (int[] tab) {
         int i = 0;

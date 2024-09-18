@@ -19,3 +19,4 @@ Instruction: 51, Suspiciousness Score: 0.0
 Instruction: 21, Suspiciousness Score: 0.0
 Tie size :9
 The rank of the faulty instruction (19) is: 6.0/19
+EXAM Score (Percentage of code to examine): 26.32%

@@ -40,3 +40,4 @@ Instruction: 64, Suspiciousness Score: 0.0
 Instruction: 86, Suspiciousness Score: 0.0
 Tie size :3
 The rank of the faulty instruction (72) is: 4.0/40
+EXAM Score (Percentage of code to examine): 7.5%
