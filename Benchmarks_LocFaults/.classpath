@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-22">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/home/bekkouche/Documents/Research/Tools/jacoco-0.8.13-20240720.051247-25/lib/org.jacoco.report-0.8.13.202407200512.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/bekkouche/Documents/Research/Tools/jacoco-0.8.13-20240720.051247-25/lib/org.jacoco.core-0.8.13.202407200512.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/bekkouche/Documents/Research/Tools/jacoco-0.8.13-20240720.051247-25/lib/org.jacoco.ant-0.8.13.202407200512.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/bekkouche/Documents/Research/Tools/jacoco-0.8.13-20240720.051247-25/lib/org.jacoco.agent-0.8.13.202407200512.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/bekkouche/Documents/Research/Tools/jacoco-0.8.13-20240720.051247-25/lib/jacococli.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/bekkouche/Documents/Research/Tools/jacoco-0.8.13-20240720.051247-25/lib/jacocoagent.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/bekkouche/Documents/Research/Tools/jar_files/asm-commons-9.7.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/bekkouche/Documents/Research/Tools/jar_files/asm-tree-9.7.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/bekkouche/Documents/Research/Tools/jar_files/asm-9.7.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

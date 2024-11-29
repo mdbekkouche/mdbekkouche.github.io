@@ -89,23 +89,23 @@ The number of instructions suspected: 2
    IIS in CSP_a using Deletion Filter:
 {CE,line 53,line 103,POST}
 
-Runtime of the method that compute IIS using Deletion Filter: 0.042
+Runtime of the method that compute IIS using Deletion Filter: 0.044
    IIS in CSP_a using QuickExplain:
 Length of the set of soft constraints : 44
 {CE,line 103,line 53,POST}
 
-Runtime of the method that compute IIS using QuickExplain: 0.039
+Runtime of the method that compute IIS using QuickExplain: 0.033
    IIS in CSP_a using the conflict refiner implementation of CPLEX:
 {CE,line 53,line 103,POST}
 
-Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.011
+Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.007
 
 The resulats:
-1. Elapsed time during DFS exploration: 0.031
+1. Elapsed time during DFS exploration: 0.032
 2. Elapsed time during MCS calculation: 0.024
-3. Elapsed time during IIS isolation using Deletion Filter: 0.042
-4. Elapsed time during IIS isolation using QuickExplain: 0.039
-5. Elapsed time during IIS isolation using Conflict Refiner: 0.011
+3. Elapsed time during IIS isolation using Deletion Filter: 0.044
+4. Elapsed time during IIS isolation using QuickExplain: 0.033
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.007
 /***************************************************************/
 By deviating '1' condition(s), we obtain:
 
@@ -182,7 +182,7 @@ The number of instructions suspected: 1
    IIS in CSP_a using Deletion Filter:
 {CE,line 70,POST}
 
-Runtime of the method that compute IIS using Deletion Filter: 0.028
+Runtime of the method that compute IIS using Deletion Filter: 0.027
    IIS in CSP_a using QuickExplain:
 Length of the set of soft constraints : 37
 {CE,line 70,POST}
@@ -191,14 +191,14 @@ Runtime of the method that compute IIS using QuickExplain: 0.014
    IIS in CSP_a using the conflict refiner implementation of CPLEX:
 {CE,line 70,POST}
 
-Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.003
+Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.005
 
 The resulats:
-1. Elapsed time during DFS exploration: 0.007
+1. Elapsed time during DFS exploration: 0.008
 2. Elapsed time during MCS calculation: 0.01
-3. Elapsed time during IIS isolation using Deletion Filter: 0.028
+3. Elapsed time during IIS isolation using Deletion Filter: 0.027
 4. Elapsed time during IIS isolation using QuickExplain: 0.014
-5. Elapsed time during IIS isolation using Conflict Refiner: 0.003
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.005
 /***************************************************************/
 By deviating '2' condition(s), we obtain:
 
@@ -279,7 +279,7 @@ The system is infeasible
 {line 59}
 {line 58}
 
-Runtime of the method that compute MCS: 0.118
+Runtime of the method that compute MCS: 0.115
 MIVcard(ctrs,line 49)=1.0
 MIVcard(ctrs,line 58)=1.0
 MIVcard(ctrs,line 59)=1.0
@@ -290,50 +290,50 @@ The number of instructions suspected: 5
    IIS in CSP_a using Deletion Filter:
 {CE,line 49,line 58,line 59,line 78,line 81,POST}
 
-Runtime of the method that compute IIS using Deletion Filter: 0.063
+Runtime of the method that compute IIS using Deletion Filter: 0.064
    IIS in CSP_a using QuickExplain:
 Length of the set of soft constraints : 42
 {CE,line 81,line 78,line 59,line 58,line 49,POST}
 
-Runtime of the method that compute IIS using QuickExplain: 0.093
+Runtime of the method that compute IIS using QuickExplain: 0.077
    IIS in CSP_a using the conflict refiner implementation of CPLEX:
 {CE,line 49,line 58,line 59,line 78,line 81,POST}
 
-Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.064
+Runtime of the method that compute IIS using the conflict refiner implementation of CPLEX: 0.07
 
 The resulats:
-1. Elapsed time during DFS exploration: 0.011
-2. Elapsed time during MCS calculation: 0.118
-3. Elapsed time during IIS isolation using Deletion Filter: 0.063
-4. Elapsed time during IIS isolation using QuickExplain: 0.093
-5. Elapsed time during IIS isolation using Conflict Refiner: 0.064
+1. Elapsed time during DFS exploration: 0.013
+2. Elapsed time during MCS calculation: 0.115
+3. Elapsed time during IIS isolation using Deletion Filter: 0.064
+4. Elapsed time during IIS isolation using QuickExplain: 0.077
+5. Elapsed time during IIS isolation using Conflict Refiner: 0.07
 /***************************************************************/
 By deviating '3' condition(s), we obtain:
 
 
 The resulats:
-1. Elapsed time during DFS exploration: 0.006
+1. Elapsed time during DFS exploration: 0.005
 2. Elapsed time during MCS calculation: 0.0
 3. Elapsed time during IIS isolation using Deletion Filter: 0.0
 4. Elapsed time during IIS isolation using QuickExplain: 0.0
 5. Elapsed time during IIS isolation using Conflict Refiner: 0.0
 /***************************************************************/
 The final resulats:
-1. The pretreatment(CFG building) time: 0.396
-2. Total elapsed time during DFS exploration: 0.055
+1. The pretreatment(CFG building) time: 0.388
+2. Total elapsed time during DFS exploration: 0.058
 
-3. The time required to calculate the MCSs:0.152
-4. The time required for Deletion Filter:0.133
-5. The time required for QuickExplain:0.146
-6. The time required for the conflict refiner implementation:0.078
+3. The time required to calculate the MCSs:0.149
+4. The time required for Deletion Filter:0.135
+5. The time required for QuickExplain:0.124
+6. The time required for the conflict refiner implementation:0.082
 7. Total elapsed time during DFS exploration and MCS calculation: 0.207
-8. Total elapsed time during DFS exploration and IIS calculation using Deletion Filter: 0.188
-9. Total elapsed time during DFS exploration and IIS calculation using QuickExplain: 0.201
-10. Total elapsed time during DFS exploration and IIS calculation using conflict refiner: 0.133
+8. Total elapsed time during DFS exploration and IIS calculation using Deletion Filter: 0.193
+9. Total elapsed time during DFS exploration and IIS calculation using QuickExplain: 0.182
+10. Total elapsed time during DFS exploration and IIS calculation using conflict refiner: 0.14
 11. The number of paths that resulted in an IIS with at least one soft constraint: 3
 12. Suspicious instructions (using MCSs):[53, 103, 72, 70, 99, 105, 49, 58, 59, 78, 81]
 13. Suspicious instructions (using Deletion Filter):[49, 81, 99, 53, 70, 103, 72, 105, 58, 59, 78]
 14. Suspicious instructions (using QuickExplain):[81, 49, 99, 53, 70, 103, 72, 105, 58, 59, 78]
 15. Suspicious instructions (using Conflict Refiner):[49, 81, 99, 53, 70, 103, 72, 105, 58, 59, 78]
 
-Total elapsed time: 1.007 s.
+Total elapsed time: 0.984 s.
