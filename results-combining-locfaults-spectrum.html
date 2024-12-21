@@ -3064,10 +3064,11 @@
 	
 
         <section class="detailed-results">
-            <h2>Detailed Results</h2>
-            <p>This section presents the detailed results of the experiments in the form of tables, charts, and other relevant visualizations.</p>
-
+            <h2>Some Detailed Results</h2>
+            <p>This section presents detailed experimental results through selected tables and a graph.</p>
+	
             <h3>Results Table</h3>
+            <h4>Average percentage improvement of our approach LocFaults+SBFL over pure SBFL techniques on the Tritype benchmark.</h4>
             <table>
                 <thead>
                     <tr>
@@ -3099,6 +3100,41 @@
                     </tr>
                 </tbody>
             </table>
+            
+            <h4>Average percentage improvement of our approach LocFaults+SBFL over pure SBFL techniques on the TCAS benchmark.</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Technique</th>
+                        <th>Metric</th>
+                        <th>Performance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>LocFaults+Ochiai over Ochiai</td>
+                        <td>Average Percentage Improvement</td>
+                        <td>47.25%</td>
+                    </tr>
+                    <tr>
+                        <td>LocFaults+Tarantula over Tarantula</td>
+                        <td>Average Percentage Improvement</td>
+                        <td>56.47%</td>
+                    </tr>
+                    <tr>
+                        <td>LocFaults+Jaccard over Jaccard</td>
+                        <td>Average Percentage Improvement</td>
+                        <td>53.10%</td>
+                    </tr>
+                    <tr>
+                        <td>LocFaults+Zoltar over Zoltar</td>
+                        <td>Average Percentage Improvement</td>
+                        <td>36.36%</td>
+                    </tr>
+                </tbody>
+            </table>
+	    <h4>Exploration of the Scalability in Computation Time of MCSs and IISs in LocFaults for BubbleSort Benchmark.</h4>
+	    <img src="images/BubbleSortResult.png"/>            
             <div style="height: 35px;">
             </div>
             <!-- Add other sections like charts if necessary -->
