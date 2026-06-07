@@ -68,34 +68,36 @@
    
    <script>
 	const rssUrl = "https://fxtwitter.com/mdbekkouche/feed.xml";
-	const apiUrl =
-	    "https://api.rss2json.com/v1/api.json?rss_url=" +
-	    encodeURIComponent(rssUrl);
 
-	fetch(apiUrl)
-	.then(response => response.json())
-	.then(data => {
+	fetch(rssUrl)
+	  .then(response => response.text())
+	  .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+	  .then(data => {
 
-	    let output = "";
+	      let output = "";
 
-	    data.items.slice(0, 10).forEach(item => {
+	      data.querySelectorAll("item").forEach((item, index) => {
+		  if(index < 10){
 
-		output += `
-		<div class="card">
-		    <div class="title">
-		        <a href="${item.link}" target="_blank">
-		            ${item.title}
-		        </a>
-		    </div>
+		      const title = item.querySelector("title").textContent;
+		      const link = item.querySelector("link").textContent;
+		      const pubDate = item.querySelector("pubDate").textContent;
 
-		    <div class="date">
-		        ${new Date(item.pubDate).toLocaleString()}
-		    </div>
-		</div>`;
-	    });
+		      output += `
+		      <div class="card">
+		          <div class="title">
+		              <a href="${link}" target="_blank">${title}</a>
+		          </div>
 
-	    document.getElementById("feed").innerHTML = output;
-	});
+		          <div class="date">
+		              ${new Date(pubDate).toLocaleString()}
+		          </div>
+		      </div>`;
+		  }
+	      });
+
+	      document.getElementById("feed").innerHTML = output;
+	  });
     </script>
 
     <!--<style>
