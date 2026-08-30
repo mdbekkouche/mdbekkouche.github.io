@@ -441,3 +441,50 @@ nav ul li a:hover {
 
 /**********/
 
+nav {
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* Responsive design for phones */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
