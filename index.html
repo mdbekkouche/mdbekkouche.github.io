@@ -65,8 +65,38 @@
     }
     </style>
    
-   
+	<style>
+	.new-mark {
+	color: red;
+	font-size: 25px;
+	font-weight: bold;
+	margin-left: 10px;
+	animation: blink 1s infinite;
+	}
+
+	@keyframes blink {
+	50% {
+	opacity: 0;
+	}
+	}
+
+        </style>
+	<style>
+
+	.conference-title {
+	    font-size: 20px;
+	    font-weight: bold;
+	}
+
+	.conference-details {
+	    margin-top: 10px;
+	    font-size: 17px;
+	    line-height: 1.6;
+	    color: #000000;
+	}
+	</style>        
    <script>
+  
 	const rssUrl = "https://fxtwitter.com/mdbekkouche/feed.xml";
 
 	fetch(rssUrl)
@@ -143,7 +173,7 @@
       setInterval("blink(bl1)",500);
       setInterval("blink(bl2)",500);
     </script>
-         
+             
     <title>Mohammed BEKKOUCHE</title>
   </head>
   
@@ -168,7 +198,8 @@
           <h2><b>Welcome on the  website of Mohammed Bekkouche!</b></h2>
           
         </div>
-        
+
+                
         <nav>
           <ul>
             <font size=2.8>
@@ -192,6 +223,8 @@
             <li><a href="index.html#im">About Me</a></LI>
 	    <li><a href="index.html#me">My education</a></LI>
 	    <li><a href="index.html#experience">Professional Experience</a></LI>
+	    <li><a href="index.html#conference-entry">Upcoming Scientific Conference</a></LI>
+	    <li><a href="index.html#student-projects">Proposed Student Projects – 2026–2027</a></LI>
 	    <li><a href="index.html#rai">Research areas that interest us</a></LI>
 	    <!--<ol>
 	      <li><a href="index.html#se">Error localization</a></LI>
@@ -302,6 +335,106 @@ My research focuses particularly on <b>Intrusion Detection Systems (IDS)</b>, le
   <li>Databases (1st year Specialized Cycle)</li>
   <li>Complexity and Problem Solving (2nd year Specialized Cycle (4th year), specialties: Artificial Intelligence and Data Science (IASD) and Cybersecurity (Cys))</li>
 </ul>
+
+
+
+<section id="student-projects">
+    <font color="red">
+   	 <h1>Proposed Student Projects – 2026–2027 <span class="new-mark">NEW</span> </h1> 
+    </font>	
+	<!-- ===================================================== -->
+	    <!-- MASTER / ENGINEERING PROJECTS -->
+	    <!-- ===================================================== -->
+
+	    <h2>Master / Engineering Projects</h2>
+
+	    <ul class="project-list">
+
+		<li>
+		    <a href="projects/2026-2027/PFE-Preeclampsia-Prediction.pdf"
+		       target="_blank">
+		        Explainable and Enhanced Machine Learning for Early Preeclampsia Risk Prediction
+		    </a>
+		</li>
+
+		<li>
+		    <a href="projects/2026-2027/PFE-Intrusion-Detection.pdf"
+		       target="_blank">
+		        Enhancing Intrusion Detection with Machine Learning for Robust Cybersecurity
+		    </a>
+		</li>
+
+	    </ul>
+
+
+	    <!-- ===================================================== -->
+	    <!-- 4TH YEAR MULTIDISCIPLINARY PROJECTS -->
+	    <!-- ===================================================== -->
+
+	    <h2>2nd Year and 4th Year – Multidisciplinary Projects</h2>
+
+	    <ul class="project-list">
+
+		<li>
+		    <a href="projects/2026-2027/MP4-Algerian-Preeclampsia-Dataset.pdf"
+		       target="_blank">
+		        Development for an Algerian Dataset and Data Processing Framework for Preeclampsia Prediction
+		    </a> (4th Year)
+		</li>
+
+		<li>
+		    <a href="projects/2026-2027/MP4-Military-Attack-Defense-Simulation.pdf"
+		       target="_blank">
+		        Intelligent Simulation Application for Generating Military Attack and Defense Scenarios
+		    </a> (4th Year)
+		</li>
+		
+	   </ul>	
+	   <ul class="project-list">
+
+		<li>
+		    <a href="projects/2026-2027/MP2-Journal-Submission-Management.pdf"
+		       target="_blank">
+		        Web and Mobile Application for Scientific Journal Submission Management
+		    </a> (2nd Year)
+		</li>
+
+		<li>
+		    <a href="projects/2026-2027/MP2-Conference-Submission-Management.pdf"
+		       target="_blank">
+		        Web and Mobile Application for Scientific Conference Submission Management
+		    </a> (2nd Year)
+		</li>
+
+	    </ul>	
+	
+</section>
+
+<div id="conference-entry">
+
+    <font color="red">
+    <h1>
+        Upcoming Scientific Conference
+        <span class="new-mark">NEW</span>
+    </h1>
+    </font>	
+    <a href="#" class="conference-title">
+        NCAIA 2027 – National Conference on Artificial Intelligence and Applications
+    </a>
+
+    <div class="conference-details">
+        <strong>April 11–12, 2027 – École Nationale Supérieure en Informatique -- Sidi Bel Abbès (ESI-SBA)</strong>
+        <br>
+        Researchers working in Artificial Intelligence and its applications are invited to prepare their research papers for this important upcoming conference.
+        <br>
+        <em>
+            The conference proposal is currently under consideration by the
+            ESI-SBA Scientific Council.
+        </em>
+    </div>
+
+</div>
+
 <font color="red">
 <h1><a name="events">Academic and Research Engagements</a></h1>
 </font>
