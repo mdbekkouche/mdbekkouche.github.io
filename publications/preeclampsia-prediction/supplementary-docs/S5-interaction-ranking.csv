@@ -1,0 +1,232 @@
+Feature1,Feature2,MeanInteraction
+BMI [kg/m²],S-Flt1 [µg/L],0.005257383711502317
+Art ut. D-pulsatility index [PI],Placental_Dysfunction_Score,0.005213339816706069
+S-Flt1 [µg/L],sFLT/PLGF,0.004118787477138599
+S-Flt1 [µg/L],log_sFlt1_PlGF,0.0033423085316377733
+S-Flt1 [µg/L],Placental_Dysfunction_Score,0.003313040462488121
+S-Flt1 [µg/L],Doppler_Angiogenic_Index,0.0032924399248834314
+Art ut. L-pulsatility index [PI],Placental_Dysfunction_Score,0.0030270743150438094
+Bilateral notch,Placental_Dysfunction_Score,0.002669076482966903
+Art ut. D-pulsatility index [PI],log_sFlt1_PlGF,0.002653207433610498
+Mean PI,log_sFlt1_PlGF,0.002643794494666128
+S-Flt1 [µg/L],PlGF_Doppler_Discordance,0.0025136885135552357
+Mean PI,Placental_Dysfunction_Score,0.0024393107302033874
+Pre-pregnancy weight [kg],S-Flt1 [µg/L],0.0022165236551063535
+BMI [kg/m²],log_sFlt1_PlGF,0.0021896652708326874
+Mean PI,S-Flt1 [µg/L],0.002111896728056532
+Mean PSV,S-Flt1 [µg/L],0.0020415887865550416
+S-PLGF [µg/L],Placental_Dysfunction_Score,0.0020240775394517207
+Bilateral notch,PlGF_Doppler_Discordance,0.0018591118033389827
+Art ut. D-pulsatility index [PI],PlGF_Doppler_Discordance,0.0018417153381928757
+S-PLGF [µg/L],S-Flt1 [µg/L],0.0018367221065686478
+BMI [kg/m²],Placental_Dysfunction_Score,0.001830501017811661
+Maternal hight [m],S-Flt1 [µg/L],0.0018296554401313562
+Bilateral notch,Doppler_Angiogenic_Index,0.0018246542126012072
+Art ut. D-pulsatility index [PI],sFLT/PLGF,0.0017481815176891107
+Mean PI,sFLT/PLGF,0.0017123535100685152
+Art ut. D-pulsatility index [PI],S-Flt1 [µg/L],0.0016992433617370748
+Doppler_Angiogenic_Index,Placental_Dysfunction_Score,0.0016594086645984238
+Art ut. D-resistance index [RI],log_sFlt1_PlGF,0.0016550002125580846
+log_sFlt1_PlGF,PlGF_Doppler_Discordance,0.0016140575042514014
+Bilateral notch,log_sFlt1_PlGF,0.0016110695466336966
+BMI [kg/m²],S-PLGF [µg/L],0.0015809405363308104
+Art ut. L-pulsatility index [PI],S-Flt1 [µg/L],0.0015563634570964929
+Bilateral notch,sFLT/PLGF,0.0015076695929131909
+BMI [kg/m²],Doppler_Angiogenic_Index,0.001506600793462095
+Mean PI,PlGF_Doppler_Discordance,0.0014903660264520067
+Art ut. D-resistance index [RI],Placental_Dysfunction_Score,0.001419575226584988
+Art ut. D-pulsatility index [PI],Doppler_Angiogenic_Index,0.0013385540106809818
+Pre-pregnancy weight [kg],log_sFlt1_PlGF,0.0013335564435660145
+Pre-pregnancy weight [kg],Doppler_Angiogenic_Index,0.001322079143152442
+sFLT/PLGF,Placental_Dysfunction_Score,0.0013114172468585402
+BMI [kg/m²],sFLT/PLGF,0.0012918569505100815
+Art ut. D-Peak Systolic Velocity [PSV],S-Flt1 [µg/L],0.0012782934441036202
+Mean RI,Placental_Dysfunction_Score,0.0012736784490474037
+Mean RI,Doppler_Angiogenic_Index,0.0012596312677573157
+Art ut. D-resistance index [RI],sFLT/PLGF,0.0012464085260760682
+Art ut. D-pulsatility index [PI],S-PLGF [µg/L],0.0012411553025657607
+Art ut. L-pulsatility index [PI],log_sFlt1_PlGF,0.0012236300645150685
+log_sFlt1_PlGF,Placental_Dysfunction_Score,0.0012153803996264078
+BMI [kg/m²],Mean PSV,0.0012011730960804958
+Mean RI,S-Flt1 [µg/L],0.0011999649408498323
+Mean PSV,log_sFlt1_PlGF,0.0011947404467979733
+Art ut. D-pulsatility index [PI],Art ut. L-pulsatility index [PI],0.001185459013928585
+Placental_Dysfunction_Score,PlGF_Doppler_Discordance,0.00118440056890529
+Art ut. D-resistance index [RI],Doppler_Angiogenic_Index,0.0011354588784759923
+Bilateral notch,S-Flt1 [µg/L],0.0011288914568680448
+S-PLGF [µg/L],sFLT/PLGF,0.0011228733315941835
+log_sFlt1_PlGF,Doppler_Angiogenic_Index,0.0010868418926631397
+Mean RI,log_sFlt1_PlGF,0.0010813274743985395
+Art ut. D-Peak Systolic Velocity [PSV],Placental_Dysfunction_Score,0.0010759666859881138
+sFLT/PLGF,Doppler_Angiogenic_Index,0.0010648835170869637
+BMI [kg/m²],Art ut. L-pulsatility index [PI],0.0010501806310348196
+Pre-pregnancy weight [kg],PlGF_Doppler_Discordance,0.0010387897902530711
+sFLT/PLGF,PlGF_Doppler_Discordance,0.0010348219761963447
+Art ut. D-Peak Systolic Velocity [PSV],log_sFlt1_PlGF,0.0010219152068728014
+Art ut. L-resistance index [RI],S-Flt1 [µg/L],0.0010135027040296966
+Pre-pregnancy weight [kg],Art ut. L-pulsatility index [PI],0.000996051446637195
+Art ut. D-resistance index [RI],S-Flt1 [µg/L],0.000995928029895749
+S-PLGF [µg/L],log_sFlt1_PlGF,0.0009832889922561654
+Materna age [years],S-Flt1 [µg/L],0.0009774650163893778
+Pre-pregnancy weight [kg],Mean PI,0.00097558763156318
+sFLT/PLGF,log_sFlt1_PlGF,0.000970915879005668
+Mean PI,S-PLGF [µg/L],0.000966916088494685
+Pre-pregnancy weight [kg],BMI [kg/m²],0.0009583738414989386
+Materna age [years],BMI [kg/m²],0.0009575967320882279
+Materna age [years],log_sFlt1_PlGF,0.0009433955597772987
+Maternal hight [m],log_sFlt1_PlGF,0.0009292969407918946
+Art ut. L-pulsatility index [PI],Mean PI,0.0009276472857266501
+Mean PSV,Doppler_Angiogenic_Index,0.0009237374999208301
+S-PLGF [µg/L],PlGF_Doppler_Discordance,0.0009139436537010824
+Art ut. L-pulsatility index [PI],Doppler_Angiogenic_Index,0.0009057610704959323
+Pre-pregnancy weight [kg],Placental_Dysfunction_Score,0.0009010576557408709
+Bilateral notch,S-PLGF [µg/L],0.0008891882562236945
+Mean PSV,Placental_Dysfunction_Score,0.0008889467478607682
+BMI [kg/m²],PlGF_Doppler_Discordance,0.0008770891101889935
+BMI [kg/m²],Art ut. D-pulsatility index [PI],0.0008644150007462428
+Art ut. D-pulsatility index [PI],Mean PI,0.0008542212447981162
+Materna age [years],Doppler_Angiogenic_Index,0.0008409918917049664
+Art ut. L-pulsatility index [PI],Mean RI,0.0008391392537506279
+Art ut. D-Peak Systolic Velocity [PSV],Mean PSV,0.0008206172503609204
+Art ut. D-Peak Systolic Velocity [PSV],S-PLGF [µg/L],0.0008083662145762382
+Art ut. L-resistance index [RI],Mean PI,0.0008055181335136097
+Art ut. D-pulsatility index [PI],Art ut. L-resistance index [RI],0.0007994013428834676
+Art ut. L-pulsatility index [PI],sFLT/PLGF,0.0007715537529694866
+BMI [kg/m²],Mean PI,0.0007715359921788192
+Art ut. L-resistance index [RI],Placental_Dysfunction_Score,0.0007708558188216494
+Art ut. D-Peak Systolic Velocity [PSV],sFLT/PLGF,0.0007626932452400874
+BMI [kg/m²],Art ut. D-Peak Systolic Velocity [PSV],0.0007617412474196922
+Mean PSV,Bilateral notch,0.0007613704054228227
+S-PLGF [µg/L],Doppler_Angiogenic_Index,0.0007545486669168658
+Art ut. D-Peak Systolic Velocity [PSV],PlGF_Doppler_Discordance,0.0007436175243047699
+Art ut. L-Peak Systolic Velocity [PSV],Placental_Dysfunction_Score,0.0007340835298404471
+Art ut. L-Peak Systolic Velocity [PSV],S-Flt1 [µg/L],0.0007256009166526104
+Pre-pregnancy weight [kg],Mean PSV,0.0007220702826364628
+Art ut. L-Peak Systolic Velocity [PSV],Mean PI,0.0007152952444200275
+Mean PI,Bilateral notch,0.0007135492905961173
+Pre-pregnancy weight [kg],Art ut. L-resistance index [RI],0.0007117347786636467
+Art ut. D-resistance index [RI],Mean PI,0.0007116451923186478
+Materna age [years],Placental_Dysfunction_Score,0.0007072377126816397
+Mean PSV,PlGF_Doppler_Discordance,0.000704813764298665
+Pre-pregnancy weight [kg],Art ut. D-pulsatility index [PI],0.0006977718867779951
+Pre-pregnancy weight [kg],Art ut. D-Peak Systolic Velocity [PSV],0.0006971887566942604
+Mean RI,sFLT/PLGF,0.0006939995095240378
+Mean PI,Mean RI,0.0006929782667256232
+Mean PI,Doppler_Angiogenic_Index,0.0006849652206167282
+Art ut. L-Peak Systolic Velocity [PSV],Mean PSV,0.0006833842154873491
+Art ut. L-Peak Systolic Velocity [PSV],PlGF_Doppler_Discordance,0.0006807678100675245
+Art ut. D-Peak Systolic Velocity [PSV],Mean PI,0.0006685620098548919
+Mean PSV,sFLT/PLGF,0.0006633044296620257
+Art ut. D-Peak Systolic Velocity [PSV],Doppler_Angiogenic_Index,0.0006605741275128785
+Maternal hight [m],Art ut. D-pulsatility index [PI],0.0006597817840220652
+BMI [kg/m²],Art ut. L-Peak Systolic Velocity [PSV],0.0006566465170514623
+Pre-pregnancy weight [kg],S-PLGF [µg/L],0.0006549558193887807
+Art ut. D-resistance index [RI],PlGF_Doppler_Discordance,0.0006525181533013346
+Art ut. D-pulsatility index [PI],Mean RI,0.0006521161589902038
+Pre-pregnancy weight [kg],Mean RI,0.0006493027469060985
+Art ut. D-Peak Systolic Velocity [PSV],Bilateral notch,0.0006430344075995353
+Doppler_Angiogenic_Index,PlGF_Doppler_Discordance,0.0006416172710372062
+Art ut. L-pulsatility index [PI],PlGF_Doppler_Discordance,0.0006341191072787124
+Pre-pregnancy weight [kg],sFLT/PLGF,0.0006238997254340812
+Art ut. D-resistance index [RI],Art ut. L-pulsatility index [PI],0.0006204990919163147
+BMI [kg/m²],Art ut. D-resistance index [RI],0.0006200857368870485
+Art ut. D-pulsatility index [PI],Mean PSV,0.0006133712037898619
+Pre-pregnancy weight [kg],Art ut. D-resistance index [RI],0.0006129342701962143
+Art ut. L-Peak Systolic Velocity [PSV],sFLT/PLGF,0.0006128979460535859
+Art ut. D-pulsatility index [PI],Art ut. L-Peak Systolic Velocity [PSV],0.0005960002840152724
+BMI [kg/m²],Art ut. L-resistance index [RI],0.0005837604370629529
+Mean RI,PlGF_Doppler_Discordance,0.0005824729484582539
+Art ut. D-pulsatility index [PI],Art ut. D-Peak Systolic Velocity [PSV],0.0005821391053596633
+Mean RI,Mean PSV,0.0005810558977826433
+Mean RI,S-PLGF [µg/L],0.0005763281002008195
+Art ut. L-Peak Systolic Velocity [PSV],log_sFlt1_PlGF,0.0005751360801037015
+Maternal hight [m],Bilateral notch,0.0005703374948667892
+BMI [kg/m²],Mean RI,0.0005652320927552024
+Materna age [years],sFLT/PLGF,0.0005578853392623855
+Art ut. D-resistance index [RI],Art ut. L-resistance index [RI],0.0005540633852889183
+Art ut. D-pulsatility index [PI],Bilateral notch,0.0005501473365427973
+Materna age [years],Art ut. D-pulsatility index [PI],0.0005452100579898225
+Pre-pregnancy weight [kg],Art ut. L-Peak Systolic Velocity [PSV],0.0005421099218621202
+Maternal hight [m],PlGF_Doppler_Discordance,0.0005356862040717523
+Mean PI,Mean PSV,0.0005323238155634476
+Maternal hight [m],BMI [kg/m²],0.0005276492449918563
+Parity,Mean PI,0.0005222718777492091
+Art ut. D-resistance index [RI],Mean RI,0.0005208127089085047
+Art ut. L-resistance index [RI],S-PLGF [µg/L],0.0005204999409468423
+Art ut. D-resistance index [RI],S-PLGF [µg/L],0.0005204860271589837
+Maternal hight [m],Doppler_Angiogenic_Index,0.0005193589884055291
+Art ut. D-Peak Systolic Velocity [PSV],Art ut. L-Peak Systolic Velocity [PSV],0.0005172777797641791
+Art ut. L-resistance index [RI],log_sFlt1_PlGF,0.0005160456099345653
+Art ut. D-Peak Systolic Velocity [PSV],Art ut. L-pulsatility index [PI],0.000506902909201177
+Pre-pregnancy weight [kg],Bilateral notch,0.0005046896755875123
+Mean RI,Bilateral notch,0.0005027070492805478
+Art ut. L-Peak Systolic Velocity [PSV],S-PLGF [µg/L],0.000502384201303916
+Maternal hight [m],Placental_Dysfunction_Score,0.0005010315720912105
+Art ut. L-pulsatility index [PI],Mean PSV,0.0004988945430840677
+Art ut. L-Peak Systolic Velocity [PSV],Mean RI,0.0004955510460287311
+BMI [kg/m²],Bilateral notch,0.000489569231213816
+Pre-pregnancy weight [kg],Maternal hight [m],0.000479523570870812
+Art ut. L-pulsatility index [PI],Art ut. L-Peak Systolic Velocity [PSV],0.0004784495622897852
+Maternal hight [m],sFLT/PLGF,0.0004756231486587454
+Art ut. L-resistance index [RI],sFLT/PLGF,0.0004677962582121918
+Art ut. D-resistance index [RI],Art ut. D-pulsatility index [PI],0.0004657360083158895
+Art ut. L-resistance index [RI],PlGF_Doppler_Discordance,0.00046440735847613096
+Art ut. L-pulsatility index [PI],Bilateral notch,0.00045790060091088053
+Art ut. L-resistance index [RI],Art ut. L-pulsatility index [PI],0.00045033943333392935
+Art ut. L-Peak Systolic Velocity [PSV],Doppler_Angiogenic_Index,0.00044544060114636713
+Art ut. L-resistance index [RI],Mean RI,0.00044381171093390784
+Art ut. D-resistance index [RI],Mean PSV,0.00041969788071296633
+Parity,PlGF_Doppler_Discordance,0.0004195686193455936
+Materna age [years],Art ut. L-pulsatility index [PI],0.000403865767278478
+Mean PSV,S-PLGF [µg/L],0.0004034367051678615
+Maternal hight [m],Mean PSV,0.0003979717964558526
+Parity,Art ut. D-pulsatility index [PI],0.0003918420532367845
+Materna age [years],S-PLGF [µg/L],0.0003911991251745623
+Materna age [years],PlGF_Doppler_Discordance,0.00038132487498140867
+Art ut. D-resistance index [RI],Art ut. D-Peak Systolic Velocity [PSV],0.00037957758463357856
+Maternal hight [m],Art ut. L-pulsatility index [PI],0.0003793740369921529
+Materna age [years],Pre-pregnancy weight [kg],0.00037676175412686315
+Art ut. L-resistance index [RI],Doppler_Angiogenic_Index,0.00036513925050348265
+Art ut. L-pulsatility index [PI],S-PLGF [µg/L],0.000358284783842183
+Parity,S-Flt1 [µg/L],0.000344712905222811
+Maternal hight [m],Art ut. D-resistance index [RI],0.0003278135187874852
+Maternal hight [m],Art ut. D-Peak Systolic Velocity [PSV],0.00032023766343350775
+Maternal hight [m],Mean PI,0.0003185237297400394
+Materna age [years],Mean PI,0.0003139560260990676
+Art ut. L-resistance index [RI],Art ut. L-Peak Systolic Velocity [PSV],0.00030960838405660337
+Parity,Placental_Dysfunction_Score,0.00030926834821824435
+Maternal hight [m],Mean RI,0.0003025949057170277
+Art ut. D-resistance index [RI],Bilateral notch,0.00029110848119794953
+Parity,Mean RI,0.00027977560691335704
+Maternal hight [m],Art ut. L-resistance index [RI],0.00027580115550009554
+Art ut. D-Peak Systolic Velocity [PSV],Art ut. L-resistance index [RI],0.000271178818682373
+Materna age [years],Mean PSV,0.00025489715614451504
+Art ut. D-resistance index [RI],Art ut. L-Peak Systolic Velocity [PSV],0.00024399946573967922
+Materna age [years],Mean RI,0.00022991200031812772
+Maternal hight [m],S-PLGF [µg/L],0.00022863004367827816
+Parity,Art ut. L-Peak Systolic Velocity [PSV],0.00022146493290286766
+Materna age [years],Art ut. D-Peak Systolic Velocity [PSV],0.00022079401637409364
+Materna age [years],Art ut. D-resistance index [RI],0.00021931221728402033
+Art ut. D-Peak Systolic Velocity [PSV],Mean RI,0.00021114193382019479
+Parity,log_sFlt1_PlGF,0.00019663746030011358
+Parity,sFLT/PLGF,0.0001958681339022936
+Maternal hight [m],Art ut. L-Peak Systolic Velocity [PSV],0.00016484129019358513
+Materna age [years],Bilateral notch,0.00016463641595731638
+Materna age [years],Maternal hight [m],0.0001597602854842215
+BMI [kg/m²],Parity,0.00015922276040235256
+Parity,Mean PSV,0.00015756250639332845
+Materna age [years],Art ut. L-Peak Systolic Velocity [PSV],0.0001538839759086695
+Art ut. L-resistance index [RI],Bilateral notch,0.00015284588299322143
+Parity,Art ut. D-Peak Systolic Velocity [PSV],0.00014983123872327794
+Parity,Bilateral notch,0.00014730842024492037
+Parity,S-PLGF [µg/L],0.00014289604701386347
+Parity,Art ut. L-pulsatility index [PI],0.00013471197216671484
+Parity,Art ut. L-resistance index [RI],0.0001239230723054403
+Parity,Art ut. D-resistance index [RI],0.00011217788079559932
+Parity,Doppler_Angiogenic_Index,0.00010572416874399716
+Art ut. L-resistance index [RI],Mean PSV,9.466758777632224e-05
+Materna age [years],Art ut. L-resistance index [RI],8.578161908103192e-05
+Art ut. L-Peak Systolic Velocity [PSV],Bilateral notch,8.1855052923826e-05
+Pre-pregnancy weight [kg],Parity,7.886553679232653e-05
+Materna age [years],Parity,5.9181445623215975e-05
+Maternal hight [m],Parity,1.258633175676715e-05
