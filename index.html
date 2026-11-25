@@ -183,133 +183,6 @@
       setInterval("blink(bl2)",500);
     </script>
     
-   <style>
-	/* ================================
-	   NC2AI 2027 Announcement
-	   ================================ */
-
-	.ncaia-alert {
-	    width: 100%;
-	    background: #00FF00
-	    color: #ffffff;
-	    padding: 14px 20px;
-	    box-sizing: border-box;
-	    position: relative;
-	    z-index: 9999;
-	    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
-	    font-family: sans-serif;
-	}
-
-	.ncaia-alert-content {
-	    max-width: 1200px;
-	    margin: auto;
-	    display: flex;
-	    align-items: center;
-	    gap: 18px;
-	}
-
-	.ncaia-alert-icon {
-	    font-size: 30px;
-	    flex-shrink: 0;
-	}
-
-	.ncaia-alert-text {
-	    flex: 1;
-	    display: flex;
-	    flex-direction: column;
-	    gap: 4px;
-	}
-
-	.ncaia-alert-text strong {
-	    font-size: 18px;
-	}
-
-	.ncaia-alert-text > span {
-	    font-size: 14px;
-	    opacity: 0.92;
-	}
-
-	.ncaia-alert-dates {
-	    display: flex;
-	    flex-wrap: wrap;
-	    gap: 18px;
-	    margin-top: 5px;
-	    font-size: 14px;
-	}
-
-	.ncaia-alert-button {
-	    background: #ffffff;
-	    color: #00FF00;
-	    text-decoration: none;
-	    padding: 10px 17px;
-	    border-radius: 5px;
-	    font-size: 14px;
-	    font-weight: bold;
-	    white-space: nowrap;
-	    transition: 0.2s ease;
-	}
-
-	.ncaia-alert-button:hover {
-	    background: #f0f0f0;
-	    transform: translateY(-1px);
-	}
-
-	.ncaia-alert-close {
-	    background: transparent;
-	    border: none;
-	    color: #ffffff;
-	    font-size: 28px;
-	    line-height: 1;
-	    cursor: pointer;
-	    padding: 5px;
-	    opacity: 0.85;
-	}
-
-	.ncaia-alert-close:hover {
-	    opacity: 1;
-	}
-
-	/* Mobile */
-	@media (max-width: 768px) {
-
-	    .ncaia-alert-content {
-		align-items: flex-start;
-		gap: 12px;
-	    }
-
-	    .ncaia-alert-icon {
-		font-size: 24px;
-	    }
-
-	    .ncaia-alert-text strong {
-		font-size: 16px;
-	    }
-
-	    .ncaia-alert-text > span {
-		font-size: 13px;
-	    }
-
-	    .ncaia-alert-dates {
-		flex-direction: column;
-		gap: 4px;
-		font-size: 13px;
-	    }
-
-	    .ncaia-alert-button {
-		display: none;
-	    }
-
-	    .ncaia-alert-close {
-		font-size: 24px;
-	    }
-	}
-     </style>
-
-	<script>
-	function closeNCAIAAlert() {
-	    document.getElementById("ncaia-alert").style.display = "none";
-	}
-	</script>
           
     <title>Mohammed BEKKOUCHE</title>
   </head>
@@ -349,37 +222,7 @@
         </nav>
       </header>
       
-   <div id="ncaia-alert" class="ncaia-alert">
-    <div class="ncaia-alert-content">
-
-        <div class="ncaia-alert-icon">📢</div>
-
-        <div class="ncaia-alert-text">
-            <strong>NC2AI 2027 – Upcoming Scientific Conference</strong>
-            <span>
-                National Conference on Artificial Intelligence Applications and Innovations
-            </span>
-
-            <div class="ncaia-alert-dates">
-                <span>📅 <b>Conference:</b> 11–12 April 2027</span>
-                <span>📍 <b>ESI-SBA</b></span>
-                <span>📝 <b>Paper Submission Deadline:</b> 15 January 2027</span>
-            </div>
-        </div>
-
-        <a href="https://nc2ai27.esi-sba.dz" target="_blank" rel="noopener noreferrer" class="ncaia-alert-button">
-            NC2AI 2027 Website
-        </a>
-
-        <button class="ncaia-alert-close"
-                onclick="closeNCAIAAlert()"
-                aria-label="Close announcement">
-            &times;
-        </button>
-
-    </div>
-</div>
-
+   
       
       <section>
         <article>
@@ -390,7 +233,6 @@
 	    <li><a href="index.html#me">My education</a></LI>
 	    <li><a href="index.html#experience">Professional Experience</a></LI>
 	    <li><a href="index.html#student-projects">Proposed Student Projects – 2026–2027</a> <span class="new-mark-2">NEW</span> </LI>
-	    <li><a href="index.html#conference-entry">Upcoming Scientific Conference</a> <span class="new-mark-2">NEW</span> </LI>
 	    <li><a href="index.html#rai">Research areas that interest us</a></LI>
 	    <!--<ol>
 	      <li><a href="index.html#se">Error localization</a></LI>
@@ -590,26 +432,6 @@ My research focuses particularly on <b>Intrusion Detection Systems (IDS)</b>, le
 	
 </section>
 
-<div id="conference-entry">
-
-    <font color="red">
-    <h1>
-        Upcoming Scientific Conference
-        <span class="new-mark">NEW</span>
-    </h1>
-    </font>	
-    <a href="https://nc2ai27.esi-sba.dz" target="_blank" rel="noopener noreferrer" class="conference-title">
-        NC2AI 2027 – National Conference on Artificial Intelligence Applications and Innovations
-    </a>
-
-    <div class="conference-details">
-        <strong>April 11–12, 2027 – École Nationale Supérieure en Informatique -- Sidi Bel Abbès (ESI-SBA)</strong>
-        <br>
-        Researchers working in Artificial Intelligence and its applications are invited to prepare their research papers for this important upcoming conference.
-        <br>
-    </div>
-
-</div>
 
 <font color="red">
 <h1><a name="events">Academic and Research Engagements</a></h1>
